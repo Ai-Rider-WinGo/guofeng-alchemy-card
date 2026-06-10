@@ -1,0 +1,40 @@
+[
+  {
+    "pool_id": "daily_basic",
+    "name": "每日基础池",
+    "levels": [1, 2],
+    "rarity_weights": {
+      "common": 65,
+      "uncommon": 25,
+      "rare": 10
+    },
+    "active_card_ids": [
+      "xingyang_001",
+      "julu_001",
+      "liubang_002",
+      "jixin_002",
+      "xiangyu_002",
+      "zhanghan_002"
+    ]
+  },
+  {
+    "pool_id": "starter_chuhan",
+    "name": "新手保护池·楚汉篇",
+    "levels": [1, 2, 4],
+    "rarity_weights": {
+      "common": 50,
+      "uncommon": 30,
+      "rare": 15,
+      "epic": 5
+    },
+    "active_card_ids": [
+      "liubang_002",
+      "jixin_002",
+      "xiangyu_002",
+      "zhanghan_002",
+      "hongmenyan_004",
+      "gaixia_siege_004"
+    ]
+  }
+]
+
