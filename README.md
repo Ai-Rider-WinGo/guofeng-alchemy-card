@@ -2,6 +2,20 @@
 
 > 面向抖音小游戏的竖屏国风历史卡牌收集项目。以中国历史人物、历史事件、兵器、典籍与朝代主题卡池为核心，构建“抽卡 + 合成 + 收集 + 升星 + 周期运营”的轻量卡牌闭环。
 
+<p align="center">
+  <img src="docs/showcase/readme-hero.png" alt="国风炼金卡牌项目封面" width="100%" />
+</p>
+
+<p align="center">
+  <strong>把楚汉战争做成可抽、可收集、可合成的历史卡牌体验。</strong>
+  <br />
+  Cocos Creator 客户端工程 · H5 视觉原型 · 本地 AI 卡牌素材管线 · 配置化历史内容系统
+</p>
+
+<p align="center">
+  <img src="docs/showcase/readme-preview.gif" alt="国风炼金卡牌前端体验预览" width="760" />
+</p>
+
 [![Engine](https://img.shields.io/badge/Cocos%20Creator-3.8.8-2f6fed)](#技术栈)
 [![Language](https://img.shields.io/badge/TypeScript-strict%20ready-3178c6)](#技术栈)
 [![Platform](https://img.shields.io/badge/Target-抖音小游戏-df2a3f)](#项目定位)
@@ -35,6 +49,20 @@
 - **重复卡价值闭环**：重复卡进入碎片、升星、同朝代收集进度与长期养成，避免“抽到重复就浪费”的体验。
 - **配置驱动工程**：卡牌、卡池、合成、每日限制、周期奖励等玩法参数均以 JSON 配置为入口，后续可平滑迁移到后台管理系统。
 - **AI 素材生产预留**：保留 ComfyUI / prompt 工作流，用于批量生成国风人物卡、事件卡、卡背与朝代主题视觉资产。
+
+## 项目展示
+
+<p align="center">
+  <img src="docs/showcase/readme-screens.png" alt="国风炼金卡牌前端界面展示" width="100%" />
+</p>
+
+<p align="center">
+  <img src="docs/showcase/readme-card-wall.png" alt="国风炼金卡牌卡牌视觉资产展示" width="100%" />
+</p>
+
+<p align="center">
+  <img src="docs/showcase/readme-asset-pipeline.png" alt="国风炼金卡牌本地 AI 素材生成管线展示" width="100%" />
+</p>
 
 ## 当前进度
 
