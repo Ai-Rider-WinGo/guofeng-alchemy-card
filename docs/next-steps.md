@@ -31,6 +31,17 @@
 - 秦末战争线
 - 汉初建国线
 
+## Step 3.5：卡牌素材生成复测
+
+素材生成已初步跑通后，先按 `docs/card-asset-test-requirements.md` 做第二轮验证：
+
+- Batch A：复测已出样张的 6 张卡，确认 workflow 可复现。
+- Batch B：补齐 MVP 闭环缺少的 6 张卡。
+- Batch C：制作卡背与稀有度卡框。
+- Batch D：导出主图、卡面预览、256 缩略图、128 缩略图并验证 Cocos 导入。
+
+卡牌文字内容以 `docs/card-copy.md` 和 `config/card_text_content.json` 为准，不要求 ComfyUI 在图片中生成文字。
+
 ## Step 4：抖音能力接入
 
 玩法闭环成立后再接：
@@ -49,4 +60,3 @@
 - 合成保护道具
 - 终极编号卡
 - 活动池轮换
-

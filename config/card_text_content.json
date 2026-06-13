@@ -1,0 +1,134 @@
+[
+  {
+    "card_id": "liubang_002",
+    "display_name": "刘邦",
+    "card_type_label": "人物",
+    "rarity_label": "Rare",
+    "face_line": "布衣起兵，终成汉高祖。",
+    "detail_text": "刘邦出身沛县，秦末起兵反秦，后在楚汉战争中击败项羽，建立汉朝。",
+    "knowledge_point": "刘邦是秦末汉初政治格局转折的核心人物。",
+    "synthesis_hint": "可与纪信合成荥阳脱困，也可参与楚汉战争事件链。",
+    "image_keywords": ["秦汉之际", "沛县起兵", "军帐", "旌旗", "竹简", "沉稳谋略", "手扶剑柄", "布衣出身但有帝王气象"]
+  },
+  {
+    "card_id": "jixin_002",
+    "display_name": "纪信",
+    "card_type_label": "人物",
+    "rarity_label": "Uncommon",
+    "face_line": "刘邦脱困，纪信代死。",
+    "detail_text": "荥阳之围中，纪信假扮刘邦出城，吸引楚军注意，使刘邦得以突围。",
+    "knowledge_point": "纪信代表了楚汉战争中以身代主的历史故事。",
+    "synthesis_hint": "可与刘邦合成荥阳脱困。",
+    "image_keywords": ["荥阳之围", "城门", "火光", "伪装汉王出城", "悲壮坚定", "护主赴险"]
+  },
+  {
+    "card_id": "xiangyu_002",
+    "display_name": "项羽",
+    "card_type_label": "人物",
+    "rarity_label": "Rare",
+    "face_line": "力拔山兮，西楚霸王。",
+    "detail_text": "项羽出身楚国贵族之后，秦末起兵，巨鹿之战后声威大振，后与刘邦争夺天下。",
+    "knowledge_point": "项羽是秦亡之后楚汉格局形成的关键人物。",
+    "synthesis_hint": "可与章邯合成巨鹿之战，也可参与楚汉相争事件链。",
+    "image_keywords": ["秦末楚军将领", "重甲", "长戟", "战场尘烟", "楚军旌旗", "强势压迫感", "英雄末路底色"]
+  },
+  {
+    "card_id": "zhanghan_002",
+    "display_name": "章邯",
+    "card_type_label": "人物",
+    "rarity_label": "Uncommon",
+    "face_line": "秦末主将，转战反秦诸军。",
+    "detail_text": "章邯是秦末重要将领，曾率秦军镇压起义军，后在巨鹿之战相关局势中走向失败。",
+    "knowledge_point": "章邯的命运折射秦末军事体系的崩塌。",
+    "synthesis_hint": "可与项羽合成巨鹿之战。",
+    "image_keywords": ["秦军将领", "黑色秦甲", "军阵", "战车", "秦旗", "严肃疲惫", "军令压力感"]
+  },
+  {
+    "card_id": "xingyang_001",
+    "display_name": "荥阳",
+    "card_type_label": "地点",
+    "rarity_label": "Common",
+    "face_line": "楚汉拉锯的重要地点。",
+    "detail_text": "荥阳位于战略要地，是楚汉战争中刘邦与项羽多次争夺的重要区域。",
+    "knowledge_point": "地理位置常常影响战争走向。",
+    "synthesis_hint": "与刘邦、纪信相关，可指向荥阳脱困事件。",
+    "image_keywords": ["秦汉古城", "城门", "丘陵道路", "军营火光", "战略要地", "围城氛围", "古地图感"]
+  },
+  {
+    "card_id": "julu_001",
+    "display_name": "巨鹿",
+    "card_type_label": "地点",
+    "rarity_label": "Common",
+    "face_line": "秦末决战的重要战场。",
+    "detail_text": "巨鹿之战发生于秦末，是反秦战争中极具转折意义的一战。",
+    "knowledge_point": "巨鹿之战显著削弱秦军主力。",
+    "synthesis_hint": "可作为巨鹿之战相关合成线索。",
+    "image_keywords": ["秦末战场", "旷野", "军阵遗迹", "战旗", "烟尘", "战车痕迹", "转折之地"]
+  },
+  {
+    "card_id": "hongmenyan_004",
+    "display_name": "鸿门宴",
+    "card_type_label": "事件",
+    "rarity_label": "Epic",
+    "face_line": "一场酒宴，暗藏天下杀机。",
+    "detail_text": "鸿门宴是刘邦与项羽关系中的关键事件，显示出秦亡后各方势力的紧张与分化。",
+    "knowledge_point": "鸿门宴常被视为楚汉竞争关系公开化的重要节点。",
+    "synthesis_hint": "可与荥阳脱困合成楚汉相争。",
+    "image_keywords": ["秦亡后宴席", "军帐", "酒案", "剑舞", "刘邦项羽阵营对峙", "紧张权谋", "烛火阴影"]
+  },
+  {
+    "card_id": "xingyang_escape_004",
+    "display_name": "荥阳脱困",
+    "card_type_label": "事件",
+    "rarity_label": "Epic",
+    "face_line": "纪信代汉王，刘邦得脱身。",
+    "detail_text": "刘邦被项羽围困荥阳时，纪信假扮刘邦出城迷惑楚军，使刘邦得以脱困。",
+    "knowledge_point": "小人物的选择也可能改变大事件走向。",
+    "synthesis_hint": "可与鸿门宴合成楚汉相争。",
+    "image_keywords": ["荥阳城门", "夜色", "楚军围城", "纪信假扮刘邦", "战车", "远处突围路线", "火光", "悲壮"]
+  },
+  {
+    "card_id": "julu_battle_004",
+    "display_name": "巨鹿之战",
+    "card_type_label": "事件",
+    "rarity_label": "Epic",
+    "face_line": "破釜沉舟，秦军主力受挫。",
+    "detail_text": "项羽率军救赵，在巨鹿一带击败秦军主力，极大改变秦末战争格局。",
+    "knowledge_point": "巨鹿之战是秦末反秦战争的重要转折点。",
+    "synthesis_hint": "可参与秦亡和楚汉格局相关事件链。",
+    "image_keywords": ["秦末战场", "楚军冲阵", "秦军军阵", "烟尘", "战旗", "破釜沉舟", "历史转折"]
+  },
+  {
+    "card_id": "gaixia_siege_004",
+    "display_name": "垓下之围",
+    "card_type_label": "事件",
+    "rarity_label": "Epic",
+    "face_line": "四面楚歌，霸王末路。",
+    "detail_text": "垓下之围是楚汉战争末期的关键事件，项羽最终败亡，刘邦集团取得决定性优势。",
+    "knowledge_point": "垓下之围标志着楚汉战争走向终局。",
+    "synthesis_hint": "可与楚汉相争合成大汉开国。",
+    "image_keywords": ["楚汉战争末期", "夜色营地", "四面楚歌", "孤军困局", "远处汉军阵列", "霸王末路", "悲壮"]
+  },
+  {
+    "card_id": "chuhan_conflict_005",
+    "display_name": "楚汉相争",
+    "card_type_label": "阶段事件",
+    "rarity_label": "Legendary",
+    "face_line": "秦亡之后，楚汉争天下。",
+    "detail_text": "秦朝灭亡后，刘邦与项羽围绕天下归属展开长期战争，最终形成楚汉相争的历史阶段。",
+    "knowledge_point": "楚汉相争决定了秦亡之后的新王朝归属。",
+    "synthesis_hint": "可与垓下之围合成大汉开国。",
+    "image_keywords": ["楚汉两军对峙", "山河棋局", "旌旗分立", "刘邦项羽阵营", "长期战争", "天下归属", "史诗但不玄幻"]
+  },
+  {
+    "card_id": "han_dynasty_founding_005",
+    "display_name": "大汉开国",
+    "card_type_label": "阶段事件",
+    "rarity_label": "Legendary",
+    "face_line": "楚汉落幕，汉朝建立。",
+    "detail_text": "刘邦击败项羽后建立汉朝，中国历史进入新的王朝阶段。",
+    "knowledge_point": "汉朝的建立延续并重塑了秦以来的大一统制度。",
+    "synthesis_hint": "MVP 阶段的阶段性终点卡。",
+    "image_keywords": ["汉初建立", "朝堂与旌旗", "汉阙", "山河初定", "制度延续", "庄重", "开国气象"]
+  }
+]
