@@ -1,0 +1,268 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* 宣纸纹理背景 */
+@layer base {
+  * {
+    @apply border-bronze/20;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: 
+      radial-gradient(circle at 20% 0%, rgba(201, 169, 97, 0.12), transparent 32rem),
+      radial-gradient(circle at 80% 24%, rgba(45, 143, 127, 0.09), transparent 26rem),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 2px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-bronze font-bold tracking-wide;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  button {
+    @apply transition-all duration-200 ease-out;
+  }
+}
+
+/* 卡牌组件 */
+@layer components {
+  .card-frame {
+    @apply relative bg-ink-2 border border-bronze/40 rounded-card overflow-hidden;
+    box-shadow: inset 0 0 20px rgba(201, 169, 97, 0.1);
+  }
+
+  .paper-panel {
+    @apply relative rounded-[18px] border border-bronze/50;
+    background:
+      linear-gradient(135deg, rgba(255, 237, 191, 0.92), rgba(177, 132, 74, 0.86)),
+      repeating-linear-gradient(90deg, rgba(58, 37, 19, 0.08) 0 1px, transparent 1px 5px);
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.35),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+      inset 0 0 36px rgba(64, 35, 11, 0.2);
+  }
+
+  .paper-panel::before,
+  .archive-panel::before {
+    content: '';
+    @apply pointer-events-none absolute inset-0 rounded-[inherit];
+    background-image:
+      linear-gradient(90deg, rgba(54, 32, 12, 0.08), transparent 30%, rgba(54, 32, 12, 0.08)),
+      repeating-linear-gradient(0deg, rgba(60, 39, 20, 0.07) 0 1px, transparent 1px 4px);
+    mix-blend-mode: multiply;
+  }
+
+  .seal-button {
+    @apply rounded-md border border-old-gold/50 bg-ink-2 px-3 py-2 text-xs font-bold text-bronze shadow-inner transition active:scale-95;
+  }
+
+  .section-title {
+    @apply flex items-center justify-center gap-3 text-xl font-black tracking-[0.12em] text-paper;
+  }
+
+  .section-title span {
+    @apply h-px w-16 bg-gradient-to-r from-transparent via-bronze/70 to-transparent;
+  }
+
+  .route-scroll {
+    @apply relative flex gap-3 overflow-x-auto rounded-[14px] border border-bronze/25 bg-black/20 p-3;
+    scrollbar-width: none;
+  }
+
+  .route-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .route-item {
+    @apply relative min-w-[72px];
+  }
+
+  .route-step {
+    @apply absolute -top-2 left-1/2 z-10 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-sm border border-bronze bg-jade text-xs font-bold text-paper;
+  }
+
+  .route-card {
+    @apply relative mt-2 h-[118px] overflow-hidden rounded-md border border-bronze/45 bg-ink-2 shadow-lg;
+  }
+
+  .route-card::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent;
+  }
+
+  .route-name {
+    @apply absolute bottom-1 right-1 z-10 rounded-sm bg-jade/85 px-1 py-0.5 text-xs font-bold text-paper;
+    writing-mode: vertical-rl;
+  }
+
+  .route-arrow {
+    @apply absolute left-[76px] top-[55px] text-3xl font-light text-bronze/70;
+  }
+
+  .archive-panel {
+    @apply relative rounded-[16px] border border-bronze/30 bg-ink-2/90 p-4 shadow-inner;
+  }
+
+  .action-card {
+    @apply rounded-[14px] border border-bronze/35 bg-ink-2/95 p-2 text-center shadow-lg transition active:scale-[0.98];
+  }
+
+  .action-card h2 {
+    @apply mt-2 text-2xl font-black tracking-[0.15em] text-paper;
+  }
+
+  .action-card p {
+    @apply mt-1 min-h-8 text-[11px] leading-4 text-paper/55;
+  }
+
+  .action-card span {
+    @apply mt-3 block rounded-md border border-bronze/35 px-2 py-2 text-xs font-bold text-bronze;
+  }
+
+  .card-content {
+    @apply relative z-10;
+  }
+
+  .card-border-top {
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-bronze to-transparent;
+  }
+
+  .card-border-bottom {
+    @apply absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-bronze to-transparent;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-bronze text-ink font-bold rounded-card hover:bg-jade hover:shadow-lg transition-all duration-200 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 border border-bronze text-bronze bg-transparent rounded-card hover:bg-bronze/10 transition-all duration-200;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-ink/50 rounded-full overflow-hidden border border-bronze/20;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-jade to-bronze transition-all duration-500;
+  }
+
+  .nav-link {
+    @apply flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium text-paper hover:text-bronze transition-colors;
+  }
+
+  .nav-link.active {
+    @apply text-bronze;
+  }
+
+  .input-base {
+    @apply bg-ink border border-bronze/30 text-paper rounded-card px-4 py-2 placeholder:text-paper/30 focus:outline-none focus:border-bronze focus:ring-1 focus:ring-bronze/30 transition-all;
+  }
+}
+
+/* 动画 */
+@layer utilities {
+  .animate-flip-in {
+    animation: flipIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes flipIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(90deg) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg) scale(1);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .safe-area-inset {
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-bronze/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-bronze/50;
+}

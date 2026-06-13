@@ -1,0 +1,38 @@
+[
+  {
+    "reward_id": "weekly_qinhan_collect_3",
+    "pool_id": "weekly_qinhan",
+    "dynasty_tag": "qin_han",
+    "required_count": 3,
+    "reward_type": "coins",
+    "reward_payload": { "amount": 1000 },
+    "desc": "秦汉卡池收集 3 张奖励金币。"
+  },
+  {
+    "reward_id": "weekly_qinhan_collect_6",
+    "pool_id": "weekly_qinhan",
+    "dynasty_tag": "qin_han",
+    "required_count": 6,
+    "reward_type": "normal_ticket",
+    "reward_payload": { "amount": 1 },
+    "desc": "秦汉卡池收集 6 张奖励普通抽卡券。"
+  },
+  {
+    "reward_id": "weekly_qinhan_collect_9",
+    "pool_id": "weekly_qinhan",
+    "dynasty_tag": "qin_han",
+    "required_count": 9,
+    "reward_type": "random_sr_card",
+    "reward_payload": { "dynasty_tag": "qin_han", "rarity": "epic" },
+    "desc": "秦汉卡池收集 9 张奖励随机 SR 主题卡。"
+  },
+  {
+    "reward_id": "weekly_qinhan_collect_12",
+    "pool_id": "weekly_qinhan",
+    "dynasty_tag": "qin_han",
+    "required_count": 12,
+    "reward_type": "cosmetic",
+    "reward_payload": { "cosmetic_type": "card_back", "asset_id": "card_back_qinhan_001" },
+    "desc": "秦汉卡池收集满 12 张奖励限定卡背。"
+  }
+]
