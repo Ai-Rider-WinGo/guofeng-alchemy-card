@@ -57,6 +57,10 @@
 </p>
 
 <p align="center">
+  <img src="docs/showcase/premium-card-art.jpg" alt="国风炼金卡牌高质量卡牌视觉探索" width="100%" />
+</p>
+
+<p align="center">
   <img src="docs/showcase/readme-card-wall.png" alt="国风炼金卡牌卡牌视觉资产展示" width="100%" />
 </p>
 
