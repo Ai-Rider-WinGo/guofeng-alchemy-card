@@ -1,0 +1,75 @@
+{
+  "theme": "guofeng_historical_card_game",
+  "colors": {
+    "ink_black": "#16120E",
+    "lacquer_red": "#5A1F1A",
+    "bronze_gold": "#B88A3B",
+    "highlight_gold": "#D8B463",
+    "paper_base": "#E9D8B0",
+    "bamboo_brown": "#7A4E2C",
+    "danger_red": "#A64232",
+    "disabled_gray": "#5A5145",
+    "new_card_gold": "#E8C56F",
+    "ssr_gold": "#F1D47A"
+  },
+  "radii": {
+    "button_primary": 12,
+    "button_secondary": 10,
+    "icon_button": 10,
+    "filter_chip": 8
+  },
+  "strokes": {
+    "outer_bronze": 3,
+    "inner_gold": 1,
+    "secondary_bronze": 1
+  },
+  "mobile_750x1334": {
+    "button_primary_height": 96,
+    "button_secondary_height": 68,
+    "icon_button_size": 64,
+    "bottom_nav_height": 124,
+    "button_primary_font_size": 34,
+    "button_secondary_font_size": 26
+  },
+  "states": {
+    "default": {
+      "offset_y": 0,
+      "edge_brightness": 1,
+      "shadow_opacity": 0.32
+    },
+    "pressed": {
+      "offset_y": 2,
+      "edge_brightness": 0.72,
+      "shadow_opacity": 0.48
+    },
+    "disabled": {
+      "saturation": 0.35,
+      "edge_brightness": 0.35,
+      "text_color": "#8D8170"
+    },
+    "claimable": {
+      "pulse_color": "#D8B463",
+      "pulse_duration_ms": 1600,
+      "pulse_scope": "edge_only"
+    },
+    "selected": {
+      "edge_color": "#D8B463",
+      "top_line": true,
+      "shadow_opacity": 0.38
+    }
+  },
+  "forbidden_styles": [
+    "modern SaaS button",
+    "web button",
+    "material design",
+    "blue purple gradient",
+    "neon cyberpunk",
+    "glassmorphism",
+    "pill button",
+    "flat UI",
+    "alchemy furnace",
+    "talisman",
+    "magic circle",
+    "immortal cultivation"
+  ]
+}

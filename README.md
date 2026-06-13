@@ -19,11 +19,14 @@
 - `docs/mvp-scope.md`：第一版玩法验证范围
 - `docs/data-model.md`：核心 JSON 数据模型说明
 - `docs/next-steps.md`：后续开发顺序
+- `docs/ui-interaction-style-guide.md`：前端按钮、底部导航、筛选、状态反馈风格规范
 - `config/cards.json`：MVP 样例卡牌母表
+- `config/ui_style_tokens.json`：前端 UI 颜色、尺寸、状态 token
 - `config/merge_rules.json`：MVP 合成规则
 - `config/draw_pools.json`：MVP 抽卡池
 - `config/daily_limits.json`：每日抽卡与奖励次数
 - `assets-source/prompts/card-art-style.md`：卡牌原画提示词风格基线
+- `assets-source/prompts/ui-button-style.md`：前端按钮和交互控件生成提示词
 
 ## MVP 内容方向
 
@@ -41,4 +44,4 @@
 - 合成时必须解释历史关系，而不是只给结果。
 - 经济参数进入配置表，不写死在代码里。
 - 终极编号卡、广告、支付、后台管理放到玩法验证之后。
-
+- 前端按钮和交互控件必须遵循国风历史卡牌手游质感，不使用现代网页按钮或 SaaS 胶囊风。
