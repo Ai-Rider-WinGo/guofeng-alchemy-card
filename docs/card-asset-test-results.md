@@ -83,3 +83,37 @@
 ### han_dynasty_founding_005 大汉开国
 
 - 状态：待记录
+
+## Batch E 交互按钮与控件记录
+
+### button_primary_draw10 抽 10 次主按钮
+
+- 状态：待记录
+
+### button_secondary_draw1 抽 1 次按钮
+
+- 状态：待记录
+
+### button_synthesis 立即合成按钮
+
+- 状态：待记录
+
+### button_reward_claimable 领取奖励按钮
+
+- 状态：待记录
+
+### button_plain_probability 概率说明按钮
+
+- 状态：待记录
+
+### icon_button_close 关闭图标按钮
+
+- 状态：待记录
+
+### bottom_nav 底部导航
+
+- 状态：待记录
+
+### badge_red_dot 朱砂红点
+
+- 状态：待记录

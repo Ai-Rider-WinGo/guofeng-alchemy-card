@@ -23,8 +23,10 @@
 - `docs/card-asset-test-requirements.md`：素材生成新一轮测试需求
 - `docs/card-copy.md`：卡牌内文字内容与画面关键词
 - `docs/card-asset-test-results.md`：样张测试记录模板
+- `docs/ui-interaction-style-guide.md`：按钮、底部导航、筛选、状态反馈的交互 UI 风格规范
 - `config/cards.json`：MVP 样例卡牌母表
 - `config/card_text_content.json`：卡面、详情页、图鉴文字内容
+- `config/ui_style_tokens.json`：交互 UI 颜色、尺寸、状态 token
 - `config/merge_rules.json`：MVP 合成规则
 - `config/draw_pools.json`：MVP 抽卡池
 - `config/daily_limits.json`：每日抽卡与奖励次数
@@ -47,3 +49,4 @@
 - 经济参数进入配置表，不写死在代码里。
 - 终极编号卡、广告、支付、后台管理放到玩法验证之后。
 - 图片生成不承担大段文字展示，卡牌文字由配置和 UI 叠加，避免 AI 乱码。
+- 按钮和交互控件必须遵循游戏 UI 质感，不使用现代网页按钮或 SaaS 胶囊风。

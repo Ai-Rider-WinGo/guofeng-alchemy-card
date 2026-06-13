@@ -39,6 +39,7 @@
 - Batch B：补齐 MVP 闭环缺少的 6 张卡。
 - Batch C：制作卡背与稀有度卡框。
 - Batch D：导出主图、卡面预览、256 缩略图、128 缩略图并验证 Cocos 导入。
+- Batch E：按 `docs/ui-interaction-style-guide.md` 修正按钮、底部导航、筛选标签和状态反馈。
 
 卡牌文字内容以 `docs/card-copy.md` 和 `config/card_text_content.json` 为准，不要求 ComfyUI 在图片中生成文字。
 
