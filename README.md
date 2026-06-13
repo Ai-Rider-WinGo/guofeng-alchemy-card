@@ -61,6 +61,12 @@
 </p>
 
 <p align="center">
+  <a href="./docs/card-master-table.md">
+    <img src="docs/showcase/card-master-table-preview.png" alt="国风炼金卡牌母卡总表预览" width="100%" />
+  </a>
+</p>
+
+<p align="center">
   <img src="docs/showcase/readme-card-wall.png" alt="国风炼金卡牌卡牌视觉资产展示" width="100%" />
 </p>
 
@@ -78,6 +84,12 @@
 | H5 视觉原型 | 参考中 | 保留 Next.js H5 原型作为视觉与交互参考，不作为最终抖音小游戏客户端 |
 | 后端服务 | 规划中 | 用户、抽卡、背包、卡册、任务、支付、广告奖励、运营后台等模块已规划，尚未接入生产后端 |
 | AI 素材管线 | 规划中 | 已有卡牌风格 prompt 基线，后续接 ComfyUI 批量出图与资源入库 |
+
+## 内容资产总表
+
+- [母卡总表 Markdown](./docs/card-master-table.md)：适合在 GitHub 内直接阅读，覆盖等级体系、12 张 MVP 母卡、合成规则与素材统计。
+- [母卡总表 HTML](./docs/card-master-table.html)：可视化总表文件，适合下载或本地打开查看完整样式。
+- [素材产出总表](./docs/card-asset-inventory.md)：记录卡牌本体、卡背、卡框、纹样边框、缩略图与 workflow 产出。
 
 ## 技术栈
 
@@ -169,6 +181,8 @@ MVP 样例线采用“秦汉篇 / 楚汉战争”作为第一条验证链：
 - [技术栈与工程模块](./docs/technical-stack.md)
 - [系统架构](./docs/architecture.md)
 - [数据配置系统](./docs/data-model.md)
+- [母卡总表](./docs/card-master-table.md)
+- [素材产出总表](./docs/card-asset-inventory.md)
 - [Cocos 前端结构](./docs/frontend-structure.md)
 - [产品路线图](./docs/roadmap.md)
 - [后续开发顺序](./docs/next-steps.md)
