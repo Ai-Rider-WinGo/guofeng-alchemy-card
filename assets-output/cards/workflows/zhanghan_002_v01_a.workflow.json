@@ -1,0 +1,16 @@
+{
+  "card_id": "zhanghan_002",
+  "version": "v01",
+  "variant": "a",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 442154963,
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "width": 960,
+  "height": 1408,
+  "positive_prompt": "masterpiece, best quality, mounted on war horse reviewing Qin troops in formation, black Qin armor, stern commanding expression, military camp, a stern middle-aged Qin dynasty general Zhang Han, weathered tired face with military discipline, wearing black Qin lamellar armor with dark insignia, standing before Qin war chariot and military formation, Qin black banners, Qin army camp behind him, serious weary expression under command pressure, semi-realistic historical war illustration, Chinese Qin-Han era, muted dark palette, doomed military commander atmosphere, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d render, blurry, low quality, ugly, bad anatomy, extra fingers, missing limbs, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, distorted face, poorly drawn face, xianxia, fantasy magic, glowing aura, floating energy, neon",
+  "prompt_id": "b7b09dd8-f3e1-4ba3-b1c4-62899b6a11e1"
+}

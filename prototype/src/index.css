@@ -1,0 +1,439 @@
+@import "tailwindcss";
+
+/* ============================================
+   国风炼金卡牌 · UI 风格系统
+   基于 ui-interaction-style-guide.md
+   ============================================ */
+
+@theme {
+  /* 主色：墨黑、漆红、青铜金 */
+  --color-ink-black: #16120E;
+  --color-lacquer-red: #5A1F1A;
+  --color-lacquer-red-light: #7A2E26;
+  --color-bronze-gold: #B88A3B;
+  --color-bronze-gold-light: #D8B463;
+  --color-bronze-gold-dark: #8A6D2B;
+
+  /* 辅助色 */
+  --color-paper: #E9D8B0;
+  --color-paper-dark: #C4AA7E;
+  --color-bamboo: #7A4E2C;
+  --color-danger: #A64232;
+  --color-disabled: #5A5145;
+  --color-new-gold: #E8C56F;
+  --color-ssr-gold: #F1D47A;
+
+  /* 背景色 */
+  --color-bg: #0E0B08;
+  --color-bg-surface: #1A1510;
+  --color-bg-card: #1E1914;
+  --color-bg-overlay: rgba(10, 8, 5, 0.88);
+
+  /* 文字色 */
+  --color-text: #E9D8B0;
+  --color-text-bright: #F5EDE0;
+  --color-text-muted: #8D8170;
+  --color-text-gold: #D8B463;
+
+  /* 稀有度色 */
+  --color-rarity-common: #8D8170;
+  --color-rarity-uncommon: #5A7A4A;
+  --color-rarity-rare: #4A6A8A;
+  --color-rarity-epic: #7A4A8A;
+  --color-rarity-legendary: #B88A3B;
+
+  /* 字体 */
+  --font-family-cn: "Noto Serif SC", "Source Han Serif CN", "STSong", "SimSun", serif;
+  --font-family-cn-sans: "Noto Sans SC", "Source Han Sans CN", "Microsoft YaHei", sans-serif;
+}
+
+/* ============================================
+   基础重置
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-cn), system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100dvh;
+  /* 宣纸微纹理背景 */
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(184, 138, 59, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(90, 31, 26, 0.03) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(184, 138, 59, 0.2);
+  border-radius: 2px;
+}
+
+/* ============================================
+   国风按钮系统
+   ============================================ */
+
+/* 主操作按钮：深漆红底 + 青铜金描边 */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 28px;
+  background: linear-gradient(180deg, #6A2520 0%, #4A1815 50%, #3A1010 100%);
+  border: 2px solid var(--color-bronze-gold);
+  border-radius: 10px;
+  color: var(--color-paper);
+  font-family: var(--font-family-cn);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 120ms ease;
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 99, 0.3) inset,
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(184, 138, 59, 0.1);
+}
+
+/* 内描边 */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px solid rgba(216, 180, 99, 0.2);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* 顶部光泽 */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 99, 0.4) inset,
+    0 2px 12px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(184, 138, 59, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 99, 0.2) inset,
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:disabled {
+  background: linear-gradient(180deg, #3A3530 0%, #2A2520 100%);
+  border-color: var(--color-disabled);
+  color: var(--color-text-muted);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-primary:disabled::before {
+  border-color: rgba(90, 81, 69, 0.3);
+}
+
+/* 高价值按钮：墨黑底 + 双层青铜金边 */
+.btn-premium {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 32px;
+  background: linear-gradient(180deg, #1E1A14 0%, #14100C 50%, #0E0B08 100%);
+  border: 2.5px solid var(--color-bronze-gold);
+  border-radius: 10px;
+  color: var(--color-bronze-gold-light);
+  font-family: var(--font-family-cn);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 120ms ease;
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 99, 0.4) inset,
+    0 0 0 4px rgba(184, 138, 59, 0.08),
+    0 3px 12px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(184, 138, 59, 0.12);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(216, 180, 99, 0.25);
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.btn-premium::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(216, 180, 99, 0.08), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+}
+
+.btn-premium:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 99, 0.2) inset,
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 次级按钮：宣纸底/半透明墨黑 + 细青铜边 */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px;
+  background: rgba(26, 21, 16, 0.8);
+  border: 1px solid rgba(184, 138, 59, 0.35);
+  border-radius: 8px;
+  color: var(--color-paper-dark);
+  font-family: var(--font-family-cn);
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(184, 138, 59, 0.5);
+  background: rgba(30, 25, 20, 0.9);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px);
+}
+
+/* 可领取呼吸光 */
+.btn-claimable {
+  animation: claimable-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes claimable-pulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(216, 180, 99, 0.3) inset, 0 2px 8px rgba(0, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 0 1px rgba(216, 180, 99, 0.5) inset, 0 2px 12px rgba(184, 138, 59, 0.2), 0 0 20px rgba(216, 180, 99, 0.1); }
+}
+
+/* ============================================
+   卡框系统
+   ============================================ */
+
+.card-frame {
+  position: relative;
+  background: linear-gradient(180deg, #1E1914 0%, #14100C 100%);
+  border: 2px solid var(--color-bronze-gold-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-frame:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.5),
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(184, 138, 59, 0.08);
+}
+
+/* 稀有度卡框光效 */
+.card-frame-epic {
+  border-color: #7A4A8A;
+  box-shadow:
+    0 0 0 1px rgba(122, 74, 138, 0.3) inset,
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(122, 74, 138, 0.1);
+}
+
+.card-frame-legendary {
+  border-color: var(--color-bronze-gold);
+  box-shadow:
+    0 0 0 1px rgba(216, 180, 99, 0.3) inset,
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(184, 138, 59, 0.15);
+}
+
+/* 传说卡流光 */
+.card-frame-legendary::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(216, 180, 99, 0.1), transparent, rgba(216, 180, 99, 0.05), transparent);
+  animation: card-rotate 6s linear infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes card-rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   竹简筛选标签
+   ============================================ */
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 14px;
+  background: rgba(26, 21, 16, 0.6);
+  border: 1px solid rgba(122, 78, 44, 0.4);
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  font-family: var(--font-family-cn);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.filter-chip:hover {
+  border-color: rgba(184, 138, 59, 0.4);
+  color: var(--color-text);
+}
+
+.filter-chip-active {
+  background: rgba(184, 138, 59, 0.12);
+  border-color: var(--color-bronze-gold);
+  color: var(--color-bronze-gold-light);
+}
+
+/* ============================================
+   青铜分割线
+   ============================================ */
+
+.divider-bronze {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 138, 59, 0.3), transparent);
+  border: none;
+  margin: 12px 0;
+}
+
+/* ============================================
+   朱砂红点
+   ============================================ */
+
+.badge-dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background: #C44030;
+  border: 1.5px solid var(--color-bg-card);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(196, 64, 48, 0.5);
+}
+
+/* ============================================
+   弹窗系统
+   ============================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(10, 8, 5, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(180deg, #1E1914 0%, #14100C 100%);
+  border: 2px solid rgba(184, 138, 59, 0.3);
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.5),
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(184, 138, 59, 0.05);
+  overflow: hidden;
+}
+
+.modal-content::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 180, 99, 0.4), transparent);
+}
+
+/* ============================================
+   页标题装饰
+   ============================================ */
+
+.page-title {
+  position: relative;
+  text-align: center;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-bronze-gold), transparent);
+}
+
+/* ============================================
+   自定义动画
+   ============================================ */
+
+/* 呼吸光 */
+@keyframes breathe {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* 浮入 */
+@keyframes float-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,105 @@
+{
+  "comfyui_api": "http://127.0.0.1:8188",
+  "checkpoint": "v1-5-pruned-emaonly-fp16.safetensors",
+  "seed_start": 20260612,
+  "jobs": [
+    {
+      "card_id": "liubang_002",
+      "version": "a",
+      "prompt_id": "0536d2ed-595d-4723-8425-bc9aa8988568",
+      "workflow": "assets/cards/samples/workflows/liubang_002_a.json",
+      "candidate": "assets/cards/samples/candidates/liubang_002_a.png"
+    },
+    {
+      "card_id": "liubang_002",
+      "version": "b",
+      "prompt_id": "8be4126e-52f2-410d-a60f-f820d9224384",
+      "workflow": "assets/cards/samples/workflows/liubang_002_b.json",
+      "candidate": "assets/cards/samples/candidates/liubang_002_b.png"
+    },
+    {
+      "card_id": "jixin_002",
+      "version": "a",
+      "prompt_id": "4d47d006-cb04-49cf-87bc-ee8d186a536c",
+      "workflow": "assets/cards/samples/workflows/jixin_002_a.json",
+      "candidate": "assets/cards/samples/candidates/jixin_002_a.png"
+    },
+    {
+      "card_id": "jixin_002",
+      "version": "b",
+      "prompt_id": "f3ea43c1-f7c8-4fe9-b411-b8a9931b7c5c",
+      "workflow": "assets/cards/samples/workflows/jixin_002_b.json",
+      "candidate": "assets/cards/samples/candidates/jixin_002_b.png"
+    },
+    {
+      "card_id": "xiangyu_002",
+      "version": "a",
+      "prompt_id": "2e287c35-1e5c-4f51-999d-b361bfac1972",
+      "workflow": "assets/cards/samples/workflows/xiangyu_002_a.json",
+      "candidate": "assets/cards/samples/candidates/xiangyu_002_a.png"
+    },
+    {
+      "card_id": "xiangyu_002",
+      "version": "b",
+      "prompt_id": "94497d85-585d-40a5-899e-192e56b662b6",
+      "workflow": "assets/cards/samples/workflows/xiangyu_002_b.json",
+      "candidate": "assets/cards/samples/candidates/xiangyu_002_b.png"
+    },
+    {
+      "card_id": "zhanghan_002",
+      "version": "a",
+      "prompt_id": "182a699e-55d1-41b3-a21b-7b0a6ac98645",
+      "workflow": "assets/cards/samples/workflows/zhanghan_002_a.json",
+      "candidate": "assets/cards/samples/candidates/zhanghan_002_a.png"
+    },
+    {
+      "card_id": "zhanghan_002",
+      "version": "b",
+      "prompt_id": "93e1558c-2208-4209-8de4-3194f3a494c9",
+      "workflow": "assets/cards/samples/workflows/zhanghan_002_b.json",
+      "candidate": "assets/cards/samples/candidates/zhanghan_002_b.png"
+    },
+    {
+      "card_id": "xingyang_escape_004",
+      "version": "a",
+      "prompt_id": "5729f454-5c82-4931-beff-92685ffe5f04",
+      "workflow": "assets/cards/samples/workflows/xingyang_escape_004_a.json",
+      "candidate": "assets/cards/samples/candidates/xingyang_escape_004_a.png"
+    },
+    {
+      "card_id": "xingyang_escape_004",
+      "version": "b",
+      "prompt_id": "f3cc8df9-a936-4848-8544-fb285f41bfa2",
+      "workflow": "assets/cards/samples/workflows/xingyang_escape_004_b.json",
+      "candidate": "assets/cards/samples/candidates/xingyang_escape_004_b.png"
+    },
+    {
+      "card_id": "julu_battle_004",
+      "version": "a",
+      "prompt_id": "8b18546f-189b-49e2-bacd-c6d99b4ffb30",
+      "workflow": "assets/cards/samples/workflows/julu_battle_004_a.json",
+      "candidate": "assets/cards/samples/candidates/julu_battle_004_a.png"
+    },
+    {
+      "card_id": "julu_battle_004",
+      "version": "b",
+      "prompt_id": "51380e3a-86ad-468c-99d3-8a9526e144b7",
+      "workflow": "assets/cards/samples/workflows/julu_battle_004_b.json",
+      "candidate": "assets/cards/samples/candidates/julu_battle_004_b.png"
+    },
+    {
+      "card_id": "card_back",
+      "version": "a",
+      "prompt_id": "4f7afe79-8e52-4ea7-834f-57ba922ee80f",
+      "workflow": "assets/cards/samples/workflows/card_back_a.json",
+      "candidate": "assets/cards/samples/candidates/card_back_a.png"
+    },
+    {
+      "card_id": "card_back",
+      "version": "b",
+      "prompt_id": "e4986321-f159-42d7-a756-95306f301af0",
+      "workflow": "assets/cards/samples/workflows/card_back_b.json",
+      "candidate": "assets/cards/samples/candidates/card_back_b.png"
+    }
+  ]
+}

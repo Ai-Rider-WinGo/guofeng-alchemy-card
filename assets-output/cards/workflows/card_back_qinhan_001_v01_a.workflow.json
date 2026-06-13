@@ -1,0 +1,8 @@
+{
+  "card_id": "card_back_qinhan_001",
+  "name": "通用卡背",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 141366378,
+  "positive_prompt": "masterpiece, best quality, Chinese Qin-Han dynasty card back design, ancient bronze vessel patterns, dragon and cloud motifs in dark bronze and aged gold, central abstract circular seal mark, textured parchment background, worn edges, ancient scroll aesthetic, semi-realistic texture art, dark atmospheric, no text, no faces, no figures, symmetrical ornamental design, vertical composition, game card back"
+}

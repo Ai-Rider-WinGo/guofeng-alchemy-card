@@ -1,0 +1,93 @@
+{
+  "project": "guofeng-alchemy-card",
+  "target": "Windows ComfyUI MVP card samples",
+  "comfyui_api": "http://127.0.0.1:8188",
+  "output_dir": "assets/cards/samples",
+  "candidate_versions": ["a", "b"],
+  "recommended_version": "b",
+  "image_size": {
+    "width": 768,
+    "height": 1024,
+    "ratio": "3:4"
+  },
+  "negative_prompt": "modern clothes, modern weapon, sci-fi, fantasy monster, immortal cultivation, magic circle, alchemy furnace, cute chibi, anime moe, over saturated red gold, gore, parody, text artifact, watermark, logo, western fantasy armor, neon glow",
+  "cards": [
+    {
+      "card_id": "liubang_002",
+      "name": "刘邦",
+      "type": "person",
+      "rarity": "rare",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "刘邦, Qin-Han transition period, commoner uprising leader from Pei County, practical cloth robe with restrained early Han armor details, leather belt, sword at side, campaign tent, banners, bamboo slips, early Han motifs, calm strategic expression, looking into the distance, one hand resting on sword hilt, grounded charisma, emerging ruler presence without imperial dragon robe, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark mobile card palette, low-saturation gold accents, cinematic lighting, vertical 3:4 composition, subject fully inside crop, no card frame baked into the art",
+        "b": "刘邦, Qin-Han transition period, practical uprising leader from Pei County, standing at the edge of a campaign tent with bamboo slips and plain banners, cloth robe, light leather armor, simple sword, hand on a campaign map, eyes lifted toward a distant battlefield, calm and tactical, not imperial, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark palette with restrained gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art"
+      }
+    },
+    {
+      "card_id": "jixin_002",
+      "name": "纪信",
+      "type": "person",
+      "rarity": "uncommon",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "纪信, Qin-Han transition period, loyal retainer during the Siege of Xingyang, disguised as the Han king to help Liu Bang escape, restrained noble disguise layered over wartime robes, Xingyang city gate at night, firelight, besieging Chu forces in the distance, chariot and guards near the gate, tragic resolute expression, protective sacrifice, walking into danger with dignity, no death scene, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark mobile card palette, low-saturation gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art",
+        "b": "纪信, Qin-Han transition period, Ji Xin at Xingyang gate before the sacrificial deception, restrained Han-king disguise cloak over wartime robes, night city gate, chariot lanterns, orange firelight, Chu siege shadows outside, guards watching with solemn tension, one hand lifting the cloak, steady face, walking forward, tragic but dignified, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark palette with restrained gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art"
+      }
+    },
+    {
+      "card_id": "xiangyu_002",
+      "name": "项羽",
+      "type": "person",
+      "rarity": "rare",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "项羽, Qin-Han transition period, Western Chu hegemon and powerful Chu commander, historically grounded, heavy Chu military armor, cloak, practical ornate details, long halberd or sword, battlefield dust, Chu banners, tense war camp atmosphere, smoke and wind, imposing forceful stance, heroic pressure, subtle undertone of tragic destiny, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark mobile card palette, low-saturation gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art",
+        "b": "项羽, Qin-Han transition period, Western Chu commander in heavy Chu armor on a dusty battlefield ridge, long halberd grounded beside him, Chu banners whipping behind, powerful three-quarter stance, commanding troops, intense expression, human heroic scale, faint tragic undertone, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark palette with restrained gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art"
+      }
+    },
+    {
+      "card_id": "zhanghan_002",
+      "name": "章邯",
+      "type": "person",
+      "rarity": "uncommon",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "章邯, Qin-Han transition period, late Qin general under severe military pressure, historically complex rather than villainous, black Qin military armor, restrained bronze fittings, commander cloak, Qin army formation, war chariot elements, black Qin banners, dusty campaign command post, maps and bamboo orders, stern tired expression, burdened by command, realistic and human, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark mobile card palette, low-saturation gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art",
+        "b": "章邯, Qin-Han transition period, late Qin general in black Qin armor inside a field command area, Qin banners, chariot wheel silhouette, soldiers waiting in formation, bamboo military orders on a table, stern commander turning slightly toward the battlefield, tired eyes, pressure of collapsing Qin military system, realistic and complex, not villainous, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark palette with restrained gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art"
+      }
+    },
+    {
+      "card_id": "xingyang_escape_004",
+      "name": "荥阳脱困",
+      "type": "event",
+      "rarity": "epic",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "荥阳脱困, Qin-Han transition period, Ji Xin disguises himself as the Han king and exits Xingyang to draw Chu forces away while Liu Bang escapes by another route, foreground Ji Xin in royal disguise near a chariot and loyal guards, middle ground Xingyang city gate with firelight and opened heavy doors, background Chu siege army, banners, night smoke, subtle distant hidden escape route, historical relationship and sacrifice, not a simple portrait, guofeng epic historical illustration, semi-realistic, ancient book paper grain, bronze and stone texture, dark mobile card palette, low-saturation gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into art",
+        "b": "荥阳脱困, Qin-Han transition period, narrative multi-layer event scene, foreground Ji Xin's decoy chariot leaving Xingyang gate under torchlight with guards, middle ground Chu soldiers turning toward the decoy, background narrow shadowed route where Liu Bang's small party escapes, night siege, city walls, firelight, smoke, tense sacrifice, event relationship and deception, not a portrait, guofeng epic historical illustration, semi-realistic, ancient paper grain, bronze and stone texture, dark palette with restrained gold, cinematic lighting, vertical 3:4 composition, no card frame baked into art"
+      }
+    },
+    {
+      "card_id": "julu_battle_004",
+      "name": "巨鹿之战",
+      "type": "event",
+      "rarity": "epic",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "巨鹿之战, Qin-Han transition period, Battle of Julu, Xiang Yu leads Chu forces in a decisive assault, Qin army formation under pressure, break the cauldrons and sink the boats atmosphere without fantasy, high-conflict battlefield scene, Chu cavalry and infantry charging, Qin shield and chariot lines strained, banners, smoke, dust, broken cooking vessels or riverbank hints as historical symbols, guofeng epic historical illustration, semi-realistic, ancient book paper grain, bronze and stone texture, dark mobile card palette, low-saturation gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into art",
+        "b": "巨鹿之战, Qin-Han transition period, Battle of Julu as a dramatic vertical battlefield composition, foreground broken cauldrons and abandoned boats as symbols, middle ground Chu forces charging through dust under Xiang Yu's command, background Qin shield wall and chariots buckling, banners torn by wind, high tension, historically grounded, no fantasy, guofeng epic historical illustration, semi-realistic, ancient paper grain, bronze and stone texture, dark palette with restrained gold, cinematic lighting, vertical 3:4 composition, no card frame baked into art"
+      }
+    },
+    {
+      "card_id": "card_back",
+      "name": "卡背",
+      "type": "card_back",
+      "rarity": "system",
+      "recommended_version": "b",
+      "prompts": {
+        "a": "mobile game card back for a Chinese historical card collection game named 国风炼金卡牌, dark desaturated background with parchment scroll texture, bronze taotie-inspired border motifs, subtle cloud patterns, bamboo-slip geometry, low-saturation gold linework, refined premium mobile card UI feel, centered abstract ancient seal emblem, semi-realistic guofeng game card art, ancient book paper grain, bronze and stone texture, cinematic soft lighting, vertical 3:4 composition, no external card frame",
+        "b": "mobile game card back for 国风炼金卡牌, restrained museum-grade Chinese historical artifact feeling, dark ink-black lacquer base, bronze cloud-and-thunder patterns, bamboo slip rhythm lines, subtle Chu-Han battlefield map texture, low-saturation aged gold accents, centered abstract seal emblem, no readable text required, semi-realistic guofeng collectible card back, premium mobile game asset, parchment grain, stone rubbing texture, symmetrical vertical 3:4 composition, generous safe margins"
+      }
+    }
+  ]
+}

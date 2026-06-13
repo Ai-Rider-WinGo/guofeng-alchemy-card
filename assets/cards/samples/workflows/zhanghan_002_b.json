@@ -1,0 +1,86 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20260619,
+      "steps": 28,
+      "cfg": 6.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly-fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "章邯, Qin-Han transition period, late Qin general in black Qin armor inside a field command area, Qin banners, chariot wheel silhouette, soldiers waiting in formation, bamboo military orders on a table, stern commander turning slightly toward the battlefield, tired eyes, pressure of collapsing Qin military system, realistic and complex, not villainous, semi-realistic guofeng card illustration, ancient book paper grain, bronze and stone texture, dark palette with restrained gold accents, cinematic lighting, vertical 3:4 composition, no card frame baked into the art",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "modern clothes, modern weapon, sci-fi, fantasy monster, immortal cultivation, magic circle, alchemy furnace, cute chibi, anime moe, over saturated red gold, gore, parody, text artifact, watermark, logo, western fantasy armor, neon glow",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "guofeng_card_samples/zhanghan_002_b",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  }
+}

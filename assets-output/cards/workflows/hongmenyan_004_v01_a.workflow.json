@@ -1,0 +1,12 @@
+{
+  "card_id": "hongmenyan_004",
+  "card_type": "事件",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1344787999,
+  "steps": 30,
+  "cfg": 5.5,
+  "positive_prompt": "masterpiece, best quality, Hongmen banquet scene in Qin-Han era, large military tent interior, two opposing factions seated at low tables, Liu Bang and Xiang Yu facing each other across the feast, swordsmen performing sword dance in center, multiple figures in Han and Chu attire, candlelight and shadows, tense political atmosphere, hidden danger at banquet, semi-realistic historical illustration, Chinese ancient court intrigue, dramatic chiaroscuro, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, digital UI, modern building, modern clothing, solo portrait, standing alone",
+  "prompt_id": "d7805fe8-f188-461b-a74c-736aecbcb8de"
+}

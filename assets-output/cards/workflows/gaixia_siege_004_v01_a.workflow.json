@@ -1,0 +1,12 @@
+{
+  "card_id": "gaixia_siege_004",
+  "card_type": "事件",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 19462357,
+  "steps": 30,
+  "cfg": 5.5,
+  "positive_prompt": "masterpiece, best quality, Gaixia siege night scene, isolated Chu military camp surrounded by distant Han army campfires on all sides, Xiang Yu in tent looking at maps with few remaining soldiers, desolate atmosphere, sounds of Chu folk songs drifting from Han camp, defeated hero final stand, multiple figures, night landscape with encirclement, semi-realistic historical war illustration, Chinese Qin-Han era, tragic atmosphere, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, digital UI, modern building, modern clothing, solo portrait, standing alone",
+  "prompt_id": "7ed0ce1e-ee79-44b8-b42b-aec0d978694c"
+}

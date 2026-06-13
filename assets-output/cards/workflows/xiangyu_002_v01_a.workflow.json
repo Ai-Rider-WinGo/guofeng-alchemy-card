@@ -1,0 +1,16 @@
+{
+  "card_id": "xiangyu_002",
+  "version": "v01",
+  "variant": "a",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 288072559,
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "width": 960,
+  "height": 1408,
+  "positive_prompt": "masterpiece, best quality, charging forward on battlefield, halberd raised, roaring battle cry, Chu cavalry behind, dust storm, overwhelming aggressive presence, a fierce masculine warrior general Xiang Yu of Chu, imposing muscular build, angular aggressive face, double-pupiled legendary eyes, heavy bronze lamellar armor with ornate Chu patterns, wielding long halberd, dark red cape, standing on battlefield with dust clouds, Chu army banners behind him, intimidating overwhelming presence, semi-realistic historical war illustration, Chinese Qin-Han era, dark dramatic atmosphere, heroic but tragic aura, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d render, blurry, low quality, ugly, bad anatomy, extra fingers, missing limbs, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, distorted face, poorly drawn face, xianxia, fantasy magic, glowing aura, floating energy, neon",
+  "prompt_id": "5b7aa490-07a2-4e26-88a2-dc4993d1d58e"
+}

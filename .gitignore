@@ -1,6 +1,8 @@
 .DS_Store
 .codegraph/
 .reasonix/
+.qoder/
+Reasonix/
 node_modules/
 dist/
 build/

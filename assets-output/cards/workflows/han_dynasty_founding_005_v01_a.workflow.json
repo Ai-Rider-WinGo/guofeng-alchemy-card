@@ -1,0 +1,12 @@
+{
+  "card_id": "han_dynasty_founding_005",
+  "card_type": "阶段事件",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1277279107,
+  "steps": 30,
+  "cfg": 5.5,
+  "positive_prompt": "masterpiece, best quality, grand founding ceremony atmosphere, early Han dynasty court, Liu Bang now as emperor in simple dignified robes, officials and banners, Han que pillars silhouette in background, dawn light breaking over new dynasty, unified realm symbolism, solemn and dignified atmosphere, Chinese historical illustration, Qin-Han transition era, founding of dynasty, not fantastical, restrained grandeur, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, digital UI, modern building, modern clothing, solo portrait, standing alone",
+  "prompt_id": "ba130a00-6ec6-46c9-8384-0f7fb6a42274"
+}

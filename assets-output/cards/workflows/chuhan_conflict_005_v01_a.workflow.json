@@ -1,0 +1,12 @@
+{
+  "card_id": "chuhan_conflict_005",
+  "card_type": "阶段事件",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 918999900,
+  "steps": 30,
+  "cfg": 5.5,
+  "positive_prompt": "masterpiece, best quality, epic Chinese historical scene, Chu and Han armies facing each other across battlefield, divided banners of Chu in red and Han in dark colors, two rival camps on opposite hills, strategic map-like composition showing the divided realm, long campaign atmosphere, Xiang Yu on left side with Chu forces, Liu Bang on right side with Han forces, center showing contested territory, semi-realistic historical illustration, Chinese Qin-Han era, grand scale, historical turning point, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, digital UI, modern building, modern clothing, solo portrait, standing alone",
+  "prompt_id": "28964834-1fba-4d58-9aff-af9e6f50faec"
+}

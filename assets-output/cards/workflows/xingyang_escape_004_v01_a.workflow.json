@@ -1,0 +1,16 @@
+{
+  "card_id": "xingyang_escape_004",
+  "version": "v01",
+  "variant": "a",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 591094146,
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "width": 960,
+  "height": 1408,
+  "positive_prompt": "masterpiece, best quality, epic historical scene, Xingyang city gate at night, a Han commander disguised in royal robes riding chariot out of city gate, torches and firelight, Chu siege army watching from distance, city walls under siege, night sky with smoke, multiple figures in dynamic composition, dramatic sacrifice scene, the real Liu Bang escaping through distant route, semi-realistic Chinese historical war art, Qin-Han era, dramatic chiaroscuro lighting, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, solo portrait, standing alone",
+  "prompt_id": "78fc29e2-328e-4ea2-a785-b1adbfe607a0"
+}

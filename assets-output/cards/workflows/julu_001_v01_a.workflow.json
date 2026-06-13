@@ -1,0 +1,12 @@
+{
+  "card_id": "julu_001",
+  "card_type": "地点",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1460055075,
+  "steps": 30,
+  "cfg": 5.5,
+  "positive_prompt": "masterpiece, best quality, Julu battlefield plains in Qin-Han era, vast open field with remnants of battle, scattered broken chariots and weapons, distant mountains, war banners stuck in ground, smoke rising, dusty windswept terrain, historical turning point landscape, strategic location atmosphere, semi-realistic war landscape illustration, Chinese ancient battlefield, somber empty field, no dominant human figures, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, digital UI, modern building, modern clothing, solo portrait, standing alone",
+  "prompt_id": "ad798ffc-cd04-4948-9535-629eff60ac33"
+}

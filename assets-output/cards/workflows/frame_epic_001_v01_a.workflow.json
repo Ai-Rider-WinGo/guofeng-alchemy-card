@@ -1,0 +1,8 @@
+{
+  "card_id": "frame_epic_001",
+  "name": "史诗框",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 646892503,
+  "positive_prompt": "masterpiece, best quality, ornate rectangular card frame border design, polished dark bronze with gold filigree patterns, dragon and phoenix vine motifs, glowing warm amber accents in corners, dark empty center, ancient Chinese imperial decorative style, epic quality, no text, no figures, game card frame, vertical, intricate symmetrical border"
+}

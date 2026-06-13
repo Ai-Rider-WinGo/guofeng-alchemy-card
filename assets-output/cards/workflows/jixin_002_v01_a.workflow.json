@@ -1,0 +1,16 @@
+{
+  "card_id": "jixin_002",
+  "version": "v01",
+  "variant": "a",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1938595917,
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "width": 960,
+  "height": 1408,
+  "positive_prompt": "masterpiece, best quality, riding war chariot out of city gate, disguised in Han royal robes, torch-lit night scene, Chu besiegers watching from distance, a rugged masculine middle-aged Han commander Ji Xin, dressed in Han general armor disguised as Liu Bang, determined sacrificial expression, riding out of city gate at night, Xingyang city gate behind him, firelight and torches, Chu army in distance, solemn heroic atmosphere, willing to die for his lord, semi-realistic historical war illustration, Chinese Qin-Han era, dramatic lighting, sacrificial warrior spirit, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d render, blurry, low quality, ugly, bad anatomy, extra fingers, missing limbs, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, distorted face, poorly drawn face, xianxia, fantasy magic, glowing aura, floating energy, neon",
+  "prompt_id": "2e7f3ee6-b060-4d3b-8fee-61bff5fa8787"
+}

@@ -1,0 +1,16 @@
+{
+  "card_id": "liubang_002",
+  "version": "v01",
+  "variant": "a",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 616566910,
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "width": 960,
+  "height": 1408,
+  "positive_prompt": "masterpiece, best quality, command tent interior, studying battle map by candlelight, stern strategic expression, a rugged masculine middle-aged Han dynasty figure Liu Bang, weathered determined face, short graying beard, hand resting on sword hilt, wearing worn battle robes over bronze armor, standing in military command tent interior, scrolls and maps on table, Han banners behind, candlelight, strategic contemplative expression, commoner-turned-emperor aura, battle-hardened but statesman-like, semi-realistic historical illustration, Chinese Qin-Han era, muted earth tones, dignified, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d render, blurry, low quality, ugly, bad anatomy, extra fingers, missing limbs, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, distorted face, poorly drawn face, xianxia, fantasy magic, glowing aura, floating energy, neon",
+  "prompt_id": "f3b6035f-3c94-4641-bd69-f4646af259d3"
+}

@@ -1,0 +1,12 @@
+{
+  "card_id": "xingyang_001",
+  "card_type": "地点",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1836954838,
+  "steps": 30,
+  "cfg": 5.5,
+  "positive_prompt": "masterpiece, best quality, ancient Chinese walled city of Xingyang in Qin-Han era, strategic fortress city on hills, city walls and watchtowers, military camp outside gates, winding mountain roads, torches and campfires at dusk, banners, siege preparation atmosphere, historical strategic location, semi-realistic landscape illustration, Chinese ancient architecture, defensive city, no human figures dominant, moody lighting, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, digital UI, modern building, modern clothing, solo portrait, standing alone",
+  "prompt_id": "1d483a47-28e1-4b00-84d5-ec914916b454"
+}

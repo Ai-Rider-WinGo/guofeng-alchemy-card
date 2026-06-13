@@ -1,0 +1,16 @@
+{
+  "card_id": "julu_battle_004",
+  "version": "v01",
+  "variant": "b",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 348839727,
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "width": 960,
+  "height": 1408,
+  "positive_prompt": "masterpiece, best quality, Julu battlefield wide view, two armies clashing in massive formation, Chu soldiers breaking through Qin lines, dust and smoke, war banners of Chu and Qin, distant mountains, ancient Chinese epic war scene, multiple figures in combat, historical turning point atmosphere, semi-realistic illustration, Qin-Han era, dramatic scale, vertical composition",
+  "negative_prompt": "text, logo, watermark, signature, modern weapon, gun, western knight, european, anime, chibi, cartoon, 3d, blurry, low quality, ugly, bad anatomy, extra fingers, feminine, soft face, pretty boy, bishounen, androgynous, makeup, deformed face, xianxia, fantasy magic, glowing aura, floating energy, neon, solo portrait, standing alone",
+  "prompt_id": "5808658d-e814-45d0-bc2e-66f0d7f4c24c"
+}

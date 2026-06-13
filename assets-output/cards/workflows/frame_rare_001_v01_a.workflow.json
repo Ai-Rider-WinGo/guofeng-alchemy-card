@@ -1,0 +1,8 @@
+{
+  "card_id": "frame_rare_001",
+  "name": "稀有框",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1826287864,
+  "positive_prompt": "masterpiece, best quality, ornate rectangular card frame border design, burnished bronze and gold accent border, detailed ancient Chinese cloud and wave patterns, subtle jade inlay corners, dark empty center, refined warring states motifs, rare quality, no text, no figures, game card frame, vertical, symmetrical ornamental border"
+}

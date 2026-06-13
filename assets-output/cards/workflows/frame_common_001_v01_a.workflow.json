@@ -1,0 +1,8 @@
+{
+  "card_id": "frame_common_001",
+  "name": "普通框",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1422986072,
+  "positive_prompt": "masterpiece, best quality, ornate rectangular card frame border design, simple bronze border with minimal cloud pattern, dark empty center area, ancient Chinese bronze age motif, subtle worn edges, common rarity, restrained design, no text, no figures, game card frame, vertical, symmetrical border only"
+}

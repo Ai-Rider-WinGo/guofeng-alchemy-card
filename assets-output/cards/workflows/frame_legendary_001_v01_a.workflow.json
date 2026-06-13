@@ -1,0 +1,8 @@
+{
+  "card_id": "frame_legendary_001",
+  "name": "传说框",
+  "version": "v01",
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "seed": 1942006082,
+  "positive_prompt": "masterpiece, best quality, ornate rectangular card frame border design, legendary tier, dark aged bronze and bright gold elaborate border, intricate dragon coiling patterns, jade green and cinnabar red jewel-like accents at corners, ancient celestial motif, subtle light rays from center, imperial jade seal patterns, dark empty center, no text, no figures, game card frame, vertical, magnificent symmetrical border"
+}
