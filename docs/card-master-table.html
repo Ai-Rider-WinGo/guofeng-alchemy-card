@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国风炼金卡牌 · 母卡总表</title>
+<style>
+  :root { --bg:#1a1714; --card:#231f1b; --border:#3a322c; --gold:#c9a85c; --text:#d4c8b8; --dim:#8a7e6e; --accent1:#b8945c; --accent2:#6b8e9e; --accent3:#8e6b9e; --accent4:#9e6b6b; --green:#6b9e6b; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:"Noto Serif CJK SC","SimSun","STSong",serif; padding:40px 20px; line-height:1.8; }
+  .container { max-width:1200px; margin:0 auto; }
+  h1 { text-align:center; color:var(--gold); font-size:2em; margin-bottom:8px; letter-spacing:4px; }
+  .subtitle { text-align:center; color:var(--dim); margin-bottom:40px; font-size:0.9em; }
+  h2 { color:var(--gold); font-size:1.4em; margin:48px 0 16px; padding-bottom:8px; border-bottom:2px solid var(--border); }
+  h3 { color:var(--accent2); font-size:1.1em; margin:32px 0 12px; }
+  
+  table { width:100%; border-collapse:collapse; margin:16px 0 32px; font-size:0.9em; }
+  th { background:var(--card); color:var(--gold); padding:10px 12px; text-align:left; font-weight:bold; border-bottom:2px solid var(--border); white-space:nowrap; }
+  td { padding:8px 12px; border-bottom:1px solid var(--border); }
+  tr:hover td { background:rgba(255,255,255,0.03); }
+  
+  .badge { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.85em; font-weight:bold; }
+  .badge-common { background:#3a322c; color:#c9a85c; }
+  .badge-uncommon { background:#2a3a2a; color:#8ec98e; }
+  .badge-rare { background:#2a2a3a; color:#8eaac9; }
+  .badge-epic { background:#3a2a3a; color:#c98ec9; }
+  .badge-legendary { background:#3a2a1a; color:#e9b84c; }
+  
+  .done { color:var(--green); }
+  .pending { color:var(--dim); }
+  .rate { font-weight:bold; color:#6b9e6b; }
+  
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:16px 0 32px; }
+  .stat-card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:20px; text-align:center; }
+  .stat-card .num { font-size:2.2em; color:var(--gold); font-weight:bold; }
+  .stat-card .label { color:var(--dim); font-size:0.9em; margin-top:4px; }
+  
+  .merge-path { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:24px; margin:16px 0 32px; font-family:monospace; line-height:2.2; white-space:pre; color:var(--text); }
+  
+  .note { color:var(--dim); font-size:0.85em; margin:4px 0; }
+  .footer { text-align:center; color:var(--dim); margin-top:60px; font-size:0.8em; padding-top:24px; border-top:1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>国风炼金卡牌</h1>
+<p class="subtitle">母卡总表 · 秦汉篇 MVP v0.2 · 素材产出清单<br>
+<span class="note">策划案范围：MVP 12张 → 一期50张 → 全量12级2,130张母卡</span></p>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>一、等级体系</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>等级</th><th>大写</th><th>稀有度</th><th>卡牌类型</th><th>合成定位</th></tr></thead>
+<tbody>
+<tr><td><span class="badge badge-common">等级 壹</span></td><td>壹</td><td>Common 普通</td><td>地名、势力、官职、制度、基础人物</td><td>合成入口 · 基础素材</td></tr>
+<tr><td><span class="badge badge-uncommon">等级 贰</span></td><td>贰</td><td>Uncommon 精良 / Rare 稀有</td><td>关键人物、小事件</td><td>核心素材 · 合成中间件</td></tr>
+<tr><td><span class="badge badge-rare">等级 叁</span></td><td>叁</td><td>Rare 稀有</td><td>人物关系</td><td>桥梁卡 · 2→3→4 链条</td></tr>
+<tr><td><span class="badge badge-epic">等级 肆</span></td><td>肆</td><td>Epic 史诗</td><td>小型历史事件</td><td>成果卡 · 合成主要产出</td></tr>
+<tr><td><span class="badge badge-legendary">等级 伍</span></td><td>伍</td><td>Legendary 传说</td><td>阶段性大事件</td><td>终极卡 · 合成终点</td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>二、已有母卡（12张 · ✅已完成）</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>card_id</th><th>名称</th><th>类型</th><th>稀有度</th><th>等级</th><th>批次</th><th>分辨率</th><th>推荐版</th><th>seed</th><th>合成成功率</th><th>可合成目标</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>xingyang_001</td><td>荥阳</td><td>地点</td><td><span class="badge badge-common">Common</span></td><td>壹</td><td>B</td><td>960×1408</td><td>a</td><td>1836954838</td><td>—</td><td>xingyang_escape_004</td><td class="done">✅</td></tr>
+<tr><td>julu_001</td><td>巨鹿</td><td>地点</td><td><span class="badge badge-common">Common</span></td><td>壹</td><td>B</td><td>960×1408</td><td>a</td><td>1460055075</td><td>—</td><td>julu_battle_004</td><td class="done">✅</td></tr>
+<tr><td>liubang_002</td><td>刘邦</td><td>人物</td><td><span class="badge badge-rare">Rare</span></td><td>贰</td><td>A</td><td>960×1408</td><td>b</td><td>1181108306</td><td class="rate">100%</td><td>xingyang_escape_004</td><td class="done">✅</td></tr>
+<tr><td>jixin_002</td><td>纪信</td><td>人物</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>贰</td><td>A</td><td>960×1408</td><td>a</td><td>1938595917</td><td class="rate">100%</td><td>xingyang_escape_004</td><td class="done">✅</td></tr>
+<tr><td>xiangyu_002</td><td>项羽</td><td>人物</td><td><span class="badge badge-rare">Rare</span></td><td>贰</td><td>A</td><td>960×1408</td><td>a</td><td>288072559</td><td class="rate">100%</td><td>julu_battle_004</td><td class="done">✅</td></tr>
+<tr><td>zhanghan_002</td><td>章邯</td><td>人物</td><td><span class="badge badge-uncommon">Uncommon</span></td><td>贰</td><td>A</td><td>960×1408</td><td>a</td><td>442154963</td><td class="rate">100%</td><td>julu_battle_004</td><td class="done">✅</td></tr>
+<tr><td>hongmenyan_004</td><td>鸿门宴</td><td>事件</td><td><span class="badge badge-epic">Epic</span></td><td>肆</td><td>B</td><td>960×1408</td><td>a</td><td>1344787999</td><td class="rate">100%</td><td>chuhan_conflict_005</td><td class="done">✅</td></tr>
+<tr><td>xingyang_escape_004</td><td>荥阳脱困</td><td>事件</td><td><span class="badge badge-epic">Epic</span></td><td>肆</td><td>A</td><td>960×1408</td><td>b</td><td>1652408189</td><td class="rate">100%</td><td>chuhan_conflict_005</td><td class="done">✅</td></tr>
+<tr><td>julu_battle_004</td><td>巨鹿之战</td><td>事件</td><td><span class="badge badge-epic">Epic</span></td><td>肆</td><td>A</td><td>960×1408</td><td>b</td><td>348839727</td><td class="rate">100%</td><td>—</td><td class="done">✅</td></tr>
+<tr><td>gaixia_siege_004</td><td>垓下之围</td><td>事件</td><td><span class="badge badge-epic">Epic</span></td><td>肆</td><td>B</td><td>960×1408</td><td>a</td><td>19462357</td><td class="rate">100%</td><td>han_dynasty_founding_005</td><td class="done">✅</td></tr>
+<tr><td>chuhan_conflict_005</td><td>楚汉相争</td><td>阶段事件</td><td><span class="badge badge-legendary">Legendary</span></td><td>伍</td><td>B</td><td>960×1408</td><td>a</td><td>918999900</td><td class="rate">100%</td><td>han_dynasty_founding_005</td><td class="done">✅</td></tr>
+<tr><td>han_dynasty_founding_005</td><td>大汉开国</td><td>阶段事件</td><td><span class="badge badge-legendary">Legendary</span></td><td>伍</td><td>B</td><td>960×1408</td><td>a</td><td>1277279107</td><td>—</td><td>（合成终点）</td><td class="done">✅</td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>三、合成规则总表</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>规则ID</th><th>材料A</th><th>材料B</th><th></th><th>产出</th><th>成功率</th><th>消耗材料</th></tr></thead>
+<tbody>
+<tr><td>merge_xingyang_escape_001</td><td>刘邦 L2 Rare</td><td>纪信 L2 Uncommon</td><td>→</td><td>荥阳脱困 L4 Epic</td><td class="rate">100%</td><td>✅</td></tr>
+<tr><td>merge_julu_battle_001</td><td>项羽 L2 Rare</td><td>章邯 L2 Uncommon</td><td>→</td><td>巨鹿之战 L4 Epic</td><td class="rate">100%</td><td>✅</td></tr>
+<tr><td>merge_chuhan_conflict_001</td><td>荥阳脱困 L4 Epic</td><td>鸿门宴 L4 Epic</td><td>→</td><td>楚汉相争 L5 Legendary</td><td class="rate">100%</td><td>✅</td></tr>
+<tr><td>merge_han_dynasty_founding_001</td><td>楚汉相争 L5 Legendary</td><td>垓下之围 L4 Epic</td><td>→</td><td>大汉开国 L5 Legendary</td><td class="rate">100%</td><td>✅</td></tr>
+</tbody>
+</table>
+
+<h3>合成路径图</h3>
+<div class="merge-path">
+  刘邦 ─┬→ 荥阳脱困 (L4) ─┬→ 楚汉相争 (L5) ─→ 大汉开国 (L5)
+  纪信 ─┘                  │
+                            │ + 鸿门宴 (L4)
+                            
+  项羽 ─┬→ 巨鹿之战 (L4)
+  章邯 ─┘
+
+  楚汉相争 (L5) + 垓下之围 (L4) → 大汉开国 (L5)
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>四、统计数据</h2>
+<!-- ═══════════════════════════════════════ -->
+
+<h3>4.1 已有母卡（12张）</h3>
+<div class="stat-grid">
+  <div class="stat-card"><div class="num">12</div><div class="label">总母卡数</div></div>
+  <div class="stat-card"><div class="num">2</div><div class="label">等级壹 · Common</div></div>
+  <div class="stat-card"><div class="num">4</div><div class="label">等级贰 · Uncommon/Rare</div></div>
+  <div class="stat-card"><div class="num">0</div><div class="label">等级叁 · Rare</div></div>
+  <div class="stat-card"><div class="num">4</div><div class="label">等级肆 · Epic</div></div>
+  <div class="stat-card"><div class="num">2</div><div class="label">等级伍 · Legendary</div></div>
+  <div class="stat-card"><div class="num">4</div><div class="label">合成规则数</div></div>
+  <div class="stat-card"><div class="num" style="color:#6b9e6b;">100%</div><div class="label">平均合成成功率</div></div>
+</div>
+
+<h3>4.2 预计一期（~50张 · 秦汉篇）</h3>
+<table>
+<thead><tr><th>等级</th><th>预计数量</th><th>卡牌类型</th><th>示例</th></tr></thead>
+<tbody>
+<tr><td>壹</td><td>~10</td><td>地名、势力、官职、基础人物</td><td>荥阳、巨鹿、函谷关、咸阳、彭城…</td></tr>
+<tr><td>贰</td><td>~12</td><td>关键人物、小事件</td><td>韩信、张良、萧何、樊哙、范增…</td></tr>
+<tr><td>叁</td><td>~8</td><td>人物关系</td><td>刘邦-张良、项羽-范增、刘邦-韩信…</td></tr>
+<tr><td>肆</td><td>~12</td><td>历史事件</td><td>鸿门宴、荥阳脱困、巨鹿之战、垓下之围、暗度陈仓…</td></tr>
+<tr><td>伍</td><td>~8</td><td>阶段大事件</td><td>楚汉相争、大汉开国、秦末起义、汉初建制…</td></tr>
+<tr style="font-weight:bold;background:var(--card);"><td>合计</td><td>~50</td><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+<h3>4.3 全量规划（12级 · 2,130张母卡）</h3>
+<table>
+<thead><tr><th>等级段</th><th>等级</th><th>数量估算</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>基础层</td><td>1-3</td><td>~400</td><td>地名/势力/官职/基础人物/关键人物/人际关系</td></tr>
+<tr><td>事件层</td><td>4-6</td><td>~600</td><td>小事件/中型事件/区域事件</td></tr>
+<tr><td>史诗层</td><td>7-9</td><td>~500</td><td>朝代事件/大战役/文明转折</td></tr>
+<tr><td>传说层</td><td>10-12</td><td>~630</td><td>时代终章/编号卡/限定联动</td></tr>
+<tr style="font-weight:bold;background:var(--card);"><td>合计</td><td>1-12</td><td>~2,130</td><td></td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>五、卡背 &amp; 稀有度卡框（6张）</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>asset_id</th><th>名称</th><th>品类</th><th>稀有度级别</th><th>等级段</th><th>分辨率</th><th>seed</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>card_back_qinhan_001</td><td>通用卡背</td><td>卡背</td><td>—</td><td>—</td><td>960×1408</td><td>141366378</td><td class="done">✅</td></tr>
+<tr><td>frame_common_001</td><td>普通框</td><td>卡框</td><td>1</td><td>铜铁</td><td>960×1408</td><td>1422986072</td><td class="done">✅</td></tr>
+<tr><td>frame_uncommon_001</td><td>精良框</td><td>卡框</td><td>2</td><td>精钢</td><td>960×1408</td><td>35690191</td><td class="done">✅</td></tr>
+<tr><td>frame_rare_001</td><td>稀有框</td><td>卡框</td><td>3</td><td>精钢</td><td>960×1408</td><td>1826287864</td><td class="done">✅</td></tr>
+<tr><td>frame_epic_001</td><td>史诗框</td><td>卡框</td><td>4</td><td>白银</td><td>960×1408</td><td>646892503</td><td class="done">✅</td></tr>
+<tr><td>frame_legendary_001</td><td>传说框</td><td>卡框</td><td>5</td><td>白银</td><td>960×1408</td><td>1942006082</td><td class="done">✅</td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>六、纹样边框（6档 · SD生成）</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>frame_id</th><th>等级段</th><th>纹样名</th><th>用法</th><th>seed</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>frame_lv1_2</td><td>等级壹-贰</td><td>菱链铜框</td><td>卡面边框叠加</td><td>1758264581</td><td class="done">✅</td></tr>
+<tr><td>frame_lv3_4</td><td>等级叁-肆</td><td>回纹钢框</td><td>卡面边框叠加</td><td>534892236</td><td class="done">✅</td></tr>
+<tr><td>frame_lv5_6</td><td>等级伍-陆</td><td>双纹银框</td><td>卡面边框叠加</td><td>1137535085</td><td class="done">✅</td></tr>
+<tr><td>frame_lv7_8</td><td>等级柒-捌</td><td>三层鎏金</td><td>卡面边框叠加</td><td>1007388437</td><td class="done">✅</td></tr>
+<tr><td>frame_lv9_10</td><td>等级玖-拾</td><td>四层赤金</td><td>卡面边框叠加</td><td>554808487</td><td class="done">✅</td></tr>
+<tr><td>frame_lv11_12</td><td>等级拾壹-拾贰</td><td>四层传说</td><td>卡面边框叠加</td><td>1324862097</td><td class="done">✅</td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>七、素材产出全量统计</h2>
+<!-- ═══════════════════════════════════════ -->
+<div class="stat-grid">
+  <div class="stat-card"><div class="num">18</div><div class="label">卡牌原画</div></div>
+  <div class="stat-card"><div class="num">12</div><div class="label">合成卡成品</div></div>
+  <div class="stat-card"><div class="num">1</div><div class="label">卡背</div></div>
+  <div class="stat-card"><div class="num">5</div><div class="label">稀有度卡框</div></div>
+  <div class="stat-card"><div class="num">6</div><div class="label">纹样边框</div></div>
+  <div class="stat-card"><div class="num">36</div><div class="label">缩略图</div></div>
+  <div class="stat-card"><div class="num">24</div><div class="label">Workflow JSON</div></div>
+  <div class="stat-card"><div class="num">4</div><div class="label">文档</div></div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>八、抽卡池配置</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>卡池ID</th><th>名称</th><th>包含等级</th><th>稀有度权重</th><th>产出卡牌</th></tr></thead>
+<tbody>
+<tr><td>daily_basic</td><td>每日基础池</td><td>1, 2</td><td>C 65% / U 25% / R 10%</td><td>全部6张等级1-2卡</td></tr>
+<tr><td>starter_chuhan</td><td>新手保护池·楚汉篇</td><td>1, 2, 4</td><td>C 50% / U 30% / R 15% / E 5%</td><td>刘邦/纪信/项羽/章邯/鸿门宴/垓下之围</td></tr>
+</tbody>
+</table>
+
+<!-- ═══════════════════════════════════════ -->
+<h2>九、每日限制</h2>
+<!-- ═══════════════════════════════════════ -->
+<table>
+<thead><tr><th>项目</th><th>次数</th></tr></thead>
+<tbody>
+<tr><td>登录免费抽卡</td><td>20</td></tr>
+<tr><td>分享奖励抽卡</td><td>5</td></tr>
+<tr><td>每次广告奖励抽卡</td><td>5</td></tr>
+<tr><td>每日最大广告次数</td><td>2</td></tr>
+<tr><td><strong>每日总抽卡上限</strong></td><td><strong>35</strong></td></tr>
+</tbody>
+</table>
+
+<div class="footer">
+  国风炼金卡牌 · 母卡总表 · 2026-06-13 · 测试模型 Animagine XL 4.0 · 分支 codex/card-asset-generation
+</div>
+
+</div>
+</body>
+</html>

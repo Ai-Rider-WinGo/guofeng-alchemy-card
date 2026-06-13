@@ -58,6 +58,12 @@
 - 本地 ComfyUI 资产生成流程，保留 prompt、workflow、候选图、成品卡面和生成记录。
 - 卡牌文字由结构化数据和 UI 叠加，避免图片生成模型产生不可控文字。
 
+## 数据总表
+
+- [母卡总表 HTML](docs/card-master-table.html)：可视化整理等级体系、MVP 12 张母卡、合成规则、素材统计、抽卡池和每日限制。
+- [母卡总表 Markdown](docs/card-master-table.md)：适合在 GitHub 内直接阅读和审阅的表格版。
+- [素材产出总表](docs/card-asset-inventory.md)：记录卡牌本体、卡背、卡框、纹样边框、缩略图和 workflow 产出。
+
 ## 项目结构
 
 ```text
