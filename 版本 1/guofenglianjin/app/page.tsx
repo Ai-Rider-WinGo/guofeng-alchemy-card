@@ -7,165 +7,152 @@ import { loadCards } from '@/lib/cardUtils'
 import { getCollectionProgress, getRemainingDraws } from '@/lib/storage'
 
 const routeCards = [
-  { step: 1, name: '刘邦', owned: '2/3', image: '/art/liubang-card.png' },
-  { step: 2, name: '纪信', owned: '1/3', image: '/art/chronicle-cardback.png' },
-  { step: 3, name: '项羽', owned: '0/3', image: '/art/xiangyu-card.png' },
-  { step: 4, name: '荥阳脱困', owned: '0/2', image: '/art/chronicle-cardback.png' },
-  { step: 5, name: '楚汉相争', owned: '0/1', image: '/art/chronicle-cardback.png' },
+  { step: 1, name: '刘邦', owned: '2/3', image: '/ui/reference-route-liubang.png' },
+  { step: 2, name: '纪信', owned: '1/3', image: '/ui/reference-route-jixin.png' },
+  { step: 3, name: '项羽', owned: '0/3', image: '/ui/reference-route-xiangyu.png' },
+  { step: 4, name: '荥阳脱困', owned: '0/2', image: '/ui/reference-route-xingyang.png' },
+  { step: 5, name: '楚汉相争', owned: '0/1', image: '/ui/reference-route-chuhan.png' },
 ]
 
 const collectionStats = [
-  { label: '历史人物', value: '68/128' },
-  { label: '重大事件', value: '36/64' },
-  { label: '典籍文物', value: '24/64' },
+  { label: '历史人物', value: '68/128', mark: '人' },
+  { label: '重大事件', value: '36/64', mark: '史' },
+  { label: '典籍文物', value: '24/64', mark: '卷' },
 ]
 
 const quickActions = [
   {
     href: '/draw',
     title: '抽卡',
-    desc: '卡牌显现',
-    image: '/art/chronicle-cardback.png',
+    desc: '炉烟起烟，卡牌显现',
+    image: '/ui/action-art-draw.png',
     cta: '前往抽卡',
+    tone: 'green',
   },
   {
     href: '/merge',
     title: '合成',
     desc: '三卡合一，英雄进阶',
-    image: '/art/liubang-card.png',
+    image: '/ui/action-art-merge.png',
     cta: '前往合成',
+    tone: 'gold',
   },
   {
     href: '/collection',
     title: '图鉴',
     desc: '解锁典藏，阅览历史',
-    image: '/art/chronicle-cardback.png',
+    image: '/ui/action-art-archive.png',
     cta: '查看图鉴',
+    tone: 'blue',
   },
 ]
 
 export default function HomePage() {
   const { gameState } = useGame()
   const allCards = loadCards()
-  const remainingDraws = getRemainingDraws(gameState)
+  const remainingDraws = Math.min(getRemainingDraws(gameState), 12)
   const collectionProgress = getCollectionProgress(gameState, allCards)
-  const progressPercent =
-    collectionProgress.total === 0
-      ? 0
-      : Math.round((collectionProgress.unlocked / collectionProgress.total) * 100)
+  const collectionTotal = Math.max(collectionProgress.total, 1)
+  const progressPercent = Math.max(18, Math.min(100, Math.round((collectionProgress.unlocked / collectionTotal) * 100)))
 
   return (
     <PageLayout>
-      <div className="mx-auto min-h-screen max-w-[430px] px-4 pb-28 pt-5 text-paper">
-        <header className="mb-5 flex items-start justify-between">
-          <div>
-            <p className="text-xs tracking-[0.35em] text-bronze/70">楚汉篇 · 第一章</p>
-            <h1 className="mt-2 text-[34px] font-black leading-none tracking-[0.08em] text-paper">
-              国风炼金卡牌
-            </h1>
+      <div className="home-shell">
+        <header className="hero-header">
+          <div className="brand-lockup">
+            <p>楚汉篇</p>
+            <h1>国风炼金卡牌</h1>
           </div>
-          <Link
-            href="/collection"
-            className="h-11 w-11 rounded-full border border-bronze/45 bg-ink-2/80 text-center text-xl leading-[42px] text-bronze shadow-inner"
-            aria-label="打开图鉴"
-          >
-            册
+
+          <Link href="/collection" className="atlas-chip" aria-label="打开图鉴">
+            <span className="atlas-medal">册</span>
+            <span>
+              图鉴进度
+              <strong>128/256</strong>
+            </span>
           </Link>
         </header>
 
-        <section className="paper-panel relative overflow-hidden p-4">
-          <div className="absolute right-3 top-3 rounded-full border border-bronze/30 px-3 py-1 text-xs text-bronze">
-            每日重置
+        <section className="daily-scroll-panel">
+          <div className="scroll-art">
+            <img src="/ui/reference-cauldron.png" alt="炼金炉鼎" />
+            <img className="smoke-layer" src="/ui/reference-smoke.png" alt="" aria-hidden="true" />
           </div>
 
-          <div className="grid grid-cols-[126px_1fr] gap-4">
-            <div className="relative h-44 overflow-hidden rounded-[10px] border border-bronze/35 bg-ink">
-              <img
-                src="/art/liubang-card.png"
-                alt="刘邦卡牌"
-                className="h-full w-full object-cover opacity-95"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 py-2">
-                <p className="text-sm font-bold text-paper">刘邦</p>
-                <p className="text-[11px] text-bronze">秦汉之际 · 关键人物</p>
-              </div>
+          <div className="draw-counter">
+            <div className="panel-label">
+              <span />
+              今日抽卡
+              <b>i</b>
             </div>
-
-            <div className="flex flex-col justify-between py-1">
-              <div>
-                <div className="flex items-center gap-2 text-sm font-bold text-ink">
-                  <span className="h-2 w-2 rotate-45 bg-bronze" />
-                  今日抽卡
-                </div>
-                <div className="mt-4 flex items-end gap-2">
-                  <span className="text-[64px] font-black leading-none text-ink">{remainingDraws}</span>
-                  <span className="pb-2 text-2xl font-bold text-ink/60">/ 20</span>
-                </div>
-                <p className="mt-2 text-sm text-ink/60">每日免费次数，抽取楚汉基础卡。</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
-                <Link href="/draw" className="seal-button text-center">
-                  当前卡池
-                </Link>
-                <Link href="/draw" className="seal-button text-center">
-                  抽卡记录
-                </Link>
-              </div>
+            <div className="draw-count">
+              <strong>{remainingDraws}</strong>
+              <span>/12</span>
+            </div>
+            <p>23:59:59 后重置</p>
+            <div className="hero-actions">
+              <Link href="/draw">卡池预览</Link>
+              <Link href="/draw">抽卡记录</Link>
             </div>
           </div>
+
+          <div className="reset-seal">每日重置</div>
         </section>
 
-        <section className="mt-7">
-          <div className="section-title">
+        <section className="route-section">
+          <div className="ornate-title">
             <span />
             推荐合成路线
             <span />
           </div>
 
-          <div className="route-scroll mt-4">
+          <div className="route-frame">
             {routeCards.map((card, index) => (
-              <div className="route-item" key={card.name}>
-                <div className="route-step">{card.step}</div>
-                <div className="route-card">
-                  <img src={card.image} alt={card.name} className="h-full w-full object-cover" />
-                  <div className="route-name">{card.name}</div>
+              <div className="route-node" key={card.name}>
+                <div className="node-rank">
+                  <span>{card.step}</span>
                 </div>
-                <p className="mt-2 text-center text-xs text-bronze/80">持有 {card.owned}</p>
-                {index < routeCards.length - 1 && <div className="route-arrow">›</div>}
+                <img src={card.image} alt={`${card.name}路线卡`} />
+                <p className="node-owned">持有 {card.owned}</p>
+                {index < routeCards.length - 1 && <b className="node-arrow">›</b>}
               </div>
             ))}
           </div>
         </section>
 
-        <section className="archive-panel mt-6">
-          <div className="section-title">
+        <section className="collection-panel">
+          <div className="ornate-title compact">
             <span />
             收藏进度
             <span />
           </div>
-          <div className="mt-4 grid grid-cols-3 divide-x divide-bronze/20">
+
+          <div className="collection-grid">
             {collectionStats.map((item) => (
-              <div className="px-2 text-center" key={item.label}>
-                <p className="text-xs text-paper/55">{item.label}</p>
-                <p className="mt-1 text-lg font-bold text-paper">{item.value}</p>
+              <div className="collection-stat" key={item.label}>
+                <b>{item.mark}</b>
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
               </div>
             ))}
+            <Link href="/collection" className="collection-total">
+              <span>藏</span>
+              收集总览
+            </Link>
           </div>
-          <div className="mt-4 rounded-full border border-bronze/25 bg-black/30 p-1">
-            <div className="h-2 rounded-full bg-gradient-to-r from-jade via-bronze to-bronze/50" style={{ width: `${Math.max(progressPercent, 12)}%` }} />
+
+          <div className="runtime-progress">
+            <i style={{ width: `${progressPercent}%` }} />
           </div>
-          <p className="mt-2 text-center text-xs text-paper/50">
+          <p className="runtime-caption">
             本地原型图鉴：{collectionProgress.unlocked}/{collectionProgress.total}
           </p>
         </section>
 
-        <section className="mt-5 grid grid-cols-3 gap-3">
+        <section className="action-grid">
           {quickActions.map((action) => (
-            <Link className="action-card" href={action.href} key={action.title}>
-              <div className="h-24 overflow-hidden rounded-md border border-bronze/20 bg-black/30">
-                <img src={action.image} alt="" className="h-full w-full object-cover opacity-80" />
-              </div>
+            <Link className={`feature-card ${action.tone}`} href={action.href} key={action.title}>
+              <img src={action.image} alt="" aria-hidden="true" />
               <h2>{action.title}</h2>
               <p>{action.desc}</p>
               <span>{action.cta} ›</span>

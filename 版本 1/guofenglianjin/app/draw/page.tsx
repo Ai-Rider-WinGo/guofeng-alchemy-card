@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { PageLayout } from '@/components/PageLayout'
 import { CardDisplay } from '@/components/CardDisplay'
 import { useGame } from '@/lib/gameContext'
-import { drawFromPool, getCardById, loadCards } from '@/lib/cardUtils'
+import { drawFromPool, getCardById } from '@/lib/cardUtils'
 import { getRemainingDraws, addCardToInventory, calculateStars } from '@/lib/storage'
 import type { Card } from '@/lib/types'
 import { DUPLICATION_FOR_STAR } from '@/lib/types'
@@ -21,64 +21,22 @@ export default function DrawPage() {
   const { gameState, updateGameState } = useGame()
   const [drawResults, setDrawResults] = useState<DrawResult[]>([])
   const [isDrawing, setIsDrawing] = useState(false)
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const remainingDraws = getRemainingDraws(gameState)
+  const selectedResult = drawResults[selectedIndex]
 
-  const handleSingleDraw = async () => {
-    if (remainingDraws === 0) return
+  const drawCards = async (count: number) => {
+    if (remainingDraws < count || isDrawing) return
 
     setIsDrawing(true)
-    setSelectedIndex(null)
     setDrawResults([])
-
-    // 模拟延迟
-    await new Promise((resolve) => setTimeout(resolve, 300))
-
-    const cardId = drawFromPool('permanent_basic')
-    if (!cardId) return
-
-    const card = getCardById(cardId)
-    if (!card) return
-
-    const isNew = !gameState.unlockedCards.includes(cardId)
-    const currentCount = (gameState.playerCards[cardId] || 0) + 1
-    const starCount = calculateStars(currentCount, DUPLICATION_FOR_STAR)
-
-    const result: DrawResult = {
-      cardId,
-      card,
-      isNew,
-      starCount,
-    }
-
-    setDrawResults([result])
     setSelectedIndex(0)
-
-    // 更新游戏状态
-    let newState = addCardToInventory(gameState, cardId)
-    newState = {
-      ...newState,
-      dailyDrawCount: newState.dailyDrawCount + 1,
-    }
-    updateGameState(newState)
-
-    setIsDrawing(false)
-  }
-
-  const handleTenDraw = async () => {
-    if (remainingDraws < 10) return
-
-    setIsDrawing(true)
-    setSelectedIndex(null)
-    setDrawResults([])
-
-    // 模拟延迟
-    await new Promise((resolve) => setTimeout(resolve, 500))
+    await new Promise((resolve) => setTimeout(resolve, count === 1 ? 360 : 560))
 
     const results: DrawResult[] = []
     let newState = gameState
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < count; i++) {
       const cardId = drawFromPool('permanent_basic')
       if (!cardId) continue
 
@@ -87,186 +45,139 @@ export default function DrawPage() {
 
       const isNew = !newState.unlockedCards.includes(cardId)
       const currentCount = (newState.playerCards[cardId] || 0) + 1
-      const starCount = calculateStars(currentCount, DUPLICATION_FOR_STAR)
 
       results.push({
         cardId,
         card,
         isNew,
-        starCount,
+        starCount: calculateStars(currentCount, DUPLICATION_FOR_STAR),
       })
 
       newState = addCardToInventory(newState, cardId)
     }
 
-    setDrawResults(results)
-
-    // 更新游戏状态
-    newState = {
+    updateGameState({
       ...newState,
-      dailyDrawCount: newState.dailyDrawCount + 10,
-    }
-    updateGameState(newState)
+      dailyDrawCount: newState.dailyDrawCount + count,
+    })
 
+    setDrawResults(results)
     setIsDrawing(false)
-  }
-
-  const handleContinue = () => {
-    setDrawResults([])
-    setSelectedIndex(null)
-  }
-
-  if (drawResults.length > 0) {
-    if (selectedIndex === null && !isDrawing) {
-      return (
-        <PageLayout>
-          <div className="max-w-md mx-auto px-4 py-6 space-y-6">
-            <h1 className="text-2xl font-bold text-bronze text-center">抽卡结果</h1>
-
-            {drawResults.length === 1 ? (
-              // 单抽显示
-              <div className="space-y-4">
-                <div className="flex justify-center">
-                  <div className="w-48">
-                    <CardDisplay
-                      cardId={drawResults[0].cardId}
-                      cardName={drawResults[0].card.name}
-                      level={drawResults[0].card.level}
-                      rarity={drawResults[0].card.rarity}
-                      isRevealed
-                    />
-                  </div>
-                </div>
-
-                <div className="card-frame p-4 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-paper/70">卡牌等级</span>
-                    <span className="text-lg font-bold text-bronze">{drawResults[0].card.level}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-paper/70">稀有度</span>
-                    <span className="text-lg font-bold text-bronze">{drawResults[0].card.rarity}</span>
-                  </div>
-                  {drawResults[0].isNew ? (
-                    <div className="p-2 bg-jade/20 rounded text-center">
-                      <span className="text-jade font-bold">✨ 新卡 ✨</span>
-                    </div>
-                  ) : (
-                    <div className="p-2 bg-bronze/20 rounded text-center space-y-1">
-                      <span className="text-bronze font-bold block">重复卡</span>
-                      <span className="text-xs text-paper/60">
-                        已拥有 {drawResults[0].starCount} ⭐
-                      </span>
-                    </div>
-                  )}
-                  <p className="text-sm text-paper/70 mt-3">{drawResults[0].card.description}</p>
-                </div>
-              </div>
-            ) : (
-              // 十连显示
-              <div className="space-y-4">
-                <div className="grid grid-cols-3 gap-2">
-                  {drawResults.map((result, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedIndex(index)}
-                      className="transition-transform hover:scale-105"
-                    >
-                      <CardDisplay
-                        cardId={result.cardId}
-                        cardName={result.card.name}
-                        level={result.card.level}
-                        rarity={result.card.rarity}
-                        isRevealed
-                      />
-                    </button>
-                  ))}
-                </div>
-
-                {selectedIndex !== null && (
-                  <div className="card-frame p-4 space-y-2">
-                    <h2 className="text-lg font-bold text-bronze">{drawResults[selectedIndex].card.name}</h2>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-paper/70">等级 {drawResults[selectedIndex].card.level}</span>
-                      <span className="text-paper/70">{drawResults[selectedIndex].card.rarity}</span>
-                    </div>
-                    {drawResults[selectedIndex].isNew ? (
-                      <span className="inline-block text-jade font-bold">✨ 新卡</span>
-                    ) : (
-                      <span className="inline-block text-bronze font-bold">重复 ({drawResults[selectedIndex].starCount}⭐)</span>
-                    )}
-                  </div>
-                )}
-              </div>
-            )}
-
-            <div className="flex gap-3">
-              <button onClick={handleContinue} className="btn-secondary flex-1">
-                查看其他结果
-              </button>
-              <Link href="/" className="btn-primary flex-1 text-center">
-                返回首页
-              </Link>
-            </div>
-          </div>
-        </PageLayout>
-      )
-    }
   }
 
   return (
     <PageLayout>
-      <div className="max-w-md mx-auto px-4 py-6 space-y-6">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-bronze mb-2">命运之卡</h1>
-          <p className="text-paper/60 text-sm">探寻历史中的传奇人物</p>
-        </div>
+      <div className="screen-shell">
+        <header className="screen-header">
+          <div>
+            <p className="screen-kicker">楚汉卡池</p>
+            <h1 className="screen-title">今日抽卡</h1>
+            <p className="screen-subtitle">炉烟起，卡牌显。先验证秦汉之际的收集闭环。</p>
+          </div>
+          <Link href="/" className="ghost-button shrink-0 px-3 py-2">
+            首页
+          </Link>
+        </header>
 
-        {/* 剩余次数 */}
-        <div className="card-frame p-6 text-center space-y-2">
-          <p className="text-paper/60 text-sm">今日剩余抽卡次数</p>
-          <p className="text-5xl font-bold text-jade">{remainingDraws}</p>
-          <p className="text-paper/60 text-xs">最多每日抽卡 20 次</p>
-        </div>
+        <section className="parchment-strip grid grid-cols-[42%_1fr] gap-4">
+          <div className="relative min-h-[185px]">
+            <img className="absolute bottom-0 left-[-24px] w-[190px] max-w-none" src="/ui/reference-cauldron.png" alt="炼金炉鼎" />
+            <img className="absolute bottom-8 left-[-26px] w-24 opacity-70 mix-blend-screen" src="/ui/reference-smoke.png" alt="" aria-hidden="true" />
+          </div>
 
-        {/* 抽卡按钮 */}
-        <div className="space-y-3">
-          <button
-            onClick={handleSingleDraw}
-            disabled={remainingDraws === 0 || isDrawing}
-            className={`w-full py-4 rounded-card font-bold transition-all ${
-              remainingDraws === 0
-                ? 'bg-paper/20 text-paper/40 cursor-not-allowed'
-                : 'btn-primary'
-            }`}
-          >
-            {isDrawing ? '抽卡中...' : '单抽'}
-          </button>
+          <div className="relative z-10 flex flex-col justify-center text-center">
+            <p className="text-sm font-black tracking-[0.12em]">本日余量</p>
+            <div className="my-3 border-y border-ink/15 py-2">
+              <strong className="block text-[58px] leading-none">{remainingDraws}</strong>
+              <span className="text-sm font-bold text-ink/60">/ 20 次</span>
+            </div>
+            <p className="text-xs font-bold text-ink/60">23:59:59 后重置</p>
+          </div>
+        </section>
 
-          <button
-            onClick={handleTenDraw}
-            disabled={remainingDraws < 10 || isDrawing}
-            className={`w-full py-4 rounded-card font-bold transition-all ${
-              remainingDraws < 10
-                ? 'bg-paper/20 text-paper/40 cursor-not-allowed'
-                : 'btn-primary'
-            }`}
-          >
-            {isDrawing ? '抽卡中...' : '十连抽'}
-          </button>
-        </div>
+        <section className="bronze-panel mt-4 p-4">
+          <div className="relative z-10 flex items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-bold tracking-[0.28em] text-bronze/70">PERIOD POOL</p>
+              <h2 className="mt-1 text-xl font-black text-parchment">秦汉之际 · 楚汉战争</h2>
+            </div>
+            <div className="rounded-full border border-bronze/30 px-3 py-1 text-xs font-bold text-bronze">
+              保底 26
+            </div>
+          </div>
 
-        {/* 提示信息 */}
-        <div className="card-frame p-4 space-y-2">
-          <h3 className="font-bold text-bronze text-sm">同名升星</h3>
-          <p className="text-xs text-paper/70">
-            拥有 3 张相同的卡片可以升一个星级，获得更强的属性。同名卡片重复获取时会自动累计。
-          </p>
-        </div>
+          <div className="relative z-10 mt-4 grid grid-cols-3 gap-2">
+            <CardDisplay cardId="liubang_002" cardName="刘邦" level={2} rarity="rare" />
+            <CardDisplay cardId="xiangyu_002" cardName="项羽" level={2} rarity="rare" />
+            <CardDisplay cardId="xingyang_escape_004" cardName="荥阳脱困" level={4} rarity="epic" />
+          </div>
 
-        <Link href="/" className="btn-secondary w-full text-center">
-          返回首页
-        </Link>
+          <div className="relative z-10 mt-4 grid grid-cols-2 gap-3">
+            <button className="ritual-button" disabled={remainingDraws < 1 || isDrawing} onClick={() => drawCards(1)}>
+              {isDrawing ? '炉火翻涌' : '抽 1 次'}
+            </button>
+            <button className="ritual-button" disabled={remainingDraws < 10 || isDrawing} onClick={() => drawCards(10)}>
+              {isDrawing ? '炉火翻涌' : '抽 10 次'}
+            </button>
+          </div>
+        </section>
+
+        <section className="bronze-panel mt-4 p-4">
+          <div className="relative z-10">
+            <div className="ornate-title compact">
+              <span />
+              抽卡结果
+              <span />
+            </div>
+
+            {drawResults.length === 0 ? (
+              <div className="mt-5 rounded-md border border-bronze/20 bg-black/20 p-5 text-center">
+                <p className="text-sm font-bold text-parchment">卡牌尚未显现</p>
+                <p className="mt-2 text-xs leading-5 text-parchment/55">点击抽卡后，结果会在此处以卡册样式展开。</p>
+              </div>
+            ) : (
+              <div className="mt-5 space-y-4">
+                <div className="mx-auto max-w-[190px]">
+                  <CardDisplay
+                    cardId={selectedResult.cardId}
+                    cardName={selectedResult.card.name}
+                    level={selectedResult.card.level}
+                    rarity={selectedResult.card.rarity}
+                  />
+                </div>
+
+                <div className="parchment-strip p-3 text-center">
+                  <p className="text-lg font-black">{selectedResult.card.name}</p>
+                  <p className="mt-1 text-xs font-bold text-ink/60">
+                    {selectedResult.isNew ? '新卡入册' : `重复卡 · 已成 ${selectedResult.starCount} 星`}
+                  </p>
+                  <p className="mt-2 text-xs leading-5 text-ink/68">{selectedResult.card.description}</p>
+                </div>
+
+                {drawResults.length > 1 && (
+                  <div className="grid grid-cols-5 gap-2">
+                    {drawResults.map((result, index) => (
+                      <button
+                        key={`${result.cardId}-${index}`}
+                        onClick={() => setSelectedIndex(index)}
+                        className={`rounded-sm border p-1 transition ${
+                          selectedIndex === index ? 'border-bronze bg-bronze/10' : 'border-bronze/20 bg-black/20'
+                        }`}
+                      >
+                        <CardDisplay
+                          cardId={result.cardId}
+                          cardName={result.card.name}
+                          level={result.card.level}
+                          rarity={result.card.rarity}
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </section>
       </div>
     </PageLayout>
   )

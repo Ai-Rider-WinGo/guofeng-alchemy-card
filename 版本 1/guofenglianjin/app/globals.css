@@ -15,6 +15,8 @@
   body {
     @apply bg-background text-foreground antialiased;
     background-image: 
+      linear-gradient(rgba(9, 9, 7, 0.88), rgba(9, 9, 7, 0.9)),
+      url('/ui/dark-paper-texture.png'),
       radial-gradient(circle at 20% 0%, rgba(201, 169, 97, 0.12), transparent 32rem),
       radial-gradient(circle at 80% 24%, rgba(45, 143, 127, 0.09), transparent 26rem),
       repeating-linear-gradient(
@@ -32,6 +34,8 @@
         transparent 2px
       );
     background-attachment: fixed;
+    background-size: cover, min(100vw, 430px) auto, auto, auto, auto, auto;
+    background-position: center top;
     min-height: 100vh;
   }
 
@@ -114,16 +118,16 @@
   }
 
   .route-card {
-    @apply relative mt-2 h-[118px] overflow-hidden rounded-md border border-bronze/45 bg-ink-2 shadow-lg;
+    @apply relative mt-2 h-[118px] overflow-hidden rounded-md border border-bronze/40 bg-ink-2 shadow-lg;
   }
 
   .route-card::after {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent;
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent;
   }
 
   .route-name {
-    @apply absolute bottom-1 right-1 z-10 rounded-sm bg-jade/85 px-1 py-0.5 text-xs font-bold text-paper;
+    @apply absolute bottom-1 right-1 z-10 rounded-sm bg-jade/80 px-1 py-0.5 text-xs font-bold text-paper;
     writing-mode: vertical-rl;
   }
 
@@ -136,7 +140,7 @@
   }
 
   .action-card {
-    @apply rounded-[14px] border border-bronze/35 bg-ink-2/95 p-2 text-center shadow-lg transition active:scale-[0.98];
+    @apply rounded-[14px] border border-bronze/30 bg-ink-2/95 p-2 text-center shadow-lg transition active:scale-[0.98];
   }
 
   .action-card h2 {
@@ -144,11 +148,11 @@
   }
 
   .action-card p {
-    @apply mt-1 min-h-8 text-[11px] leading-4 text-paper/55;
+    @apply mt-1 min-h-8 text-[11px] leading-4 text-paper/50;
   }
 
   .action-card span {
-    @apply mt-3 block rounded-md border border-bronze/35 px-2 py-2 text-xs font-bold text-bronze;
+    @apply mt-3 block rounded-md border border-bronze/30 px-2 py-2 text-xs font-bold text-bronze;
   }
 
   .card-content {
@@ -180,11 +184,439 @@
   }
 
   .nav-link {
-    @apply flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium text-paper hover:text-bronze transition-colors;
+    @apply flex flex-col items-center justify-center gap-1 text-xs font-bold text-bronze/50 transition-colors;
+    min-width: 3.75rem;
   }
 
   .nav-link.active {
     @apply text-bronze;
+  }
+
+  .home-shell {
+    @apply relative mx-auto min-h-screen max-w-[430px] overflow-hidden px-4 pb-28 pt-6 text-paper;
+  }
+
+  .home-shell::before {
+    content: '';
+    @apply pointer-events-none absolute inset-x-0 top-0 h-48 opacity-60;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(197, 156, 79, 0.25), transparent 40%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.08), transparent);
+  }
+
+  .hero-header {
+    @apply relative z-10 mb-4 flex items-start justify-between gap-3;
+  }
+
+  .brand-lockup p {
+    @apply mb-1 text-[10px] font-bold tracking-[0.42em] text-bronze/70;
+  }
+
+  .brand-lockup h1 {
+    @apply max-w-[205px] text-[27px] font-black leading-[1.04] text-bronze;
+    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    letter-spacing: 0;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45), 0 0 22px rgba(190, 148, 75, 0.18);
+  }
+
+  .atlas-chip {
+    @apply flex shrink-0 items-center gap-2 pt-1 text-[11px] font-bold text-bronze;
+  }
+
+  .atlas-medal {
+    @apply grid h-10 w-10 place-items-center rounded-full border border-bronze/40 bg-black/40 text-base shadow-inner;
+    box-shadow: inset 0 0 0 2px rgba(201, 169, 97, 0.12), 0 0 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .atlas-chip strong {
+    @apply ml-1 text-sm text-parchment;
+  }
+
+  .daily-scroll-panel {
+    @apply relative z-10 grid min-h-[198px] grid-cols-[42%_1fr] overflow-hidden rounded-[10px] border border-bronze/40 p-4;
+    background:
+      linear-gradient(90deg, rgba(110, 75, 34, 0.16), rgba(214, 181, 116, 0.08) 42%, rgba(72, 43, 16, 0.18)),
+      linear-gradient(rgba(223, 195, 133, 0.8), rgba(174, 132, 72, 0.83)),
+      url('/ui/parchment-clean-texture.png');
+    background-size: cover;
+    box-shadow:
+      0 18px 34px rgba(0, 0, 0, 0.52),
+      inset 0 0 0 1px rgba(255, 237, 189, 0.16),
+      inset 0 -20px 48px rgba(45, 23, 8, 0.22);
+  }
+
+  .daily-scroll-panel::before,
+  .daily-scroll-panel::after,
+  .collection-panel::before,
+  .feature-card::before {
+    content: '';
+    @apply pointer-events-none absolute inset-0 rounded-[inherit];
+  }
+
+  .daily-scroll-panel::before {
+    background:
+      linear-gradient(90deg, rgba(39, 23, 8, 0.08), transparent 24%, transparent 70%, rgba(39, 23, 8, 0.12)),
+      repeating-linear-gradient(0deg, rgba(56, 36, 15, 0.09) 0 1px, transparent 1px 5px);
+    mix-blend-mode: multiply;
+  }
+
+  .daily-scroll-panel::after {
+    box-shadow: inset 0 0 0 2px rgba(52, 31, 14, 0.22), inset 0 0 24px rgba(37, 22, 9, 0.28);
+  }
+
+  .scroll-art {
+    @apply relative z-10 flex min-h-[170px] items-end justify-center overflow-visible;
+  }
+
+  .scroll-art > img:first-child {
+    @apply absolute bottom-[-6px] left-[-20px] max-w-none;
+    width: 190px;
+    filter: drop-shadow(0 16px 20px rgba(31, 17, 5, 0.55));
+  }
+
+  .smoke-layer {
+    @apply absolute bottom-8 left-[-26px] w-24 opacity-70;
+    mix-blend-mode: screen;
+  }
+
+  .draw-counter {
+    @apply relative z-10 flex flex-col justify-center pl-5 text-center text-ink;
+  }
+
+  .panel-label {
+    @apply mb-2 flex items-center justify-center gap-2 text-base font-black tracking-[0.12em] text-ink/80;
+    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+  }
+
+  .panel-label span {
+    @apply h-3 w-3 rotate-45 border border-old-gold;
+  }
+
+  .panel-label b {
+    @apply grid h-5 w-5 place-items-center rounded-full border border-ink/50 text-xs not-italic;
+  }
+
+  .draw-count {
+    @apply flex items-end justify-center gap-2 border-y border-ink/10 py-3;
+  }
+
+  .draw-count strong {
+    @apply text-[55px] leading-none text-ink;
+    font-family: Georgia, 'Times New Roman', serif;
+    letter-spacing: 0;
+  }
+
+  .draw-count span {
+    @apply pb-2 text-[28px] font-bold text-ink/80;
+  }
+
+  .draw-counter p {
+    @apply mt-2 text-xs font-bold text-ink/60;
+  }
+
+  .hero-actions {
+    @apply mt-4 grid grid-cols-2 gap-2;
+  }
+
+  .hero-actions a {
+    @apply rounded-sm border border-[#6d5129] bg-[#4c3218] px-2 py-2 text-xs font-bold text-parchment shadow-inner transition active:scale-95;
+    box-shadow: inset 0 0 0 2px rgba(232, 197, 125, 0.08), 0 3px 10px rgba(41, 24, 8, 0.18);
+  }
+
+  .reset-seal {
+    @apply absolute right-3 top-14 z-10 rounded-full bg-[#8a3026] px-1.5 py-3 text-[11px] font-bold leading-4 text-parchment;
+    writing-mode: vertical-rl;
+    box-shadow: inset 0 0 0 1px rgba(248, 214, 154, 0.3);
+  }
+
+  .route-section {
+    @apply relative z-10 mt-6;
+  }
+
+  .ornate-title {
+    @apply flex items-center justify-center gap-3 text-[22px] font-black text-parchment;
+    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    letter-spacing: 0.05em;
+  }
+
+  .ornate-title span {
+    @apply relative h-px w-20 bg-bronze/30;
+  }
+
+  .ornate-title span::after {
+    content: '';
+    @apply absolute top-1/2 h-2 w-2 -translate-y-1/2 rotate-45 border border-bronze/50 bg-ink;
+  }
+
+  .ornate-title span:first-child::after {
+    @apply right-0;
+  }
+
+  .ornate-title span:last-child::after {
+    @apply left-0;
+  }
+
+  .ornate-title.compact {
+    @apply text-[21px];
+  }
+
+  .route-frame {
+    @apply relative mt-4 flex gap-2 overflow-x-auto rounded-[8px] border border-bronze/25 px-3 pb-3 pt-5;
+    background-color: rgba(0, 0, 0, 0.28);
+    scrollbar-width: none;
+    box-shadow: inset 0 0 0 1px rgba(201, 169, 97, 0.08), inset 0 0 28px rgba(201, 169, 97, 0.05);
+  }
+
+  .route-frame::-webkit-scrollbar {
+    display: none;
+  }
+
+  .route-node {
+    @apply relative min-w-[55px] text-center;
+  }
+
+  .route-node img {
+    @apply h-[88px] w-[55px] rounded-sm border border-bronze/40 object-cover;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.38), inset 0 0 0 1px rgba(255, 232, 176, 0.12);
+  }
+
+  .node-rank {
+    @apply absolute left-1/2 top-[-11px] z-20 grid h-6 w-6 -translate-x-1/2 rotate-45 place-items-center border border-bronze bg-[#20372d] text-[11px] text-bronze;
+  }
+
+  .node-rank {
+    font-family: Georgia, serif;
+  }
+
+  .node-rank span {
+    transform: rotate(-45deg);
+  }
+
+  .node-owned {
+    @apply mt-2 whitespace-nowrap text-[12px] font-bold text-bronze/80;
+  }
+
+  .node-arrow {
+    @apply absolute left-[57px] top-[38px] text-xl font-light text-bronze/70;
+  }
+
+  .collection-panel {
+    @apply relative z-10 mt-5 overflow-hidden rounded-[8px] border border-bronze/25 bg-black/25 px-3 py-4;
+    box-shadow: inset 0 0 0 1px rgba(201, 169, 97, 0.08), 0 10px 22px rgba(0, 0, 0, 0.25);
+  }
+
+  .collection-panel::before {
+    background:
+      linear-gradient(90deg, rgba(201, 169, 97, 0.04), transparent 32%, rgba(201, 169, 97, 0.05)),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 6px);
+  }
+
+  .collection-grid {
+    @apply relative z-10 mt-4 grid grid-cols-[1fr_1fr_1fr_86px] divide-x divide-bronze/20;
+  }
+
+  .collection-stat {
+    @apply px-1 text-center;
+  }
+
+  .collection-stat b,
+  .collection-total span {
+    @apply mx-auto mb-2 grid h-10 w-10 place-items-center rounded-full border border-bronze/30 bg-black/25 text-sm text-bronze;
+  }
+
+  .collection-stat span {
+    @apply block text-xs text-parchment/80;
+  }
+
+  .collection-stat strong {
+    @apply mt-1 block text-lg text-parchment;
+  }
+
+  .collection-total {
+    @apply px-2 text-center text-sm font-bold text-bronze;
+  }
+
+  .runtime-progress {
+    @apply relative z-10 mt-4 h-2 overflow-hidden rounded-full border border-bronze/20 bg-black/40;
+  }
+
+  .runtime-progress i {
+    @apply block h-full rounded-full;
+    background: linear-gradient(90deg, #425f42, #d0b66e 72%, rgba(208, 182, 110, 0.3));
+  }
+
+  .runtime-caption {
+    @apply relative z-10 mt-2 text-center text-[11px] text-parchment/40;
+  }
+
+  .action-grid {
+    @apply relative z-10 mt-5 grid grid-cols-3 gap-3;
+  }
+
+  .feature-card {
+    @apply relative min-h-[250px] overflow-hidden rounded-[10px] border border-bronze/30 p-3 text-center transition active:scale-[0.985];
+    background:
+      linear-gradient(180deg, rgba(20, 26, 21, 0.3), rgba(10, 9, 7, 0.28)),
+      #17221d;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.38), inset 0 0 0 1px rgba(255, 232, 176, 0.07);
+  }
+
+  .feature-card.gold {
+    background:
+      linear-gradient(180deg, rgba(93, 57, 14, 0.54), rgba(32, 21, 10, 0.52)),
+      #3a2813;
+  }
+
+  .feature-card.blue {
+    background:
+      linear-gradient(180deg, rgba(23, 43, 42, 0.54), rgba(10, 18, 18, 0.52)),
+      #172826;
+  }
+
+  .feature-card::before {
+    box-shadow: inset 0 0 0 2px rgba(201, 169, 97, 0.08), inset 0 0 24px rgba(0, 0, 0, 0.34);
+  }
+
+  .feature-card img {
+    @apply absolute inset-x-2 bottom-[66px] h-[118px] w-[calc(100%-1rem)] object-contain opacity-80;
+  }
+
+  .feature-card h2,
+  .feature-card p,
+  .feature-card span {
+    @apply relative z-10;
+  }
+
+  .feature-card h2 {
+    @apply mt-3 text-[29px] font-black text-parchment;
+    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .feature-card p {
+    @apply mx-auto mt-2 min-h-10 max-w-[7em] text-[11px] leading-5 text-parchment/75;
+  }
+
+  .feature-card span {
+    @apply absolute inset-x-3 bottom-3 rounded-sm border border-bronze/30 bg-black/30 px-2 py-2 text-sm font-bold text-parchment;
+    box-shadow: inset 0 0 0 1px rgba(255, 232, 176, 0.08);
+  }
+
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 z-50 border-t border-bronze/25 bg-[#100d09]/95 safe-area-inset backdrop-blur;
+    box-shadow: 0 -14px 32px rgba(0, 0, 0, 0.52), inset 0 1px 0 rgba(201, 169, 97, 0.12);
+  }
+
+  .bottom-nav-inner {
+    @apply mx-auto grid max-w-[430px] grid-cols-5;
+  }
+
+  .nav-mark {
+    @apply grid h-8 w-8 place-items-center overflow-hidden rounded-sm;
+  }
+
+  .nav-mark img {
+    @apply h-7 w-7 object-contain opacity-65 transition;
+    filter: sepia(0.35) saturate(0.9);
+  }
+
+  .nav-link.active .nav-mark img {
+    @apply opacity-100;
+    filter: drop-shadow(0 0 7px rgba(201, 169, 97, 0.45));
+  }
+
+  .screen-shell {
+    @apply relative mx-auto min-h-screen max-w-[430px] overflow-hidden px-4 pb-28 pt-6 text-paper;
+  }
+
+  .screen-header {
+    @apply relative z-10 mb-4 flex items-end justify-between gap-4;
+  }
+
+  .screen-kicker {
+    @apply text-[10px] font-bold tracking-[0.4em] text-bronze/70;
+  }
+
+  .screen-title {
+    @apply mt-1 text-[30px] font-black leading-none text-bronze;
+    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    letter-spacing: 0;
+  }
+
+  .screen-subtitle {
+    @apply mt-2 text-xs leading-5 text-parchment/60;
+  }
+
+  .bronze-panel {
+    @apply relative overflow-hidden rounded-[10px] border border-bronze/30 bg-black/25;
+    box-shadow: inset 0 0 0 1px rgba(201, 169, 97, 0.08), 0 12px 26px rgba(0, 0, 0, 0.34);
+  }
+
+  .bronze-panel::before {
+    content: '';
+    @apply pointer-events-none absolute inset-0 rounded-[inherit];
+    background:
+      repeating-linear-gradient(90deg, rgba(255, 231, 170, 0.025) 0 1px, transparent 1px 6px),
+      radial-gradient(circle at 50% 0%, rgba(201, 169, 97, 0.12), transparent 55%);
+  }
+
+  .parchment-strip {
+    @apply relative overflow-hidden rounded-[9px] border border-bronze/35 p-4 text-ink;
+    background:
+      linear-gradient(rgba(223, 195, 133, 0.84), rgba(174, 132, 72, 0.82)),
+      url('/ui/parchment-clean-texture.png');
+    background-size: cover;
+    box-shadow: inset 0 0 0 1px rgba(255, 237, 189, 0.16), 0 10px 20px rgba(0, 0, 0, 0.28);
+  }
+
+  .ritual-button {
+    @apply rounded-sm border border-[#6d5129] bg-[#4c3218] px-3 py-3 text-sm font-bold text-parchment shadow-inner transition active:scale-95 disabled:cursor-not-allowed disabled:opacity-40;
+    box-shadow: inset 0 0 0 2px rgba(232, 197, 125, 0.08), 0 3px 10px rgba(41, 24, 8, 0.2);
+  }
+
+  .ghost-button {
+    @apply rounded-sm border border-bronze/30 bg-black/25 px-3 py-3 text-sm font-bold text-bronze transition active:scale-95;
+  }
+
+  .game-card {
+    @apply relative aspect-[2/3] w-full overflow-hidden rounded-[6px] border border-bronze/45 bg-ink-2;
+    box-shadow: inset 0 0 0 2px rgba(255, 232, 176, 0.08), 0 8px 16px rgba(0, 0, 0, 0.38);
+  }
+
+  .game-card img {
+    @apply h-full w-full object-cover;
+  }
+
+  .game-card-shade {
+    @apply absolute inset-0;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 28%, rgba(0, 0, 0, 0.78)),
+      radial-gradient(circle at 50% 45%, transparent, rgba(0, 0, 0, 0.16));
+  }
+
+  .game-card-rarity {
+    @apply absolute left-2 top-2 rounded-sm border border-bronze/45 bg-black/45 px-1.5 py-0.5 text-[10px] font-black text-bronze;
+  }
+
+  .game-card-name {
+    @apply absolute bottom-7 left-2 right-2 text-center text-base font-black text-parchment;
+    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  }
+
+  .game-card-level {
+    @apply absolute bottom-2 left-2 right-2 text-center text-[11px] font-bold text-bronze/85;
+  }
+
+  .game-card.rare,
+  .game-card.epic,
+  .game-card.legendary {
+    box-shadow: inset 0 0 0 2px rgba(255, 232, 176, 0.14), 0 0 18px rgba(201, 169, 97, 0.18), 0 10px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .game-card.unrevealed img {
+    filter: brightness(0.82) saturate(0.88);
   }
 
   .input-base {

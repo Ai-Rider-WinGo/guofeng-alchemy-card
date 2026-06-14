@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { PageLayout } from '@/components/PageLayout'
@@ -8,6 +8,13 @@ import { CardDisplay } from '@/components/CardDisplay'
 import { useGame } from '@/lib/gameContext'
 import { getCardById, loadCards } from '@/lib/cardUtils'
 import type { Card } from '@/lib/types'
+
+const typeLabels: Record<string, string> = {
+  person: '人物',
+  event: '事件',
+  strategy: '谋略',
+  place: '地名',
+}
 
 export default function CardDetailPage() {
   const { gameState } = useGame()
@@ -18,25 +25,27 @@ export default function CardDetailPage() {
 
   useEffect(() => {
     const foundCard = getCardById(cardId)
-    if (foundCard) {
-      setCard(foundCard)
+    if (!foundCard) return
 
-      const allCards = loadCards()
-      const related = foundCard.relatedCards
-        .map((id) => allCards.find((c) => c.id === id))
-        .filter((c): c is Card => c !== undefined)
-      setRelatedCards(related)
-    }
+    setCard(foundCard)
+    const allCards = loadCards()
+    setRelatedCards(
+      foundCard.relatedCards
+        .map((id) => allCards.find((item) => item.id === id))
+        .filter((item): item is Card => item !== undefined)
+    )
   }, [cardId])
 
   if (!card) {
     return (
       <PageLayout>
-        <div className="max-w-md mx-auto px-4 py-6 text-center">
-          <p className="text-paper/60">卡片未找到</p>
-          <Link href="/collection" className="btn-secondary block mt-4">
-            返回图鉴
-          </Link>
+        <div className="screen-shell">
+          <section className="bronze-panel p-8 text-center">
+            <p className="relative z-10 text-sm text-parchment/60">卡片未找到</p>
+            <Link href="/collection" className="ghost-button relative z-10 mt-4 block">
+              返回图鉴
+            </Link>
+          </section>
         </div>
       </PageLayout>
     )
@@ -46,87 +55,75 @@ export default function CardDetailPage() {
 
   return (
     <PageLayout>
-      <div className="max-w-md mx-auto px-4 py-6 space-y-6">
-        {/* 卡牌大图 */}
-        <div className="flex justify-center">
-          {isUnlocked ? (
-            <div className="w-56">
-              <CardDisplay
-                cardId={card.id}
-                cardName={card.name}
-                level={card.level}
-                rarity={card.rarity}
-                isRevealed
-              />
+      <div className="screen-shell">
+        <header className="screen-header">
+          <div>
+            <p className="screen-kicker">{card.dynasty}</p>
+            <h1 className="screen-title">{card.name}</h1>
+            <p className="screen-subtitle">{card.description}</p>
+          </div>
+          <Link href="/collection" className="ghost-button shrink-0 px-3 py-2">
+            图鉴
+          </Link>
+        </header>
+
+        <section className="bronze-panel p-4">
+          <div className="relative z-10 grid grid-cols-[44%_1fr] gap-4">
+            <CardDisplay
+              cardId={card.id}
+              cardName={isUnlocked ? card.name : '未解锁'}
+              level={card.level}
+              rarity={card.rarity}
+              isRevealed={isUnlocked}
+            />
+
+            <div className="space-y-3">
+              {[
+                ['等级', String(card.level)],
+                ['稀有度', card.rarity],
+                ['类型', typeLabels[card.type] ?? card.type],
+                ['持有', isUnlocked ? `${gameState.playerCards[cardId] || 1} 张` : '未收集'],
+              ].map(([label, value]) => (
+                <div key={label} className="rounded-sm border border-bronze/20 bg-black/20 px-3 py-2">
+                  <p className="text-[11px] font-bold text-parchment/45">{label}</p>
+                  <p className="mt-1 text-sm font-black text-bronze">{value}</p>
+                </div>
+              ))}
             </div>
-          ) : (
-            <div className="card-frame w-56 aspect-[2/3] border-2 border-bronze/20 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-5xl mb-4">❓</div>
-                <p className="text-paper/60">未解锁的卡片</p>
+          </div>
+        </section>
+
+        <section className="mt-4 space-y-3">
+          <div className="parchment-strip">
+            <p className="text-sm font-black tracking-[0.18em]">历史故事</p>
+            <p className="mt-2 text-xs leading-6 text-ink/72">{card.story}</p>
+          </div>
+
+          <div className="bronze-panel p-4">
+            <div className="relative z-10 space-y-4">
+              <div>
+                <p className="text-sm font-black text-bronze">历史知识点</p>
+                <p className="mt-2 text-xs leading-6 text-parchment/68">{card.knowledgePoint}</p>
+              </div>
+              <div className="h-px bg-bronze/20" />
+              <div>
+                <p className="text-sm font-black text-bronze">合成提示</p>
+                <p className="mt-2 text-xs leading-6 text-parchment/68">{card.mergeHint}</p>
               </div>
             </div>
-          )}
-        </div>
-
-        {/* 卡片属性 */}
-        <div className="card-frame p-4 space-y-4">
-          <div>
-            <h1 className="text-2xl font-bold text-bronze mb-1">{card.name}</h1>
-            <p className="text-sm text-paper/60">{card.description}</p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-2 gap-3 text-sm">
-            <div className="p-2 bg-ink/30 rounded">
-              <p className="text-paper/60 text-xs">等级</p>
-              <p className="text-lg font-bold text-bronze">{card.level}</p>
-            </div>
-            <div className="p-2 bg-ink/30 rounded">
-              <p className="text-paper/60 text-xs">稀有度</p>
-              <p className="text-lg font-bold text-bronze">{card.rarity}</p>
-            </div>
-            <div className="p-2 bg-ink/30 rounded">
-              <p className="text-paper/60 text-xs">朝代</p>
-              <p className="text-lg font-bold text-bronze">{card.dynasty}</p>
-            </div>
-            <div className="p-2 bg-ink/30 rounded">
-              <p className="text-paper/60 text-xs">类型</p>
-              <p className="text-lg font-bold text-bronze">
-                {card.type === 'person' ? '人物' : card.type === 'event' ? '事件' : '战略'}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* 历史故事 */}
-        <div className="card-frame p-4 space-y-2">
-          <h2 className="text-lg font-bold text-bronze">历史故事</h2>
-          <p className="text-sm text-paper/70 leading-relaxed">{card.story}</p>
-        </div>
-
-        {/* 历史知识点 */}
-        <div className="card-frame p-4 space-y-2">
-          <h2 className="text-lg font-bold text-bronze">历史知识点</h2>
-          <p className="text-sm text-paper/70 leading-relaxed">{card.knowledgePoint}</p>
-        </div>
-
-        {/* 合成提示 */}
-        <div className="card-frame p-4 space-y-2">
-          <h2 className="text-lg font-bold text-jade">合成提示</h2>
-          <p className="text-sm text-paper/70 leading-relaxed">{card.mergeHint}</p>
-        </div>
-
-        {/* 相关卡片 */}
         {relatedCards.length > 0 && (
-          <div className="card-frame p-4 space-y-3">
-            <h2 className="text-lg font-bold text-bronze">相关卡片</h2>
-            <div className="grid grid-cols-3 gap-2">
+          <section className="mt-5">
+            <div className="ornate-title compact">
+              <span />
+              相关卡片
+              <span />
+            </div>
+            <div className="route-frame">
               {relatedCards.map((relatedCard) => (
-                <Link
-                  key={relatedCard.id}
-                  href={`/card/${relatedCard.id}`}
-                  className="hover:opacity-80 transition"
-                >
+                <Link key={relatedCard.id} href={`/card/${relatedCard.id}`} className="min-w-[72px]">
                   <CardDisplay
                     cardId={relatedCard.id}
                     cardName={relatedCard.name}
@@ -137,25 +134,20 @@ export default function CardDetailPage() {
                 </Link>
               ))}
             </div>
-          </div>
+          </section>
         )}
 
-        {/* 拥有状态 */}
-        {isUnlocked && (
-          <div className="card-frame p-4 text-center bg-jade/10 border-jade/30">
-            <p className="text-sm text-jade">✓ 已收集</p>
-            <p className="text-xs text-paper/60 mt-1">拥有 {gameState.playerCards[cardId] || 1} 张</p>
-          </div>
-        )}
-
-        {/* 导航 */}
-        <div className="flex gap-3">
-          <Link href="/collection" className="btn-secondary flex-1 text-center">
+        <div className="mt-5 grid grid-cols-2 gap-3">
+          <Link href="/collection" className="ghost-button text-center">
             返回图鉴
           </Link>
-          {card.level <= 2 && (
-            <Link href="/merge" className="btn-primary flex-1 text-center">
+          {card.level <= 2 ? (
+            <Link href="/merge" className="ritual-button text-center">
               用于合成
+            </Link>
+          ) : (
+            <Link href="/draw" className="ritual-button text-center">
+              前往抽卡
             </Link>
           )}
         </div>
