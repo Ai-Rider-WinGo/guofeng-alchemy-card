@@ -11,7 +11,7 @@
 - `card-master-table-preview.png`：母卡总表 HTML 的 README 预览截图。
 - `readme-card-wall.png`：卡牌视觉资产墙。
 - `readme-asset-pipeline.png`：本地 AI 素材生成管线展示。
-- `frontend-draw.png`、`frontend-inventory.png`、`frontend-card-detail.png`：单页界面截图。
+- `frontend-draw.png`、`frontend-inventory.png`、`frontend-card-detail.png`：当前参考图重绘版前端截图。
 
 ## 使用原则
 
