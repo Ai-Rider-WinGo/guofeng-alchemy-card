@@ -55,7 +55,7 @@ export default function CardDetailPage() {
                 cardId={card.id}
                 cardName={card.name}
                 level={card.level}
-                rarity={card.rarity}
+                quality={card.rarity}
                 isRevealed
               />
             </div>
@@ -131,7 +131,7 @@ export default function CardDetailPage() {
                     cardId={relatedCard.id}
                     cardName={relatedCard.name}
                     level={relatedCard.level}
-                    rarity={relatedCard.rarity}
+                    quality={relatedCard.rarity}
                     isRevealed={gameState.unlockedCards.includes(relatedCard.id)}
                   />
                 </Link>

@@ -1,0 +1,135 @@
+<h2>设计章节三（修订）：配方系统 — 炼金秘方</h2>
+<p class="subtitle">配方 = 稀有消耗品 · 碎片 = 通用材料 · 秘方在手，碎片炼金</p>
+
+<div class="section">
+  <h3>⚗️ 新配方机制</h3>
+  <div class="mockup">
+    <div class="mockup-header">配方不是"消耗指定卡牌"，而是"获得炼制权限 + 碎片兑换"</div>
+    <div class="mockup-body">
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px 0;">
+        <div style="background:rgba(255,215,0,0.1);border:2px solid rgba(255,215,0,0.5);border-radius:8px;padding:12px;text-align:center;min-width:100px;">
+          <div style="font-size:24px;">📜</div>
+          <div style="font-weight:bold;color:#ffd700;font-size:13px;">赤壁秘方</div>
+          <div style="font-size:10px;color:#aaa;">稀有配方道具</div>
+        </div>
+        <div style="color:#4ade80;font-size:20px;">+</div>
+        <div style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.3);border-radius:8px;padding:12px;text-align:center;min-width:100px;">
+          <div style="font-size:24px;">💎</div>
+          <div style="font-weight:bold;color:#3b82f6;font-size:13px;">300 碎片</div>
+          <div style="font-size:10px;color:#aaa;">通用炼金材料</div>
+        </div>
+        <div style="color:#ffd700;font-size:24px;">→</div>
+        <div style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(239,68,68,0.1));border:2px solid rgba(255,215,0,0.4);border-radius:8px;padding:12px;text-align:center;min-width:100px;">
+          <div style="font-size:24px;">🔥</div>
+          <div style="font-weight:bold;color:#ffd700;font-size:13px;">赤壁之战 Lv7</div>
+          <div style="font-size:10px;color:#aaa;">保底出卡</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>📜 配方获取方式（定量控制）</h3>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:150px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#ffd700;margin-bottom:6px;">🏆 里程碑掉落</div>
+      <p style="font-size:12px;color:#aaa;margin:4px 0;">收集某朝代 N 张卡<br>合成次数达到 N 次<br>排行榜前 N 名奖励</p>
+      <div style="font-size:10px;color:#666;margin-top:6px;">稳定产出 · 人人可得</div>
+    </div>
+    <div style="flex:1;min-width:150px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#ef4444;margin-bottom:6px;">🎪 限时活动</div>
+      <p style="font-size:12px;color:#aaa;margin:4px 0;">每周活动专属配方<br>联名品牌限定配方<br>"错过等N周"</p>
+      <div style="font-size:10px;color:#666;margin-top:6px;">稀缺驱动 · 制造话题</div>
+    </div>
+    <div style="flex:1;min-width:150px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#a855f7;margin-bottom:6px;">🎁 稀有掉落</div>
+      <p style="font-size:12px;color:#aaa;margin:4px 0;">通用合成小概率出<br>看广告额外掉落<br>签到连续7天</p>
+      <div style="font-size:10px;color:#666;margin-top:6px;">惊喜感 · 多巴胺</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>📊 配方分级</h3>
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+          <th style="padding:6px;text-align:left;color:#aaa;">配方等级</th>
+          <th style="padding:6px;text-align:center;color:#aaa;">可炼制目标</th>
+          <th style="padding:6px;text-align:center;color:#aaa;">碎片消耗</th>
+          <th style="padding:6px;text-align:center;color:#aaa;">获取难度</th>
+          <th style="padding:6px;text-align:left;color:#aaa;">举例</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;color:#22c55e;">普通配方</td>
+          <td style="padding:6px;text-align:center;">Lv4-6</td>
+          <td style="padding:6px;text-align:center;">30-80 碎片</td>
+          <td style="padding:6px;text-align:center;color:#22c55e;">容易</td>
+          <td style="padding:6px;color:#aaa;">里程碑/签到自然获得</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;color:#3b82f6;">稀有配方</td>
+          <td style="padding:6px;text-align:center;">Lv7-9</td>
+          <td style="padding:6px;text-align:center;">100-200 碎片</td>
+          <td style="padding:6px;text-align:center;color:#fbbf24;">中等</td>
+          <td style="padding:6px;color:#aaa;">周活动/排行奖励</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;color:#a855f7;">史诗配方</td>
+          <td style="padding:6px;text-align:center;">Lv10-11</td>
+          <td style="padding:6px;text-align:center;">250-400 碎片</td>
+          <td style="padding:6px;text-align:center;color:#ef4444;">困难</td>
+          <td style="padding:6px;color:#aaa;">月度大师榜/联名活动</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;color:#ffd700;">传说配方</td>
+          <td style="padding:6px;text-align:center;">Lv12 至宝</td>
+          <td style="padding:6px;text-align:center;">500 碎片</td>
+          <td style="padding:6px;text-align:center;color:#ff0000;">极难</td>
+          <td style="padding:6px;color:#aaa;">赛季终极大奖/实体卡兑换资格</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h3>⚖️ 修订后：三条路径定位</h3>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px;">
+    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+        <th style="padding:6px;text-align:left;color:#aaa;">路径</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">机制</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">确定性</th>
+        <th style="padding:6px;text-align:left;color:#aaa;">适合谁</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">🔄 通用合成</td>
+        <td style="padding:6px;text-align:center;font-size:11px;">2同等级同朝代→随机升1级</td>
+        <td style="padding:6px;text-align:center;color:#fbbf24;">随机</td>
+        <td style="padding:6px;color:#aaa;">日常玩家·走量</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">📜 配方炼制</td>
+        <td style="padding:6px;text-align:center;font-size:11px;">配方+碎片→指定卡</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">100%</td>
+        <td style="padding:6px;color:#aaa;">策略玩家·定向突破</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;">💎 碎片直兑</td>
+        <td style="padding:6px;text-align:center;font-size:11px;">纯碎片→指定卡（无配方）</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">100%</td>
+        <td style="padding:6px;color:#aaa;">氪肝玩家·终极保底</td>
+      </tr>
+    </table>
+    <p style="font-size:11px;color:#666;margin:8px 0 0 0;">
+      碎片直兑比配方炼制贵 2-3 倍碎片。配方的价值在于"打折"——有秘方，省材料。
+    </p>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;">配方变成稀有消耗品，定量发放，碎片是通用货币。这个机制OK吗？</p>

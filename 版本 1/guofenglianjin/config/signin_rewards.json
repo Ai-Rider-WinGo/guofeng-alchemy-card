@@ -1,0 +1,12 @@
+{
+  "cycle": 7,
+  "rewards": [
+    { "day": 1, "type": "shard", "amount": 5, "label": "💎 ×5" },
+    { "day": 2, "type": "shard", "amount": 10, "label": "💎 ×10" },
+    { "day": 3, "type": "shard", "amount": 15, "label": "💎 ×15" },
+    { "day": 4, "type": "shard", "amount": 25, "label": "💎 ×25" },
+    { "day": 5, "type": "shard", "amount": 40, "label": "💎 ×40" },
+    { "day": 6, "type": "shard", "amount": 60, "label": "💎 ×60" },
+    { "day": 7, "type": "shard", "amount": 100, "label": "💎 ×100" }
+  ]
+}

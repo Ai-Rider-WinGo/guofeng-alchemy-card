@@ -1,0 +1,139 @@
+<h2>设计章节一：卡牌规模与等级体系</h2>
+<p class="subtitle">「六朝炼金录」— 6个朝代 × 12个等级，金字塔式卡牌分布</p>
+
+<div class="section">
+  <h3>🏗️ 金字塔等级结构</h3>
+  <div class="mockup">
+    <div class="mockup-body">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <!-- Lv12 pinnacle -->
+        <div style="background:linear-gradient(135deg,rgba(255,215,0,0.2),rgba(255,180,0,0.1));border:1px solid rgba(255,215,0,0.5);border-radius:6px;padding:6px 20px;text-align:center;min-width:120px;">
+          <span style="color:#ffd700;font-weight:bold;font-size:13px;">Lv12 · 至宝</span><br>
+          <span style="color:#aaa;font-size:10px;">全服仅12张 · 每朝2张</span>
+        </div>
+        <div style="color:#aaa;font-size:10px;">▲ 终极收藏 ▲</div>
+        
+        <div style="background:rgba(220,38,38,0.12);border:1px solid rgba(220,38,38,0.3);border-radius:6px;padding:5px 24px;text-align:center;min-width:140px;">
+          <span style="color:#ef4444;font-weight:bold;font-size:12px;">Lv10-11 · 神品</span><br>
+          <span style="color:#aaa;font-size:10px;">每朝3-4张</span>
+        </div>
+        <div style="background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.3);border-radius:6px;padding:5px 28px;text-align:center;min-width:160px;">
+          <span style="color:#a855f7;font-weight:bold;font-size:12px;">Lv8-9 · 极品</span><br>
+          <span style="color:#aaa;font-size:10px;">每朝5-7张</span>
+        </div>
+        <div style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);border-radius:6px;padding:5px 36px;text-align:center;min-width:180px;">
+          <span style="color:#3b82f6;font-weight:bold;font-size:12px;">Lv6-7 · 稀有</span><br>
+          <span style="color:#aaa;font-size:10px;">每朝10-14张</span>
+        </div>
+        <div style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:5px 44px;text-align:center;min-width:200px;">
+          <span style="color:#22c55e;font-weight:bold;font-size:12px;">Lv4-5 · 精良</span><br>
+          <span style="color:#aaa;font-size:10px;">每朝20-25张</span>
+        </div>
+        <div style="background:rgba(156,163,175,0.12);border:1px solid rgba(156,163,175,0.3);border-radius:6px;padding:5px 52px;text-align:center;min-width:220px;">
+          <span style="color:#9ca3af;font-weight:bold;font-size:12px;">Lv1-3 · 凡品/入门</span><br>
+          <span style="color:#aaa;font-size:10px;">每朝30-40张</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>📊 数量估算</h3>
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+          <th style="padding:6px;text-align:left;color:#aaa;">等级段</th>
+          <th style="padding:6px;text-align:center;color:#aaa;">品质</th>
+          <th style="padding:6px;text-align:center;color:#aaa;">每朝数量</th>
+          <th style="padding:6px;text-align:center;color:#aaa;">6朝合计</th>
+          <th style="padding:6px;text-align:left;color:#aaa;">卡牌类型举例</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;">Lv1-3</td>
+          <td style="padding:6px;text-align:center;color:#9ca3af;">凡品</td>
+          <td style="padding:6px;text-align:center;">100-120</td>
+          <td style="padding:6px;text-align:center;color:#4ade80;">~660</td>
+          <td style="padding:6px;font-size:11px;color:#aaa;">地名、小人物、器物、碎片事件</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;">Lv4-5</td>
+          <td style="padding:6px;text-align:center;color:#22c55e;">精良</td>
+          <td style="padding:6px;text-align:center;">40-50</td>
+          <td style="padding:6px;text-align:center;color:#4ade80;">~270</td>
+          <td style="padding:6px;font-size:11px;color:#aaa;">知名人物、重要事件、文物</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;">Lv6-7</td>
+          <td style="padding:6px;text-align:center;color:#3b82f6;">稀有</td>
+          <td style="padding:6px;text-align:center;">20-28</td>
+          <td style="padding:6px;text-align:center;color:#4ade80;">~144</td>
+          <td style="padding:6px;font-size:11px;color:#aaa;">关键战役、核心人物高光时刻</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;">Lv8-9</td>
+          <td style="padding:6px;text-align:center;color:#a855f7;">极品</td>
+          <td style="padding:6px;text-align:center;">10-14</td>
+          <td style="padding:6px;text-align:center;color:#4ade80;">~72</td>
+          <td style="padding:6px;font-size:11px;color:#aaa;">王朝兴衰转折点、帝王功业</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:6px;">Lv10-11</td>
+          <td style="padding:6px;text-align:center;color:#ef4444;">神品</td>
+          <td style="padding:6px;text-align:center;">6-8</td>
+          <td style="padding:6px;text-align:center;color:#4ade80;">~42</td>
+          <td style="padding:6px;font-size:11px;color:#aaa;">朝代象征、千古名篇、传国重器</td>
+        </tr>
+        <tr>
+          <td style="padding:6px;">Lv12</td>
+          <td style="padding:6px;text-align:center;color:#ffd700;">至宝</td>
+          <td style="padding:6px;text-align:center;">2</td>
+          <td style="padding:6px;text-align:center;color:#4ade80;font-weight:bold;">12</td>
+          <td style="padding:6px;font-size:11px;color:#aaa;">「定稿卡」— 可兑换实体黄金卡</td>
+        </tr>
+        <tr style="border-top:2px solid rgba(255,215,0,0.3);">
+          <td style="padding:8px;font-weight:bold;color:#fff;">总计</td>
+          <td></td>
+          <td style="padding:8px;text-align:center;font-weight:bold;">~190/朝</td>
+          <td style="padding:8px;text-align:center;font-weight:bold;color:#ffd700;font-size:16px;">≈ 1200+</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <h3>🏅 Lv12 实体卡机制</h3>
+  <div style="background:linear-gradient(135deg,rgba(255,215,0,0.08),rgba(180,130,30,0.05));border:1px solid rgba(255,215,0,0.3);border-radius:8px;padding:16px;">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:120px;text-align:center;">
+        <div style="font-size:24px;">12</div>
+        <div style="font-size:11px;color:#aaa;">定稿卡牌</div>
+      </div>
+      <div style="color:#aaa;">×</div>
+      <div style="flex:1;min-width:120px;text-align:center;">
+        <div style="font-size:24px;">100</div>
+        <div style="font-size:11px;color:#aaa;">张/款·带编号</div>
+      </div>
+      <div style="color:#aaa;">=</div>
+      <div style="flex:1;min-width:120px;text-align:center;">
+        <div style="font-size:24px;color:#ffd700;">1200</div>
+        <div style="font-size:11px;color:#aaa;">张实体黄金卡</div>
+      </div>
+      <div style="flex:1;min-width:120px;text-align:center;">
+        <div style="font-size:24px;color:#ffd700;">1g</div>
+        <div style="font-size:11px;color:#aaa;">黄金/张</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);font-size:12px;color:#aaa;">
+      <strong>混合兑换：</strong>每款卡 100 个名额 → 30个先到先得 + 40个抽签 + 30个里程碑保底<br>
+      <strong>发放节奏：</strong>每季（朝代）结束时发放该朝代的 2 款 Lv12 实体卡（200张/季）
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;">每个朝代约 190 张卡，6 朝共计 1200+ 张。这个数量级你觉得合适吗？在终端告诉我，我们可以调。</p>

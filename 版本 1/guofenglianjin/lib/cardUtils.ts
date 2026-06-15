@@ -1,7 +1,51 @@
-import cardsData from '@/config/cards.json'
-import mergeRulesData from '@/config/merge_rules.json'
-import drawPoolsData from '@/config/draw_pools.json'
-import { Card, MergeRule } from './types'
+// lib/cardUtils.ts — 适配新类型系统
+
+import { Card, DynastyId, CardQuality, CardType } from './types'
+import { loadAllCards, loadCardsByDynasty, getCardById as configGetCardById, loadDynasties } from './config-loader'
+import { canGenericSynthesize, genericSynthesize } from './synthesis-engine'
+
+// ============ 卡牌加载（委托给 config-loader） ============
+
+export function loadCards(): Card[] {
+  return loadAllCards()
+}
+
+export { loadCardsByDynasty }
+
+export function getCardById(cardId: string): Card | undefined {
+  return configGetCardById(cardId)
+}
+
+// ============ 朝代/品质/类型查询 ============
+
+export function getAllDynasties(): string[] {
+  return loadDynasties().map(d => d.id)
+}
+
+export function getAllQualities(): CardQuality[] {
+  return ['common', 'fine', 'rare', 'epic', 'divine', 'treasure']
+}
+
+export function getAllTypes(): CardType[] {
+  return ['person', 'event', 'place', 'artifact', 'strategy']
+}
+
+// ============ 旧版兼容：canMerge → 新合成引擎 ============
+
+export function canMerge(card1Id: string, card2Id: string): { to: string; mergeDesc: string } | null {
+  if (!canGenericSynthesize(card1Id, card2Id)) return null
+
+  const result = genericSynthesize(card1Id, card2Id)
+  if (!result.success || !result.resultCardId) return null
+
+  const targetCard = getCardById(result.resultCardId)
+  return {
+    to: result.resultCardId,
+    mergeDesc: targetCard ? `合成 ${targetCard.name}` : '未知合成结果',
+  }
+}
+
+// ============ 抽卡池（兼容旧版接口） ============
 
 export interface DrawPool {
   pool_id: string
@@ -11,64 +55,38 @@ export interface DrawPool {
   active_card_ids: string[]
 }
 
-// 加载卡牌数据
-export function loadCards(): Card[] {
-  return cardsData.map((card: any) => ({
-    id: card.card_id,
-    name: card.name,
-    level: card.level,
-    type: card.type,
-    dynasty: card.dynasty,
-    rarity: card.rarity,
-    description: card.short_desc,
-    story: card.story,
-    knowledgePoint: card.knowledge_point,
-    relatedCards: card.related_cards,
-    mergeHint: card.merge_hint,
-  }))
-}
-
-// 加载合成规则
-export function loadMergeRules(): MergeRule[] {
-  return mergeRulesData.map((rule: any) => ({
-    from: [rule.input_a, rule.input_b],
-    to: rule.output,
-    mergeDesc: rule.merge_desc,
-    requiresOrder: false,
-  }))
-}
-
-// 加载抽卡池
 export function loadDrawPools(): DrawPool[] {
-  return drawPoolsData.map((pool: any) => ({
-    pool_id: pool.pool_id,
-    name: pool.name,
-    levels: pool.levels,
-    rarity_weights: pool.rarity_weights,
-    active_card_ids: pool.active_card_ids,
-  }))
+  // 返回兼容格式的抽卡池
+  return [
+    {
+      pool_id: 'permanent_basic',
+      name: '基础池',
+      levels: [1, 2, 3],
+      rarity_weights: {
+        common: 0.60,
+        fine: 0.25,
+        rare: 0.10,
+        epic: 0.04,
+        divine: 0.01,
+        treasure: 0,
+      },
+      active_card_ids: loadCardsByDynasty('qinhan')
+        .filter(c => c.level <= 3)
+        .map(c => c.id),
+    },
+  ]
 }
 
-// 获取卡牌 by ID
-export function getCardById(cardId: string): Card | undefined {
-  const cards = loadCards()
-  return cards.find((c) => c.id === cardId)
-}
-
-// 从抽卡池随机抽卡
 export function drawFromPool(poolId: string): string | null {
   const pools = loadDrawPools()
-  const pool = pools.find((p) => p.pool_id === poolId)
-
+  const pool = pools.find(p => p.pool_id === poolId)
   if (!pool || pool.active_card_ids.length === 0) return null
 
-  // 按稀有度权重随机选择稀有度
-  const rarityWeights = pool.rarity_weights
-  const totalWeight = Object.values(rarityWeights).reduce((a, b) => a + b, 0)
+  const totalWeight = Object.values(pool.rarity_weights).reduce((a, b) => a + b, 0)
   let randomValue = Math.random() * totalWeight
   let selectedRarity: string | null = null
 
-  for (const [rarity, weight] of Object.entries(rarityWeights)) {
+  for (const [rarity, weight] of Object.entries(pool.rarity_weights)) {
     randomValue -= weight
     if (randomValue <= 0) {
       selectedRarity = rarity
@@ -76,23 +94,20 @@ export function drawFromPool(poolId: string): string | null {
     }
   }
 
-  if (!selectedRarity) selectedRarity = Object.keys(rarityWeights)[0]
+  if (!selectedRarity) selectedRarity = Object.keys(pool.rarity_weights)[0]
 
-  // 从选定稀有度的卡牌中随机选择
   const cards = loadCards()
   const candidateCards = pool.active_card_ids
-    .map((id) => cards.find((c) => c.id === id))
-    .filter(
-      (c): c is Card =>
-        c !== undefined &&
-        c.rarity === selectedRarity &&
-        pool.levels.includes(c.level)
+    .map(id => cards.find(c => c.id === id))
+    .filter((c): c is Card =>
+      c !== undefined &&
+      c.quality === selectedRarity &&
+      pool.levels.includes(c.level)
     )
 
   if (candidateCards.length === 0) {
-    // 降级到任意可用卡牌
     const allCandidates = pool.active_card_ids
-      .map((id) => cards.find((c) => c.id === id))
+      .map(id => cards.find(c => c.id === id))
       .filter((c): c is Card => c !== undefined && pool.levels.includes(c.level))
 
     if (allCandidates.length === 0) return null
@@ -102,54 +117,62 @@ export function drawFromPool(poolId: string): string | null {
   return candidateCards[Math.floor(Math.random() * candidateCards.length)].id
 }
 
-// 检查是否可以合成两张卡
-export function canMerge(card1Id: string, card2Id: string): MergeRule | null {
-  const rules = loadMergeRules()
-
-  // 检查顺序 1->2 或 2->1
-  const rule =
-    rules.find(
-      (r) => (r.from[0] === card1Id && r.from[1] === card2Id) || (r.from[0] === card2Id && r.from[1] === card1Id)
-    ) || null
-
-  return rule
-}
-
-// 十连抽
 export function draw10FromPool(poolId: string): string[] {
   const results: string[] = []
   for (let i = 0; i < 10; i++) {
     const cardId = drawFromPool(poolId)
-    if (cardId) {
-      results.push(cardId)
-    }
+    if (cardId) results.push(cardId)
   }
   return results
 }
 
-// 获取指定朝代的所有卡牌
+// ============ 查询辅助 ============
+
 export function getCardsByDynasty(dynasty: string): Card[] {
-  const cards = loadCards()
-  return cards.filter((c) => c.dynasty === dynasty)
+  return loadAllCards().filter(c => c.dynasty === dynasty)
 }
 
-// 获取所有朝代
-export function getAllDynasties(): string[] {
-  const cards = loadCards()
-  const dynasties = new Set(cards.map((c) => c.dynasty))
-  return Array.from(dynasties).sort()
+export function getCollectionProgress(state: { unlockedCards: string[] }, allCards: Card[]): { unlocked: number; total: number } {
+  return {
+    total: allCards.length,
+    unlocked: state.unlockedCards.length,
+  }
 }
 
-// 获取所有稀有度
-export function getAllRarities(): string[] {
-  const cards = loadCards()
-  const rarities = new Set(cards.map((c) => c.rarity))
-  return Array.from(rarities)
+export function getCollectionProgressByDynasty(
+  state: { unlockedCards: string[] },
+  allCards: Card[]
+): { [dynasty: string]: { unlocked: number; total: number } } {
+  const result: { [dynasty: string]: { unlocked: number; total: number } } = {}
+  for (const card of allCards) {
+    if (!result[card.dynasty]) {
+      result[card.dynasty] = { unlocked: 0, total: 0 }
+    }
+    result[card.dynasty].total++
+    if (state.unlockedCards.includes(card.id)) {
+      result[card.dynasty].unlocked++
+    }
+  }
+  return result
 }
 
-// 获取所有类型
-export function getAllTypes(): string[] {
-  const cards = loadCards()
-  const types = new Set(cards.map((c) => c.type))
-  return Array.from(types)
+export function filterCards(
+  cards: Card[],
+  filters: { dynasty?: string; level?: number; type?: string; rarity?: string }
+): Card[] {
+  return cards.filter(card => {
+    if (filters.dynasty && card.dynasty !== filters.dynasty) return false
+    if (filters.level && card.level !== filters.level) return false
+    if (filters.type && card.type !== filters.type) return false
+    if (filters.rarity && card.quality !== filters.rarity) return false
+    return true
+  })
+}
+
+export function searchCards(cards: Card[], query: string): Card[] {
+  const lowerQuery = query.toLowerCase()
+  return cards.filter(card =>
+    card.name.toLowerCase().includes(lowerQuery) ||
+    card.description.toLowerCase().includes(lowerQuery)
+  )
 }

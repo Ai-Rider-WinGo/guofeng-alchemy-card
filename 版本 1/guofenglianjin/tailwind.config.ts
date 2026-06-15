@@ -27,6 +27,7 @@ const config: Config = {
       },
       fontFamily: {
         'sans': ['Georgia', 'serif', 'system-ui', '-apple-system'],
+        'kai': ['KaiTi', 'STKaiti', 'Songti SC', 'Georgia', 'serif'],
       },
       spacing: {
         'safe': 'max(0.5rem, env(safe-area-inset-left))',

@@ -1,39 +1,52 @@
 'use client'
 
+import { CardQuality, CARD_QUALITY } from '@/lib/types'
+
 interface CardDisplayProps {
   cardId: string
   cardName: string
   level: number
-  rarity: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary'
+  quality: CardQuality
   isRevealed?: boolean
 }
 
-const rarityColors: Record<string, string> = {
-  'common': 'border-rarity-common',
-  'uncommon': 'border-rarity-uncommon',
-  'rare': 'border-rarity-rare',
-  'epic': 'border-rarity-epic',
-  'legendary': 'border-rarity-legendary',
+const qualityBorderColors: Record<CardQuality, string> = {
+  common: 'border-gray-400',
+  fine: 'border-green-400',
+  rare: 'border-blue-400',
+  epic: 'border-purple-400',
+  divine: 'border-red-400',
+  treasure: 'border-yellow-400',
 }
 
-const rarityBgColors: Record<string, string> = {
-  'common': 'bg-rarity-common/10',
-  'uncommon': 'bg-rarity-uncommon/10',
-  'rare': 'bg-rarity-rare/10',
-  'epic': 'bg-rarity-epic/10',
-  'legendary': 'bg-rarity-legendary/10',
+const qualityBgColors: Record<CardQuality, string> = {
+  common: 'bg-gray-400/10',
+  fine: 'bg-green-400/10',
+  rare: 'bg-blue-400/10',
+  epic: 'bg-purple-400/10',
+  divine: 'bg-red-400/10',
+  treasure: 'bg-yellow-400/10',
+}
+
+const qualityLabels: Record<CardQuality, string> = {
+  common: '凡品',
+  fine: '精良',
+  rare: '稀有',
+  epic: '极品',
+  divine: '神品',
+  treasure: '至宝',
 }
 
 export function CardDisplay({
   cardId,
   cardName,
   level,
-  rarity,
+  quality,
   isRevealed = true,
 }: CardDisplayProps) {
   return (
     <div
-      className={`card-frame w-full aspect-[2/3] border-2 ${rarityColors[rarity]} ${
+      className={`card-frame w-full aspect-[2/3] border-2 ${qualityBorderColors[quality]} ${
         !isRevealed ? 'flex items-center justify-center cursor-pointer' : ''
       }`}
     >
@@ -47,7 +60,7 @@ export function CardDisplay({
           <div className="card-border-bottom" />
         </div>
       ) : (
-        <div className={`card-content p-4 h-full flex flex-col justify-between ${rarityBgColors[rarity]}`}>
+        <div className={`card-content p-4 h-full flex flex-col justify-between ${qualityBgColors[quality]}`}>
           <div className="card-border-top" />
 
           {/* 占位符艺术区域 */}
@@ -63,7 +76,7 @@ export function CardDisplay({
             <h3 className="text-lg font-bold text-bronze leading-tight">{cardName}</h3>
             <div className="flex items-center justify-between text-xs">
               <span className="text-paper/70">等级 {level}</span>
-              <span className={`px-2 py-1 rounded text-xs font-bold`}>{rarity}</span>
+              <span className="px-2 py-1 rounded text-xs font-bold">{qualityLabels[quality]}</span>
             </div>
           </div>
 

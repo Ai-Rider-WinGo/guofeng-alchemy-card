@@ -1,0 +1,158 @@
+<h2>设计章节三：合成系统 — 多元升级</h2>
+<p class="subtitle">通用合成 + 配方合成 + 碎片保底 + 活动获取，四条路径并行</p>
+
+<div class="section">
+  <h3>路径一：通用合成（主力，日常使用）</h3>
+  <div class="mockup">
+    <div class="mockup-header">规则：任意 2 张同等级 + 同朝代卡 → 随机 1 张下一等级同朝代卡</div>
+    <div class="mockup-body">
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px 0;">
+        <div style="background:rgba(156,163,175,0.12);border:1px solid rgba(156,163,175,0.3);border-radius:6px;padding:8px 12px;text-align:center;">
+          <div style="font-size:10px;color:#aaa;">秦汉 · Lv2</div>
+          <div style="font-weight:bold;color:#fff;font-size:12px;">刘邦</div>
+        </div>
+        <div style="color:#4ade80;font-size:20px;">+</div>
+        <div style="background:rgba(156,163,175,0.12);border:1px solid rgba(156,163,175,0.3);border-radius:6px;padding:8px 12px;text-align:center;">
+          <div style="font-size:10px;color:#aaa;">秦汉 · Lv2</div>
+          <div style="font-weight:bold;color:#fff;font-size:12px;">樊哙</div>
+        </div>
+        <div style="color:#ffd700;font-size:20px;">→</div>
+        <div style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:8px 12px;text-align:center;">
+          <div style="font-size:10px;color:#aaa;">秦汉 · Lv3</div>
+          <div style="font-weight:bold;color:#22c55e;font-size:12px;">随机Lv3秦汉卡</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#aaa;text-align:center;margin-top:6px;">
+        低等级（Lv1-5）通用合成成功率 100%<br>
+        中等级（Lv6-8）成功率 80%，失败返还 1 张原卡<br>
+        高等级（Lv9-11）成功率 60%，失败返还碎片
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>路径二：配方合成（定向，关键卡牌）</h3>
+  <div class="mockup">
+    <div class="mockup-header">规则：特定卡牌组合 → 保底出指定结果（历史典故驱动）</div>
+    <div class="mockup-body">
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px 0;">
+        <div style="background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.3);border-radius:6px;padding:8px 12px;text-align:center;">
+          <div style="font-size:10px;color:#aaa;">三国 · Lv4</div>
+          <div style="font-weight:bold;color:#a855f7;font-size:12px;">诸葛亮</div>
+        </div>
+        <div style="color:#a855f7;font-size:20px;">+</div>
+        <div style="background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.3);border-radius:6px;padding:8px 12px;text-align:center;">
+          <div style="font-size:10px;color:#aaa;">三国 · Lv4</div>
+          <div style="font-weight:bold;color:#a855f7;font-size:12px;">周瑜</div>
+        </div>
+        <div style="color:#ffd700;font-size:20px;">→</div>
+        <div style="background:rgba(255,215,0,0.12);border:2px solid rgba(255,215,0,0.4);border-radius:6px;padding:8px 12px;text-align:center;">
+          <div style="font-size:10px;color:#aaa;">三国 · Lv7</div>
+          <div style="font-weight:bold;color:#ffd700;font-size:12px;">✨ 赤壁之战</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#aaa;text-align:center;margin-top:6px;">
+        每个朝代约 20-30 条历史配方<br>
+        配方合成成功率 100% · 不可重复使用同一配方（合成后配方点亮，变为通用合成）<br>
+        <span style="color:#fbbf24;">首次完成配方 → 触发历史剧情动画 + 额外碎片奖励</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>路径三：碎片保底（安全网）</h3>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#3b82f6;margin-bottom:6px;">🔷 碎片来源</div>
+      <ul style="font-size:12px;color:#aaa;margin:4px 0;padding-left:18px;">
+        <li>重复卡自动分解</li>
+        <li>每日签到奖励</li>
+        <li>任务奖励</li>
+        <li>排行榜奖励</li>
+        <li>好友赠送</li>
+      </ul>
+    </div>
+    <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#22c55e;margin-bottom:6px;">🛠️ 碎片兑换</div>
+      <ul style="font-size:12px;color:#aaa;margin:4px 0;padding-left:18px;">
+        <li>定向合成：消耗碎片直接合成指定卡</li>
+        <li>Lv 越高碎片消耗越多</li>
+        <li>通用碎片 + 朝代碎片两种货币</li>
+      </ul>
+    </div>
+    <div style="flex:1;min-width:160px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#fbbf24;margin-bottom:6px;">📊 碎片消耗表</div>
+      <table style="width:100%;font-size:11px;border-collapse:collapse;">
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:3px;color:#aaa;">Lv1-3</td><td style="padding:3px;text-align:right;">5-15 碎片</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:3px;color:#aaa;">Lv4-6</td><td style="padding:3px;text-align:right;">20-50 碎片</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:3px;color:#aaa;">Lv7-9</td><td style="padding:3px;text-align:right;">60-150 碎片</td></tr>
+        <tr><td style="padding:3px;color:#aaa;">Lv10-12</td><td style="padding:3px;text-align:right;">200-500 碎片</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>路径四：活动获取（惊喜/社交）</h3>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:12px;">
+    <div style="flex:1;min-width:130px;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:6px;padding:10px;">
+      <span style="color:#ef4444;">🎪 限时活动</span>
+      <p style="color:#aaa;margin:4px 0 0 0;">每周主题 mini-game<br>完成获得特定卡牌<br>"错过等6周"的稀缺感</p>
+    </div>
+    <div style="flex:1;min-width:130px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.2);border-radius:6px;padding:10px;">
+      <span style="color:#3b82f6;">🎁 好友赠送</span>
+      <p style="color:#aaa;margin:4px 0 0 0;">每日可赠送 1 张 Lv1-3 卡<br>每日可接收 3 张<br>Lv4+ 不可赠送（保值）</p>
+    </div>
+    <div style="flex:1;min-width:130px;background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.2);border-radius:6px;padding:10px;">
+      <span style="color:#a855f7;">🤝 联名任务</span>
+      <p style="color:#aaa;margin:4px 0 0 0;">品牌联名专属任务链<br>完成获得联名限定卡<br>兼具收藏和广告价值</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>⚖️ 四条路径的定位</h3>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px;">
+    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+        <th style="padding:6px;text-align:left;color:#aaa;">路径</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">定位</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">确定性</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">门槛</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">适用等级</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">通用合成</td>
+        <td style="padding:6px;text-align:center;">日常主力</td>
+        <td style="padding:6px;text-align:center;color:#fbbf24;">随机</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">低</td>
+        <td style="padding:6px;text-align:center;">全部等级</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">配方合成</td>
+        <td style="padding:6px;text-align:center;">定向突破</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">保底</td>
+        <td style="padding:6px;text-align:center;color:#fbbf24;">中</td>
+        <td style="padding:6px;text-align:center;">Lv4-12</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">碎片保底</td>
+        <td style="padding:6px;text-align:center;">安全网</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">100%</td>
+        <td style="padding:6px;text-align:center;color:#ef4444;">高</td>
+        <td style="padding:6px;text-align:center;">全部等级</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;">活动获取</td>
+        <td style="padding:6px;text-align:center;">惊喜/社交</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">确定</td>
+        <td style="padding:6px;text-align:center;color:#22c55e;">低</td>
+        <td style="padding:6px;text-align:center;">Lv1-8</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;">四条路径覆盖不同玩家类型：休闲玩家走通用+活动，硬核玩家走配方+碎片。合理吗？</p>

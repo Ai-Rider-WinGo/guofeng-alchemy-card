@@ -6,33 +6,33 @@ import { usePathname } from 'next/navigation'
 interface NavItem {
   href: string
   label: string
-  mark: string
+  icon: string
 }
 
 const navItems: NavItem[] = [
-  { href: '/', label: '首页', mark: '首' },
-  { href: '/draw', label: '抽卡', mark: '卡' },
-  { href: '/merge', label: '合成', mark: '合' },
-  { href: '/collection', label: '卡册', mark: '册' },
-  { href: '/profile', label: '我的', mark: '我' },
+  { href: '/', label: '首页', icon: '/ui/nav-home.png' },
+  { href: '/draw', label: '抽卡', icon: '/ui/nav-lineup.png' },
+  { href: '/merge', label: '合成', icon: '/ui/nav-task.png' },
+  { href: '/collection', label: '卡册', icon: '/ui/nav-achievement.png' },
+  { href: '/profile', label: '我的', icon: '/ui/nav-shop.png' },
 ]
 
 export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-bronze/25 bg-ink/95 safe-area-inset backdrop-blur">
-      <div className="mx-auto flex max-w-[430px] items-center justify-around px-safe">
+    <nav className="bottom-nav">
+      <div className="bottom-nav-inner">
         {navItems.map((item) => (
           <Link
             key={`${item.href}-${item.label}`}
             href={item.href}
             className={`nav-link ${pathname === item.href ? 'active' : ''}`}
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-bronze/30 text-sm font-black">
-              {item.mark}
+            <span className="nav-mark">
+              <img src={item.icon} alt="" aria-hidden="true" />
             </span>
-            <span className="text-xs">{item.label}</span>
+            <span>{item.label}</span>
           </Link>
         ))}
       </div>

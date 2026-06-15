@@ -164,7 +164,7 @@ export default function CollectionPage() {
                         cardId={card.id}
                         cardName={card.name}
                         level={card.level}
-                        rarity={card.rarity}
+                        quality={card.rarity}
                         isRevealed
                       />
                     ) : (

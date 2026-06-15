@@ -1,0 +1,133 @@
+<h2>设计章节四：社交系统 — 交换 · 排行 · 展示</h2>
+<p class="subtitle">好友交换拉新 · 排行榜拼留存 · 个人展示促传播</p>
+
+<div class="section">
+  <h3>🤝 子系统一：好友交换</h3>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#3b82f6;margin-bottom:8px;">📤 交换规则</div>
+      <table style="width:100%;font-size:11px;border-collapse:collapse;">
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:4px;color:#aaa;">可交换等级</td><td style="padding:4px;text-align:right;">Lv1-5</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:4px;color:#aaa;">每日赠送上限</td><td style="padding:4px;text-align:right;">3 张</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:4px;color:#aaa;">每日接收上限</td><td style="padding:4px;text-align:right;">5 张</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:4px;color:#aaa;">需要关系</td><td style="padding:4px;text-align:right;">互相关注好友</td></tr>
+        <tr><td style="padding:4px;color:#aaa;">碎片赠送</td><td style="padding:4px;text-align:right;">每日 10 碎片</td></tr>
+      </table>
+    </div>
+    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#22c55e;margin-bottom:8px;">🎯 心愿单</div>
+      <p style="font-size:12px;color:#aaa;margin:4px 0;">每位玩家可设置 3 张"心愿卡"<br>好友看到你的心愿单<br>如果他有重复卡，一键赠送</p>
+      <p style="font-size:11px;color:#666;margin-top:8px;">降低交换摩擦 · 促进定向帮助</p>
+    </div>
+    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px;">
+      <div style="font-weight:bold;color:#fbbf24;margin-bottom:8px;">📢 拉新机制</div>
+      <p style="font-size:12px;color:#aaa;margin:4px 0;">邀请新用户 → 双方各得 100 碎片<br>好友完成首次合成 → 奖励配方<br>好友达到 Lv6 → 奖励限定边框</p>
+      <p style="font-size:11px;color:#666;margin-top:8px;">三级阶梯奖励 · 持续激励拉新</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>🏆 子系统二：排行榜</h3>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:140px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:8px;padding:12px;">
+      <div style="font-weight:bold;color:#ffd700;font-size:13px;">📚 收藏大师榜</div>
+      <p style="font-size:11px;color:#aaa;margin:4px 0;">按总收集卡牌数排名<br>分全服/好友双视角<br>每周一结算</p>
+    </div>
+    <div style="flex:1;min-width:140px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:8px;padding:12px;">
+      <div style="font-weight:bold;color:#ffd700;font-size:13px;">⚗️ 炼金大师榜</div>
+      <p style="font-size:11px;color:#aaa;margin:4px 0;">按累计合成次数排名<br>本周合成积分<br>展示合成狂人</p>
+    </div>
+    <div style="flex:1;min-width:140px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:8px;padding:12px;">
+      <div style="font-weight:bold;color:#ffd700;font-size:13px;">🏛️ 朝代专家榜</div>
+      <p style="font-size:11px;color:#aaa;margin:4px 0;">按当前周朝代收集度排名<br>每朝有独立榜单<br>"秦汉专家"等称号</p>
+    </div>
+    <div style="flex:1;min-width:140px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:8px;padding:12px;">
+      <div style="font-weight:bold;color:#ffd700;font-size:13px;">👑 月度总榜</div>
+      <p style="font-size:11px;color:#aaa;margin:4px 0;">综合加权排名<br>月度"炼金宗师"称号<br>奖励传说配方</p>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#aaa;text-align:center;">
+    排行奖励：限定称号 · 头像框 · 碎片 · 配方 · 特殊卡牌特效
+  </div>
+</div>
+
+<div class="section">
+  <h3>🏰 子系统三：个人展示（炼金阁）</h3>
+  <div class="mockup">
+    <div class="mockup-header">每个玩家拥有一个"炼金阁"主页，展示收藏成就</div>
+    <div class="mockup-body">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:2;min-width:200px;">
+          <div style="font-weight:bold;color:#fff;font-size:13px;margin-bottom:8px;">🖼️ 展示柜</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;">
+            <div style="width:44px;height:60px;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);border-radius:4px;"></div>
+            <div style="width:44px;height:60px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);border-radius:4px;"></div>
+            <div style="width:44px;height:60px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:4px;"></div>
+            <div style="width:44px;height:60px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:4px;"></div>
+            <div style="width:44px;height:60px;background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.15);border-radius:4px;"></div>
+          </div>
+          <p style="font-size:10px;color:#aaa;margin-top:4px;">自选 6 张最骄傲的卡展示</p>
+        </div>
+        <div style="flex:1;min-width:140px;">
+          <div style="font-weight:bold;color:#fff;font-size:13px;margin-bottom:8px;">🏅 称号墙</div>
+          <div style="font-size:10px;color:#ffd700;">秦汉专家</div>
+          <div style="font-size:10px;color:#a855f7;">炼金大师</div>
+          <div style="font-size:10px;color:#3b82f6;">收藏达人</div>
+          <div style="font-size:10px;color:#aaa;">...</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:#aaa;">
+        访客可点赞 · 每日点赞获碎片 · 被赞多上人气榜
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;font-size:12px;">
+    <div style="flex:1;min-width:120px;background:rgba(255,255,255,0.03);border-radius:6px;padding:10px;text-align:center;">
+      <span style="color:#4ade80;">🔗 分享到抖音</span>
+      <p style="color:#aaa;margin:4px 0 0 0;">一键生成炼金阁截图<br>分享到抖音动态<br>带游戏入口链接</p>
+    </div>
+    <div style="flex:1;min-width:120px;background:rgba(255,255,255,0.03);border-radius:6px;padding:10px;text-align:center;">
+      <span style="color:#4ade80;">🎨 稀有卡特效</span>
+      <p style="color:#aaa;margin:4px 0 0 0;">Lv10+ 卡有金色流光<br>Lv12 卡有全屏特效<br>访客可见·值得炫耀</p>
+    </div>
+    <div style="flex:1;min-width:120px;background:rgba(255,255,255,0.03);border-radius:6px;padding:10px;text-align:center;">
+      <span style="color:#4ade80;">🏛️ 访客记录</span>
+      <p style="color:#aaa;margin:4px 0 0 0;">谁来看过你的炼金阁<br>可以回访<br>社交破冰</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>📊 社交系统总览</h3>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px;">
+    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+        <th style="padding:6px;text-align:left;color:#aaa;">子系统</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">核心目的</th>
+        <th style="padding:6px;text-align:center;color:#aaa;">日常频次</th>
+        <th style="padding:6px;text-align:left;color:#aaa;">变现关联</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">🤝 好友交换</td>
+        <td style="padding:6px;text-align:center;">拉新·粘性</td>
+        <td style="padding:6px;text-align:center;">每日</td>
+        <td style="padding:6px;color:#aaa;">邀请奖励·扩展DAU基数</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:6px;">🏆 排行榜</td>
+        <td style="padding:6px;text-align:center;">竞争·留存</td>
+        <td style="padding:6px;text-align:center;">每周</td>
+        <td style="padding:6px;color:#aaa;">冲榜看广告加速</td>
+      </tr>
+      <tr>
+        <td style="padding:6px;">🏰 炼金阁</td>
+        <td style="padding:6px;text-align:center;">炫耀·传播</td>
+        <td style="padding:6px;text-align:center;">随时</td>
+        <td style="padding:6px;color:#aaa;">分享截图自然引流</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;">三驾马车：交换拉新 · 排行留人 · 展示传播。这个社交体系OK吗？</p>

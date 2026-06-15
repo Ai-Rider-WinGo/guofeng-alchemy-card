@@ -1,0 +1,35 @@
+<h2>第二问：1→12 级的升级路径应该怎么设计？</h2>
+<p class="subtitle">升级体验决定了玩家每天的"核心循环"是什么</p>
+
+<div class="options">
+  <div class="option" data-choice="linear" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>线性合成（简化版）</h3>
+      <p>两两合成就行。2张Lv1→1张Lv2，2张Lv2→1张Lv3……一路到Lv12。路径清晰简单，但需要大量基础卡牌（2^11=2048张Lv1才能到1张Lv12）。适合"慢慢攒"的佛系玩家。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="branch" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>分支合成（策略型）</h3>
+      <p>同一等级有多张不同的卡，合成路径有分支选择。比如2张不同Lv1可以合成不同的Lv2卡。玩家需要思考和规划合成路线，像"科技树"一样。适合喜欢策略的玩家。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="multi" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>多元升级（混合型）</h3>
+      <p>不止合成一种方式。可以是：合成升级、碎片积累兑换、限时活动获取、排行榜奖励、好友赠送……多种途径并行，不同玩家走不同的路。适合大众用户。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="quest" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>任务驱动（剧情型）</h3>
+      <p>每次升级不只是"凑材料"，而是完成一个历史剧情任务。比如：要合成"赤壁之战"卡，需要先收集"诸葛亮"+"周瑜"+"东风"，触发火烧赤壁的剧情动画。升级=解锁故事。</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;">选一个你觉得最对味的方向，终端里说说想法。</p>
