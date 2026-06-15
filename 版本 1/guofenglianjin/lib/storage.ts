@@ -331,7 +331,7 @@ export function filterCards(
     if (dynasty && card.dynasty !== dynasty) return false
     if (level && card.level !== level) return false
     if (type && card.type !== type) return false
-    if (rarity && card.rarity !== rarity) return false
+    if (rarity && card.quality !== rarity) return false
     return true
   })
 }
@@ -403,7 +403,7 @@ function findAutoMergePair(state: GameState, allCardIds: string[]): { card1Id: s
       if (!resultCard) continue
 
       const levelScore = (resultCard.level || 1) * 2
-      const rarityScore = { common: 0, uncommon: 1, rare: 2, epic: 3, legendary: 4 }[resultCard.rarity] || 0
+      const rarityScore = { common: 0, fine: 1, rare: 2, epic: 3, divine: 4, treasure: 5 }[resultCard.quality] || 0
       const score = levelScore + rarityScore
 
       if (!bestPair || score > bestPair.score) {
@@ -427,9 +427,9 @@ function checkMergeRule(card1Id: string, card2Id: string): { to: string } | null
 }
 
 // 从配置获取卡牌信息
-function getCardFromConfig(cardId: string): { level: number; rarity: string } | null {
+function getCardFromConfig(cardId: string): { level: number; quality: string } | null {
   const card = (cardsData as any[]).find((c: any) => c.card_id === cardId)
-  return card ? { level: card.level, rarity: card.rarity } : null
+  return card ? { level: card.level, quality: card.quality } : null
 }
 
 // 执行自动合成
@@ -516,7 +516,6 @@ export function useRecipe(state: GameState, recipeId: string): GameState {
 // ============ 每周轮换 ============
 
 import { WEEKLY_DYNASTY_ORDER, WEEK_DURATION_MS } from './constants'
-import { DynastyId } from './types'
 
 export function shouldRotateWeek(state: GameState): boolean {
   return Date.now() - state.lastWeekRotation >= WEEK_DURATION_MS

@@ -45,7 +45,7 @@ export default function MergePage() {
     if (!rule) { setMergeResult(null); setInvalidPair(true); setTimeout(() => setInvalidPair(false), 2000); return }
     const resultCard = getCardById(rule.to)
     if (!resultCard) return
-    setMergeResult({ rule, resultCard }); setInvalidPair(false)
+    setMergeResult({ ...rule, resultCard }); setInvalidPair(false)
   }
 
   const handleExecutePairMerge = () => {
@@ -174,14 +174,14 @@ export default function MergePage() {
               <label className="text-sm font-bold text-bronze">选择第一张卡片</label>
               {selectedCard1 && getCardById(selectedCard1) ? (
                 <div className="flex gap-4 items-start">
-                  <div className="w-24"><CardDisplay cardId={selectedCard1} cardName={getCardById(selectedCard1)!.name} level={getCardById(selectedCard1)!.level} quality={getCardById(selectedCard1)!.rarity} isRevealed /></div>
+                  <div className="w-24"><CardDisplay cardId={selectedCard1} cardName={getCardById(selectedCard1)!.name} level={getCardById(selectedCard1)!.level} quality={getCardById(selectedCard1)!.quality} isRevealed /></div>
                   <button onClick={() => { setSelectedCard1(null); setMergeResult(null) }} className="ghost-button">更换</button>
                 </div>
               ) : (
                 <div className="grid grid-cols-3 gap-2 max-h-52 overflow-y-auto">
                   {playerCardList.map((card) => (
                     <button key={card.id} onClick={() => handleSelectCard(card.id, false)} className="hover:opacity-80 transition">
-                      <CardDisplay cardId={card.id} cardName={card.name} level={card.level} quality={card.rarity} isRevealed />
+                      <CardDisplay cardId={card.id} cardName={card.name} level={card.level} quality={card.quality} isRevealed />
                       <p className="text-xs text-parchment/60 mt-1 text-center">×{gameState.playerCards[card.id]}</p>
                     </button>
                   ))}
@@ -196,14 +196,14 @@ export default function MergePage() {
                 <label className="text-sm font-bold text-bronze">选择第二张卡片</label>
                 {selectedCard2 && getCardById(selectedCard2) ? (
                   <div className="flex gap-4 items-start">
-                    <div className="w-24"><CardDisplay cardId={selectedCard2} cardName={getCardById(selectedCard2)!.name} level={getCardById(selectedCard2)!.level} quality={getCardById(selectedCard2)!.rarity} isRevealed /></div>
+                    <div className="w-24"><CardDisplay cardId={selectedCard2} cardName={getCardById(selectedCard2)!.name} level={getCardById(selectedCard2)!.level} quality={getCardById(selectedCard2)!.quality} isRevealed /></div>
                     <button onClick={() => { setSelectedCard2(null); setMergeResult(null) }} className="ghost-button">更换</button>
                   </div>
                 ) : (
                   <div className="grid grid-cols-3 gap-2 max-h-52 overflow-y-auto">
                     {playerCardList.filter((c) => c.id !== selectedCard1).map((card) => (
                       <button key={card.id} onClick={() => handleSelectCard(card.id, true)} className="hover:opacity-80 transition">
-                        <CardDisplay cardId={card.id} cardName={card.name} level={card.level} quality={card.rarity} isRevealed />
+                        <CardDisplay cardId={card.id} cardName={card.name} level={card.level} quality={card.quality} isRevealed />
                         <p className="text-xs text-parchment/60 mt-1 text-center">×{gameState.playerCards[card.id]}</p>
                       </button>
                     ))}
@@ -228,11 +228,11 @@ export default function MergePage() {
                 <div className="text-center">
                   <h2 className="text-lg font-black text-jade mb-3">✨ 可合成 ✨</h2>
                   <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="w-14"><CardDisplay cardId={selectedCard1!} cardName={getCardById(selectedCard1!)!.name} level={getCardById(selectedCard1!)!.level} quality={getCardById(selectedCard1!)!.rarity} isRevealed /></div>
+                    <div className="w-14"><CardDisplay cardId={selectedCard1!} cardName={getCardById(selectedCard1!)!.name} level={getCardById(selectedCard1!)!.level} quality={getCardById(selectedCard1!)!.quality} isRevealed /></div>
                     <span className="text-xl text-bronze">+</span>
-                    <div className="w-14"><CardDisplay cardId={selectedCard2!} cardName={getCardById(selectedCard2!)!.name} level={getCardById(selectedCard2!)!.level} quality={getCardById(selectedCard2!)!.rarity} isRevealed /></div>
+                    <div className="w-14"><CardDisplay cardId={selectedCard2!} cardName={getCardById(selectedCard2!)!.name} level={getCardById(selectedCard2!)!.level} quality={getCardById(selectedCard2!)!.quality} isRevealed /></div>
                     <span className="text-xl text-bronze">→</span>
-                    <div className="w-14"><CardDisplay cardId={mergeResult.resultCard.id} cardName={mergeResult.resultCard.name} level={mergeResult.resultCard.level} quality={mergeResult.resultCard.rarity} isRevealed /></div>
+                    <div className="w-14"><CardDisplay cardId={mergeResult.resultCard.id} cardName={mergeResult.resultCard.name} level={mergeResult.resultCard.level} quality={mergeResult.resultCard.quality} isRevealed /></div>
                   </div>
                 </div>
                 <div className="bg-black/20 p-3 rounded space-y-2">
@@ -293,7 +293,7 @@ export default function MergePage() {
                   return (
                     <div key={cardId} className="bronze-panel p-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-16 shrink-0"><CardDisplay cardId={card.id} cardName={card.name} level={card.level} quality={card.rarity} isRevealed /></div>
+                        <div className="w-16 shrink-0"><CardDisplay cardId={card.id} cardName={card.name} level={card.level} quality={card.quality} isRevealed /></div>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-bold text-parchment truncate">{card.name}</h3>
                           <p className="text-xs text-parchment/50">拥有 {count} 张</p>

@@ -55,7 +55,7 @@ export default function CardDetailPage() {
                 cardId={card.id}
                 cardName={card.name}
                 level={card.level}
-                quality={card.rarity}
+                quality={card.quality}
                 isRevealed
               />
             </div>
@@ -83,7 +83,7 @@ export default function CardDetailPage() {
             </div>
             <div className="p-2 bg-ink/30 rounded">
               <p className="text-paper/60 text-xs">稀有度</p>
-              <p className="text-lg font-bold text-bronze">{card.rarity}</p>
+              <p className="text-lg font-bold text-bronze">{card.quality}</p>
             </div>
             <div className="p-2 bg-ink/30 rounded">
               <p className="text-paper/60 text-xs">朝代</p>
@@ -131,7 +131,7 @@ export default function CardDetailPage() {
                     cardId={relatedCard.id}
                     cardName={relatedCard.name}
                     level={relatedCard.level}
-                    quality={relatedCard.rarity}
+                    quality={relatedCard.quality}
                     isRevealed={gameState.unlockedCards.includes(relatedCard.id)}
                   />
                 </Link>

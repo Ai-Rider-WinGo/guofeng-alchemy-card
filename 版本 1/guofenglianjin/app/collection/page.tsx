@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { PageLayout } from '@/components/PageLayout'
 import { CardDisplay } from '@/components/CardDisplay'
 import { useGame } from '@/lib/gameContext'
-import { loadCards, getAllDynasties, getAllRarities, getAllTypes } from '@/lib/cardUtils'
+import { loadCards, getAllDynasties, getAllQualities, getAllTypes } from '@/lib/cardUtils'
 import { filterCards, searchCards } from '@/lib/storage'
 
 export default function CollectionPage() {
@@ -17,7 +17,7 @@ export default function CollectionPage() {
   const [filterType, setFilterType] = useState<string>('')
 
   const dynasties = getAllDynasties()
-  const rarities = getAllRarities()
+  const rarities = getAllQualities()
   const types = getAllTypes()
 
   const filteredCards = useMemo(() => {
@@ -164,7 +164,7 @@ export default function CollectionPage() {
                         cardId={card.id}
                         cardName={card.name}
                         level={card.level}
-                        quality={card.rarity}
+                        quality={card.quality}
                         isRevealed
                       />
                     ) : (

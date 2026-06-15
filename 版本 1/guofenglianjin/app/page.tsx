@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { PageLayout } from '@/components/PageLayout'
 import { RewardBadge } from '@/components/RewardBadge'
+import { DynastyBanner } from '@/components/DynastyBanner'
 import { useGame } from '@/lib/gameContext'
 import { loadCards, loadDrawPools } from '@/lib/cardUtils'
 import { getCollectionProgress, getRemainingDraws, updateWeeklyCollectionProgress, claimWeeklyReward } from '@/lib/storage'
@@ -97,6 +98,9 @@ export default function HomePage() {
             <span>图鉴进度<strong>{collectionProgress.unlocked}/{FULL_TOTAL}</strong></span>
           </Link>
         </header>
+
+        {/* 本周朝代指示器 */}
+        <DynastyBanner />
 
         {/* ====== Banner 轮播 3 屏 ====== */}
         <section className="relative z-10 overflow-hidden rounded-[10px] border border-bronze/40">
