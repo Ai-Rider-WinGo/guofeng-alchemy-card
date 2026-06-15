@@ -4,10 +4,11 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { PageLayout } from '@/components/PageLayout'
 import { RewardBadge } from '@/components/RewardBadge'
-import { DynastyBanner } from '@/components/DynastyBanner'
 import { useGame } from '@/lib/gameContext'
 import { loadCards, loadDrawPools } from '@/lib/cardUtils'
 import { getCollectionProgress, getRemainingDraws, updateWeeklyCollectionProgress, claimWeeklyReward } from '@/lib/storage'
+import { DYNASTY_META } from '@/lib/types'
+import { WEEKLY_DYNASTY_ORDER } from '@/lib/constants'
 import weeklyRewardsData from '@/config/weekly_collection_rewards.json'
 
 // 朝代标签 → 展示信息
@@ -85,121 +86,132 @@ export default function HomePage() {
   weekEnd.setHours(23, 59, 59)
   const resetDay = ['日', '一', '二', '三', '四', '五', '六'][weekEnd.getDay()]
 
+  const currentDynasty = gameState.currentWeeklyDynasty
+  const dynMeta = DYNASTY_META[currentDynasty]
+  const nextIndex = (WEEKLY_DYNASTY_ORDER.indexOf(currentDynasty) + 1) % 6
+  const nextDynasty = WEEKLY_DYNASTY_ORDER[nextIndex]
+
   return (
     <PageLayout>
-      <div className="home-shell">
-        <header className="hero-header">
-          <div className="brand-lockup">
-            <p>楚汉篇</p>
-            <h1>国风炼金卡牌</h1>
+      <div className="home-shell" style={{ background: 'linear-gradient(180deg, #050505 0%, #0a0908 50%, #0d0b09 100%)' }}>
+        {/* 顶部资源栏 */}
+        <div className="flex items-center justify-between mb-3 pt-2">
+          <div>
+            <p className="text-[10px] text-gold/50 tracking-[0.3em] uppercase">六朝炼金录</p>
+            <h1 className="text-xl font-black text-gold font-display tracking-wider">国风炼金卡牌</h1>
           </div>
-          <Link href="/collection" className="atlas-chip">
-            <span className="atlas-medal">册</span>
-            <span>图鉴进度<strong>{collectionProgress.unlocked}/{FULL_TOTAL}</strong></span>
+          <Link href="/collection" className="flex items-center gap-1.5 text-[11px] text-gold/70">
+            <span className="w-8 h-8 rounded-full border border-gold/30 bg-void-300 flex items-center justify-center text-sm">册</span>
+            <span>{collectionProgress.unlocked}<span className="text-gold/30">/{FULL_TOTAL}</span></span>
           </Link>
-        </header>
+        </div>
 
-        {/* 本周朝代指示器 */}
-        <DynastyBanner />
-
-        {/* ====== Banner 轮播 3 屏 ====== */}
-        <section className="relative z-10 overflow-hidden rounded-[10px] border border-bronze/40">
-          <div className="flex transition-transform duration-500 ease-out"
-               style={{ transform: `translateX(-${bannerIndex * 100}%)` }}>
-
-            {/* 第1屏：当前抽卡主题 */}
-            <div className="daily-scroll-panel shrink-0 w-full">
-              <div className="scroll-art">
-                <img src="/ui/reference-cauldron.png" alt="卡池" />
-                <img className="smoke-layer" src="/ui/reference-smoke.png" alt="" aria-hidden="true" />
-              </div>
-              <div className="draw-counter">
-                <div className="panel-label"><span />当前卡池<b>秦</b></div>
-                <div className="py-2 text-center">
-                  <p className="text-2xl font-black text-ink tracking-[0.08em]">
-                    {weeklyPool?.name || '秦汉风云'}
-                  </p>
-                  <p className="text-xs text-ink/60 mt-1">每周{resetDay} 23:59 轮换</p>
-                </div>
-                <p className="text-xs text-ink/60">今日剩余抽卡 {remainingDraws} 次</p>
-                <div className="hero-actions">
-                  <Link href="/draw">前往抽卡</Link>
-                  <Link href="/draw">卡池预览</Link>
-                </div>
-              </div>
-              <div className="reset-seal">{weeklyPool?.name?.slice(0, 2) || '秦汉'}</div>
+        {/* ====== 朝代主视觉大卡 ====== */}
+        <div className="hero-visual p-4 mb-4">
+          <div className="flex items-center justify-between mb-3">
+            <div>
+              <p className="text-[10px] text-gold/50 tracking-[0.2em]">当前朝代</p>
+              <h2 className="text-2xl font-black text-gold font-display">{dynMeta.name}</h2>
+              <p className="text-[11px] text-text-secondary">{dynMeta.period}</p>
             </div>
-
-            {/* 第2屏：签到4倍碎片活动 */}
-            <div className="daily-scroll-panel shrink-0 w-full" style={{
-              background: 'linear-gradient(135deg, rgba(180,140,80,0.3), rgba(200,160,60,0.15)), linear-gradient(rgba(223,195,133,0.8), rgba(174,132,72,0.83)), url(\'/ui/parchment-clean-texture.png\')',
-              backgroundSize: 'cover',
-            }}>
-              <div className="scroll-art flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-7xl">💎</div>
-                  <div className="text-5xl font-black text-ink mt-2">×4</div>
-                </div>
-              </div>
-              <div className="draw-counter">
-                <div className="panel-label"><span />限时活动<b>!</b></div>
-                <div className="py-2 text-center">
-                  <p className="text-xl font-black text-ink tracking-[0.06em]">签到 4 倍碎片</p>
-                  <p className="text-xs text-ink/60 mt-1">活动期间签到奖励翻 4 倍</p>
-                </div>
-                <p className="text-xs text-jade font-bold">连续 7 天最高可得 1000+ 碎片</p>
-                <div className="hero-actions">
-                  <Link href="/signin">立即签到</Link>
-                  <Link href="/tasks">做任务赚碎片</Link>
-                </div>
-              </div>
-              <div className="reset-seal">🔥 热力</div>
-            </div>
-
-            {/* 第3屏：邀请好友活动 */}
-            <div className="daily-scroll-panel shrink-0 w-full" style={{
-              background: 'linear-gradient(135deg, rgba(45,143,127,0.22), rgba(30,100,90,0.12)), linear-gradient(rgba(210,200,175,0.82), rgba(160,140,110,0.8)), url(\'/ui/parchment-clean-texture.png\')',
-              backgroundSize: 'cover',
-            }}>
-              <div className="scroll-art flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-7xl">👥</div>
-                  <div className="text-4xl font-black text-ink mt-2">+5</div>
-                </div>
-              </div>
-              <div className="draw-counter">
-                <div className="panel-label"><span />邀请有礼<b>邀</b></div>
-                <div className="py-2 text-center">
-                  <p className="text-xl font-black text-ink tracking-[0.06em]">邀请好友</p>
-                  <p className="text-xs text-ink/60 mt-1">每邀请一位好友</p>
-                </div>
-                <p className="text-xs text-jade font-bold">赠送 5 次抽卡机会</p>
-                <div className="hero-actions">
-                  <button onClick={() => {
-                    const shareText = '来《国风炼金卡牌》收集历史英雄卡牌！'
-                    if (navigator.share) {
-                      navigator.share({ title: '国风炼金卡牌', text: shareText, url: window.location.origin })
-                    } else {
-                      navigator.clipboard?.writeText(shareText + ' ' + window.location.origin)
-                    }
-                  }}>📤 分享给好友</button>
-                  <Link href="/profile">查看邀请记录</Link>
-                </div>
-              </div>
-              <div className="reset-seal">🎁 邀请</div>
+            <div className="text-right">
+              <p className="text-[10px] text-text-muted">下周预告</p>
+              <p className="text-sm text-gold/70">{DYNASTY_META[nextDynasty].name}</p>
             </div>
           </div>
+          {/* 六朝进度条 */}
+          <div className="flex gap-1.5 mb-3">
+            {WEEKLY_DYNASTY_ORDER.map((d, i) => {
+              const meta = DYNASTY_META[d]
+              const isCurrent = i === WEEKLY_DYNASTY_ORDER.indexOf(currentDynasty)
+              const isPast = i < WEEKLY_DYNASTY_ORDER.indexOf(currentDynasty)
+              return (
+                <div key={d} className="flex-1 text-center">
+                  <div className={`h-1.5 rounded-full mb-1 transition-all ${
+                    isCurrent ? 'bg-gold' : isPast ? 'bg-gold/30' : 'bg-gold/10'
+                  }`} />
+                  <span className={`text-[9px] ${isCurrent ? 'text-gold font-bold' : 'text-text-muted'}`}>
+                    {meta.name}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+          {/* 收藏进度 */}
+          <div className="flex items-center gap-2 text-[11px] text-text-secondary">
+            <span>🏛️ 朝代收藏</span>
+            <div className="flex-1 h-1 bg-void-200 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-bronze-green to-gold rounded-full transition-all"
+                   style={{ width: `${Math.min(100, (collectionProgress.unlocked / FULL_TOTAL) * 100)}%` }} />
+            </div>
+            <span className="text-gold font-bold">{collectionProgress.unlocked}/{FULL_TOTAL}</span>
+          </div>
+        </div>
 
-          {/* 指示器 */}
-          <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-            {Array.from({ length: totalSlides }).map((_, i) => (
-              <button key={i} onClick={() => setBannerIndex(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === bannerIndex ? 'w-6 bg-bronze' : 'w-2 bg-bronze/30'
-                }`} />
+        {/* ====== 两大主入口 ====== */}
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          {/* 命运抽卡 */}
+          <Link href="/draw" className="hero-visual p-4 text-center group cursor-pointer block">
+            <div className="text-4xl mb-2 group-active:scale-90 transition-transform">🎴</div>
+            <h3 className="text-lg font-black text-gold font-display">命运抽卡</h3>
+            <p className="text-[10px] text-text-secondary mt-1">今日剩余 {remainingDraws} 次</p>
+            <div className="mt-2 inline-block px-3 py-1 rounded-lg border border-gold/30 text-[10px] text-gold/80 font-bold">
+              前往抽卡 ›
+            </div>
+          </Link>
+          {/* 炼金合成 */}
+          <Link href="/merge" className="hero-visual p-4 text-center group cursor-pointer block">
+            <div className="text-4xl mb-2 group-active:scale-90 transition-transform">⚗️</div>
+            <h3 className="text-lg font-black text-gold font-display">炼金合成</h3>
+            <p className="text-[10px] text-text-secondary mt-1">已合成 {gameState.totalMerges} 次</p>
+            <div className="mt-2 inline-block px-3 py-1 rounded-lg border border-gold/30 text-[10px] text-gold/80 font-bold">
+              前往合成 ›
+            </div>
+          </Link>
+        </div>
+
+        {/* ====== 至宝目标 ====== */}
+        <div className="gold-panel p-3 mb-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-bold text-gold">👑 至宝目标</h3>
+            <span className="text-[10px] text-text-muted">集齐12张至宝 · 兑换1g黄金实体卡</span>
+          </div>
+          <div className="flex gap-1 justify-center">
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div key={i} className={`treasure-slot ${i < gameState.ultimateCards.length ? 'owned' : ''}`}>
+                {i < gameState.ultimateCards.length ? (
+                  <span className="text-gold text-xs">★</span>
+                ) : (
+                  <span className="text-gold/15 text-[10px]">{i + 1}</span>
+                )}
+              </div>
             ))}
           </div>
-        </section>
+          <div className="text-center mt-2">
+            <span className="text-[10px] text-gold/40">
+              {gameState.ultimateCards.length === 0
+                ? '炼成第一张至宝，开启实体黄金卡之旅'
+                : `已炼成 ${gameState.ultimateCards.length}/12 张至宝`
+              }
+            </span>
+          </div>
+        </div>
+
+        {/* ====== 快捷入口 2×2 ====== */}
+        <div className="grid grid-cols-4 gap-2 mb-4">
+          {[
+            { href: '/leaderboard', icon: '🏆', label: '排行' },
+            { href: '/gallery', icon: '🏰', label: '炼金阁' },
+            { href: '/signin', icon: '🔥', label: '签到' },
+            { href: '/tasks', icon: '📋', label: '任务' },
+          ].map(item => (
+            <Link key={item.href} href={item.href}
+              className="flex flex-col items-center gap-1 py-2 rounded-lg bg-void-200/50 border border-gold/10 text-[10px] text-text-secondary hover:border-gold/30 transition-colors">
+              <span className="text-lg">{item.icon}</span>
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </div>
 
         {/* 收集奖励 */}
         {weeklyRewardConfig && (

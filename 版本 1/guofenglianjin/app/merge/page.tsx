@@ -142,12 +142,12 @@ export default function MergePage() {
             <button
               onClick={handleAutoMerge}
               disabled={remainingAuto <= 0}
-              className="ritual-button w-full text-sm">
+              className="btn-primary-gold w-full text-sm">
               ⚡ 自动合成
             </button>
             <button
               onClick={() => setShowAdGate(true)}
-              className="ghost-button w-full text-sm">
+              className="btn-secondary-dark w-full text-sm">
               📺 看广告 +2次
             </button>
           </div>
@@ -175,7 +175,7 @@ export default function MergePage() {
               {selectedCard1 && getCardById(selectedCard1) ? (
                 <div className="flex gap-4 items-start">
                   <div className="w-24"><CardDisplay cardId={selectedCard1} cardName={getCardById(selectedCard1)!.name} level={getCardById(selectedCard1)!.level} quality={getCardById(selectedCard1)!.quality} isRevealed /></div>
-                  <button onClick={() => { setSelectedCard1(null); setMergeResult(null) }} className="ghost-button">更换</button>
+                  <button onClick={() => { setSelectedCard1(null); setMergeResult(null) }} className="btn-secondary-dark">更换</button>
                 </div>
               ) : (
                 <div className="grid grid-cols-3 gap-2 max-h-52 overflow-y-auto">
@@ -197,7 +197,7 @@ export default function MergePage() {
                 {selectedCard2 && getCardById(selectedCard2) ? (
                   <div className="flex gap-4 items-start">
                     <div className="w-24"><CardDisplay cardId={selectedCard2} cardName={getCardById(selectedCard2)!.name} level={getCardById(selectedCard2)!.level} quality={getCardById(selectedCard2)!.quality} isRevealed /></div>
-                    <button onClick={() => { setSelectedCard2(null); setMergeResult(null) }} className="ghost-button">更换</button>
+                    <button onClick={() => { setSelectedCard2(null); setMergeResult(null) }} className="btn-secondary-dark">更换</button>
                   </div>
                 ) : (
                   <div className="grid grid-cols-3 gap-2 max-h-52 overflow-y-auto">
@@ -213,7 +213,7 @@ export default function MergePage() {
             )}
 
             {selectedCard1 && selectedCard2 && !mergeResult && (
-              <button onClick={handleCheckMerge} className="ritual-button w-full">检查合成</button>
+              <button onClick={handleCheckMerge} className="btn-primary-gold w-full">检查合成</button>
             )}
 
             {invalidPair && (
@@ -244,8 +244,8 @@ export default function MergePage() {
                   <p className="text-xs text-parchment/60 mt-1">{mergeResult.resultCard.description}</p>
                 </div>
                 <div className="flex gap-3">
-                  <button onClick={() => { setMergeResult(null); setSelectedCard1(null); setSelectedCard2(null) }} className="ghost-button flex-1">重新选择</button>
-                  <button onClick={() => setShowConfirm(true)} className="ritual-button flex-1">确认合成</button>
+                  <button onClick={() => { setMergeResult(null); setSelectedCard1(null); setSelectedCard2(null) }} className="btn-secondary-dark flex-1">重新选择</button>
+                  <button onClick={() => setShowConfirm(true)} className="btn-primary-gold flex-1">确认合成</button>
                 </div>
               </div>
             )}
@@ -303,7 +303,7 @@ export default function MergePage() {
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => handleStarUp(cardId)} className="ritual-button w-full mt-3 py-2 text-sm">升星 · 消耗 3 张</button>
+                      <button onClick={() => handleStarUp(cardId)} className="btn-primary-gold w-full mt-3 py-2 text-sm">升星 · 消耗 3 张</button>
                     </div>
                   )
                 })}
@@ -321,8 +321,8 @@ export default function MergePage() {
               <p className="text-sm text-ink/70">消耗 <strong>{getCardById(selectedCard1!)?.name}</strong> 和 <strong>{getCardById(selectedCard2!)?.name}</strong>，获得 <strong className="text-jade">{mergeResult.resultCard.name}</strong></p>
               <p className="text-xs text-ink/50">此操作不可撤销</p>
               <div className="flex gap-3">
-                <button onClick={() => setShowConfirm(false)} className="ghost-button flex-1">取消</button>
-                <button onClick={handleExecutePairMerge} className="ritual-button flex-1">确认合成</button>
+                <button onClick={() => setShowConfirm(false)} className="btn-secondary-dark flex-1">取消</button>
+                <button onClick={handleExecutePairMerge} className="btn-primary-gold flex-1">确认合成</button>
               </div>
             </div>
           </div>
@@ -359,8 +359,8 @@ export default function MergePage() {
               </p>
               <p className="text-xs text-ink/40">广告接口已预留，接入抖音广告 SDK 后启用</p>
               <div className="flex gap-3">
-                <button onClick={() => setShowAdGate(false)} className="ghost-button flex-1">取消</button>
-                <button onClick={handleAdAutoMerge} className="ritual-button flex-1">
+                <button onClick={() => setShowAdGate(false)} className="btn-secondary-dark flex-1">取消</button>
+                <button onClick={handleAdAutoMerge} className="btn-primary-gold flex-1">
                   观看广告 (+2次)
                 </button>
               </div>
@@ -368,7 +368,7 @@ export default function MergePage() {
           </div>
         )}
 
-        <Link href="/" className="ghost-button w-full text-center block mt-5">返回首页</Link>
+        <Link href="/" className="btn-secondary-dark w-full text-center block mt-5">返回首页</Link>
       </div>
     </PageLayout>
   )

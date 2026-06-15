@@ -730,6 +730,88 @@
   }
 }
 
+/* ====== 新暗黑国潮组件 v2 ====== */
+@layer components {
+  /* 暗金玻璃面板 */
+  .gold-panel {
+    @apply relative overflow-hidden rounded-xl border border-gold/20;
+    background: linear-gradient(180deg, rgba(20,16,10,0.95) 0%, rgba(11,9,6,0.98) 100%);
+    box-shadow: inset 0 0 0 1px rgba(216,177,90,0.08), 0 8px 24px rgba(0,0,0,0.4);
+  }
+  .gold-panel::after {
+    content: '';
+    @apply absolute top-0 left-4 right-4 h-px;
+    background: linear-gradient(90deg, transparent, rgba(216,177,90,0.3), transparent);
+  }
+
+  /* 主按钮 - 金焰 */
+  .btn-primary-gold {
+    @apply relative overflow-hidden rounded-xl px-6 py-4 font-bold text-void-200 tracking-wider transition-all active:scale-95;
+    background: linear-gradient(135deg, #b8913a 0%, #d8b15a 50%, #f2a83b 100%);
+    box-shadow: 0 4px 16px rgba(216,177,90,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+    font-size: 15px;
+  }
+  .btn-primary-gold::after {
+    content: '';
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity;
+    background: linear-gradient(135deg, #ffe19a 0%, #d8b15a 50%, #f9d04f 100%);
+  }
+  .btn-primary-gold:active::after {
+    opacity: 0.3;
+  }
+
+  /* 次按钮 - 暗金边框 */
+  .btn-secondary-dark {
+    @apply rounded-xl border border-gold/30 bg-void-300 px-6 py-4 text-sm font-bold text-gold transition-all active:scale-95;
+    box-shadow: inset 0 0 0 1px rgba(216,177,90,0.06);
+  }
+
+  /* 主视觉大卡 */
+  .hero-visual {
+    @apply relative overflow-hidden rounded-2xl border border-gold/20;
+    background: linear-gradient(135deg, rgba(20,16,10,0.9), rgba(11,9,6,0.95));
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(216,177,90,0.06);
+  }
+  .hero-visual::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-30;
+    background: radial-gradient(circle at 50% 0%, rgba(216,177,90,0.15), transparent 60%);
+  }
+
+  /* 至宝槽位 */
+  .treasure-slot {
+    @apply relative w-10 h-14 rounded-md border border-dashed border-gold/20 bg-void-200 flex items-center justify-center;
+    transition: all 0.3s;
+  }
+  .treasure-slot.owned {
+    @apply border-solid border-gold/50 bg-gold/10;
+    box-shadow: 0 0 12px rgba(216,177,90,0.2);
+  }
+
+  /* 朝代印章 */
+  .dynasty-seal {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-seal text-xs font-bold;
+    border: 1px solid;
+  }
+
+  /* 品质流光 */
+  .quality-glow-common { box-shadow: 0 0 6px rgba(107,91,58,0.3); }
+  .quality-glow-fine { box-shadow: 0 0 10px rgba(31,107,90,0.4); }
+  .quality-glow-rare { box-shadow: 0 0 14px rgba(31,79,139,0.5); }
+  .quality-glow-epic { box-shadow: 0 0 18px rgba(123,63,163,0.5); }
+  .quality-glow-divine { box-shadow: 0 0 22px rgba(216,67,21,0.6); }
+  .quality-glow-treasure { 
+    box-shadow: 0 0 30px rgba(216,177,90,0.7), 0 0 60px rgba(216,177,90,0.3);
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+}
+
+/* 炼金火焰呼吸动画 */
+@keyframes flame-breath {
+  0%, 100% { box-shadow: 0 0 12px rgba(246,106,42,0.4), inset 0 0 8px rgba(246,106,42,0.1); }
+  50% { box-shadow: 0 0 24px rgba(246,106,42,0.7), inset 0 0 16px rgba(246,106,42,0.2); }
+}
+
 /* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 6px;

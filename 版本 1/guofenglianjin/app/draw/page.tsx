@@ -87,7 +87,7 @@ export default function DrawPage() {
               {selectedIndex !== null && (<div className="bronze-panel p-4 space-y-2 animate-slide-up"><h2 className="text-lg font-black text-bronze">{drawResults[selectedIndex].card.name}</h2><div className="flex items-center justify-between text-sm"><span className="text-parchment/70">等级 {drawResults[selectedIndex].card.level}</span><span className="text-parchment/70">{drawResults[selectedIndex].card.quality}</span></div>{drawResults[selectedIndex].isNew ? (<span className="inline-block text-jade font-bold">✨ 新卡解锁</span>) : (<span className="inline-block text-bronze font-bold">重复 ({drawResults[selectedIndex].starCount}⭐) · 碎片+{drawResults[selectedIndex].shardAmount}</span>)}<p className="text-xs text-parchment/60 mt-2">{drawResults[selectedIndex].card.description}</p></div>)}
             </div>
           )}
-          <div className="flex gap-3 mt-5"><button onClick={handleContinue} className="ghost-button flex-1">继续抽卡</button><Link href="/" className="ritual-button flex-1 text-center">返回首页</Link></div>
+          <div className="flex gap-3 mt-5"><button onClick={handleContinue} className="btn-secondary-dark flex-1">继续抽卡</button><Link href="/" className="btn-primary-gold flex-1 text-center">返回首页</Link></div>
         </div>
       </PageLayout>
     )
@@ -126,11 +126,11 @@ export default function DrawPage() {
 
         <div className="mt-4 space-y-3">
           <button onClick={handleSingleDraw} disabled={remainingDraws === 0 || isDrawing}
-            className={`w-full py-4 rounded-sm text-lg font-black tracking-[0.1em] transition-all ${remainingDraws === 0 ? 'bg-paper/20 text-paper/40 cursor-not-allowed' : 'ritual-button'}`}>
+            className={`w-full py-4 rounded-sm text-lg font-black tracking-[0.1em] transition-all ${remainingDraws === 0 ? 'bg-paper/20 text-paper/40 cursor-not-allowed' : 'btn-primary-gold'}`}>
             {isDrawing ? '抽卡中...' : '抽 1 次'}
           </button>
           <button onClick={handleTenDraw} disabled={remainingDraws < 10 || isDrawing}
-            className={`w-full py-4 rounded-sm text-lg font-black tracking-[0.1em] transition-all ${remainingDraws < 10 ? 'bg-paper/20 text-paper/40 cursor-not-allowed' : 'ritual-button'}`}>
+            className={`w-full py-4 rounded-sm text-lg font-black tracking-[0.1em] transition-all ${remainingDraws < 10 ? 'bg-paper/20 text-paper/40 cursor-not-allowed' : 'btn-primary-gold'}`}>
             {isDrawing ? '抽卡中...' : '十连抽'}
           </button>
         </div>
@@ -145,7 +145,7 @@ export default function DrawPage() {
           </ul>
         </div>
 
-        <Link href="/" className="ghost-button w-full text-center block mt-5">返回首页</Link>
+        <Link href="/" className="btn-secondary-dark w-full text-center block mt-5">返回首页</Link>
 
         <PoolDetailModal poolName={currentPool?.name || '基础卡池'} isOpen={showPoolDetail} onClose={() => setShowPoolDetail(false)} rarityWeights={currentPool?.rarity_weights || {}} cardList={poolCardList} />
       </div>
