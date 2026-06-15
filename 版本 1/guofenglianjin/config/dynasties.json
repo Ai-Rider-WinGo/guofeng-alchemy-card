@@ -1,0 +1,8 @@
+[
+  { "id": "qinhan",  "name": "秦汉",   "period": "前221-220", "order": 1 },
+  { "id": "sanguo",  "name": "三国",   "period": "220-280",   "order": 2 },
+  { "id": "tang",    "name": "唐",     "period": "618-907",   "order": 3 },
+  { "id": "song",    "name": "宋",     "period": "960-1279",  "order": 4 },
+  { "id": "ming",    "name": "明",     "period": "1368-1644", "order": 5 },
+  { "id": "chunqiu", "name": "春秋战国", "period": "前770-前221", "order": 6 }
+]
