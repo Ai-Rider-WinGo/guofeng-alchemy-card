@@ -11,16 +11,17 @@ db/
 └── seeds/            # 初始/测试数据种子
 ```
 
-## 核心数据表（规划）
+## 核心数据表
 
 | 表名 | 说明 |
 |---|---|
 | `users` | 用户账户（UID、昵称、注册时间、VIP 等级） |
+| `cards` | 卡牌定义（ID、名称、稀有度、朝代、类型、CDN图片URL） |
 | `user_cards` | 用户持有卡牌（卡牌 ID、数量、星级、获取时间） |
 | `user_fragments` | 用户碎片（碎片类型、数量） |
 | `user_collections` | 图鉴点亮记录 |
 | `user_draw_history` | 抽卡历史 |
-| `cards` | 卡牌定义（ID、名称、稀有度、朝代、类型、星级上限） |
+| `user_pity_counters` | 保底计数器 |
 | `draw_pools` | 卡池定义（池 ID、类型、概率配置、保底规则） |
 | `pool_schedules` | 卡池排期（朝代轮换、限时池上下架时间） |
 | `merge_recipes` | 合成配方 |
@@ -29,6 +30,11 @@ db/
 | `tasks` | 任务定义 |
 | `user_tasks` | 用户任务进度 |
 
+## 图片存储策略
+
+**数据库不存图片二进制。** `cards.image_url` 和 `cards.thumbnail_url` 存储 CDN URL 引用，实际图片存储于对象存储（OSS/COS/S3）+ CDN 分发。详见 `assets-source/README.md`。
+
 ## 状态
 
-🚧 待设计 — 将在技术选型后确定具体数据库引擎和 ORM。
+🚧 Schema 草案就绪 — 等待技术选型后确定数据库引擎和 ORM。
+

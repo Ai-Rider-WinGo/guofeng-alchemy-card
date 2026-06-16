@@ -36,6 +36,72 @@ CREATE TABLE IF NOT EXISTS user_fragments (
     UNIQUE(user_id, fragment_type, fragment_id)
 );
 
+-- 卡牌定义表（玩法数据，对应 design 分支 config/cards.json）
+-- 图片存于 CDN，此处只存 URL 引用
+CREATE TABLE IF NOT EXISTS cards (
+    id              SERIAL PRIMARY KEY,
+    card_id         VARCHAR(32) UNIQUE NOT NULL,
+    name            VARCHAR(100) NOT NULL,
+    level           INT NOT NULL,
+    type            VARCHAR(16) NOT NULL,           -- person/event/weapon/book/place/dynasty
+    dynasty         VARCHAR(50) NOT NULL,
+    dynasty_tag     VARCHAR(32) NOT NULL,
+    rarity          VARCHAR(8) NOT NULL,            -- N/R/SR/SSR/UR
+    tags            JSONB DEFAULT '[]',
+    short_desc      TEXT,
+    story           TEXT,
+    knowledge_point TEXT,
+    related_cards   JSONB DEFAULT '[]',
+    merge_paths     JSONB DEFAULT '[]',
+    star_max        INT DEFAULT 5,
+    image_url       TEXT NOT NULL,                  -- CDN URL: {CDN_BASE}/cards/{dynasty_tag}/{card_id}.png
+    thumbnail_url   TEXT NOT NULL,                  -- CDN URL: {CDN_BASE}/cards/{dynasty_tag}/{card_id}_thumb.png
+    is_final        BOOLEAN DEFAULT FALSE,
+    final_desc      TEXT,
+    created_at      TIMESTAMPTZ DEFAULT NOW(),
+    updated_at      TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 卡池定义表
+CREATE TABLE IF NOT EXISTS draw_pools (
+    id              SERIAL PRIMARY KEY,
+    pool_id         VARCHAR(32) UNIQUE NOT NULL,
+    name            VARCHAR(100) NOT NULL,
+    pool_type       VARCHAR(32) NOT NULL,           -- permanent / weekly_dynasty / limited_premium
+    dynasty_tag     VARCHAR(32),
+    rarity_weights  JSONB NOT NULL,
+    featured_card_ids JSONB DEFAULT '[]',
+    pity_config     JSONB NOT NULL,
+    ticket_type     VARCHAR(32) NOT NULL,
+    active          BOOLEAN DEFAULT FALSE,
+    rotation_week   INT,
+    duration_days   INT DEFAULT 7,
+    mvp_launch      BOOLEAN DEFAULT TRUE,
+    created_at      TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 卡池排期表
+CREATE TABLE IF NOT EXISTS pool_schedules (
+    id              SERIAL PRIMARY KEY,
+    pool_id         VARCHAR(32) NOT NULL,
+    dynasty_tag     VARCHAR(32) NOT NULL,
+    theme_name      VARCHAR(100) NOT NULL,
+    start_at        TIMESTAMPTZ NOT NULL,
+    end_at          TIMESTAMPTZ NOT NULL,
+    is_active       BOOLEAN DEFAULT FALSE
+);
+
+-- 保底计数器
+CREATE TABLE IF NOT EXISTS user_pity_counters (
+    id              SERIAL PRIMARY KEY,
+    user_id         INT REFERENCES users(id),
+    pool_id         VARCHAR(32) NOT NULL,
+    draw_count      INT DEFAULT 0,
+    ssr_pity        INT DEFAULT 0,
+    updated_at      TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(user_id, pool_id)
+);
+
 -- 图鉴收集
 CREATE TABLE IF NOT EXISTS user_collections (
     id              SERIAL PRIMARY KEY,
