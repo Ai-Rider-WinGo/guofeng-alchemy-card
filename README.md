@@ -9,7 +9,7 @@
 <p align="center">
   <strong>把楚汉战争做成可抽、可收集、可合成的历史卡牌体验。</strong>
   <br />
-  Next.js 前端 · 配置化玩法系统 · 多分支协作工程
+  Next.js 前端 · Cocos 游戏客户端 · 配置化玩法系统
 </p>
 
 [![Engine](https://img.shields.io/badge/Next.js-16-000000)](https://nextjs.org/)
@@ -36,31 +36,32 @@
   -> 下周进入新朝代卡池
 ```
 
-## Git 分支架构
+## 分支策略
 
-本项目采用**单仓多长期分支**协作模型：
+本项目采用 **GitHub Flow（单主干 + 短期功能分支）**：
 
 ```
-main ────────────────────────────── 集成/发布基线
-├─ design     策划案 + 玩法配置 JSON（真理源）
-├─ frontend   Next.js 主力前端（web/）
-├─ backend    服务端 API（server/）
-├─ database   数据库 Schema / Migration（db/）
-└─ admin      后台管理系统（admin/）
+main ────●────●────●────●────  唯一长期分支，永远可部署
+          ↘    ↗    ↘    ↗
+        feat/   fix/    ...     短期分支，做完即合，合完即删
 ```
 
-> 旧版 Cocos Creator 工程已打 `archive/cocos-mvp` tag 归档，可按需恢复。
+日常开发流程：
+1. 从 `main` 开出功能分支：`git checkout -b feat/xxx`
+2. 在上面写代码、提交
+3. 合并回 `main`，删除功能分支
 
 ## 当前进度
 
 | 模块 | 状态 | 说明 |
 | --- | --- | --- |
-| 产品策划 | 已建立 | `design` 分支维护总策划案、MVP 范围、数据模型 |
-| 前端 | 原型中 | `frontend` 分支 — Next.js 16 + React 19 + Tailwind CSS，已具备抽卡/合成/卡册/任务等核心页面 |
-| 配置数据 | 原型中 | `design` 分支维护 draw_pools / merge_rules / cards 等玩法 JSON |
-| 后端服务 | 规划中 | `backend` 分支 — API 架构与模块规划就绪，待编码 |
-| 数据库 | 规划中 | `database` 分支 — Schema 草案与迁移策略就绪 |
-| 后台管理 | 规划中 | `admin` 分支 — 用户运营/卡牌管理/数据统计模块规划就绪 |
+| 产品策划 | 已建立 | 总策划案、MVP 范围、数据模型 |
+| 前端 | 原型中 | Next.js 16 + React 19 + Tailwind CSS，已具备抽卡/合成/卡册/任务等核心页面 |
+| 配置数据 | 原型中 | draw_pools / merge_rules / cards 等玩法 JSON |
+| Cocos 客户端 | 原型中 | Cocos Creator 3.8.8 工程，核心脚本骨架就绪 |
+| 后端服务 | 规划中 | API 架构与模块规划就绪，待编码 |
+| 数据库 | 规划中 | Schema 草案与迁移策略就绪 |
+| 后台管理 | 规划中 | 用户运营/卡牌管理/数据统计模块规划就绪 |
 | AI 素材 | 规划中 | 已有卡牌风格 prompt 基线，后续接 ComfyUI 批量出图 |
 
 ## 技术栈
@@ -68,6 +69,7 @@ main ─────────────────────────
 | 层 | 技术 |
 |---|---|
 | 前端 | Next.js 16 + React 19 + TypeScript + Tailwind CSS |
+| 游戏客户端 | Cocos Creator 3.8.8 + TypeScript |
 | 后端(规划) | Node.js / Python，Express / Fastify / FastAPI |
 | 数据库(规划) | PostgreSQL + Redis |
 | 运维(规划) | 对象存储 / CDN |
@@ -79,14 +81,15 @@ main ─────────────────────────
 ├── README.md
 ├── CONTRIBUTING.md
 ├── .github/                   # PR/Issue 模板
-├── 策划案/                    # 项目总策划案（design 分支权威）
-├── config/                    # 玩法配置 JSON（design 分支权威）
+├── 策划案/                    # 项目总策划案
+├── config/                    # 玩法配置 JSON
 ├── docs/                      # 产品、技术、架构文档
 ├── assets-source/             # AI 素材生产提示词
-├── web/                       # Next.js 前端工程（frontend 分支）
-├── server/                    # 后端 API（backend 分支）
-├── db/                        # 数据库 Schema（database 分支）
-└── admin/                     # 后台管理（admin 分支）
+├── web/                       # Next.js 前端工程
+├── client/cocos-client/       # Cocos Creator 3.8.8 游戏客户端
+├── server/                    # 后端 API
+├── db/                        # 数据库 Schema
+└── admin/                     # 后台管理
 ```
 
 ## 数据与内容体系

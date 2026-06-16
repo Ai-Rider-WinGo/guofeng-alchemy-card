@@ -1,0 +1,44 @@
+[
+  {
+    "rule_id": "duplicate_level_1_dynasty_shard",
+    "level_min": 1,
+    "level_max": 1,
+    "preferred_output": "dynasty_shard",
+    "shard_quantity": 1,
+    "can_star_up": false,
+    "can_decompose": true,
+    "desc": "重复 1 级卡自动转化为同朝代碎片。"
+  },
+  {
+    "rule_id": "duplicate_level_2_star_or_dynasty_shard",
+    "level_min": 2,
+    "level_max": 2,
+    "preferred_output": "star_material",
+    "fallback_output": "dynasty_shard",
+    "shard_quantity": 2,
+    "can_star_up": true,
+    "can_decompose": true,
+    "desc": "重复 2 级卡优先作为该卡升星材料，也可转为同朝代碎片。"
+  },
+  {
+    "rule_id": "duplicate_level_3_plus_star_or_premium_shard",
+    "level_min": 3,
+    "level_max": 99,
+    "preferred_output": "star_material",
+    "fallback_output": "premium_shard",
+    "shard_quantity": 5,
+    "can_star_up": true,
+    "can_decompose": true,
+    "desc": "重复 3 级及以上卡优先用于该卡升星，也可分解为高级碎片。"
+  },
+  {
+    "rule_id": "duplicate_ssr_breakthrough",
+    "rarity": "legendary",
+    "preferred_output": "breakthrough_material",
+    "fallback_output": "premium_shard",
+    "shard_quantity": 20,
+    "can_star_up": true,
+    "can_decompose": true,
+    "desc": "重复 SSR 用于升星、突破或兑换稀有资源。"
+  }
+]

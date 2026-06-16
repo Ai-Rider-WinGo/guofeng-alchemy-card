@@ -1,24 +1,24 @@
 # 国风炼金卡牌 · 接口契约与联调标准
 
-> **本文档为项目接口唯一权威源。** 前端(`frontend`分支)、后端(`backend`分支)、数据库(`database`分支)均以此文档为联调基准。
-> 任何接口变更必须先在本文档更新，经 review 后同步到各分支实现。
+> **本文档为项目接口唯一权威源。** 前端(`web/`)、后端(`server/`)、数据库(`db/`)均以此文档为联调基准。
+> 任何接口变更必须先在本文档更新，经 review 后同步到各模块实现。
 
 ---
 
-## 1. 分支协作模型
+## 1. 模块协作模型
 
 ```
-design 分支 (本文档 + config JSON)
+docs/api-contract.md + config/*.json (设计/配置层)
     │
-    ├──→ frontend 分支  读 config + 按 API 契约调接口
-    ├──→ backend 分支   按 API 契约实现接口 + 读 config 做业务逻辑
-    └──→ database 分支  按 Schema 建表，字段名与 API 响应一致
+    ├──→ web/        读 config + 按 API 契约调接口
+    ├──→ server/     按 API 契约实现接口 + 读 config 做业务逻辑
+    └──→ db/         按 Schema 建表，字段名与 API 响应一致
 ```
 
 **同步规则**：
-- `design/config/*.json` 玩法数据变更 → `frontend` 和 `backend` 同步拉取
-- `docs/api-contract.md` 接口变更 → 三个分支同时更新对应实现
-- `database` 字段与 API 响应的 JSON key 保持一致（`card_id` 而非 `cardId`）
+- `config/*.json` 玩法数据变更 → `web/` 和 `server/` 同步适配
+- `docs/api-contract.md` 接口变更 → 三个模块同时更新对应实现
+- `db/` 字段与 API 响应的 JSON key 保持一致（`card_id` 而非 `cardId`）
 
 ---
 

@@ -1,0 +1,44 @@
+[
+  {
+    "dynasty_tag": "tang",
+    "display_name": "唐朝",
+    "theme_color": "#C9973A",
+    "visual_keywords": ["长安", "诗歌", "宫廷乐舞", "边塞", "盛唐纹样"],
+    "rotation_priority": 1
+  },
+  {
+    "dynasty_tag": "song",
+    "display_name": "宋朝",
+    "theme_color": "#4F8F78",
+    "visual_keywords": ["汴京", "书院", "山水", "市井", "文人"],
+    "rotation_priority": 2
+  },
+  {
+    "dynasty_tag": "ming",
+    "display_name": "明朝",
+    "theme_color": "#A33A32",
+    "visual_keywords": ["宫城", "海贸", "将领", "典籍", "青绿纹样"],
+    "rotation_priority": 3
+  },
+  {
+    "dynasty_tag": "three_kingdoms",
+    "display_name": "三国",
+    "theme_color": "#7B3F25",
+    "visual_keywords": ["名将", "谋士", "战役", "阵图", "旌旗"],
+    "rotation_priority": 4
+  },
+  {
+    "dynasty_tag": "qin_han",
+    "display_name": "秦汉",
+    "theme_color": "#8D6A38",
+    "visual_keywords": ["秦简", "汉阙", "楚汉", "战车", "统一"],
+    "rotation_priority": 5
+  },
+  {
+    "dynasty_tag": "spring_autumn_warring_states",
+    "display_name": "春秋战国",
+    "theme_color": "#3D6B7D",
+    "visual_keywords": ["诸侯", "青铜器", "兵法", "纵横", "竹简"],
+    "rotation_priority": 6
+  }
+]
