@@ -1,0 +1,13 @@
+{
+  "weekly_qinhan": {
+    "pool_id": "weekly_qinhan",
+    "dynasty": "秦汉",
+    "total_cards": 12,
+    "tiers": [
+      { "count": 3, "reward": { "type": "shard", "amount": 50, "label": "💎 碎片 ×50" } },
+      { "count": 6, "reward": { "type": "shard", "amount": 120, "label": "💎 碎片 ×120" } },
+      { "count": 9, "reward": { "type": "shard", "amount": 250, "label": "💎 碎片 ×250" } },
+      { "count": 12, "reward": { "type": "exclusive", "item": "秦汉限定头像框", "label": "👑 限定头像框" } }
+    ]
+  }
+}

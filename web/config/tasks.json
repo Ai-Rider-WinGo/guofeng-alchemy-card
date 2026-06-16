@@ -1,0 +1,69 @@
+{
+  "daily": [
+    {
+      "id": "daily_login",
+      "title": "每日登录",
+      "description": "今日已登录游戏",
+      "target": 1,
+      "reward": { "type": "shard", "amount": 10, "label": "💎 碎片 ×10" }
+    },
+    {
+      "id": "daily_draw",
+      "title": "抽卡 2 次",
+      "description": "完成任意抽卡",
+      "target": 2,
+      "reward": { "type": "shard", "amount": 15, "label": "💎 碎片 ×15" }
+    },
+    {
+      "id": "daily_merge",
+      "title": "合成 1 次",
+      "description": "完成一次卡牌合成",
+      "target": 1,
+      "reward": { "type": "shard", "amount": 20, "label": "💎 碎片 ×20" }
+    },
+    {
+      "id": "daily_ad",
+      "title": "观看广告",
+      "description": "观看一次激励广告",
+      "target": 1,
+      "reward": { "type": "shard", "amount": 30, "label": "💎 碎片 ×30" }
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ach_first_merge",
+      "title": "初次合成",
+      "description": "完成任意一次卡牌合成",
+      "target": 1,
+      "reward": { "type": "shard", "amount": 50, "label": "💎 碎片 ×50" }
+    },
+    {
+      "id": "ach_collect_5",
+      "title": "初级收藏家",
+      "description": "收集 5 种不同卡牌",
+      "target": 5,
+      "reward": { "type": "shard", "amount": 80, "label": "💎 碎片 ×80" }
+    },
+    {
+      "id": "ach_collect_10",
+      "title": "资深收藏家",
+      "description": "收集全部 10 种卡牌",
+      "target": 10,
+      "reward": { "type": "shard", "amount": 200, "label": "💎 碎片 ×200" }
+    },
+    {
+      "id": "ach_legendary",
+      "title": "传说见证者",
+      "description": "获得一张传说级卡牌",
+      "target": 1,
+      "reward": { "type": "shard", "amount": 300, "label": "💎 碎片 ×300" }
+    },
+    {
+      "id": "ach_merge_5",
+      "title": "炼金大师",
+      "description": "完成 5 次合成",
+      "target": 5,
+      "reward": { "type": "shard", "amount": 150, "label": "💎 碎片 ×150" }
+    }
+  ]
+}
