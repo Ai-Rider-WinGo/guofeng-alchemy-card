@@ -14,7 +14,8 @@
     "related_cards": ["liubang_002", "jixin_002", "xingyang_escape_004"],
     "merge_paths": [],
     "star_max": 2,
-    "image": "cards/xingyang_001.png"
+    "image": "{CDN_BASE}/cards/qin_han/xingyang_001.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/xingyang_001_thumb.png"
   },
   {
     "card_id": "julu_001",
@@ -31,7 +32,8 @@
     "related_cards": ["xiangyu_002", "zhanghan_002", "julu_battle_004"],
     "merge_paths": [],
     "star_max": 2,
-    "image": "cards/julu_001.png"
+    "image": "{CDN_BASE}/cards/qin_han/julu_001.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/julu_001_thumb.png"
   },
   {
     "card_id": "jixin_002",
@@ -50,7 +52,8 @@
       { "target": "xingyang_escape_004", "partner": "liubang_002", "desc": "与刘邦合成「荥阳脱困」" }
     ],
     "star_max": 3,
-    "image": "cards/jixin_002.png"
+    "image": "{CDN_BASE}/cards/qin_han/jixin_002.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/jixin_002_thumb.png"
   },
   {
     "card_id": "liubang_002",
@@ -69,7 +72,8 @@
       { "target": "xingyang_escape_004", "partner": "jixin_002", "desc": "与纪信合成「荥阳脱困」" }
     ],
     "star_max": 3,
-    "image": "cards/liubang_002.png"
+    "image": "{CDN_BASE}/cards/qin_han/liubang_002.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/liubang_002_thumb.png"
   },
   {
     "card_id": "xiangyu_002",
@@ -88,7 +92,8 @@
       { "target": "julu_battle_004", "partner": "zhanghan_002", "desc": "与章邯合成「巨鹿之战」" }
     ],
     "star_max": 3,
-    "image": "cards/xiangyu_002.png"
+    "image": "{CDN_BASE}/cards/qin_han/xiangyu_002.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/xiangyu_002_thumb.png"
   },
   {
     "card_id": "zhanghan_002",
@@ -107,7 +112,8 @@
       { "target": "julu_battle_004", "partner": "xiangyu_002", "desc": "与项羽合成「巨鹿之战」" }
     ],
     "star_max": 3,
-    "image": "cards/zhanghan_002.png"
+    "image": "{CDN_BASE}/cards/qin_han/zhanghan_002.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/zhanghan_002_thumb.png"
   },
   {
     "card_id": "hongmenyan_004",
@@ -126,7 +132,8 @@
       { "target": "chuhan_conflict_005", "partner": "xingyang_escape_004", "desc": "与荥阳脱困合成「楚汉相争」" }
     ],
     "star_max": 4,
-    "image": "cards/hongmenyan_004.png"
+    "image": "{CDN_BASE}/cards/qin_han/hongmenyan_004.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/hongmenyan_004_thumb.png"
   },
   {
     "card_id": "xingyang_escape_004",
@@ -145,7 +152,8 @@
       { "target": "chuhan_conflict_005", "partner": "hongmenyan_004", "desc": "与鸿门宴合成「楚汉相争」" }
     ],
     "star_max": 4,
-    "image": "cards/xingyang_escape_004.png"
+    "image": "{CDN_BASE}/cards/qin_han/xingyang_escape_004.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/xingyang_escape_004_thumb.png"
   },
   {
     "card_id": "julu_battle_004",
@@ -162,7 +170,8 @@
     "related_cards": ["xiangyu_002", "zhanghan_002", "julu_001", "chuhan_conflict_005"],
     "merge_paths": [],
     "star_max": 4,
-    "image": "cards/julu_battle_004.png"
+    "image": "{CDN_BASE}/cards/qin_han/julu_battle_004.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/julu_battle_004_thumb.png"
   },
   {
     "card_id": "gaixia_siege_004",
@@ -181,7 +190,8 @@
       { "target": "han_dynasty_founding_005", "partner": "chuhan_conflict_005", "desc": "与楚汉相争合成「大汉开国」" }
     ],
     "star_max": 4,
-    "image": "cards/gaixia_siege_004.png"
+    "image": "{CDN_BASE}/cards/qin_han/gaixia_siege_004.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/gaixia_siege_004_thumb.png"
   },
   {
     "card_id": "chuhan_conflict_005",
@@ -200,7 +210,8 @@
       { "target": "han_dynasty_founding_005", "partner": "gaixia_siege_004", "desc": "与垓下之围合成「大汉开国」" }
     ],
     "star_max": 5,
-    "image": "cards/chuhan_conflict_005.png"
+    "image": "{CDN_BASE}/cards/qin_han/chuhan_conflict_005.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/chuhan_conflict_005_thumb.png"
   },
   {
     "card_id": "han_dynasty_founding_005",
@@ -217,7 +228,8 @@
     "related_cards": ["liubang_002", "chuhan_conflict_005", "gaixia_siege_004"],
     "merge_paths": [],
     "star_max": 5,
-    "image": "cards/han_dynasty_founding_005.png",
+    "image": "{CDN_BASE}/cards/qin_han/han_dynasty_founding_005.png",
+    "thumbnail": "{CDN_BASE}/cards/qin_han/han_dynasty_founding_005_thumb.png",
     "is_final": true,
     "final_desc": "楚汉合成链终点卡。恭喜完成秦汉篇全收集！"
   }
