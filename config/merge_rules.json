@@ -1,43 +1,171 @@
 [
   {
-    "rule_id": "merge_xingyang_escape_001",
+    "rule_id": "merge_xingyang_escape",
+    "type": "recipe",
     "input_a": "liubang_002",
     "input_b": "jixin_002",
     "output": "xingyang_escape_004",
     "target_level": 4,
-    "success_rate": 1,
-    "consume_inputs": true,
-    "merge_desc": "刘邦被项羽围困荥阳，纪信假扮刘邦出城吸引楚军，使刘邦得以脱身。"
+    "success_rate": 1.0,
+    "consume_inputs": false,
+    "require_owned": true,
+    "merge_desc": "刘邦被围荥阳，纪信假扮汉王出城吸引楚军，使刘邦从西门脱身。"
   },
   {
-    "rule_id": "merge_julu_battle_001",
+    "rule_id": "merge_julu_battle",
+    "type": "recipe",
     "input_a": "xiangyu_002",
     "input_b": "zhanghan_002",
     "output": "julu_battle_004",
     "target_level": 4,
-    "success_rate": 1,
-    "consume_inputs": true,
-    "merge_desc": "项羽与秦将章邯所代表的秦军力量在秦末战争中形成关键对抗，最终导向巨鹿之战的历史转折。"
+    "success_rate": 1.0,
+    "consume_inputs": false,
+    "require_owned": true,
+    "merge_desc": "项羽破釜沉舟，在巨鹿大破章邯所率秦军主力。"
   },
   {
-    "rule_id": "merge_chuhan_conflict_001",
+    "rule_id": "merge_chuhan_conflict",
+    "type": "recipe",
     "input_a": "xingyang_escape_004",
     "input_b": "hongmenyan_004",
     "output": "chuhan_conflict_005",
     "target_level": 5,
-    "success_rate": 1,
-    "consume_inputs": true,
-    "merge_desc": "鸿门宴揭示刘邦与项羽的权力裂痕，荥阳脱困体现双方战争拉锯，两者共同指向楚汉相争。"
+    "success_rate": 1.0,
+    "consume_inputs": false,
+    "require_owned": true,
+    "merge_desc": "鸿门宴揭开楚汉裂痕，荥阳拉锯展现双方战争格局，两件事共同指向楚汉争天下的历史阶段。"
   },
   {
-    "rule_id": "merge_han_dynasty_founding_001",
+    "rule_id": "merge_han_founding",
+    "type": "recipe",
     "input_a": "chuhan_conflict_005",
     "input_b": "gaixia_siege_004",
     "output": "han_dynasty_founding_005",
     "target_level": 5,
-    "success_rate": 1,
+    "success_rate": 1.0,
+    "consume_inputs": false,
+    "require_owned": true,
+    "merge_desc": "楚汉相争经垓下之围走向终局，项羽败亡，刘邦建立汉朝。"
+  },
+  {
+    "rule_id": "fuse_level_1_to_2",
+    "type": "fuse",
+    "input_level": 1,
+    "input_count": 3,
+    "input_dynasty_match": true,
+    "output_level": 2,
+    "output_random": true,
+    "output_dynasty_inherit": true,
+    "success_rate": 1.0,
     "consume_inputs": true,
-    "merge_desc": "楚汉相争经过垓下之围走向终局，项羽败亡后刘邦建立汉朝。"
+    "merge_desc": "3张同朝代1级卡熔合为1张随机2级卡。"
+  },
+  {
+    "rule_id": "fuse_level_2_to_3",
+    "type": "fuse",
+    "input_level": 2,
+    "input_count": 3,
+    "input_dynasty_match": true,
+    "output_level": 3,
+    "output_random": true,
+    "output_dynasty_inherit": true,
+    "success_rate": 0.9,
+    "consume_inputs": true,
+    "fail_refund": "fuse_stone:0.5",
+    "merge_desc": "3张同朝代2级卡熔合为1张随机3级卡，成功率90%，失败返还50%熔合石。"
+  },
+  {
+    "rule_id": "fuse_level_3_to_4",
+    "type": "fuse",
+    "input_level": 3,
+    "input_count": 2,
+    "input_dynasty_match": true,
+    "extra_material": { "type": "fuse_stone", "amount": 1 },
+    "output_level": 4,
+    "output_random": true,
+    "output_dynasty_inherit": true,
+    "success_rate": 0.7,
+    "consume_inputs": true,
+    "fail_refund": "fuse_stone:0.5",
+    "merge_desc": "2张同朝代3级卡+1熔合石熔合为1张随机4级卡，成功率70%，失败返还50%熔合石。"
+  },
+  {
+    "rule_id": "shard_synthesize_N",
+    "type": "shard_synthesize",
+    "rarity": "N",
+    "shard_type": "dynasty_shard",
+    "shard_count": 10,
+    "output_rarity": "N",
+    "merge_desc": "10个朝代碎片合成1张N级卡（指定）。"
+  },
+  {
+    "rule_id": "shard_synthesize_R",
+    "type": "shard_synthesize",
+    "rarity": "R",
+    "shard_type": "dynasty_shard",
+    "shard_count": 20,
+    "output_rarity": "R",
+    "merge_desc": "20个朝代碎片合成1张R级卡（指定）。"
+  },
+  {
+    "rule_id": "shard_synthesize_SR",
+    "type": "shard_synthesize",
+    "rarity": "SR",
+    "shard_type": "premium_shard",
+    "shard_count": 30,
+    "output_rarity": "SR",
+    "merge_desc": "30个高级碎片合成1张SR级卡（指定）。"
+  },
+  {
+    "rule_id": "shard_synthesize_SSR",
+    "type": "shard_synthesize",
+    "rarity": "SSR",
+    "shard_type": "premium_shard",
+    "shard_count": 50,
+    "output_rarity": "SSR",
+    "merge_desc": "50个高级碎片合成1张SSR级卡（指定）。"
+  },
+  {
+    "rule_id": "shard_synthesize_UR",
+    "type": "shard_synthesize",
+    "rarity": "UR",
+    "shard_type": "premium_shard",
+    "shard_count": 80,
+    "output_rarity": "UR",
+    "merge_desc": "80个高级碎片合成1张UR级卡（指定）。"
+  },
+  {
+    "rule_id": "star_up_1_to_2",
+    "type": "star_up",
+    "from_star": 1,
+    "to_star": 2,
+    "cost": { "same_card": 1, "coins": 500 },
+    "merge_desc": "1张同卡+500金币升至2星。"
+  },
+  {
+    "rule_id": "star_up_2_to_3",
+    "type": "star_up",
+    "from_star": 2,
+    "to_star": 3,
+    "cost": { "same_card": 2, "coins": 2000 },
+    "merge_desc": "2张同卡+2000金币升至3星。"
+  },
+  {
+    "rule_id": "star_up_3_to_4",
+    "type": "star_up",
+    "from_star": 3,
+    "to_star": 4,
+    "cost": { "same_card": 3, "star_stone": 1, "coins": 5000 },
+    "min_rarity": "SR",
+    "merge_desc": "3张同卡+1升星石+5000金币升至4星（需SR+）。"
+  },
+  {
+    "rule_id": "star_up_4_to_5",
+    "type": "star_up",
+    "from_star": 4,
+    "to_star": 5,
+    "cost": { "same_card": 5, "star_stone": 3, "coins": 10000 },
+    "min_rarity": "SSR",
+    "merge_desc": "5张同卡+3升星石+10000金币升至5星（需SSR+）。"
   }
 ]
-

@@ -3,94 +3,252 @@
     "pool_id": "permanent_basic",
     "name": "常驻基础池",
     "pool_type": "permanent",
-    "description": "新手和日常免费抽入口，主要产出 1-2 级基础卡、通用碎片和升级材料。",
-    "levels": [1, 2],
+    "description": "常驻可用。新手免费抽和日常普通抽入口，产出覆盖所有已发布卡牌（不含限定/UR）。",
     "rarity_weights": {
-      "common": 65,
-      "uncommon": 25,
-      "rare": 10
+      "N": 60,
+      "R": 25,
+      "SR": 10,
+      "SSR": 4,
+      "UR": 1
     },
-    "active_card_ids": [
-      "xingyang_001",
-      "julu_001",
-      "liubang_002",
-      "jixin_002",
-      "xiangyu_002",
-      "zhanghan_002"
-    ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 90,
+      "ssr_hard_pity": 180,
+      "description": "每10抽保底R+；每90抽保底SSR+；180抽硬保底SSR"
+    },
     "featured_card_ids": [],
-    "ticket_type": "normal_ticket"
+    "ticket_type": "normal_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "exclude_card_ids": [],
+    "active": true
+  },
+  {
+    "pool_id": "weekly_tang",
+    "name": "周期朝代池·盛唐风华",
+    "pool_type": "weekly_dynasty",
+    "dynasty_tag": "tang",
+    "theme_name": "盛唐风华",
+    "rotation_week": 1,
+    "duration_days": 7,
+    "description": "唐朝主题卡池。低阶卡定向投放唐朝卡牌。焦点卡：李白(SR)、唐太宗(SSR)、大唐盛世(SSR)。",
+    "rarity_weights": {
+      "N": 42,
+      "R": 28,
+      "SR": 18,
+      "SSR": 10,
+      "UR": 2
+    },
+    "up_multiplier": 1.5,
+    "featured_multiplier": 2.0,
+    "featured_card_ids": [
+      "libai_003",
+      "tang_taizong_004",
+      "tang_shengshi_005"
+    ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 70,
+      "ssr_hard_pity": 140,
+      "description": "每10抽保底SR+；每70抽保底SSR+（含当期UP）；140抽硬保底当期UP SSR"
+    },
+    "collection_target": 20,
+    "ticket_type": "normal_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": false,
+    "schedule_note": "第1周激活"
+  },
+  {
+    "pool_id": "weekly_song",
+    "name": "周期朝代池·大宋风华",
+    "pool_type": "weekly_dynasty",
+    "dynasty_tag": "song",
+    "theme_name": "大宋风华",
+    "rotation_week": 2,
+    "duration_days": 7,
+    "description": "宋朝主题卡池。低阶卡定向投放宋朝卡牌。焦点卡：苏轼(SR)、岳飞(SR)、清明上河图(SSR)。",
+    "rarity_weights": {
+      "N": 42,
+      "R": 28,
+      "SR": 18,
+      "SSR": 10,
+      "UR": 2
+    },
+    "up_multiplier": 1.5,
+    "featured_multiplier": 2.0,
+    "featured_card_ids": [
+      "sushi_003",
+      "yuefei_003",
+      "qingming_shanghe_004"
+    ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 70,
+      "ssr_hard_pity": 140
+    },
+    "collection_target": 20,
+    "ticket_type": "normal_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": false,
+    "schedule_note": "第2周激活"
+  },
+  {
+    "pool_id": "weekly_ming",
+    "name": "周期朝代池·大明雄风",
+    "pool_type": "weekly_dynasty",
+    "dynasty_tag": "ming",
+    "theme_name": "大明雄风",
+    "rotation_week": 3,
+    "duration_days": 7,
+    "description": "明朝主题卡池。焦点卡：朱元璋(SSR)、郑和(SR)、永乐大典(SSR)。",
+    "rarity_weights": {
+      "N": 42,
+      "R": 28,
+      "SR": 18,
+      "SSR": 10,
+      "UR": 2
+    },
+    "up_multiplier": 1.5,
+    "featured_multiplier": 2.0,
+    "featured_card_ids": [
+      "zhuyuanzhang_004",
+      "zhenghe_003",
+      "yongle_dadian_004"
+    ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 70,
+      "ssr_hard_pity": 140
+    },
+    "collection_target": 20,
+    "ticket_type": "normal_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": false,
+    "schedule_note": "第3周激活"
+  },
+  {
+    "pool_id": "weekly_sanguo",
+    "name": "周期朝代池·三国争霸",
+    "pool_type": "weekly_dynasty",
+    "dynasty_tag": "three_kingdoms",
+    "theme_name": "三国争霸",
+    "rotation_week": 4,
+    "duration_days": 7,
+    "description": "三国主题卡池。焦点卡：诸葛亮(SSR)、关羽(SR)、赤壁之战(SSR)。",
+    "rarity_weights": {
+      "N": 42,
+      "R": 28,
+      "SR": 18,
+      "SSR": 10,
+      "UR": 2
+    },
+    "up_multiplier": 1.5,
+    "featured_multiplier": 2.0,
+    "featured_card_ids": [
+      "zhugeliang_004",
+      "guanyu_003",
+      "chibi_war_004"
+    ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 70,
+      "ssr_hard_pity": 140
+    },
+    "collection_target": 20,
+    "ticket_type": "normal_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": false,
+    "schedule_note": "第4周激活"
   },
   {
     "pool_id": "weekly_qinhan",
-    "name": "周期朝代池·秦汉篇",
+    "name": "周期朝代池·秦汉风云",
     "pool_type": "weekly_dynasty",
     "dynasty_tag": "qin_han",
-    "theme_name": "秦汉风云卡池",
+    "theme_name": "秦汉风云",
     "rotation_week": 5,
     "duration_days": 7,
-    "description": "当前 MVP 样例周期池。1-2 级低阶卡与高阶事件卡都围绕秦汉/楚汉主题投放。",
-    "levels": [1, 2, 4, 5],
+    "description": "秦汉主题卡池。MVP 首期验证池，包含完整楚汉 12 张卡牌线。焦点卡：刘邦(R)、项羽(R)、大汉开国(SSR)。",
     "rarity_weights": {
-      "common": 45,
-      "uncommon": 28,
-      "rare": 17,
-      "epic": 8,
-      "legendary": 2
+      "N": 42,
+      "R": 28,
+      "SR": 18,
+      "SSR": 10,
+      "UR": 2
     },
-    "active_card_ids": [
-      "xingyang_001",
-      "julu_001",
-      "liubang_002",
-      "jixin_002",
-      "xiangyu_002",
-      "zhanghan_002",
-      "hongmenyan_004",
-      "xingyang_escape_004",
-      "julu_battle_004",
-      "gaixia_siege_004",
-      "chuhan_conflict_005",
-      "han_dynasty_founding_005"
-    ],
+    "up_multiplier": 1.5,
+    "featured_multiplier": 2.0,
     "featured_card_ids": [
       "liubang_002",
       "xiangyu_002",
-      "chuhan_conflict_005"
+      "han_dynasty_founding_005"
     ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 70,
+      "ssr_hard_pity": 140,
+      "description": "每10抽保底SR+；每70抽保底SSR+（含当期UP）；140抽硬保底当期UP SSR"
+    },
     "collection_target": 12,
     "ticket_type": "normal_ticket",
-    "rotation_schedule": [
-      { "week": 1, "dynasty_tag": "tang", "theme_name": "唐朝卡池" },
-      { "week": 2, "dynasty_tag": "song", "theme_name": "宋朝卡池" },
-      { "week": 3, "dynasty_tag": "ming", "theme_name": "明朝卡池" },
-      { "week": 4, "dynasty_tag": "three_kingdoms", "theme_name": "三国卡池" },
-      { "week": 5, "dynasty_tag": "qin_han", "theme_name": "秦汉卡池" },
-      { "week": 6, "dynasty_tag": "spring_autumn_warring_states", "theme_name": "春秋战国卡池" }
-    ]
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": true,
+    "schedule_note": "MVP 阶段默认激活"
+  },
+  {
+    "pool_id": "weekly_chunqiu",
+    "name": "周期朝代池·百家争鸣",
+    "pool_type": "weekly_dynasty",
+    "dynasty_tag": "spring_autumn_warring_states",
+    "theme_name": "百家争鸣",
+    "rotation_week": 6,
+    "duration_days": 7,
+    "description": "春秋战国主题卡池。焦点卡：孔子(SR)、孙武(SSR)、孙子兵法(SR)。",
+    "rarity_weights": {
+      "N": 42,
+      "R": 28,
+      "SR": 18,
+      "SSR": 10,
+      "UR": 2
+    },
+    "up_multiplier": 1.5,
+    "featured_multiplier": 2.0,
+    "featured_card_ids": [
+      "kongzi_003",
+      "sunwu_004",
+      "sunzi_bingfa_003"
+    ],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 70,
+      "ssr_hard_pity": 140
+    },
+    "collection_target": 20,
+    "ticket_type": "normal_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": false,
+    "schedule_note": "第6周激活"
   },
   {
     "pool_id": "limited_premium_placeholder",
     "name": "限时高级池·预留",
     "pool_type": "limited_premium",
-    "description": "后续围绕 SSR 人物、重要历史事件、节日活动做概率提升。MVP 阶段仅保留配置结构。",
-    "levels": [2, 4, 5],
+    "description": "节庆/活动限时高级池。投入 SSR 人物/事件 UP，使用高级抽卡券。MVP 阶段仅保留配置结构。",
     "rarity_weights": {
-      "rare": 70,
-      "epic": 25,
-      "legendary": 5
+      "R": 20,
+      "SR": 55,
+      "SSR": 20,
+      "UR": 5
     },
-    "active_card_ids": [
-      "hongmenyan_004",
-      "xingyang_escape_004",
-      "julu_battle_004",
-      "gaixia_siege_004",
-      "chuhan_conflict_005",
-      "han_dynasty_founding_005"
-    ],
-    "featured_card_ids": [
-      "han_dynasty_founding_005"
-    ],
+    "featured_card_ids": [],
+    "pity": {
+      "sr_every": 10,
+      "ssr_every": 50,
+      "ssr_hard_pity": 100
+    },
     "ticket_type": "premium_ticket",
+    "ten_draw_guaranteed_rarity": "SR",
+    "active": false,
     "mvp_launch": false
   }
 ]

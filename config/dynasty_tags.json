@@ -2,43 +2,86 @@
   {
     "dynasty_tag": "tang",
     "display_name": "唐朝",
+    "period": "公元618-907年",
     "theme_color": "#C9973A",
-    "visual_keywords": ["长安", "诗歌", "宫廷乐舞", "边塞", "盛唐纹样"],
-    "rotation_priority": 1
+    "visual_keywords": ["长安", "诗歌", "宫廷乐舞", "边塞", "盛唐纹样", "唐三彩"],
+    "rotation_priority": 1,
+    "card_count_target": 20,
+    "focus_cards": ["libai_003", "tang_taizong_004", "tang_shengshi_005"],
+    "low_level_card_themes": [
+      "唐代士兵", "唐代诗人", "唐代官员", "唐代商旅",
+      "唐代乐师", "长安才子", "边塞诗人", "唐军骑兵", "宫廷乐舞"
+    ]
   },
   {
     "dynasty_tag": "song",
     "display_name": "宋朝",
+    "period": "公元960-1279年",
     "theme_color": "#4F8F78",
-    "visual_keywords": ["汴京", "书院", "山水", "市井", "文人"],
-    "rotation_priority": 2
+    "visual_keywords": ["汴京", "书院", "山水画", "市井", "文人", "青瓷"],
+    "rotation_priority": 2,
+    "card_count_target": 20,
+    "focus_cards": ["sushi_003", "yuefei_003", "qingming_shanghe_004"],
+    "low_level_card_themes": [
+      "宋代书生", "宋代商贩", "宋代工匠", "宋代官员",
+      "汴京市民", "宋代画师", "宋代词人", "南宋将士", "书院学子"
+    ]
   },
   {
     "dynasty_tag": "ming",
     "display_name": "明朝",
+    "period": "公元1368-1644年",
     "theme_color": "#A33A32",
-    "visual_keywords": ["宫城", "海贸", "将领", "典籍", "青绿纹样"],
-    "rotation_priority": 3
+    "visual_keywords": ["宫城", "海贸", "将领", "典籍", "青绿纹样", "明代家具"],
+    "rotation_priority": 3,
+    "card_count_target": 20,
+    "focus_cards": ["zhuyuanzhang_004", "zhenghe_003", "yongle_dadian_004"],
+    "low_level_card_themes": [
+      "明朝士兵", "明朝商贾", "明朝工匠", "明朝官员",
+      "明朝海商", "明朝书生", "锦衣卫", "明朝将领", "紫禁城守卫"
+    ]
   },
   {
     "dynasty_tag": "three_kingdoms",
     "display_name": "三国",
+    "period": "公元220-280年",
     "theme_color": "#7B3F25",
-    "visual_keywords": ["名将", "谋士", "战役", "阵图", "旌旗"],
-    "rotation_priority": 4
+    "visual_keywords": ["名将", "谋士", "战役", "阵图", "旌旗", "青铜纹饰"],
+    "rotation_priority": 4,
+    "card_count_target": 20,
+    "focus_cards": ["zhugeliang_004", "guanyu_003", "chibi_war_004"],
+    "low_level_card_themes": [
+      "三国士兵", "三国斥候", "三国谋士", "三国铁匠",
+      "蜀汉士卒", "曹魏步卒", "东吴水兵", "三国游侠", "屯田农民"
+    ]
   },
   {
     "dynasty_tag": "qin_han",
     "display_name": "秦汉",
+    "period": "公元前221-公元220年",
     "theme_color": "#8D6A38",
-    "visual_keywords": ["秦简", "汉阙", "楚汉", "战车", "统一"],
-    "rotation_priority": 5
+    "visual_keywords": ["秦简", "汉阙", "楚汉", "战车", "统一", "兵马俑"],
+    "rotation_priority": 5,
+    "card_count_target": 12,
+    "focus_cards": ["liubang_002", "xiangyu_002", "han_dynasty_founding_005"],
+    "mvp_active": true,
+    "low_level_card_themes": [
+      "秦军士兵", "汉军士兵", "楚地壮士", "秦汉农夫",
+      "秦汉商人", "秦汉工匠", "秦汉学者", "秦弩手", "汉骑兵"
+    ]
   },
   {
     "dynasty_tag": "spring_autumn_warring_states",
     "display_name": "春秋战国",
+    "period": "公元前770-公元前221年",
     "theme_color": "#3D6B7D",
-    "visual_keywords": ["诸侯", "青铜器", "兵法", "纵横", "竹简"],
-    "rotation_priority": 6
+    "visual_keywords": ["诸侯", "青铜器", "兵法", "纵横家", "竹简", "编钟"],
+    "rotation_priority": 6,
+    "card_count_target": 20,
+    "focus_cards": ["kongzi_003", "sunwu_004", "sunzi_bingfa_003"],
+    "low_level_card_themes": [
+      "诸侯士兵", "百家学子", "青铜匠人", "战国游士",
+      "齐国商人", "楚国武士", "秦国锐士", "赵国骑兵", "纵横家门客"
+    ]
   }
 ]

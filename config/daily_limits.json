@@ -1,8 +1,68 @@
 {
-  "login_free_draws": 20,
-  "share_bonus_draws": 5,
-  "ad_bonus_draws_per_view": 5,
-  "max_ad_views_per_day": 2,
-  "max_total_daily_draws": 35
+  "free_draw": {
+    "daily_limit": 1,
+    "pool_restriction": ["permanent_basic", "current_weekly_dynasty"],
+    "reset_time": "00:00:00",
+    "desc": "每日免费单抽1次，限基础池或当前朝代池"
+  },
+  "normal_draw": {
+    "daily_limit": 50,
+    "ticket_type": "normal_ticket",
+    "desc": "每日普通抽卡上限50次（含免费抽）"
+  },
+  "premium_draw": {
+    "daily_limit": 20,
+    "ticket_type": "premium_ticket",
+    "desc": "每日高级抽卡上限20次"
+  },
+  "ad_bonus_draw": {
+    "daily_limit": 2,
+    "reward": { "type": "normal_ticket", "amount": 1 },
+    "desc": "每日观看激励视频可获额外抽卡券×1，限2次"
+  },
+  "shard_synthesize": {
+    "daily_free_count": 3,
+    "cost_after_free": { "type": "coins", "amount": 200 },
+    "desc": "每日免费碎片合成3次，超出消耗金币200"
+  },
+  "fuse": {
+    "daily_free_count": 2,
+    "cost_after_free": { "type": "coins", "amount": 500 },
+    "desc": "每日免费等级熔合2次，超出消耗金币500"
+  },
+  "manual_decompose": {
+    "daily_limit": 50,
+    "desc": "每日手动分解卡牌上限50次"
+  },
+  "signin": {
+    "cycle_days": 7,
+    "break_reset": true,
+    "rewards": [
+      { "day": 1, "rewards": [{ "type": "coins", "amount": 500 }] },
+      { "day": 2, "rewards": [{ "type": "normal_ticket", "amount": 1 }] },
+      { "day": 3, "rewards": [{ "type": "coins", "amount": 800 }] },
+      { "day": 4, "rewards": [{ "type": "normal_ticket", "amount": 2 }] },
+      { "day": 5, "rewards": [{ "type": "star_stone", "amount": 1 }] },
+      { "day": 6, "rewards": [{ "type": "normal_ticket", "amount": 3 }] },
+      { "day": 7, "rewards": [{ "type": "premium_ticket", "amount": 1 }] }
+    ],
+    "desc": "连续签到7天循环，断签重置从第1天开始"
+  },
+  "daily_tasks": [
+    { "task_id": "daily_draw_1", "desc": "完成1次抽卡", "rewards": [{ "type": "coins", "amount": 200 }] },
+    { "task_id": "daily_merge_1", "desc": "完成1次合成", "rewards": [{ "type": "coins", "amount": 300 }] },
+    { "task_id": "daily_all_done", "desc": "完成全部每日任务", "rewards": [{ "type": "normal_ticket", "amount": 1 }] }
+  ],
+  "weekly_tasks": [
+    { "task_id": "weekly_draw_20", "desc": "本周抽卡20次", "rewards": [{ "type": "normal_ticket", "amount": 2 }] },
+    { "task_id": "weekly_merge_5", "desc": "本周合成5次", "rewards": [{ "type": "star_stone", "amount": 1 }] },
+    { "task_id": "weekly_new_card_10", "desc": "本周收集10张新卡", "rewards": [{ "type": "premium_ticket", "amount": 1 }] },
+    { "task_id": "weekly_login_5", "desc": "本周登录5天", "rewards": [{ "type": "normal_ticket", "amount": 3 }] }
+  ],
+  "shop_exchange_rates": {
+    "normal_ticket": { "cost": { "type": "coins", "amount": 1000 }, "daily_limit": 5 },
+    "star_stone": { "cost": { "type": "coins", "amount": 5000 }, "daily_limit": 1 },
+    "fuse_stone": { "cost": { "type": "coins", "amount": 3000 }, "daily_limit": 2 }
+  },
+  "desc": "每日限制、签到、任务、商店兑换统一配置"
 }
-
