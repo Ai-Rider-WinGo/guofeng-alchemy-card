@@ -1,44 +1,107 @@
 [
   {
-    "rule_id": "duplicate_level_1_dynasty_shard",
-    "level_min": 1,
-    "level_max": 1,
-    "preferred_output": "dynasty_shard",
-    "shard_quantity": 1,
-    "can_star_up": false,
-    "can_decompose": true,
-    "desc": "重复 1 级卡自动转化为同朝代碎片。"
+    "rule_id": "duplicate_N",
+    "rarity": "N",
+    "level_range": [1, 2],
+    "primary_action": "auto_shard",
+    "auto_shard": {
+      "shard_type": "dynasty_shard",
+      "quantity": 1,
+      "inherit_dynasty": true
+    },
+    "star_up": { "enabled": false },
+    "manual_decompose": {
+      "shard_type": "dynasty_shard",
+      "quantity": 1
+    },
+    "desc": "重复N级卡自动转化为1个同朝代碎片。不可用于升星。"
   },
   {
-    "rule_id": "duplicate_level_2_star_or_dynasty_shard",
-    "level_min": 2,
-    "level_max": 2,
-    "preferred_output": "star_material",
-    "fallback_output": "dynasty_shard",
-    "shard_quantity": 2,
-    "can_star_up": true,
-    "can_decompose": true,
-    "desc": "重复 2 级卡优先作为该卡升星材料，也可转为同朝代碎片。"
+    "rule_id": "duplicate_R",
+    "rarity": "R",
+    "level_range": [2, 3],
+    "primary_action": "recommend_star_up",
+    "auto_shard": {
+      "shard_type": "dynasty_shard",
+      "quantity": 3,
+      "inherit_dynasty": true
+    },
+    "star_up": {
+      "enabled": true,
+      "max_star": 3
+    },
+    "manual_decompose": {
+      "shard_type": "dynasty_shard",
+      "quantity": 3
+    },
+    "desc": "重复R级卡优先推荐升星（最高3星），也可自动转化为3个同朝代碎片。"
   },
   {
-    "rule_id": "duplicate_level_3_plus_star_or_premium_shard",
-    "level_min": 3,
-    "level_max": 99,
-    "preferred_output": "star_material",
-    "fallback_output": "premium_shard",
-    "shard_quantity": 5,
-    "can_star_up": true,
-    "can_decompose": true,
-    "desc": "重复 3 级及以上卡优先用于该卡升星，也可分解为高级碎片。"
+    "rule_id": "duplicate_SR",
+    "rarity": "SR",
+    "level_range": [3, 4],
+    "primary_action": "recommend_star_up",
+    "auto_shard": {
+      "shard_type": "premium_shard",
+      "quantity": 8
+    },
+    "star_up": {
+      "enabled": true,
+      "max_star": 4
+    },
+    "manual_decompose": {
+      "shard_type": "premium_shard",
+      "quantity": 8
+    },
+    "desc": "重复SR级卡优先推荐升星（最高4星），也可分解为8个高级碎片。"
   },
   {
-    "rule_id": "duplicate_ssr_breakthrough",
-    "rarity": "legendary",
-    "preferred_output": "breakthrough_material",
-    "fallback_output": "premium_shard",
-    "shard_quantity": 20,
-    "can_star_up": true,
-    "can_decompose": true,
-    "desc": "重复 SSR 用于升星、突破或兑换稀有资源。"
+    "rule_id": "duplicate_SSR",
+    "rarity": "SSR",
+    "level_range": [4, 5],
+    "primary_action": "recommend_star_up",
+    "auto_shard": {
+      "shard_type": "premium_shard",
+      "quantity": 20
+    },
+    "star_up": {
+      "enabled": true,
+      "max_star": 5
+    },
+    "manual_decompose": {
+      "shard_type": "premium_shard",
+      "quantity": 20
+    },
+    "desc": "重复SSR级卡优先推荐升星（最高5星），也可分解为20个高级碎片。"
+  },
+  {
+    "rule_id": "duplicate_UR",
+    "rarity": "UR",
+    "level_range": [5, 5],
+    "primary_action": "recommend_star_up",
+    "auto_shard": {
+      "shard_type": "premium_shard",
+      "quantity": 50
+    },
+    "star_up": {
+      "enabled": true,
+      "max_star": 5
+    },
+    "manual_decompose": {
+      "shard_type": "premium_shard",
+      "quantity": 50
+    },
+    "desc": "重复UR级卡优先推荐升星，也可分解为50个高级碎片。极稀有资源，慎重处理。"
+  },
+  {
+    "rule_id": "duplicate_settings",
+    "type": "global_settings",
+    "auto_shard_enabled": true,
+    "auto_shard_rarities": ["N"],
+    "recommend_strategy": "smart",
+    "lock_protection": true,
+    "default_keep_min": 1,
+    "batch_decompose_enabled": true,
+    "desc": "全局设置: N卡自动分解开启；R+弹窗推荐升星优先；锁定保护防止误分解；批量分解N卡支持一键操作。"
   }
 ]
