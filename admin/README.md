@@ -1,85 +1,157 @@
-# 国风炼金卡牌 · 后台管理系统
+<div align="center">
+  <a href="https://github.com/anncwb/vue-vben-admin">
+    <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
+  </a>
+  <br>
+  <br>
 
-> 运营后台管理面板。负责用户运营管理、卡牌内容管理、卡池配置、数据统计等运营职能。
+[![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 
-## 技术栈（规划）
+  <h1>Vue Vben Admin</h1>
+</div>
 
-- 前端框架：React + Ant Design Pro / Vue + Element Plus
-- 构建工具：Vite
-- 与后端通信：REST API / tRPC
-- 部署：独立静态站点，挂载在 `/admin` 路径
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) [![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml) [![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml) [![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml) [![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml)
 
-## 模块规划
+**English** | [中文](./README.zh-CN.md) | [日本語](./README.ja-JP.md)
 
-### 1. 用户运营管理
-| 功能 | 说明 |
-|---|---|
-| 用户列表 | 搜索、筛选（UID/昵称/VIP 等级/注册时间）、分页 |
-| 用户详情 | 卡牌持有、碎片数量、图鉴进度、充值记录 |
-| 封禁管理 | 冻结/解封用户、封禁原因记录 |
-| VIP 管理 | 手动调整 VIP 等级、VIP 权益查询 |
-| 用户数据导出 | CSV 导出用户数据用于分析 |
+## Introduction
 
-### 2. 卡牌管理
-| 功能 | 说明 |
-|---|---|
-| 卡牌列表 | 按朝代/稀有度/类型筛选，分页展示 |
-| 卡牌 CRUD | 新增卡牌、编辑属性、删除/下架 |
-| 卡牌图片上传 | 上传卡面图、卡背图，自动压缩 |
-| 批量导入 | CSV/JSON 批量导入卡牌数据 |
-| 卡牌统计 | 各稀有度分布、持有率排行、最受欢迎卡牌 |
+Vue Vben Admin is a free and open source middle and back-end template. Using the latest `vue3`, `vite`, `TypeScript` and other mainstream technology development, the out-of-the-box middle and back-end front-end solutions can also be used for learning reference.
 
-### 3. 卡池配置
-| 功能 | 说明 |
-|---|---|
-| 卡池列表 | 基础池/周期池/限时池管理 |
-| 卡池编辑 | 概率配置、UP 卡选择、保底规则 |
-| 周期排期 | 朝代轮换时间表、自动切换 |
-| 限时池上下架 | 手动/定时上架限时卡池 |
+## Upgrade Notice
 
-### 4. 数据统计
-| 功能 | 说明 |
-|---|---|
-| 运营概览 | DAU/MAU、今日抽卡次数、今日新增用户 |
-| 抽卡统计 | 各池抽卡次数、SSR 出货率监控 |
-| 收入统计 | 充值金额、道具消耗、付费率 |
-| 留存分析 | 次日/7日/30日留存率 |
+This is the latest version, 5.0, and it is not compatible with previous versions. If you are starting a new project, it is recommended to use the latest version. If you wish to view the old version, please use the [v2 branch](https://github.com/vbenjs/vue-vben-admin/tree/v2).
 
-### 5. 系统配置
-| 功能 | 说明 |
-|---|---|
-| 每日限制 | 免费抽次数、合成次数、任务数量 |
-| 任务配置 | 每日任务/周任务的奖励和条件 |
-| 签到奖励 | 连续签到奖励配置 |
-| 公告管理 | 游戏内公告发布 |
+## Features
 
-## 页面结构
+- **Latest Technology Stack**: Developed with cutting-edge front-end technologies like Vue 3 and Vite
+- **TypeScript**: A language for application-scale JavaScript
+- **Themes**: Multiple theme colors available with customizable options
+- **Internationalization**: Comprehensive built-in internationalization support
+- **Permissions**: Built-in solution for dynamic route-based permission generation
 
-```
-/admin
-├── /dashboard           # 运营概览仪表盘
-├── /users               # 用户列表
-│   └── /users/:uid      # 用户详情
-├── /cards               # 卡牌管理
-│   └── /cards/:id       # 卡牌编辑
-├── /pools               # 卡池配置
-│   └── /pools/:id       # 卡池编辑
-├── /schedule            # 周期排期
-├── /analytics           # 数据统计
-├── /tasks               # 任务配置
-├── /settings            # 系统设置
-└── /notices             # 公告管理
+## Preview
+
+- [Vben Admin](https://vben.pro/) - Full version Chinese site
+
+Test Account: vben/123456
+
+<div align="center">
+  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
+  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
+  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
+</div>
+
+### Use Gitpod
+
+Open the project in Gitpod (free online dev environment for GitHub) and start coding immediately.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/vbenjs/vue-vben-admin)
+
+## Documentation
+
+[Document](https://doc.vben.pro/)
+
+## Install and Use
+
+1. Get the project code
+
+```bash
+git clone https://github.com/vbenjs/vue-vben-admin.git
 ```
 
-## 权限模型
+2. Install dependencies
 
-| 角色 | 权限范围 |
-|---|---|
-| 超级管理员 | 全部功能 |
-| 运营人员 | 用户管理、卡牌管理、卡池配置、公告 |
-| 数据分析师 | 数据统计（只读） |
-| 客服 | 用户查询（只读） |
+```bash
+cd vue-vben-admin
+npm i -g corepack
+pnpm install
+```
 
-## 状态
+3. Run
 
-🚧 待开发 — 将在后端 API 就绪后搭建。
+```bash
+pnpm dev
+```
+
+4. Build
+
+```bash
+pnpm build
+```
+
+## Change Log
+
+[CHANGELOG](https://github.com/vbenjs/vue-vben-admin/releases)
+
+## How to Contribute
+
+You are very welcome to join! [Raise an issue](https://github.com/anncwb/vue-vben-admin/issues/new/choose) or submit a Pull Request.
+
+**Pull Request Process:**
+
+1. Fork the code
+2. Create your branch: `git checkout -b feat/xxxx`
+3. Submit your changes: `git commit -am 'feat(function): add xxxxx'`
+4. Push your branch: `git push origin feat/xxxx`
+5. Submit `pull request`
+
+## Git Contribution Submission Specification
+
+Reference [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) specification ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
+
+- `feat` Add new features
+- `fix` Fix the problem/BUG
+- `style` The code style is related and does not affect the running result
+- `perf` Optimization/performance improvement
+- `refactor` Refactor
+- `revert` Undo edit
+- `test` Test related
+- `docs` Documentation/notes
+- `chore` Dependency update/scaffolding configuration modification etc.
+- `ci` Continuous integration
+- `types` Type definition file changes
+
+## Browser Support
+
+Tailwind CSS v4.0 is designed for Safari 16.4+, Chrome 111+, and Firefox 128+
+
+Support modern browsers, not IE
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
+| :-: | :-: | :-: | :-: |
+| last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+
+## Maintainer
+
+[@Vben](https://github.com/anncwb)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=vbenjs/vue-vben-admin&type=Date)](https://star-history.com/#vbenjs/vue-vben-admin&Date)
+
+## Donate
+
+If you think this project is helpful to you, you can help the author buy a cup of coffee to show your support!
+
+![donate](https://unpkg.com/@vbenjs/static-source@0.1.7/source/sponsor.png)
+
+<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aee;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
+
+## Contributors
+
+<a href="https://openomy.app/github/vbenjs/vue-vben-admin" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://openomy.app/svg?repo=vbenjs/vue-vben-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+ </a>
+
+<a href="https://github.com/vbenjs/vue-vben-admin/graphs/contributors">
+  <img alt="Contributors" src="https://contrib.rocks/image?repo=vbenjs/vue-vben-admin" />
+</a>
+
+## Discord
+
+- [Github Discussions](https://github.com/anncwb/vue-vben-admin/discussions)
+
+## License
+
+[MIT © Vben-2020](./LICENSE)
