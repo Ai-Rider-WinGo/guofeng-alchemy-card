@@ -7,12 +7,14 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173,
     proxy: {
+      // NestJS (3002) — 管理后台全部 API
       '/api': {
-        target: 'http://localhost:8888',  // card_server.py 本地看板 API
+        target: 'http://localhost:3002',
         changeOrigin: true,
       },
+      // card_server.py (8888) — 图片素材
       '/assets-output': {
-        target: 'http://localhost:8888',  // 卡牌图片等静态资源
+        target: 'http://localhost:8888',
         changeOrigin: true,
       },
     },
