@@ -1,9 +1,9 @@
 import { IsString, IsOptional, IsEnum, IsNumber, IsArray, IsBoolean } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { CardQuality, CardType } from '../../../database/entities/card.entity';
+import { CardRarity, CardType } from '../../../database/entities/card.entity';
 
 export class CreateCardDto {
-  @ApiProperty({ example: 'qinhan_liubang_l1' })
+  @ApiProperty({ example: 'liubang_002' })
   @IsString()
   card_id: string;
 
@@ -11,24 +11,34 @@ export class CreateCardDto {
   @IsString()
   name: string;
 
-  @ApiPropertyOptional({ enum: CardQuality, default: CardQuality.COMMON })
-  @IsEnum(CardQuality)
+  @ApiPropertyOptional({ enum: CardRarity, default: CardRarity.N })
+  @IsEnum(CardRarity)
   @IsOptional()
-  quality?: CardQuality;
+  rarity?: CardRarity;
 
   @ApiProperty({ example: '秦汉' })
   @IsString()
   dynasty: string;
+
+  @ApiPropertyOptional({ example: 'qin_han' })
+  @IsString()
+  @IsOptional()
+  dynasty_tag?: string;
 
   @ApiPropertyOptional({ default: 1 })
   @IsNumber()
   @IsOptional()
   level?: number;
 
-  @ApiPropertyOptional({ enum: CardType, default: CardType.CHARACTER })
+  @ApiPropertyOptional({ enum: CardType, default: CardType.PERSON })
   @IsEnum(CardType)
   @IsOptional()
   type?: CardType;
+
+  @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  short_desc?: string;
 
   @ApiPropertyOptional()
   @IsString()
@@ -61,9 +71,14 @@ export class CreateCardDto {
   related_cards?: string[];
 
   @ApiPropertyOptional()
-  @IsString()
+  @IsArray()
   @IsOptional()
-  merge_hint?: string;
+  merge_paths?: { target: string; partner: string; desc: string }[];
+
+  @ApiPropertyOptional({ default: 3 })
+  @IsNumber()
+  @IsOptional()
+  star_max?: number;
 
   @ApiPropertyOptional({ default: true })
   @IsBoolean()
@@ -82,15 +97,20 @@ export class UpdateCardDto {
   @IsOptional()
   name?: string;
 
-  @ApiPropertyOptional({ enum: CardQuality })
-  @IsEnum(CardQuality)
+  @ApiPropertyOptional({ enum: CardRarity })
+  @IsEnum(CardRarity)
   @IsOptional()
-  quality?: CardQuality;
+  rarity?: CardRarity;
 
   @ApiPropertyOptional()
   @IsString()
   @IsOptional()
   dynasty?: string;
+
+  @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  dynasty_tag?: string;
 
   @ApiPropertyOptional()
   @IsNumber()
@@ -101,6 +121,11 @@ export class UpdateCardDto {
   @IsEnum(CardType)
   @IsOptional()
   type?: CardType;
+
+  @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  short_desc?: string;
 
   @ApiPropertyOptional()
   @IsString()
@@ -133,9 +158,14 @@ export class UpdateCardDto {
   related_cards?: string[];
 
   @ApiPropertyOptional()
-  @IsString()
+  @IsArray()
   @IsOptional()
-  merge_hint?: string;
+  merge_paths?: { target: string; partner: string; desc: string }[];
+
+  @ApiPropertyOptional()
+  @IsNumber()
+  @IsOptional()
+  star_max?: number;
 
   @ApiPropertyOptional()
   @IsBoolean()
@@ -149,10 +179,10 @@ export class QueryCardDto {
   @IsOptional()
   dynasty?: string;
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({ description: 'rarity: N, R, SR, SSR, UR' })
   @IsString()
   @IsOptional()
-  quality?: string;
+  rarity?: string;
 
   @ApiPropertyOptional()
   @IsString()

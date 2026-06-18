@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Put, Delete, Body, Param, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { MergeRulesService } from './merge-rules.service';
-import { CreateMergeRuleDto, UpdateMergeRuleDto } from '../pools/dto/create-pool.dto';
+import { CreateMergeRuleDto, UpdateMergeRuleDto } from './dto/create-merge-rule.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 
 @ApiTags('合成规则')

@@ -5,14 +5,23 @@ export class MergeRule {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column({ unique: true })
+  rule_id: string;
+
   @Column()
   rule_name: string;
 
-  @Column({ type: 'simple-json' })
-  input_card_ids: string[];
+  @Column()
+  input_a: string;
+
+  @Column()
+  input_b: string;
 
   @Column()
   output_card_id: string;
+
+  @Column({ nullable: true })
+  target_level: number;
 
   @Column({ type: 'decimal', precision: 3, scale: 2, default: 1.0 })
   success_rate: number;
@@ -20,8 +29,11 @@ export class MergeRule {
   @Column({ default: true })
   consume_inputs: boolean;
 
+  @Column({ default: true })
+  require_owned: boolean;
+
   @Column({ type: 'text', nullable: true })
-  story_output: string;
+  merge_desc: string;
 
   @Column({ default: true })
   is_active: boolean;

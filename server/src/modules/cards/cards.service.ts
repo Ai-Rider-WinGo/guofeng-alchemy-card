@@ -12,11 +12,11 @@ export class CardsService {
   ) {}
 
   async findAll(query: QueryCardDto) {
-    const { dynasty, quality, type, keyword, page = 1, limit = 20 } = query;
+    const { dynasty, rarity, type, keyword, page = 1, limit = 20 } = query;
     const qb = this.cardRepo.createQueryBuilder('card');
 
     if (dynasty) qb.andWhere('card.dynasty = :dynasty', { dynasty });
-    if (quality) qb.andWhere('card.quality = :quality', { quality });
+    if (rarity) qb.andWhere('card.rarity = :rarity', { rarity });
     if (type) qb.andWhere('card.type = :type', { type });
 
     if (keyword) {

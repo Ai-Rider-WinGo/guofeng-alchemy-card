@@ -1,19 +1,26 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
-export enum CardQuality {
-  COMMON = 'common',
-  UNCOMMON = 'uncommon',
-  RARE = 'rare',
-  SR = 'sr',
-  SSR = 'ssr',
-  TREASURE = 'treasure',
+export enum CardRarity {
+  N = 'N',
+  R = 'R',
+  SR = 'SR',
+  SSR = 'SSR',
+  UR = 'UR',
 }
 
 export enum CardType {
-  CHARACTER = 'character',
-  PLACE = 'place',
+  PERSON = 'person',
   EVENT = 'event',
-  STAGE_EVENT = 'stage_event',
+  WEAPON = 'weapon',
+  CLASSIC = 'classic',
+  PLACE = 'place',
+  DYNASTY = 'dynasty',
+}
+
+export interface MergePath {
+  target: string;
+  partner: string;
+  desc: string;
 }
 
 @Entity('cards')
@@ -27,23 +34,23 @@ export class Card {
   @Column()
   name: string;
 
-  @Column({ type: 'varchar', default: CardQuality.COMMON })
-  quality: CardQuality;
+  @Column({ type: 'varchar', default: CardRarity.N })
+  rarity: CardRarity;
 
   @Column()
   dynasty: string;
 
+  @Column({ nullable: true })
+  dynasty_tag: string;
+
   @Column({ default: 1 })
   level: number;
 
-  @Column({ type: 'varchar', default: CardType.CHARACTER })
+  @Column({ type: 'varchar', default: CardType.PERSON })
   type: CardType;
 
   @Column({ nullable: true })
-  image_url: string;
-
-  @Column({ nullable: true })
-  thumbnail_url: string;
+  short_desc: string;
 
   @Column({ type: 'text', nullable: true })
   story: string;
@@ -57,8 +64,17 @@ export class Card {
   @Column({ type: 'simple-json', nullable: true })
   related_cards: string[];
 
-  @Column({ type: 'text', nullable: true })
-  merge_hint: string;
+  @Column({ type: 'simple-json', nullable: true })
+  merge_paths: MergePath[];
+
+  @Column({ default: 3 })
+  star_max: number;
+
+  @Column({ nullable: true })
+  image_url: string;
+
+  @Column({ nullable: true })
+  thumbnail_url: string;
 
   @Column({ default: true })
   is_active: boolean;

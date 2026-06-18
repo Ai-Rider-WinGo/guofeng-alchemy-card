@@ -31,7 +31,7 @@ docs/api-contract.md + config/*.json (设计/配置层)
 | 协议 | HTTPS |
 | Base URL | `https://api.guofeng-alchemy.example.com/v1` |
 | 请求格式 | `Content-Type: application/json` |
-| 响应格式 | `{ "code": 0, "data": {...}, "msg": "ok" }` |
+| 响应格式 | `{ "code": 0, "data": {...}, "message": "ok" }` |
 | 认证 | Header `Authorization: Bearer {token}` |
 | 分页 | `?page=1&page_size=20`，响应含 `total`/`page`/`page_size` |
 | 时间格式 | ISO 8601: `2026-06-16T10:30:00+08:00` |
@@ -40,13 +40,13 @@ docs/api-contract.md + config/*.json (设计/配置层)
 
 ```json
 // 成功
-{ "code": 0, "data": { ... }, "msg": "ok" }
+{ "code": 0, "data": { ... }, "message": "ok" }
 
 // 业务错误
-{ "code": 40001, "data": null, "msg": "抽卡券不足" }
+{ "code": 40001, "data": null, "message": "抽卡券不足" }
 
 // 系统错误
-{ "code": 50000, "data": null, "msg": "服务器内部错误" }
+{ "code": 50000, "data": null, "message": "服务器内部错误" }
 ```
 
 ### 2.3 错误码

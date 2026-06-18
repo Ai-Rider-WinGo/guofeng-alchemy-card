@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { MergeRule } from '../../database/entities/merge-rule.entity';
-import { CreateMergeRuleDto, UpdateMergeRuleDto } from '../pools/dto/create-pool.dto';
+import { CreateMergeRuleDto, UpdateMergeRuleDto } from './dto/create-merge-rule.dto';
 
 @Injectable()
 export class MergeRulesService {

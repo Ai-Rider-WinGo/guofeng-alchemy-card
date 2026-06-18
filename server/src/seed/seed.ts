@@ -29,7 +29,7 @@ async function bootstrap() {
     console.log('Admin user ready');
   }
 
-  // 2. Cards
+  // 2. Cards — from config/cards.json
   const cf = path.join(cfgDir, 'cards.json');
   if (fs.existsSync(cf)) {
     const cards = JSON.parse(fs.readFileSync(cf, 'utf-8'));
@@ -40,17 +40,21 @@ async function bootstrap() {
       const ent = {
         card_id: c.card_id,
         name: c.name || c.card_id,
-        quality: c.quality || c.rarity || 'common',
-        dynasty: c.dynasty || '秦汉',
+        rarity: c.rarity || 'N',
+        dynasty: c.dynasty || '未知',
+        dynasty_tag: c.dynasty_tag || null,
         level: c.level || 1,
-        type: c.type || c.card_type || 'character',
-        image_url: c.image_url || null,
-        story: c.story || c.description || null,
+        type: c.type || 'person',
+        short_desc: c.short_desc || null,
+        story: c.story || null,
         knowledge_point: c.knowledge_point || null,
         tags: c.tags || [],
         related_cards: c.related_cards || [],
-        merge_hint: c.merge_hint || null,
-        is_active: c.active !== undefined ? c.active : true,
+        merge_paths: c.merge_paths || [],
+        star_max: c.star_max || 3,
+        image_url: c.image_url || c.image || null,
+        thumbnail_url: c.thumbnail_url || c.thumbnail || null,
+        is_active: true,
       };
       if (ex) { Object.assign(ex, ent); await repo.save(ex); }
       else { await repo.save(repo.create(ent)); }
@@ -59,7 +63,7 @@ async function bootstrap() {
     console.log(`Cards: ${n}`);
   }
 
-  // 3. Draw Pools
+  // 3. Draw Pools — from config/draw_pools.json
   const pf = path.join(cfgDir, 'draw_pools.json');
   if (fs.existsSync(pf)) {
     const pools = JSON.parse(fs.readFileSync(pf, 'utf-8'));
@@ -70,9 +74,13 @@ async function bootstrap() {
       const ent = {
         pool_id: p.pool_id,
         name: p.name || p.pool_id,
-        type: p.pool_type || p.type || 'permanent_basic',
-        rate_weights: p.rarity_weights || p.rate_weights || { common: 60, uncommon: 25, rare: 10, sr: 4, ssr: 1 },
-        card_ids: p.featured_card_ids || p.card_ids || p.include_card_ids || [],
+        type: p.pool_type || p.type || 'permanent',
+        rarity_weights: p.rarity_weights || { N: 60, R: 25, SR: 10, SSR: 4, UR: 1 },
+        featured_card_ids: p.featured_card_ids || [],
+        dynasty_tag: p.dynasty_tag || null,
+        ticket_type: p.ticket_type || 'normal_ticket',
+        pity_config: p.pity_config || null,
+        collection_target: p.collection_target || null,
         rotation_schedule: p.rotation_schedule || null,
         is_active: p.active !== undefined ? p.active : true,
       };
@@ -83,23 +91,25 @@ async function bootstrap() {
     console.log(`Pools: ${n}`);
   }
 
-  // 4. Merge Rules
+  // 4. Merge Rules — from config/merge_rules.json
   const mf = path.join(cfgDir, 'merge_rules.json');
   if (fs.existsSync(mf)) {
     const rules = JSON.parse(fs.readFileSync(mf, 'utf-8'));
     const repo = ds.getRepository(MergeRule);
     let n = 0;
     for (const r of rules) {
-      const inputs: string[] = r.input_card_ids || [];
-      if (r.input_a) inputs.push(r.input_a);
-      if (r.input_b) inputs.push(r.input_b);
+      // config uses input_a/input_b/output, entity uses same names
       const ent = {
-        rule_name: r.rule_name || r.rule_id || `rule_${n}`,
-        input_card_ids: inputs,
+        rule_id: r.rule_id || `rule_${n}`,
+        rule_name: r.rule_name || r.rule_id || `合成规则_${n}`,
+        input_a: r.input_a || '',
+        input_b: r.input_b || '',
         output_card_id: r.output_card_id || r.output || '',
+        target_level: r.target_level || null,
         success_rate: r.success_rate !== undefined ? r.success_rate : 1.0,
         consume_inputs: r.consume_inputs !== undefined ? r.consume_inputs : true,
-        story_output: r.story_output || r.merge_desc || null,
+        require_owned: r.require_owned !== undefined ? r.require_owned : true,
+        merge_desc: r.merge_desc || null,
         is_active: true,
       };
       await repo.save(repo.create(ent));

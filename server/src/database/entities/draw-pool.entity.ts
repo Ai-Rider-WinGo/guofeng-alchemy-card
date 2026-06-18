@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 export enum PoolType {
-  PERMANENT = 'permanent_basic',
-  WEEKLY = 'weekly',
-  LIMITED = 'limited_premium',
+  PERMANENT = 'permanent',
+  WEEKLY_DYNASTY = 'weekly_dynasty',
+  LIMITED_PREMIUM = 'limited_premium',
 }
 
 @Entity('draw_pools')
@@ -21,16 +21,27 @@ export class DrawPool {
   type: PoolType;
 
   @Column({ type: 'simple-json' })
-  rate_weights: {
-    common: number;
-    uncommon: number;
-    rare: number;
-    sr: number;
-    ssr: number;
-  };
+  rarity_weights: Record<string, number>;
 
   @Column({ type: 'simple-json' })
-  card_ids: string[];
+  featured_card_ids: string[];
+
+  @Column({ nullable: true })
+  dynasty_tag: string;
+
+  @Column({ nullable: true })
+  ticket_type: string;
+
+  @Column({ type: 'simple-json', nullable: true })
+  pity_config: {
+    sr_every: number;
+    ssr_every: number;
+    ssr_hard_pity: number;
+    description: string;
+  };
+
+  @Column({ nullable: true })
+  collection_target: number;
 
   @Column({ type: 'simple-json', nullable: true })
   rotation_schedule: {

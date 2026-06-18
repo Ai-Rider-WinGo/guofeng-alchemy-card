@@ -17,15 +17,15 @@ const router = createRouter({
   routes,
 });
 
-// Auth guard: allow access even without token (card_server.py has no auth)
 router.beforeEach((to, from, next) => {
   const token = localStorage.getItem('admin_token');
   if (!to.meta.noAuth && !token) {
-    // Auto-set a demo token so the admin works with card_server.py
-    localStorage.setItem('admin_token', 'dev-token');
-    localStorage.setItem('admin_user', JSON.stringify({ display_name: 'Admin', username: 'admin' }));
+    next('/login');
+  } else if (to.path === '/login' && token) {
+    next('/dashboard');
+  } else {
+    next();
   }
-  next();
 });
 
 export default router;

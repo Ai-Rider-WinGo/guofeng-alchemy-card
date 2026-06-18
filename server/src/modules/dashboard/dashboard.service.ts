@@ -21,11 +21,11 @@ export class DashboardService {
       .groupBy('card.dynasty')
       .getRawMany();
 
-    const byQuality = await this.cardRepo
+    const byRarity = await this.cardRepo
       .createQueryBuilder('card')
-      .select('card.quality', 'quality')
+      .select('card.rarity', 'rarity')
       .addSelect('COUNT(*)', 'count')
-      .groupBy('card.quality')
+      .groupBy('card.rarity')
       .getRawMany();
 
     const byType = await this.cardRepo
@@ -39,7 +39,7 @@ export class DashboardService {
       total_cards: totalCards,
       active_cards: activeCards,
       by_dynasty: byDynasty,
-      by_quality: byQuality,
+      by_rarity: byRarity,
       by_type: byType,
     };
   }

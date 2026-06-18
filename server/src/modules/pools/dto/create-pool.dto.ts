@@ -16,13 +16,33 @@ export class CreatePoolDto {
   @IsOptional()
   type?: PoolType;
 
-  @ApiProperty({ example: { common: 70, uncommon: 20, rare: 7, sr: 2.5, ssr: 0.5 } })
-  @IsObject()
-  rate_weights: { common: number; uncommon: number; rare: number; sr: number; ssr: number };
+  @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  dynasty_tag?: string;
 
-  @ApiProperty({ example: ['qinhan_liubang_l1', 'qinhan_xiangyu_l1'] })
+  @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  ticket_type?: string;
+
+  @ApiProperty({ example: { N: 60, R: 25, SR: 10, SSR: 4, UR: 1 } })
+  @IsObject()
+  rarity_weights: Record<string, number>;
+
+  @ApiProperty({ example: ['liubang_002', 'xiangyu_002'] })
   @IsArray()
-  card_ids: string[];
+  featured_card_ids: string[];
+
+  @ApiPropertyOptional()
+  @IsObject()
+  @IsOptional()
+  pity_config?: { sr_every: number; ssr_every: number; ssr_hard_pity: number; description: string };
+
+  @ApiPropertyOptional()
+  @IsNumber()
+  @IsOptional()
+  collection_target?: number;
 
   @ApiPropertyOptional()
   @IsObject()
@@ -42,90 +62,39 @@ export class UpdatePoolDto {
   name?: string;
 
   @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  dynasty_tag?: string;
+
+  @ApiPropertyOptional()
+  @IsString()
+  @IsOptional()
+  ticket_type?: string;
+
+  @ApiPropertyOptional()
   @IsObject()
   @IsOptional()
-  rate_weights?: { common: number; uncommon: number; rare: number; sr: number; ssr: number };
+  rarity_weights?: Record<string, number>;
 
   @ApiPropertyOptional()
   @IsArray()
   @IsOptional()
-  card_ids?: string[];
+  featured_card_ids?: string[];
+
+  @ApiPropertyOptional()
+  @IsObject()
+  @IsOptional()
+  pity_config?: any;
+
+  @ApiPropertyOptional()
+  @IsNumber()
+  @IsOptional()
+  collection_target?: number;
 
   @ApiPropertyOptional()
   @IsObject()
   @IsOptional()
   rotation_schedule?: any;
-
-  @ApiPropertyOptional()
-  @IsBoolean()
-  @IsOptional()
-  is_active?: boolean;
-}
-
-export class CreateMergeRuleDto {
-  @ApiProperty({ example: '刘邦+纪信→荥阳脱困' })
-  @IsString()
-  rule_name: string;
-
-  @ApiProperty({ example: ['qinhan_liubang_l1', 'qinhan_jixin_l1'] })
-  @IsArray()
-  input_card_ids: string[];
-
-  @ApiProperty({ example: 'qinhan_xingyang_tuokun' })
-  @IsString()
-  output_card_id: string;
-
-  @ApiPropertyOptional({ default: 1.0 })
-  @IsNumber()
-  @IsOptional()
-  success_rate?: number;
-
-  @ApiPropertyOptional({ default: true })
-  @IsBoolean()
-  @IsOptional()
-  consume_inputs?: boolean;
-
-  @ApiPropertyOptional()
-  @IsString()
-  @IsOptional()
-  story_output?: string;
-
-  @ApiPropertyOptional({ default: true })
-  @IsBoolean()
-  @IsOptional()
-  is_active?: boolean;
-}
-
-export class UpdateMergeRuleDto {
-  @ApiPropertyOptional()
-  @IsString()
-  @IsOptional()
-  rule_name?: string;
-
-  @ApiPropertyOptional()
-  @IsArray()
-  @IsOptional()
-  input_card_ids?: string[];
-
-  @ApiPropertyOptional()
-  @IsString()
-  @IsOptional()
-  output_card_id?: string;
-
-  @ApiPropertyOptional()
-  @IsNumber()
-  @IsOptional()
-  success_rate?: number;
-
-  @ApiPropertyOptional()
-  @IsBoolean()
-  @IsOptional()
-  consume_inputs?: boolean;
-
-  @ApiPropertyOptional()
-  @IsString()
-  @IsOptional()
-  story_output?: string;
 
   @ApiPropertyOptional()
   @IsBoolean()
