@@ -38,8 +38,17 @@ async function importJsonConfigs(dataSource: DataSource) {
   if (fs.existsSync(poolsPath)) {
     const pools = JSON.parse(fs.readFileSync(poolsPath, 'utf-8'));
     const poolsRepo = dataSource.getRepository(DrawPool);
-    for (const pool of pools) {
-      const existing = await poolsRepo.findOne({ where: { pool_id: pool.pool_id } });
+    for (const raw of pools) {
+      const existing = await poolsRepo.findOne({ where: { pool_id: raw.pool_id } });
+      const pool = {
+        pool_id: raw.pool_id,
+        name: raw.name,
+        type: raw.pool_type || 'permanent_basic',
+        rate_weights: raw.rarity_weights || raw.rate_weights || { common: 60, uncommon: 25, rare: 10, sr: 4, ssr: 1 },
+        card_ids: raw.featured_card_ids || raw.card_ids || [],
+        rotation_schedule: raw.rotation_schedule || null,
+        is_active: raw.active !== undefined ? raw.active : true,
+      };
       if (!existing) await poolsRepo.save(poolsRepo.create(pool));
       else {
         Object.assign(existing, pool);
