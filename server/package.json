@@ -2,9 +2,10 @@
   "name": "guofeng-alchemy-server",
   "version": "0.1.0",
   "scripts": {
-    "build": "nest build",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main",
+    "start:dev": "npm run build && node dist/main",
+    "start:watch": "nest start --watch",
     "start:prod": "node dist/main",
     "seed": "ts-node src/seed/seed.ts",
     "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/database/data-source.ts",
