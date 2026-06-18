@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_TYPE=postgres
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_USER=guofeng
+      - DATABASE_PASSWORD=changeme
+      - DATABASE_NAME=guofeng_alchemy
+      - REDIS_HOST=redis
+      - JWT_SECRET=your-production-secret
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: guofeng
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: guofeng_alchemy
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+
+  admin:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ../admin/apps/web-antd/dist:/usr/share/nginx/html
+
+volumes:
+  pgdata:
