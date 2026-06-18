@@ -8,9 +8,10 @@ export class AssetsService {
   constructor(private config: ConfigService) {}
 
   getUploadDir() {
-    const dir = this.config.get('UPLOAD_DIR', './uploads');
-    if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
-    return dir;
+    const dir = this.config.get('UPLOAD_DIR') || './uploads';
+    const absDir = join(process.cwd(), dir);
+    if (!existsSync(absDir)) mkdirSync(absDir, { recursive: true });
+    return absDir;
   }
 
   async saveFile(file: Express.Multer.File) {
@@ -23,16 +24,20 @@ export class AssetsService {
     };
   }
 
-  listFiles() {
+  async listFiles() {
     const dir = this.getUploadDir();
-    const files = readdirSync(dir);
-    return files.map((f: string) => ({
-      filename: f,
-      url: `/uploads/${f}`,
-    }));
+    try {
+      const files = readdirSync(dir);
+      return files.map((f: string) => ({
+        filename: f,
+        url: `/uploads/${f}`,
+      }));
+    } catch {
+      return [];
+    }
   }
 
-  removeFile(filename: string) {
+  async removeFile(filename: string) {
     const filePath = join(this.getUploadDir(), filename);
     if (existsSync(filePath)) unlinkSync(filePath);
     return { deleted: true };

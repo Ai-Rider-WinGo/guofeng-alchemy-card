@@ -13,11 +13,16 @@ export class AuditLogsController {
   @Get()
   @ApiOperation({ summary: '获取操作日志列表' })
   findAll(
-    @Query('page') page?: number,
-    @Query('limit') limit?: number,
+    @Query('page') page?: string,
+    @Query('limit') limit?: string,
     @Query('target') target?: string,
     @Query('username') username?: string,
   ) {
-    return this.auditLogsService.findAll({ page, limit, target, username });
+    return this.auditLogsService.findAll({
+      page: page ? Number(page) : 1,
+      limit: limit ? Number(limit) : 50,
+      target,
+      username,
+    });
   }
 }
