@@ -5,7 +5,7 @@
 /* 宣纸纹理背景 + 暗纸纹理叠加 */
 @layer base {
   * {
-    @apply border-bronze/20;
+    border-color: rgba(201, 169, 97, 0.08);
   }
 
   html {
@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased font-body;
     background-image: 
       linear-gradient(rgba(9, 9, 7, 0.88), rgba(9, 9, 7, 0.9)),
       url('/ui/dark-paper-texture.png'),
@@ -40,7 +40,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-bronze font-bold tracking-wide;
+    @apply text-gold font-bold tracking-wide font-display;
   }
 
   h1 {
@@ -55,8 +55,14 @@
     @apply text-xl;
   }
 
+  /* 字体层级规范：
+     隶书 clerical → 品牌主标题 "国风炼金卡牌"（StickyHeader）
+     楷体 display  → 页面标题 h1/h2、区块标题
+     宋体 body     → 正文、描述文字、卡牌文本
+     UI 字体      → 按钮、标签、Badge、数字、导航 */
   button {
     @apply transition-all duration-200 ease-out;
+    font-family: 'PingFang SC', 'HarmonyOS Sans SC', 'Noto Sans SC', system-ui, sans-serif;
   }
 }
 
@@ -133,7 +139,7 @@
   /* 华丽标题 — 带菱形装饰端点 */
   .ornate-title {
     @apply flex items-center justify-center gap-3 text-[22px] font-black text-parchment;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    font-family: KaiTi, STKaiti, 'ZCOOL XiaoWei', 'Noto Serif SC', 'Songti SC', Georgia, serif;
     letter-spacing: 0.05em;
   }
 
@@ -249,6 +255,12 @@
       #172826;
   }
 
+  .feature-card.green {
+    background:
+      linear-gradient(180deg, rgba(20, 26, 21, 0.3), rgba(10, 9, 7, 0.28)),
+      #17221d;
+  }
+
   .feature-card::before {
     content: '';
     @apply pointer-events-none absolute inset-0 rounded-[inherit];
@@ -267,7 +279,7 @@
 
   .feature-card h2 {
     @apply mt-3 text-[29px] font-black text-parchment;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    font-family: KaiTi, STKaiti, 'ZCOOL XiaoWei', 'Noto Serif SC', 'Songti SC', Georgia, serif;
     letter-spacing: 0.04em;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   }
@@ -279,59 +291,6 @@
   .feature-card span {
     @apply absolute inset-x-3 bottom-3 rounded-sm border border-bronze/30 bg-black/30 px-2 py-2 text-sm font-bold text-parchment;
     box-shadow: inset 0 0 0 1px rgba(255, 232, 176, 0.08);
-  }
-
-  /* ====== 卡牌组件 ====== */
-  .card-content {
-    @apply relative z-10;
-  }
-
-  .card-border-top {
-    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-bronze to-transparent;
-  }
-
-  .card-border-bottom {
-    @apply absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-bronze to-transparent;
-  }
-
-  .game-card {
-    @apply relative aspect-[2/3] w-full overflow-hidden rounded-[6px] border border-bronze/45 bg-ink-2;
-    box-shadow: inset 0 0 0 2px rgba(255, 232, 176, 0.08), 0 8px 16px rgba(0, 0, 0, 0.38);
-  }
-
-  .game-card img {
-    @apply h-full w-full object-cover;
-  }
-
-  .game-card-shade {
-    @apply absolute inset-0;
-    background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 28%, rgba(0, 0, 0, 0.78)),
-      radial-gradient(circle at 50% 45%, transparent, rgba(0, 0, 0, 0.16));
-  }
-
-  .game-card-rarity {
-    @apply absolute left-2 top-2 rounded-sm border border-bronze/45 bg-black/45 px-1.5 py-0.5 text-[10px] font-black text-bronze;
-  }
-
-  .game-card-name {
-    @apply absolute bottom-7 left-2 right-2 text-center text-base font-black text-parchment;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
-  }
-
-  .game-card-level {
-    @apply absolute bottom-2 left-2 right-2 text-center text-[11px] font-bold text-bronze/85;
-  }
-
-  .game-card.rare,
-  .game-card.epic,
-  .game-card.legendary {
-    box-shadow: inset 0 0 0 2px rgba(255, 232, 176, 0.14), 0 0 18px rgba(201, 169, 97, 0.18), 0 10px 18px rgba(0, 0, 0, 0.45);
-  }
-
-  .game-card.unrevealed img {
-    filter: brightness(0.82) saturate(0.88);
   }
 
   /* ====== 导航 ====== */
@@ -387,17 +346,6 @@
   /* ====== 首页专用类 ====== */
   .hero-header {
     @apply relative z-10 mb-4 flex items-start justify-between gap-3;
-  }
-
-  .brand-lockup p {
-    @apply mb-1 text-[10px] font-bold tracking-[0.42em] text-bronze/70;
-  }
-
-  .brand-lockup h1 {
-    @apply max-w-[205px] text-[27px] font-black leading-[1.04] text-bronze;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
-    letter-spacing: 0;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45), 0 0 22px rgba(190, 148, 75, 0.18);
   }
 
   .atlas-chip {
@@ -466,7 +414,7 @@
 
   .panel-label {
     @apply mb-2 flex items-center justify-center gap-2 text-base font-black tracking-[0.12em] text-ink/80;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    font-family: KaiTi, STKaiti, 'ZCOOL XiaoWei', 'Noto Serif SC', 'Songti SC', Georgia, serif;
   }
 
   .panel-label span {
@@ -612,34 +560,6 @@
     @apply relative z-10 mt-5 grid grid-cols-3 gap-3;
   }
 
-  .feature-card.green {
-    background:
-      linear-gradient(180deg, rgba(20, 26, 21, 0.3), rgba(10, 9, 7, 0.28)),
-      #17221d;
-  }
-
-  .feature-card h2,
-  .feature-card p,
-  .feature-card span {
-    @apply relative z-10;
-  }
-
-  .feature-card h2 {
-    @apply mt-3 text-[29px] font-black text-parchment;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
-    letter-spacing: 0.04em;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-  }
-
-  .feature-card p {
-    @apply mx-auto mt-2 min-h-10 max-w-[7em] text-[11px] leading-5 text-parchment/75;
-  }
-
-  .feature-card span {
-    @apply absolute inset-x-3 bottom-3 rounded-sm border border-bronze/30 bg-black/30 px-2 py-2 text-sm font-bold text-parchment;
-    box-shadow: inset 0 0 0 1px rgba(255, 232, 176, 0.08);
-  }
-
   /* ====== 子页面通用 ====== */
   .screen-header {
     @apply relative z-10 mb-4 flex items-end justify-between gap-4;
@@ -651,7 +571,7 @@
 
   .screen-title {
     @apply mt-1 text-[30px] font-black leading-none text-bronze;
-    font-family: KaiTi, STKaiti, 'Songti SC', Georgia, serif;
+    font-family: KaiTi, STKaiti, 'ZCOOL XiaoWei', 'Noto Serif SC', 'Songti SC', Georgia, serif;
     letter-spacing: 0;
   }
 
@@ -681,10 +601,6 @@
 
   .animate-slide-up {
     animation: slideUp 0.3s ease-out;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-out;
   }
 
   @keyframes flipIn {
@@ -718,6 +634,65 @@
     }
   }
 
+  /* ====== 页面切换动画 ====== */
+  .animate-slide-in-right {
+    animation: slideInRight 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .animate-fade-in-page {
+    animation: fadeInPage 0.2s ease-out;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ====== 按压触感 ====== */
+  .touch-press {
+    @apply transition-all duration-100 ease-out active:scale-[0.96] active:brightness-90;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .touch-press-sm {
+    @apply transition-all duration-100 ease-out active:scale-[0.97];
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* 全局可点击元素的触感增强 */
+  a, button, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
   .safe-area-inset {
     padding-left: max(0.5rem, env(safe-area-inset-left));
     padding-right: max(0.5rem, env(safe-area-inset-right));
@@ -725,9 +700,6 @@
     padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
   }
 
-  .touch-manipulation {
-    touch-action: manipulation;
-  }
 }
 
 /* ====== 新暗黑国潮组件 v2 ====== */
@@ -788,28 +760,6 @@
     box-shadow: 0 0 12px rgba(216,177,90,0.2);
   }
 
-  /* 朝代印章 */
-  .dynasty-seal {
-    @apply inline-flex items-center justify-center w-8 h-8 rounded-seal text-xs font-bold;
-    border: 1px solid;
-  }
-
-  /* 品质流光 */
-  .quality-glow-common { box-shadow: 0 0 6px rgba(107,91,58,0.3); }
-  .quality-glow-fine { box-shadow: 0 0 10px rgba(31,107,90,0.4); }
-  .quality-glow-rare { box-shadow: 0 0 14px rgba(31,79,139,0.5); }
-  .quality-glow-epic { box-shadow: 0 0 18px rgba(123,63,163,0.5); }
-  .quality-glow-divine { box-shadow: 0 0 22px rgba(216,67,21,0.6); }
-  .quality-glow-treasure { 
-    box-shadow: 0 0 30px rgba(216,177,90,0.7), 0 0 60px rgba(216,177,90,0.3);
-    animation: pulse-gold 2s ease-in-out infinite;
-  }
-}
-
-/* 炼金火焰呼吸动画 */
-@keyframes flame-breath {
-  0%, 100% { box-shadow: 0 0 12px rgba(246,106,42,0.4), inset 0 0 8px rgba(246,106,42,0.1); }
-  50% { box-shadow: 0 0 24px rgba(246,106,42,0.7), inset 0 0 16px rgba(246,106,42,0.2); }
 }
 
 /* 滚动条样式 */

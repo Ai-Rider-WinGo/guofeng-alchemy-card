@@ -1,8 +1,11 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { PageLayout } from '@/components/PageLayout'
+import { BannerCarousel, type BannerItem } from '@/components/BannerCarousel'
+import { AlchemyFurnace } from '@/components/AlchemyFurnace'
+import { useToast } from '@/components/Toast'
 import { RewardBadge } from '@/components/RewardBadge'
 import { useGame } from '@/lib/gameContext'
 import { loadCards, loadDrawPools } from '@/lib/cardUtils'
@@ -12,13 +15,13 @@ import { WEEKLY_DYNASTY_ORDER } from '@/lib/constants'
 import weeklyRewardsData from '@/config/weekly_collection_rewards.json'
 
 // 朝代标签 → 展示信息
-const DYNASTY_DISPLAY: Record<string, { label: string; desc: string; icon: string; color: string; cardDynastyPattern: string }> = {
-  qin_han:  { label: '秦月汉关', desc: '楚汉争霸', icon: '🏯', color: '#8a5b25', cardDynastyPattern: '秦汉|汉初' },
-  tang:     { label: '盛唐气象', desc: '万国来朝', icon: '🏰', color: '#c9a961', cardDynastyPattern: '唐' },
-  song:     { label: '大宋风华', desc: '文治天下', icon: '🏛️', color: '#6b8e9e', cardDynastyPattern: '宋' },
-  ming:     { label: '大明雄风', desc: '七下西洋', icon: '⛩️', color: '#9e6b6b', cardDynastyPattern: '明' },
-  three_kingdoms: { label: '三国争霸', desc: '群雄逐鹿', icon: '⚔️', color: '#6b9e6b', cardDynastyPattern: '三国' },
-  spring_autumn_warring_states: { label: '春秋战国', desc: '百家争鸣', icon: '📜', color: '#8e6b9e', cardDynastyPattern: '春秋|战国' },
+const DYNASTY_DISPLAY: Record<string, { label: string; desc: string; icon: string; bgClass: string; borderClass: string; cardDynastyPattern: string }> = {
+  qin_han:  { label: '秦月汉关', desc: '楚汉争霸', icon: '🏯', bgClass: 'bg-dynasty-qinhan', borderClass: 'border-dynasty-qinhan', cardDynastyPattern: '秦汉|汉初' },
+  tang:     { label: '盛唐气象', desc: '万国来朝', icon: '🏰', bgClass: 'bg-dynasty-tang', borderClass: 'border-dynasty-tang', cardDynastyPattern: '唐' },
+  song:     { label: '大宋风华', desc: '文治天下', icon: '🏛️', bgClass: 'bg-dynasty-song', borderClass: 'border-dynasty-song', cardDynastyPattern: '宋' },
+  ming:     { label: '大明雄风', desc: '七下西洋', icon: '⛩️', bgClass: 'bg-dynasty-ming', borderClass: 'border-dynasty-ming', cardDynastyPattern: '明' },
+  three_kingdoms: { label: '三国争霸', desc: '群雄逐鹿', icon: '⚔️', bgClass: 'bg-dynasty-sanguo', borderClass: 'border-dynasty-sanguo', cardDynastyPattern: '三国' },
+  spring_autumn_warring_states: { label: '春秋战国', desc: '百家争鸣', icon: '📜', bgClass: 'bg-dynasty-chunqiu', borderClass: 'border-dynasty-chunqiu', cardDynastyPattern: '春秋|战国' },
 }
 
 const collectionStats = [
@@ -33,10 +36,37 @@ const quickActions = [
   { href: '/collection', title: '图鉴', desc: '解锁典藏，阅览历史', image: '/ui/action-art-archive.png', cta: '查看图鉴', tone: 'blue' as const },
 ]
 
-const BANNER_INTERVAL = 4500
+/** 运营 Banner 数据 — 后续可从配置/后端拉取 */
+const HOME_BANNERS: BannerItem[] = [
+  {
+    id: 'double_weekend',
+    type: 'event',
+    icon: '🔥',
+    title: '周末双倍碎片活动',
+    subtitle: '本周五六日抽卡碎片掉落翻倍，速来炼金',
+    link: '/draw',
+  },
+  {
+    id: 'new_pool_qinhan',
+    type: 'new_pool',
+    icon: '🏯',
+    title: '秦汉卡池全新上线',
+    subtitle: '刘邦、项羽、韩信等传奇人物等你收集',
+    link: '/draw',
+  },
+  {
+    id: 'collab_coming',
+    type: 'limited',
+    icon: '✨',
+    title: '限定至宝即将登场',
+    subtitle: '集齐6张Lv11即可炼成第一张至宝金卡',
+    link: '/merge',
+  },
+]
 
 export default function HomePage() {
   const { gameState, updateGameState } = useGame()
+  const { showToast } = useToast()
   const allCards = loadCards()
   const pools = loadDrawPools()
   const weeklyPool = pools.find((p) => p.pool_id === 'weekly_qinhan')
@@ -48,16 +78,6 @@ export default function HomePage() {
   const progressPercent = Math.max(1, Math.min(100, Math.round((collectionProgress.unlocked / FULL_TOTAL) * 100)))
   const remainingDraws = Math.min(getRemainingDraws(gameState), 12)
   const totalFragments = Object.values(gameState.fragments || {}).reduce((a, b) => a + b, 0)
-
-  const [bannerIndex, setBannerIndex] = useState(0)
-  const totalSlides = 3
-
-  const nextSlide = useCallback(() => setBannerIndex((prev) => (prev + 1) % totalSlides), [])
-
-  useEffect(() => {
-    const timer = setInterval(nextSlide, BANNER_INTERVAL)
-    return () => clearInterval(timer)
-  }, [nextSlide])
 
   const weeklyRewardConfig = (weeklyRewardsData as any).weekly_qinhan
   const currentWeeklyState = gameState.weeklyRewards?.['weekly_qinhan']
@@ -76,6 +96,7 @@ export default function HomePage() {
     const tier = weeklyRewardConfig?.tiers?.[tierIndex]
     if (!tier) return
     updateGameState(claimWeeklyReward(gameState, 'weekly_qinhan', tierIndex, tier.reward))
+    showToast(`领取成功：${tier.reward.label}`, 'reward', '🎁')
   }
 
   // 倒计时（周几重置）
@@ -93,21 +114,20 @@ export default function HomePage() {
 
   return (
     <PageLayout>
-      <div className="home-shell" style={{ background: 'linear-gradient(180deg, #050505 0%, #0a0908 50%, #0d0b09 100%)' }}>
-        {/* 顶部资源栏 */}
-        <div className="flex items-center justify-between mb-3 pt-2">
-          <div>
-            <p className="text-[10px] text-gold/50 tracking-[0.3em] uppercase">六朝炼金录</p>
-            <h1 className="text-xl font-black text-gold font-display tracking-wider">国风炼金卡牌</h1>
-          </div>
-          <Link href="/collection" className="flex items-center gap-1.5 text-[11px] text-gold/70">
-            <span className="w-8 h-8 rounded-full border border-gold/30 bg-void-300 flex items-center justify-center text-sm">册</span>
-            <span>{collectionProgress.unlocked}<span className="text-gold/30">/{FULL_TOTAL}</span></span>
-          </Link>
+      <div className="home-shell bg-gradient-to-b from-background via-[#0a0908] to-void-100">
+        {/* ====== Signature：炼金炉 ====== */}
+        <div className="animate-slide-up" style={{ animationDelay: '0ms' }}>
+          <AlchemyFurnace />
+        </div>
+
+        {/* ====== 运营 Banner 轮播 ====== */}
+        <div className="animate-slide-up" style={{ animationDelay: '200ms' }}>
+          <BannerCarousel banners={HOME_BANNERS} />
         </div>
 
         {/* ====== 朝代主视觉大卡 ====== */}
-        <div className="hero-visual p-4 mb-4">
+        <div className="animate-slide-up" style={{ animationDelay: '400ms' }}>
+          <div className="hero-visual p-4 mb-4">
           <div className="flex items-center justify-between mb-3">
             <div>
               <p className="text-[10px] text-gold/50 tracking-[0.2em]">当前朝代</p>
@@ -147,8 +167,10 @@ export default function HomePage() {
             <span className="text-gold font-bold">{collectionProgress.unlocked}/{FULL_TOTAL}</span>
           </div>
         </div>
+        </div>
 
         {/* ====== 两大主入口 ====== */}
+        <div className="animate-slide-up" style={{ animationDelay: '600ms' }}>
         <div className="grid grid-cols-2 gap-3 mb-4">
           {/* 命运抽卡 */}
           <Link href="/draw" className="hero-visual p-4 text-center group cursor-pointer block">
@@ -156,7 +178,7 @@ export default function HomePage() {
             <h3 className="text-lg font-black text-gold font-display">命运抽卡</h3>
             <p className="text-[10px] text-text-secondary mt-1">今日剩余 {remainingDraws} 次</p>
             <div className="mt-2 inline-block px-3 py-1 rounded-lg border border-gold/30 text-[10px] text-gold/80 font-bold">
-              前往抽卡 ›
+              前往抽卡
             </div>
           </Link>
           {/* 炼金合成 */}
@@ -165,12 +187,14 @@ export default function HomePage() {
             <h3 className="text-lg font-black text-gold font-display">炼金合成</h3>
             <p className="text-[10px] text-text-secondary mt-1">已合成 {gameState.totalMerges} 次</p>
             <div className="mt-2 inline-block px-3 py-1 rounded-lg border border-gold/30 text-[10px] text-gold/80 font-bold">
-              前往合成 ›
+              前往合成
             </div>
           </Link>
         </div>
+        </div>
 
         {/* ====== 至宝目标 ====== */}
+        <div className="animate-slide-up" style={{ animationDelay: '800ms' }}>
         <div className="gold-panel p-3 mb-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-bold text-gold">👑 至宝目标</h3>
@@ -196,8 +220,10 @@ export default function HomePage() {
             </span>
           </div>
         </div>
+        </div>
 
         {/* ====== 快捷入口 2×2 ====== */}
+        <div className="animate-slide-up" style={{ animationDelay: '1000ms' }}>
         <div className="grid grid-cols-4 gap-2 mb-4">
           {[
             { href: '/leaderboard', icon: '🏆', label: '排行' },
@@ -212,9 +238,11 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
+        </div>
 
         {/* 收集奖励 */}
         {weeklyRewardConfig && (
+          <div className="animate-slide-up" style={{ animationDelay: '1100ms' }}>
           <div className="mt-4 grid grid-cols-4 gap-2">
             {weeklyRewardConfig.tiers.map((tier: any, idx: number) => {
               const isUnlocked = collectedCount >= tier.count
@@ -224,9 +252,11 @@ export default function HomePage() {
                 onClick={() => isUnlocked && !isClaimed ? handleClaimWeekly(idx) : undefined} />
             })}
           </div>
+          </div>
         )}
 
         {/* 六朝主题阶段 */}
+        <div className="animate-slide-up" style={{ animationDelay: '1200ms' }}>
         <section className="route-section">
           <div className="ornate-title"><span />六朝主题<span /></div>
 
@@ -242,15 +272,12 @@ export default function HomePage() {
 
               return (
                 <div className="route-node" key={stage.dynasty_tag}>
-                  <div className={`node-rank ${isActive ? '!bg-bronze' : ''}`}
-                       style={isActive ? { backgroundColor: display.color } : {}}>
-                    <span style={isActive ? { color: '#f5ead6' } : {}}>{display.icon}</span>
+                  <div className={`node-rank ${isActive ? display.bgClass + ' !bg-opacity-100' : ''}`}>
+                    <span className={isActive ? 'text-paper' : ''}>{display.icon}</span>
                   </div>
-                  <div className="route-card !h-[100px] flex flex-col items-center justify-center"
-                       style={{ borderColor: isActive ? display.color : undefined }}>
+                  <div className={`route-card !h-[100px] flex flex-col items-center justify-center ${isActive ? display.borderClass : ''}`}>
                     <div className="relative z-10 text-center px-2">
-                      <p className="text-sm font-black text-parchment"
-                         style={{ fontFamily: 'KaiTi, STKaiti, Georgia, serif' }}>{display.label}</p>
+                      <p className="text-sm font-black text-parchment font-display">{display.label}</p>
                       <p className="text-[10px] text-bronze/80 mt-1">{display.desc}</p>
                       <p className="text-[10px] text-parchment/60 mt-1">{unlocked}/{total}</p>
                     </div>
@@ -262,8 +289,10 @@ export default function HomePage() {
             })}
           </div>
         </section>
+        </div>
 
         {/* 收藏进度 */}
+        <div className="animate-slide-up" style={{ animationDelay: '1400ms' }}>
         <section className="collection-panel">
           <div className="ornate-title compact"><span />收藏进度<span /></div>
           <div className="collection-grid">
@@ -277,18 +306,21 @@ export default function HomePage() {
           <div className="runtime-progress"><i style={{ width: `${progressPercent}%` }} /></div>
           <p className="runtime-caption">全量图鉴：{collectionProgress.unlocked}/{FULL_TOTAL}（12 级 · 2,130 张母卡）</p>
         </section>
+        </div>
 
         {/* 功能卡片 */}
+        <div className="animate-slide-up" style={{ animationDelay: '1600ms' }}>
         <section className="action-grid">
           {quickActions.map((action) => (
             <Link className={`feature-card ${action.tone}`} href={action.href} key={action.title}>
               <img src={action.image} alt="" aria-hidden="true" />
               <h2>{action.title}</h2>
               <p>{action.desc}</p>
-              <span>{action.cta} ›</span>
+              <span>{action.cta}</span>
             </Link>
           ))}
         </section>
+        </div>
       </div>
     </PageLayout>
   )

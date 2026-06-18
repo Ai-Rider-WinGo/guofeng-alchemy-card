@@ -10,7 +10,7 @@ export default function GalleryPage() {
   const { gameState } = useGame()
   const allCards = loadCards()
 
-  // 获取玩家拥有的 Lv8+ 卡牌（稀有展示）
+  // 获取玩家拥有的 Lv4+ 卡牌（展示柜）
   const showcaseCards = allCards
     .filter(c => (gameState.playerCards[c.id] || 0) > 0 && c.level >= 4)
     .slice(0, 6)

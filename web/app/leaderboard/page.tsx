@@ -6,15 +6,20 @@ import { DynastyBanner } from '@/components/DynastyBanner'
 import { useGame } from '@/lib/gameContext'
 
 const MOCK_RANKINGS = [
-  { rank: 1, name: '炼金宗师', cards: 128, merges: 56 },
-  { rank: 2, name: '六朝行者', cards: 115, merges: 48 },
-  { rank: 3, name: '青铜藏家', cards: 102, merges: 41 },
-  { rank: 4, name: '国风少年', cards: 89, merges: 35 },
-  { rank: 5, name: '历史学徒', cards: 76, merges: 29 },
-]
+    { rank: 1, name: '炼金宗师', cards: 128, merges: 56 },
+    { rank: 2, name: '六朝行者', cards: 115, merges: 48 },
+    { rank: 3, name: '青铜藏家', cards: 102, merges: 41 },
+    { rank: 4, name: '国风少年', cards: 89, merges: 35 },
+    { rank: 5, name: '历史学徒', cards: 76, merges: 29 },
+  ]
 
 export default function LeaderboardPage() {
   const { gameState } = useGame()
+
+  // 玩家自身数据
+  const myCards = gameState.unlockedCards?.length ?? 0
+  const myMerges = gameState.totalMerges ?? 0
+  const myRank = MOCK_RANKINGS.findIndex(r => myCards >= r.cards) + 1 || MOCK_RANKINGS.length + 1
 
   return (
     <PageLayout>
@@ -54,6 +59,28 @@ export default function LeaderboardPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* 我的排名 */}
+        <div className="mt-4">
+          <div className="ornate-title compact mb-3"><span />我的排名<span /></div>
+          <div className="bronze-panel p-3 flex items-center gap-3 border-gold/50 bg-gold/5">
+            <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-black bg-gold/20 text-gold">
+              {myRank <= MOCK_RANKINGS.length ? myRank : '—'}
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold text-gold">我</p>
+              <p className="text-[10px] text-parchment/50">
+                收藏 {myCards} 张 · 合成 {myMerges} 次
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gold/60">超越</p>
+              <p className="text-sm font-bold text-gold">
+                {myRank <= 1 ? '第 1 名' : `前 ${MOCK_RANKINGS.filter(r => r.cards > myCards).length} 名`}
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="bronze-panel p-4 mt-4 text-center">

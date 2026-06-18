@@ -2,23 +2,24 @@
 
 import { CardQuality, Card } from '@/lib/types'
 
-// ============ 品质视觉配置 ============
+// ============ 品质视觉配置（引用 tailwind.config.ts quality.* tokens） ============
 const Q: Record<CardQuality, { label: string; border: string; bg: string; text: string; icon: string }> = {
-  common:   { label: '凡品', border: 'border-[#6b5b3a]', bg: 'bg-[#3d3113]', text: 'text-[#8e7a55]', icon: '◇' },
-  fine:     { label: '精良', border: 'border-[#1f6b5a]', bg: 'bg-[#0d2b24]', text: 'text-[#5aab9a]', icon: '◆' },
-  rare:     { label: '稀有', border: 'border-[#1f4f8b]', bg: 'bg-[#0d1f38]', text: 'text-[#5a9ad8]', icon: '◇' },
-  epic:     { label: '极品', border: 'border-[#7b3fa3]', bg: 'bg-[#1a0d24]', text: 'text-[#b37fd8]', icon: '⬡' },
-  divine:   { label: '神品', border: 'border-[#d84315]', bg: 'bg-[#2a0a04]', text: 'text-[#f98b55]', icon: '◆' },
-  treasure: { label: '至宝', border: 'border-[#d8b15a]', bg: 'bg-[#1a1005]', text: 'text-[#ffe19a]', icon: '⬢' },
+  common:   { label: '凡品', border: 'border-quality-common-border', bg: 'bg-quality-common-bg', text: 'text-quality-common-text', icon: '◇' },
+  fine:     { label: '精良', border: 'border-quality-fine-border',  bg: 'bg-quality-fine-bg',  text: 'text-quality-fine-text',  icon: '◆' },
+  rare:     { label: '稀有', border: 'border-quality-rare-border',  bg: 'bg-quality-rare-bg',  text: 'text-quality-rare-text',  icon: '◇' },
+  epic:     { label: '极品', border: 'border-quality-epic-border',  bg: 'bg-quality-epic-bg',  text: 'text-quality-epic-text',  icon: '⬡' },
+  divine:   { label: '神品', border: 'border-quality-divine-border', bg: 'bg-quality-divine-bg', text: 'text-quality-divine-text', icon: '◆' },
+  treasure: { label: '至宝', border: 'border-quality-treasure-border', bg: 'bg-quality-treasure-bg', text: 'text-quality-treasure-text', icon: '⬢' },
 }
 
-const DYNASTY_SEAL: Record<string, { icon: string; hex: string }> = {
-  qinhan:  { icon: '秦', hex: '#1f6b5a' },
-  sanguo:  { icon: '三', hex: '#8b1e18' },
-  tang:    { icon: '唐', hex: '#c98d26' },
-  song:    { icon: '宋', hex: '#7fa99b' },
-  ming:    { icon: '明', hex: '#1f4f8b' },
-  chunqiu: { icon: '战', hex: '#6b8f3a' },
+// ============ 朝代印章（引用 tailwind.config.ts dynasty.* tokens） ============
+const DYNASTY_SEAL: Record<string, { icon: string; border: string; text: string }> = {
+  qinhan:  { icon: '秦', border: 'border-dynasty-qinhan',  text: 'text-dynasty-qinhan' },
+  sanguo:  { icon: '三', border: 'border-dynasty-sanguo',  text: 'text-dynasty-sanguo' },
+  tang:    { icon: '唐', border: 'border-dynasty-tang',    text: 'text-dynasty-tang' },
+  song:    { icon: '宋', border: 'border-dynasty-song',    text: 'text-dynasty-song' },
+  ming:    { icon: '明', border: 'border-dynasty-ming',    text: 'text-dynasty-ming' },
+  chunqiu: { icon: '战', border: 'border-dynasty-chunqiu', text: 'text-dynasty-chunqiu' },
 }
 
 // ============ Props: 兼容 Card 对象和单独字段 ============
@@ -52,13 +53,16 @@ export function CardDisplay(props: CardDisplayProps) {
   if (!revealed) {
     return (
       <div className={`${sizeClass} aspect-[5/7] relative`}>
-        <div className="w-full h-full rounded-lg border border-[#5c4a1d]/30 bg-[#0d0b09] flex flex-col items-center justify-center gap-1.5 overflow-hidden">
+        <div className="w-full h-full rounded-lg border border-gold/15 bg-void-100 flex flex-col items-center justify-center gap-1.5 overflow-hidden">
+          {/* 朝代水印 */}
           <div className="absolute inset-0 opacity-[0.06] flex items-center justify-center text-5xl font-black select-none pointer-events-none">
             {seal.icon}
           </div>
+          {/* 装饰线 */}
           <div className="absolute top-3 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gold/15 rounded" />
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gold/15 rounded" />
-          <div className="relative z-10 w-8 h-8 rounded-full border border-gold/15 bg-[#110e0b] flex items-center justify-center">
+          {/* 问号 */}
+          <div className="relative z-10 w-8 h-8 rounded-full border border-gold/15 bg-void-200 flex items-center justify-center">
             <span className="text-gold/25 text-lg">?</span>
           </div>
           <span className="relative z-10 text-[9px] text-gold/20 tracking-wider">未解封</span>
@@ -78,13 +82,10 @@ export function CardDisplay(props: CardDisplayProps) {
           ${isTreasure ? 'animate-pulse-gold' : ''}
           transition-transform duration-200
           ${props.isNew ? 'animate-flip-in' : ''}
+          ${style.bg}
         `}
-        style={{
-          backgroundColor: style.bg.split('-')[1] || '#1a1005',
-        }}
       >
-        {/* 底色 + 光晕 */}
-        <div className={`absolute inset-0 ${style.bg}`} />
+        {/* 光晕 overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
 
         {/* 顶部金线 */}
@@ -105,8 +106,7 @@ export function CardDisplay(props: CardDisplayProps) {
         {/* 左上：朝代印 */}
         <div className="absolute top-1 left-1">
           <div
-            className="w-5 h-5 rounded-seal flex items-center justify-center text-[9px] font-black border bg-black/60"
-            style={{ borderColor: seal.hex, color: seal.hex }}
+            className={`w-5 h-5 rounded-seal flex items-center justify-center text-[9px] font-black border bg-black/60 ${seal.border} ${seal.text}`}
           >
             {seal.icon}
           </div>
@@ -135,12 +135,8 @@ export function CardDisplay(props: CardDisplayProps) {
 
         {/* 至宝特殊：流光扫过 */}
         {isTreasure && (
-          <div className="absolute inset-0 pointer-events-none"
-            style={{
-              background: 'linear-gradient(105deg, transparent 40%, rgba(255,225,154,0.06) 50%, transparent 60%)',
-              backgroundSize: '200% 100%',
-              animation: 'shimmer 2.5s linear infinite',
-            }}
+          <div
+            className="absolute inset-0 pointer-events-none bg-shimmer-gradient bg-[length:200%_100%] animate-shimmer"
           />
         )}
 

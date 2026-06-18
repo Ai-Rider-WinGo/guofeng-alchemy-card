@@ -11,31 +11,18 @@ const config: Config = {
         // 暗黑国潮主色
         'void': {
           DEFAULT: '#050505',
-          50: '#0a0908',
           100: '#0d0b09',
           200: '#110e0b',
           300: '#14100a',
-          400: '#1b130a',
         },
         'gold': {
           DEFAULT: '#d8b15a',
-          50: '#fef9e7',
-          100: '#fdf0c5',
-          200: '#fbe28a',
-          300: '#f9d04f',
-          400: '#f7c024',
           500: '#d8b15a',
           600: '#b8913a',
-          700: '#8a6d2b',
           800: '#5c4a1d',
-          900: '#3d3113',
-          'highlight': '#ffe19a',
-          'flame': '#f2a83b',
         },
         'cinnabar': {
           DEFAULT: '#8b1e18',
-          light: '#a8322a',
-          dark: '#5c100c',
         },
         'bronze': {
           DEFAULT: '#c9a961',
@@ -47,15 +34,8 @@ const config: Config = {
           light: '#a3c4b8',
           dark: '#4a7c6b',
         },
-        'sapphire': {
-          DEFAULT: '#1f4f8b',
-          light: '#3a7bc8',
-          dark: '#15345c',
-        },
         'flame': {
           DEFAULT: '#f66a2a',
-          light: '#f98b55',
-          dark: '#c44a10',
         },
         // 文字色
         'text': {
@@ -91,18 +71,19 @@ const config: Config = {
         'old-gold': '#5c4a1d',
       },
       fontFamily: {
-        'display': ['Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'Georgia', 'serif'],
-        'body': ['PingFang SC', 'HarmonyOS Sans SC', 'Noto Sans SC', 'system-ui', 'sans-serif'],
-        'kai': ['KaiTi', 'STKaiti', 'Songti SC', 'Georgia', 'serif'],
+        // 隶书 - 主标题/logo 专用，秦汉石碑般的古拙庄重
+        'clerical': ['LiSu', 'STLiti', '隶书', 'KaiTi', 'STKaiti', 'serif'],
+        // 楷体 - 页面标题、区块标题，笔墨书写感
+        'display': ['KaiTi', 'STKaiti', 'ZCOOL XiaoWei', 'Noto Serif SC', 'Songti SC', 'Georgia', 'serif'],
+        // 宋体 - 正文、卡牌描述，古籍刻本风
+        'body': ['Noto Serif SC', 'Songti SC', 'SimSun', 'STSongti', 'Georgia', 'serif'],
+        // UI 小字 - 按钮/标签/Badge 保持清晰
+        'ui': ['PingFang SC', 'HarmonyOS Sans SC', 'Noto Sans SC', 'system-ui', 'sans-serif'],
       },
       spacing: {
         'safe': 'max(0.5rem, env(safe-area-inset-left))',
       },
       keyframes: {
-        'flip': {
-          '0%': { transform: 'rotateY(0deg)' },
-          '100%': { transform: 'rotateY(180deg)' },
-        },
         'pulse-slow': {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.7' },
@@ -110,19 +91,6 @@ const config: Config = {
         'pulse-gold': {
           '0%, 100%': { boxShadow: '0 0 8px rgba(216,177,90,0.3)' },
           '50%': { boxShadow: '0 0 20px rgba(216,177,90,0.6)' },
-        },
-        'glow-sweep': {
-          '0%': { backgroundPosition: '200% 50%' },
-          '100%': { backgroundPosition: '-200% 50%' },
-        },
-        'flame-flicker': {
-          '0%, 100%': { filter: 'brightness(1)' },
-          '33%': { filter: 'brightness(1.2)' },
-          '66%': { filter: 'brightness(0.9)' },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-4px)' },
         },
         'shimmer': {
           '0%': { backgroundPosition: '-200% 0' },
@@ -133,28 +101,24 @@ const config: Config = {
           '60%': { transform: 'scale(0.95)', opacity: '1' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
+        'slide-down': {
+          '0%': { opacity: '0', transform: 'translateY(-12px) scale(0.95)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
       },
       animation: {
-        'flip': 'flip 0.6s ease-in-out',
         'pulse-slow': 'pulse-slow 2s ease-in-out infinite',
         'pulse-gold': 'pulse-gold 2s ease-in-out infinite',
-        'glow-sweep': 'glow-sweep 3s linear infinite',
-        'flame-flicker': 'flame-flicker 1.5s ease-in-out infinite',
-        'float': 'float 3s ease-in-out infinite',
         'shimmer': 'shimmer 2.5s linear infinite',
         'seal-stamp': 'seal-stamp 0.4s ease-out',
-        'flip-in': 'flip 0.6s ease-in-out',
+        'slide-down': 'slide-down 0.3s ease-out',
       },
       borderRadius: {
         'card': '0.5rem',
         'seal': '0.25rem',
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, #d8b15a 0%, #ffe19a 50%, #b8913a 100%)',
-        'dark-gradient': 'linear-gradient(180deg, #0a0908 0%, #110e0b 50%, #050505 100%)',
-        'panel-gradient': 'linear-gradient(180deg, rgba(20,16,10,0.95) 0%, rgba(11,9,6,0.98) 100%)',
         'shimmer-gradient': 'linear-gradient(90deg, transparent 0%, rgba(216,177,90,0.15) 50%, transparent 100%)',
-        'treasure-shine': 'linear-gradient(135deg, #d8b15a 0%, #ffe19a 25%, #d8b15a 50%, #f2a83b 75%, #d8b15a 100%)',
       },
     },
   },

@@ -29,8 +29,12 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        {/* 国风字体：站酷小薇体作为楷体兜底（隶书/楷体/宋体均为系统字体） */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-sans bg-background text-foreground">
+      <body className="font-body bg-background text-foreground">
         <GameProvider>
           {children}
         </GameProvider>
