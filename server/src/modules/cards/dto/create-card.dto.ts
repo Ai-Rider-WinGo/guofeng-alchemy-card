@@ -1,4 +1,5 @@
 import { IsString, IsOptional, IsEnum, IsNumber, IsArray, IsBoolean } from 'class-validator';
+import { Type } from 'class-transformer';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { CardRarity, CardType } from '../../../database/entities/card.entity';
 
@@ -195,11 +196,13 @@ export class QueryCardDto {
   keyword?: string;
 
   @ApiPropertyOptional({ default: 1 })
+  @Type(() => Number)
   @IsNumber()
   @IsOptional()
   page?: number;
 
   @ApiPropertyOptional({ default: 20 })
+  @Type(() => Number)
   @IsNumber()
   @IsOptional()
   limit?: number;
