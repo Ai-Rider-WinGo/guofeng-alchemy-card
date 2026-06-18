@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from '../app.module';
 import { AdminUser, AdminRole } from '../database/entities/admin-user.entity';
-import { Card } from '../database/entities/card.entity';
+import { Card, CardRarity, CardType, MergePath } from '../database/entities/card.entity';
 import { DrawPool } from '../database/entities/draw-pool.entity';
 import { MergeRule } from '../database/entities/merge-rule.entity';
 import { GameConfig } from '../database/entities/game-config.entity';
@@ -29,39 +29,66 @@ async function bootstrap() {
     console.log('Admin user ready');
   }
 
-  // 2. Cards — from config/cards.json
-  const cf = path.join(cfgDir, 'cards.json');
-  if (fs.existsSync(cf)) {
+  // 2. Cards — from import_cards.json (139 cards) + config/cards.json (canonical 12)
+  const qualityToRarity: Record<string, string> = {
+    common: 'N', n: 'N',
+    uncommon: 'R', r: 'R',
+    rare: 'SR', sr: 'SR',
+    epic: 'SSR', ssr: 'SSR',
+    legendary: 'UR', treasure: 'UR', ur: 'UR',
+  };
+  const cnTypeToEn: Record<string, string> = {
+    '人物': 'person', '事件': 'event', '兵器': 'weapon',
+    '典籍': 'classic', '地点': 'place', '朝代': 'dynasty',
+  };
+  const dynastyTagMap: Record<string, string> = {
+    '秦汉': 'qin_han', '两晋': 'jin', '三国': 'three_kingdoms',
+    '隋唐': 'tang', '宋元': 'song', '明清': 'ming',
+    '春秋战国': 'spring_autumn_warring_states', '春秋': 'spring_autumn_warring_states',
+  };
+
+  const cardFiles = [
+    { path: path.join(cfgDir, '..', 'import_cards.json'), label: 'import_cards.json' },
+    { path: path.join(cfgDir, 'cards.json'), label: 'cards.json' },
+  ];
+  let totalCards = 0;
+  const cardRepo = ds.getRepository(Card);
+
+  for (const { path: cf, label } of cardFiles) {
+    if (!fs.existsSync(cf)) { console.log(`  skip ${label} (not found)`); continue; }
     const cards = JSON.parse(fs.readFileSync(cf, 'utf-8'));
-    const repo = ds.getRepository(Card);
-    let n = 0;
     for (const c of cards) {
-      const ex = await repo.findOne({ where: { card_id: c.card_id } });
+      const ex = await cardRepo.findOne({ where: { card_id: c.card_id } });
+      // field mapping
+      const rawRarity = (c.rarity || c.quality || 'N').toString().toLowerCase();
+      const rawType = (c.type || 'person').toString();
+      const rawDynasty = c.dynasty || '未知';
+
       const ent = {
         card_id: c.card_id,
         name: c.name || c.card_id,
-        rarity: c.rarity || 'N',
-        dynasty: c.dynasty || '未知',
-        dynasty_tag: c.dynasty_tag || null,
+        rarity: (qualityToRarity[rawRarity] || 'N') as CardRarity,
+        dynasty: rawDynasty,
+        dynasty_tag: c.dynasty_tag || dynastyTagMap[rawDynasty] || null,
         level: c.level || 1,
-        type: c.type || 'person',
+        type: (cnTypeToEn[rawType] || rawType || 'person') as CardType,
         short_desc: c.short_desc || null,
         story: c.story || null,
         knowledge_point: c.knowledge_point || null,
         tags: c.tags || [],
         related_cards: c.related_cards || [],
-        merge_paths: c.merge_paths || [],
+        merge_paths: (c.merge_paths || []) as MergePath[],
         star_max: c.star_max || 3,
         image_url: c.image_url || c.image || null,
         thumbnail_url: c.thumbnail_url || c.thumbnail || null,
-        is_active: true,
+        is_active: c.is_active !== undefined ? c.is_active : true,
       };
-      if (ex) { Object.assign(ex, ent); await repo.save(ex); }
-      else { await repo.save(repo.create(ent)); }
-      n++;
+      if (ex) { Object.assign(ex, ent); await cardRepo.save(ex); }
+      else { await cardRepo.save(cardRepo.create(ent)); }
+      totalCards++;
     }
-    console.log(`Cards: ${n}`);
   }
+  console.log(`Cards: ${totalCards}`);
 
   // 3. Draw Pools — from config/draw_pools.json
   const pf = path.join(cfgDir, 'draw_pools.json');
