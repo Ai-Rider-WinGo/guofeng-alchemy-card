@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { PageLayout } from '@/components/PageLayout'
 import { TaskItem } from '@/components/TaskItem'
 import { useGame } from '@/lib/gameContext'
 import { claimTaskReward, isTaskComplete, isTaskClaimed } from '@/lib/storage'
+import { isLoggedIn, getFragments } from '@/lib/api/game'
 import taskDefs from '@/config/tasks.json'
 import type { TaskDef } from '@/lib/types'
 
@@ -19,6 +20,16 @@ export default function TasksPage() {
   const achievementTasks = (taskDefs as { achievement: TaskDef[] }).achievement
   const currentTasks = activeTab === 'daily' ? dailyTasks : achievementTasks
   const totalFragments = Object.values(gameState.fragments || {}).reduce((a, b) => a + b, 0)
+
+  useEffect(() => {
+    if (!isLoggedIn()) return
+    getFragments().then((frags) => {
+      if (frags) {
+        updateGameState({ ...gameState, fragments: frags })
+      }
+    }).catch(() => {})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleClaim = (task: TaskDef) => {
     updateGameState(claimTaskReward(gameState, task.id, task.reward))

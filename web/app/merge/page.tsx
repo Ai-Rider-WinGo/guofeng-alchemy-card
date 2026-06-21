@@ -8,6 +8,7 @@ import { FragmentBar } from '@/components/FragmentBar'
 import { useGame } from '@/lib/gameContext'
 import { loadCards, canMerge, getCardById } from '@/lib/cardUtils'
 import { executeMerge, removeCardFromInventory, addCardToInventory, getFragmentCount, consumeFragments, getStarUpCandidates, getRemainingAutoMerges, performAutoMerge, addAdAutoMerge } from '@/lib/storage'
+import { isLoggedIn, mergeGeneric, mergeFragment } from '@/lib/api/game'
 import type { Card } from '@/lib/types'
 
 type MergeTab = 'pair' | 'fragment' | 'starup'
@@ -48,22 +49,71 @@ export default function MergePage() {
     setMergeResult({ ...rule, resultCard }); setInvalidPair(false)
   }
 
-  const handleExecutePairMerge = () => {
+  const handleExecutePairMerge = async () => {
     if (!selectedCard1 || !selectedCard2 || !mergeResult) return
-    const newState = executeMerge(gameState, selectedCard1, selectedCard2, mergeResult.resultCard.id)
-    updateGameState(newState)
+    if (isLoggedIn()) {
+      // 登录态：调后端
+      try {
+        const res = await mergeGeneric(selectedCard1, selectedCard2)
+        if (!res.success) {
+          setAutoMergeMsg(res.error || '合成失败')
+          setTimeout(() => setAutoMergeMsg(null), 3000)
+          setSelectedCard1(null); setSelectedCard2(null); setMergeResult(null); setShowConfirm(false)
+          return
+        }
+        // 用后端结果同步本地状态
+        let newState = removeCardFromInventory(gameState, selectedCard1, 1)
+        newState = removeCardFromInventory(newState, selectedCard2, 1)
+        newState = addCardToInventory(newState, res.result_card_id!)
+        newState.totalMerges = (newState.totalMerges || 0) + 1
+        newState.mergeHistory = [...(newState.mergeHistory || []), {
+          from: [selectedCard1, selectedCard2],
+          to: res.result_card_id!,
+          timestamp: Date.now(),
+        }]
+        updateGameState(newState)
+        setAutoMergeMsg(`✨ 合成成功：${res.name}`)
+        setTimeout(() => setAutoMergeMsg(null), 3000)
+      } catch (e: any) {
+        setAutoMergeMsg('合成请求失败: ' + (e.message || ''))
+        setTimeout(() => setAutoMergeMsg(null), 3000)
+      }
+    } else {
+      // 游客态：本地
+      const newState = executeMerge(gameState, selectedCard1, selectedCard2, mergeResult.resultCard.id)
+      updateGameState(newState)
+    }
     setSelectedCard1(null); setSelectedCard2(null); setMergeResult(null); setShowConfirm(false)
   }
 
-  const handleFragmentMerge = (cardId: string) => {
-    const fragments = getFragmentCount(gameState, cardId) || getFragmentCount(gameState, '秦汉')
-    if (fragments < REQUIRED_SHARDS) return
-    let newState = consumeFragments(gameState, cardId, REQUIRED_SHARDS)
-    if ((newState.fragments?.[cardId] || 0) === (gameState.fragments?.[cardId] || 0)) {
-      newState = consumeFragments(gameState, '秦汉', REQUIRED_SHARDS)
+  const handleFragmentMerge = async (cardId: string) => {
+    if (isLoggedIn()) {
+      try {
+        const shardKey = cardId
+        const res = await mergeFragment(cardId, shardKey)
+        if (!res.success) {
+          setAutoMergeMsg(res.error || '碎片不足')
+          setTimeout(() => setAutoMergeMsg(null), 3000)
+          return
+        }
+        const newState = addCardToInventory(gameState, cardId)
+        updateGameState(newState)
+        setAutoMergeMsg(`✨ 碎片合成成功：${res.name}`)
+        setTimeout(() => setAutoMergeMsg(null), 3000)
+      } catch (e: any) {
+        setAutoMergeMsg('碎片合成失败: ' + (e.message || ''))
+        setTimeout(() => setAutoMergeMsg(null), 3000)
+      }
+    } else {
+      const fragments = getFragmentCount(gameState, cardId) || getFragmentCount(gameState, '秦汉')
+      if (fragments < REQUIRED_SHARDS) return
+      let newState = consumeFragments(gameState, cardId, REQUIRED_SHARDS)
+      if ((newState.fragments?.[cardId] || 0) === (gameState.fragments?.[cardId] || 0)) {
+        newState = consumeFragments(gameState, '秦汉', REQUIRED_SHARDS)
+      }
+      newState = addCardToInventory(newState, cardId)
+      updateGameState(newState)
     }
-    newState = addCardToInventory(newState, cardId)
-    updateGameState(newState)
   }
 
   const handleStarUp = (cardId: string) => {
