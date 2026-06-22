@@ -26,6 +26,7 @@ import {
   rotateWeek,
 } from './storage'
 import { INITIAL_GAME_STATE } from './types'
+import type { GameState } from './types'
 
 beforeEach(() => {
   localStorageMock.clear()
@@ -58,14 +59,14 @@ describe('saveGameState and loadGameState', () => {
 
 describe('addCardToInventory', () => {
   it('should increment card count', () => {
-    let state = { ...INITIAL_GAME_STATE }
+    let state: GameState = { ...INITIAL_GAME_STATE }
     state = addCardToInventory(state, 'card_a')
     expect(state.playerCards['card_a']).toBe(1)
     state = addCardToInventory(state, 'card_a')
     expect(state.playerCards['card_a']).toBe(2)
   })
   it('should add to unlockedCards on first acquisition', () => {
-    let state = { ...INITIAL_GAME_STATE }
+    let state: GameState = { ...INITIAL_GAME_STATE }
     state = addCardToInventory(state, 'card_a')
     expect(state.unlockedCards).toContain('card_a')
     state = addCardToInventory(state, 'card_a')
@@ -75,12 +76,12 @@ describe('addCardToInventory', () => {
 
 describe('removeCardFromInventory', () => {
   it('should decrement card count', () => {
-    let state = { ...INITIAL_GAME_STATE, playerCards: { 'card_a': 3 } }
+    let state: GameState = { ...INITIAL_GAME_STATE, playerCards: { 'card_a': 3 } }
     state = removeCardFromInventory(state, 'card_a', 1)
     expect(state.playerCards['card_a']).toBe(2)
   })
   it('should remove card entry when count reaches 0', () => {
-    let state = { ...INITIAL_GAME_STATE, playerCards: { 'card_a': 1 } }
+    let state: GameState = { ...INITIAL_GAME_STATE, playerCards: { 'card_a': 1 } }
     state = removeCardFromInventory(state, 'card_a', 1)
     expect(state.playerCards['card_a']).toBeUndefined()
   })
@@ -88,12 +89,12 @@ describe('removeCardFromInventory', () => {
 
 describe('addRecipeToInventory', () => {
   it('should add recipe id', () => {
-    let state = { ...INITIAL_GAME_STATE }
+    let state: GameState = { ...INITIAL_GAME_STATE }
     state = addRecipeToInventory(state, 'recipe_chibi')
     expect(state.ownedRecipes).toContain('recipe_chibi')
   })
   it('should not add duplicate', () => {
-    let state = { ...INITIAL_GAME_STATE, ownedRecipes: ['recipe_chibi'] }
+    let state: GameState = { ...INITIAL_GAME_STATE, ownedRecipes: ['recipe_chibi'] }
     state = addRecipeToInventory(state, 'recipe_chibi')
     expect(state.ownedRecipes).toEqual(['recipe_chibi'])
   })
@@ -101,7 +102,7 @@ describe('addRecipeToInventory', () => {
 
 describe('useRecipe', () => {
   it('should move recipe from owned to used', () => {
-    let state = { ...INITIAL_GAME_STATE, ownedRecipes: ['recipe_chibi'] }
+    let state: GameState = { ...INITIAL_GAME_STATE, ownedRecipes: ['recipe_chibi'] }
     state = useRecipe(state, 'recipe_chibi')
     expect(state.ownedRecipes).not.toContain('recipe_chibi')
     expect(state.usedRecipes).toContain('recipe_chibi')
@@ -121,12 +122,12 @@ describe('shouldRotateWeek', () => {
 
 describe('rotateWeek', () => {
   it('should advance to next dynasty in cycle', () => {
-    let state = { ...INITIAL_GAME_STATE, currentWeeklyDynasty: 'qinhan' as const }
+    let state: GameState = { ...INITIAL_GAME_STATE, currentWeeklyDynasty: 'qinhan' }
     state = rotateWeek(state)
     expect(state.currentWeeklyDynasty).toBe('sanguo')
   })
   it('should wrap from chunqiu to qinhan', () => {
-    let state = { ...INITIAL_GAME_STATE, currentWeeklyDynasty: 'chunqiu' as const }
+    let state: GameState = { ...INITIAL_GAME_STATE, currentWeeklyDynasty: 'chunqiu' }
     state = rotateWeek(state)
     expect(state.currentWeeklyDynasty).toBe('qinhan')
   })

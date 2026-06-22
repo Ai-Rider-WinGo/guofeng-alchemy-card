@@ -8,13 +8,46 @@ import { PoolDetailModal } from '@/components/PoolDetailModal'
 import { useGame } from '@/lib/gameContext'
 import { drawFromPool, getCardById, loadCards, loadDrawPools } from '@/lib/cardUtils'
 import { getRemainingDraws, addCardToInventory, calculateStars, convertDuplicateToFragment, updateTaskProgress } from '@/lib/storage'
-import type { Card } from '@/lib/types'
-import { DUPLICATION_FOR_STAR } from '@/lib/types'
-import { draw as apiDraw, isLoggedIn, getDrawRemaining } from '@/lib/api/game'
+import type { Card, CardQuality, DynastyId } from '@/lib/types'
+import { CARD_QUALITY, DUPLICATION_FOR_STAR, DYNASTY_META } from '@/lib/types'
+import { draw as apiDraw, isLoggedIn, type DrawnCard } from '@/lib/api/game'
 import { useToast } from '@/components/Toast'
 
 interface DrawResult {
   cardId: string; card: Card; isNew: boolean; starCount: number; wasConverted: boolean; shardAmount?: number; shardType?: string
+}
+
+function isCardQuality(value: string): value is CardQuality {
+  return value in CARD_QUALITY
+}
+
+function isDynastyId(value: string): value is DynastyId {
+  return value in DYNASTY_META
+}
+
+function createFallbackCard(drawnCard: DrawnCard): Card {
+  return {
+    id: drawnCard.card_id,
+    name: drawnCard.name,
+    level: drawnCard.level,
+    quality: isCardQuality(drawnCard.rarity) ? drawnCard.rarity : 'common',
+    type: 'person',
+    dynasty: isDynastyId(drawnCard.dynasty) ? drawnCard.dynasty : 'qinhan',
+    description: '',
+    story: '',
+    knowledgePoint: '',
+    relatedCards: [],
+    mergeHint: '',
+    image: drawnCard.image_url ?? drawnCard.thumbnail_url ?? undefined,
+  }
+}
+
+function resolveDrawnCard(drawnCard: DrawnCard): Card {
+  return getCardById(drawnCard.card_id) ?? createFallbackCard(drawnCard)
+}
+
+function getErrorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : '抽卡失败'
 }
 
 export default function DrawPage() {
@@ -30,9 +63,9 @@ export default function DrawPage() {
   const currentPool = pools.find((p) => p.pool_id === 'permanent_basic')
   const poolCardList = (currentPool?.active_card_ids || []).map((id) => allCards.find((c) => c.id === id)).filter((c): c is Card => c !== undefined).map((c) => ({ id: c.id, name: c.name, rarity: c.quality, level: c.level }))
 
-  const processDraw = (cardId: string, currentState: typeof gameState) => {
+  const processDraw = (cardId: string, currentState: typeof gameState): { result: DrawResult | null; newState: typeof gameState } => {
     const card = getCardById(cardId)
-    if (!card) return { result: null as any, newState: currentState }
+    if (!card) return { result: null, newState: currentState }
     const isNew = !currentState.unlockedCards.includes(cardId)
     const currentCount = (currentState.playerCards[cardId] || 0) + 1
     const starCount = calculateStars(currentCount, DUPLICATION_FOR_STAR)
@@ -52,11 +85,11 @@ export default function DrawPage() {
       try {
         const res = await apiDraw('permanent_basic', 1)
         const results: DrawResult[] = res.drawn.map((d) => {
-          const card = getCardById(d.card_id)
+          const card = resolveDrawnCard(d)
           const isNew = !gameState.unlockedCards.includes(d.card_id)
           const currentCount = (gameState.playerCards[d.card_id] || 0) + 1
           const starCount = calculateStars(currentCount, DUPLICATION_FOR_STAR)
-          return { cardId: d.card_id, card: card || { id: d.card_id, name: d.name, level: d.level, quality: 'common', type: 'person', dynasty: 'qinhan', description: '', story: '', knowledgePoint: '', relatedCards: [] } as Card, isNew, starCount, wasConverted: !isNew }
+          return { cardId: d.card_id, card, isNew, starCount, wasConverted: !isNew }
         })
         // 同步本地状态（与后端一致）
         let newState = gameState
@@ -68,8 +101,8 @@ export default function DrawPage() {
         updateGameState(newState)
         setDrawResults(results); setSelectedIndex(0); setIsDrawing(false)
         return
-      } catch (e: any) {
-        showToast(e.message || '抽卡失败', 'error'); setIsDrawing(false); return
+      } catch (e: unknown) {
+        showToast(getErrorMessage(e), 'error'); setIsDrawing(false); return
       }
     }
 
@@ -89,10 +122,10 @@ export default function DrawPage() {
       try {
         const res = await apiDraw('permanent_basic', 10)
         const results: DrawResult[] = res.drawn.map((d) => {
-          const card = getCardById(d.card_id)
+          const card = resolveDrawnCard(d)
           const isNew = !gameState.unlockedCards.includes(d.card_id)
           const currentCount = (gameState.playerCards[d.card_id] || 0) + 1
-          return { cardId: d.card_id, card: card || { id: d.card_id, name: d.name, level: d.level, quality: 'common', type: 'person', dynasty: 'qinhan', description: '', story: '', knowledgePoint: '', relatedCards: [] } as Card, isNew, starCount: calculateStars(currentCount, DUPLICATION_FOR_STAR), wasConverted: !isNew }
+          return { cardId: d.card_id, card, isNew, starCount: calculateStars(currentCount, DUPLICATION_FOR_STAR), wasConverted: !isNew }
         })
         let newState = gameState
         for (const r of results) {
@@ -103,8 +136,8 @@ export default function DrawPage() {
         updateGameState(newState)
         setDrawResults(results); setIsDrawing(false)
         return
-      } catch (e: any) {
-        showToast(e.message || '抽卡失败', 'error'); setIsDrawing(false); return
+      } catch (e: unknown) {
+        showToast(getErrorMessage(e), 'error'); setIsDrawing(false); return
       }
     }
 

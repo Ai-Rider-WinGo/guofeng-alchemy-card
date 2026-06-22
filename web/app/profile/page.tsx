@@ -15,6 +15,7 @@ export default function ProfilePage() {
   const totalFragments = Object.values(gameState.fragments || {}).reduce((a, b) => a + b, 0)
 
   const shortcutLinks = [
+    { href: '/inventory', title: '我的背包', desc: `${ownedCount} 种卡`, image: '/ui/nav-lineup.png', tone: 'green' as const },
     { href: '/tasks', title: '任务中心', desc: '每日 & 成就', image: '/ui/action-art-archive.png', tone: 'green' as const },
     { href: '/signin', title: '每日签到', desc: `连续 ${gameState.signIn?.streak || 0} 天`, image: '/ui/nav-home.png', tone: 'gold' as const },
     { href: '/collection', title: '我的卡册', desc: `${collectionProgress.unlocked}/${collectionProgress.total}`, image: '/ui/action-art-archive.png', tone: 'blue' as const },
