@@ -24,3 +24,33 @@ web/package-lock.json
 !.env.example
 
 .superpowers/
+
+# IDE / tool caches
+.qoder/
+.codex/
+__pycache__/
+*.pyc
+
+# OS junk
+nul
+Thumbs.db
+
+# ComfyUI temp
+*.bat
+loc_data_*.json
+all_cards_export.json
+
+# DB files
+*.db
+
+# Abandoned admin project (replaced by admin-light/)
+admin/
+
+# Generated images — too large for git, use CDN/object storage
+assets-output/
+
+# Old version backup
+版本 1/
+Reasonix/
+__pycache__/
+

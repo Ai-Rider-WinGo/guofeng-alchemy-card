@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>国风炼金 · 批量生成监控</title>
+<style>
+:root{
+  --bg:#0f0d0b; --cbg:#1a1713; --bd:#2a241c; --g:#c9a85c;
+  --t:#d4c8b8; --dim:#7a7060; --r:#c95c5c; --grn:#6b9e6b;
+  --blu:#6b8ec9; --purp:#a06ea0; --orn:#d4894a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t);font-family:"Microsoft YaHei","PingFang SC",sans-serif;min-height:100vh}
+h1{font-size:1.4em;color:var(--g)}
+h2{font-size:1em;color:var(--g);margin-bottom:8px}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:var(--cbg);border-bottom:2px solid var(--g)}
+.topbar .status{display:flex;gap:20px;font-size:0.82em}
+.topbar .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+.dot-live{background:var(--grn);animation:pulse 2s infinite}
+.dot-dead{background:var(--r)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.container{max-width:1400px;margin:0 auto;padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--cbg);border:1px solid var(--bd);border-radius:10px;padding:18px}
+.card.full{grid-column:1/-1}
+.num{font-size:2.8em;font-weight:bold;color:var(--g);line-height:1}
+.num.sm{font-size:1.5em}
+.num.red{color:var(--r)}.num.grn{color:var(--grn)}.num.blu{color:var(--blu)}
+.label{font-size:0.72em;color:var(--dim);margin-top:4px}
+.stat-row{display:flex;gap:24px;flex-wrap:wrap}
+/* Progress bar */
+.pbar-bg{background:var(--bg);border-radius:20px;height:28px;overflow:hidden;margin:10px 0;display:flex}
+.pbar-fill{background:linear-gradient(90deg,var(--g),#e9c870);height:100%;transition:width 1s ease;display:flex;align-items:center;justify-content:center;font-size:0.75em;color:var(--bg);font-weight:bold}
+.pbar-fail{background:var(--r)}
+/* Timeline */
+.timeline{max-height:360px;overflow-y:auto;font-size:0.72em;font-family:"Cascadia Code","Consolas",monospace}
+.timeline .l{color:var(--dim)}.timeline .ok{color:var(--grn)}.timeline .err{color:var(--r)}.timeline .warn{color:var(--orn)}.timeline .info{color:var(--blu)}
+/* Card types */
+.type-badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:0.7em;font-weight:bold}
+.t-person{background:#2e1e1e;color:#c98e8e} .t-event{background:#2e2a1e;color:#e9b84c}
+.t-weapon{background:#1e1e2e;color:#8eaac9} .t-book{background:#1e2e1e;color:#8ec98e}
+.t-place{background:#2e2820;color:#c9a85c} .t-dynasty{background:#2e1e2e;color:#c98ec9}
+/* Rarity badges */
+.rare{display:inline-block;padding:1px 6px;border-radius:3px;font-size:0.7em}
+.r-N{background:#2e2820;color:#aaa}.r-R{background:#1e1e2e;color:#8eaac9}
+.r-SR{background:#2e1e2e;color:#c98ec9}.r-SSR{background:#2e2a1a;color:#e9b84c}
+.r-UR{background:#2e1e1e;color:#e9a84c}
+/* Grid of generated cards */
+.thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:6px;max-height:400px;overflow-y:auto}
+.thumb-item{position:relative;aspect-ratio:3/4;background:var(--bg);border-radius:4px;overflow:hidden;border:1px solid var(--bd)}
+.thumb-item img{width:100%;height:100%;object-fit:cover}
+.thumb-item .tn{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.8);font-size:0.5em;padding:1px 3px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* Auto refresh indicator */
+.refresh-dot{font-size:0.7em;color:var(--dim)}
+/* Quick stats grid */
+.qstats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <h1>🏯 国风炼金 · 批量生成监控</h1>
+    <span class="refresh-dot" id="refreshInfo">自动刷新中...</span>
+  </div>
+  <div class="status">
+    <span><span class="dot dot-live" id="comfyDot"></span> ComfyUI: <b id="comfyStatus">检测中...</b></span>
+    <span>⏰ <b id="clock">--:--:--</b></span>
+    <span>🔄 每30秒</span>
+  </div>
+</div>
+
+<div class="container">
+  <!-- 概览卡片 -->
+  <div class="card full">
+    <h2>📊 生成概览</h2>
+    <div class="stat-row">
+      <div style="flex:1;min-width:200px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline">
+          <span class="num" id="totalCompleted">0</span>
+          <span style="font-size:0.9em;color:var(--dim)">/ <span id="totalCards">200</span></span>
+        </div>
+        <div class="label">已完成</div>
+        <div class="pbar-bg">
+          <div class="pbar-fill" id="progressBar" style="width:0%">0%</div>
+        </div>
+      </div>
+      <div class="qstats">
+        <div><div class="num blu sm" id="statRemaining">200</div><div class="label">待处理</div></div>
+        <div><div class="num red sm" id="statFailed">0</div><div class="label">失败</div></div>
+        <div><div class="num sm" id="statSpeed">-</div><div class="label">速度</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ComfyUI 状态 -->
+  <div class="card">
+    <h2>🖥️ ComfyUI 状态</h2>
+    <div class="stat-row">
+      <div><div class="num sm" id="vramFree">--</div><div class="label">VRAM 空闲 (GB)</div></div>
+      <div><div class="num sm" id="queueRun">0</div><div class="label">队列运行中</div></div>
+      <div><div class="num sm" id="queuePend">0</div><div class="label">队列等待中</div></div>
+    </div>
+    <div style="margin-top:8px;font-size:0.72em;color:var(--dim)">
+      版本: <span id="comfyVer">--</span> · Python: <span id="comfyPy">--</span>
+    </div>
+  </div>
+
+  <!-- 类型分布 -->
+  <div class="card">
+    <h2>📋 卡牌类型分布</h2>
+    <div class="stat-row" id="typeDist">
+      <div><div class="num sm">67</div><div class="label type-badge t-person">人物</div></div>
+      <div><div class="num sm">43</div><div class="label type-badge t-event">事件</div></div>
+      <div><div class="num sm">23</div><div class="label type-badge t-weapon">兵器</div></div>
+      <div><div class="num sm">17</div><div class="label type-badge t-book">典籍</div></div>
+      <div><div class="num sm">24</div><div class="label type-badge t-place">地点</div></div>
+      <div><div class="num sm">6</div><div class="label type-badge t-dynasty">朝代</div></div>
+    </div>
+  </div>
+
+  <!-- 最近生成的卡牌 -->
+  <div class="card full">
+    <h2>🖼️ 最近生成</h2>
+    <div class="thumb-grid" id="recentThumbs">
+      <div style="color:var(--dim);text-align:center;padding:20px">等待生成结果...</div>
+    </div>
+  </div>
+
+  <!-- 实时日志 -->
+  <div class="card full">
+    <h2>📜 实时日志</h2>
+    <div class="timeline" id="logContainer">
+      <div style="color:var(--dim)">等待日志...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = 'http://127.0.0.1:8888';
+let prevCompleted = 0;
+let startTime = Date.now();
+
+function fmtTime(d) {
+  return d.toTimeString().slice(0,8);
+}
+
+async function refresh() {
+  try {
+    // 并行获取所有数据
+    const [progRes, comfyRes, logRes] = await Promise.all([
+      fetch(API+'/api/batch-progress').then(r=>r.json()),
+      fetch(API+'/api/comfyui-status').then(r=>r.json()),
+      fetch(API+'/api/batch-log').then(r=>r.json())
+    ]);
+
+    // 更新概览
+    document.getElementById('totalCompleted').textContent = progRes.completed || 0;
+    document.getElementById('totalCards').textContent = progRes.total || 200;
+    const pct = progRes.pct || 0;
+    const bar = document.getElementById('progressBar');
+    bar.style.width = pct + '%';
+    bar.textContent = pct > 5 ? pct + '%' : '';
+    if (progRes.failed_count > 10) bar.classList.add('pbar-fail');
+
+    document.getElementById('statRemaining').textContent = progRes.remaining || 0;
+    document.getElementById('statFailed').textContent = progRes.failed_count || 0;
+
+    // 计算速度
+    if (prevCompleted > 0 && progRes.completed > prevCompleted) {
+      const elapsed = (Date.now() - startTime) / 60000; // 分钟
+      const speed = (progRes.completed / elapsed).toFixed(1);
+      document.getElementById('statSpeed').textContent = speed + '/min';
+    }
+
+    // ComfyUI 状态
+    document.getElementById('comfyDot').className = comfyRes.online ? 'dot dot-live' : 'dot dot-dead';
+    document.getElementById('comfyStatus').textContent = comfyRes.online ? '在线' : '离线';
+    document.getElementById('vramFree').textContent = comfyRes.vram_free_gb || '--';
+    document.getElementById('queueRun').textContent = comfyRes.queue_running || 0;
+    document.getElementById('queuePend').textContent = comfyRes.queue_pending || 0;
+    document.getElementById('comfyVer').textContent = comfyRes.version || '--';
+    document.getElementById('comfyPy').textContent = comfyRes.python ? comfyRes.python.split(' ')[0] : '--';
+
+    // 日志
+    if (logRes.lines && logRes.lines.length > 0) {
+      let html = '';
+      for (const line of logRes.lines.slice(-30)) {
+        let cls = '';
+        if (line.includes('✅')) cls = 'ok';
+        else if (line.includes('❌') || line.includes('失败')) cls = 'err';
+        else if (line.includes('⚠️')) cls = 'warn';
+        else if (line.includes('📊') || line.includes('===')) cls = 'info';
+        html += `<div class="${cls}">${escapeHtml(line)}</div>`;
+      }
+      document.getElementById('logContainer').innerHTML = html;
+      document.getElementById('logContainer').scrollTop = document.getElementById('logContainer').scrollHeight;
+    }
+
+    // 时钟
+    document.getElementById('clock').textContent = fmtTime(new Date());
+    document.getElementById('refreshInfo').textContent = `上次刷新: ${fmtTime(new Date())}`;
+
+    prevCompleted = progRes.completed || 0;
+
+  } catch(e) {
+    document.getElementById('comfyDot').className = 'dot dot-dead';
+    document.getElementById('comfyStatus').textContent = '连接失败';
+  }
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// 首次刷新
+refresh();
+
+// 每30秒自动刷新
+setInterval(refresh, 30000);
+</script>
+</body>
+</html>

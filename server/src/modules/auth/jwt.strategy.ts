@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { ConfigService } from '@nestjs/config';
@@ -13,6 +13,11 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: any) {
+    // 安全隔离：拒绝玩家 token（kind === 'player'）访问 admin 路由。
+    // 旧 admin token 无 kind 字段，视为 admin 放行；新 admin token kind='admin'。
+    if (payload.kind === 'player') {
+      throw new UnauthorizedException('无权访问后台接口');
+    }
     return { id: payload.sub, username: payload.username, role: payload.role };
   }
 }

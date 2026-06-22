@@ -39,4 +39,11 @@ export class ConfigsService {
     }
     return results;
   }
+
+  async remove(key: string) {
+    const config = await this.configRepo.findOne({ where: { config_key: key } });
+    if (!config) return { deleted: false };
+    await this.configRepo.remove(config);
+    return { deleted: true };
+  }
 }

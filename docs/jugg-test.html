@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><title>Juggernaut XL 写实测试</title>
+<style>body{background:#12100e;color:#d4c8b8;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+h1{color:#c9a85c}h3{color:#7a7060;margin-top:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#1e1b17;border:1px solid #2e2820;border-radius:6px;overflow:hidden}
+.card img{width:100%}.card .lbl{padding:8px;font-size:0.85em;color:#7a7060}
+.card .lbl strong{color:#c9a85c}
+</style></head><body>
+<h1>📸 Juggernaut-XL v9 — 写实测试</h1>
+<p style="color:#7a7060">提醒词：cinematic photorealistic + Chinese historical + epicanthic fold + muted tones</p>
+<div class="grid" id="jg"></div>
+<div id="g4"></div>
+<script>
+const jg={1:'刘邦',2:'项羽',3:'咸阳',4:'李世民',5:'赤壁之战'};
+let h='';
+for(let i=1;i<=5;i++){
+  const no=`TEST-JG-${String(i).padStart(3,'0')}`;
+  h+=`<div class="card"><img src="/assets-output/cards/originals-v2/${no}.png"><div class="lbl"><strong>${no}</strong> · ${jg[i]}</div></div>`;
+}
+document.getElementById('jg').innerHTML=h;
+</script>
+</body></html>

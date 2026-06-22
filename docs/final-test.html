@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><title>Animagine + 专属特征</title>
+<style>body{background:#12100e;color:#d4c8b8;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+h1{color:#c9a85c}p{color:#7a7060;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.card{background:#1e1b17;border:1px solid #2e2820;border-radius:6px;overflow:hidden}
+.card img{width:100%}.card .lbl{padding:10px;font-size:0.85em;color:#7a7060}
+.card .lbl strong{color:#c9a85c}.card .lbl .feat{color:#8ec98e;font-size:0.8em;display:block}
+</style></head><body>
+<h1>🎯 Animagine XL · 回归版</h1>
+<p>每张加了人物专属道具特征（青龙偃月刀/羽扇/龙袍/破釜沉舟）</p>
+<div class="grid" id="g"></div>
+<script>
+const data=[
+  {no:'TEST-FX-001',name:'关羽',feat:'红脸 + 青龙偃月刀 + 丹凤眼'},
+  {no:'TEST-FX-002',name:'诸葛亮',feat:'白袍 + 羽扇 + 星图竹简'},
+  {no:'TEST-FX-003',name:'李世民',feat:'黄龙袍 + 玉带 + 红柱宫殿'},
+  {no:'TEST-FX-004',name:'巨鹿之战',feat:'项羽冲锋 + 楚红秦黑旌旗'},
+];
+let h='';
+data.forEach(d=>{
+  h+=`<div class="card"><img src="/assets-output/cards/originals-v2/${d.no}.png"><div class="lbl"><strong>${d.name}</strong><span class="feat">${d.feat}</span></div></div>`;
+});
+document.getElementById('g').innerHTML=h;
+</script>
+</body></html>

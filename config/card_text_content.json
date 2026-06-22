@@ -1,0 +1,30 @@
+[
+  {
+    "card_id": "xingyang_001",
+    "display_name": "荥阳",
+    "card_type_label": "地点",
+    "rarity_label": "Common",
+    "knowledge_point": "荥阳是楚汉战争的核心战场，刘邦与项羽反复争夺的战略要地。",
+    "image_keywords": [
+      "城池",
+      "要塞",
+      "楚汉",
+      "荥阳"
+    ],
+    "detail_text": "荥阳地处中原腹地，扼守东西交通要道，楚汉双方在此反复拉锯，刘邦曾在此被围困数月，靠纪信舍身方得脱困。"
+  },
+  {
+    "card_id": "julu_001",
+    "display_name": "巨鹿",
+    "card_type_label": "地点",
+    "rarity_label": "Common",
+    "knowledge_point": "巨鹿是项羽破釜沉舟大破秦军主力的古战场，秦末战争的转折点。",
+    "image_keywords": [
+      "战场",
+      "巨鹿",
+      "项羽",
+      "破釜沉舟"
+    ],
+    "detail_text": "巨鹿之战中项羽率楚军破釜沉舟，以少胜多大破章邯率领的秦军主力，此战奠定了项羽的霸业基础。"
+  }
+]

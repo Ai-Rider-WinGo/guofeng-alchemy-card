@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Put, Delete, Body, Param, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Put, Patch, Delete, Body, Param, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { PoolsService } from './pools.service';
 import { CreatePoolDto, UpdatePoolDto } from './dto/create-pool.dto';
@@ -26,6 +26,16 @@ export class PoolsController {
   @Put(':id')
   @ApiOperation({ summary: '更新卡池' })
   update(@Param('id') id: string, @Body() dto: UpdatePoolDto) { return this.poolsService.update(+id, dto); }
+
+  @Patch(':id/toggle')
+  @ApiOperation({ summary: '快速上下架卡池（切换 is_active）' })
+  toggle(@Param('id') id: string) { return this.poolsService.toggleActive(+id); }
+
+  @Patch('batch-toggle')
+  @ApiOperation({ summary: '批量上下架卡池' })
+  batchToggle(@Body() body: { ids: number[]; active: boolean }) {
+    return this.poolsService.batchToggle(body.ids, body.active);
+  }
 
   @Delete(':id')
   @ApiOperation({ summary: '删除卡池' })

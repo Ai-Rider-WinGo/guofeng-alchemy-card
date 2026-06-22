@@ -30,9 +30,28 @@ interface CardDisplayProps {
   level?: number
   quality?: CardQuality
   dynasty?: string
+  /** 卡牌图片 URL（不含 CDN_BASE 前缀） */
+  image?: string
   isRevealed?: boolean
   isNew?: boolean
   size?: 'sm' | 'md' | 'lg'
+}
+
+/** 本地开发：图片基础路径（symlink → assets-output/cards/zh-v1，扁平结构） */
+const LOCAL_IMG_BASE = '/cards'
+
+/** 将配置中的图片 URL 解析为可访问的本地路径
+ *  配置格式: "{CDN_BASE}/cards/qin_han/liubang_002.png"
+ *  本地实际: "/cards/liubang_002.png"（扁平，无朝代子目录）
+ *  策略: 取末段文件名拼到 /cards/ 下
+ */
+function resolveCardImage(imgSrc: string): string {
+  if (!imgSrc) return ''
+  // 去掉 CDN_BASE 前缀
+  const cleaned = imgSrc.replace(/\{CDN_BASE\}\/?/g, '')
+  // 取最后一段文件名（兼容 qin_han/x.png 与扁平 x.png）
+  const fileName = cleaned.split('/').filter(Boolean).pop() || ''
+  return `${LOCAL_IMG_BASE}/${fileName}`
 }
 
 export function CardDisplay(props: CardDisplayProps) {
@@ -44,6 +63,10 @@ export function CardDisplay(props: CardDisplayProps) {
   const dyn = c?.dynasty || props.dynasty || 'qinhan'
   const revealed = props.isRevealed ?? true
   const size = props.size || 'md'
+  const imgSrc = c?.image || props.image || ''
+
+  // 解析图片 URL 为本地可访问路径
+  const resolvedImg = resolveCardImage(imgSrc)
 
   const style = Q[q]
   const seal = DYNASTY_SEAL[dyn] || DYNASTY_SEAL.qinhan
@@ -91,9 +114,21 @@ export function CardDisplay(props: CardDisplayProps) {
         {/* 顶部金线 */}
         <div className="absolute top-0 left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
 
-        {/* 主视觉区 */}
+        {/* 主视觉区 — 有图显示图，无图显示占位符 */}
         <div className="absolute inset-3 top-7 bottom-14 flex items-center justify-center">
-          <div className="text-center select-none">
+          {resolvedImg ? (
+            <img
+              src={resolvedImg}
+              alt={name}
+              className="w-full h-full object-contain rounded-sm"
+              loading="lazy"
+              onError={(e) => {
+                // 图片加载失败时隐藏，露出下方占位符
+                (e.target as HTMLImageElement).style.display = 'none'
+              }}
+            />
+          ) : null}
+          <div className={`text-center select-none ${resolvedImg ? 'absolute inset-0 -z-10' : ''}`}>
             <div className={`text-3xl opacity-15 ${isTreasure ? 'opacity-25' : ''}`}>
               {isTreasure ? '👑' : q === 'divine' ? '🔥' : q === 'epic' ? '💎' : '🏛️'}
             </div>

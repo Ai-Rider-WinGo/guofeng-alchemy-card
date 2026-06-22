@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Body, Param, Query, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { ConfigsService } from './configs.service';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
@@ -32,5 +32,11 @@ export class ConfigsController {
   @ApiOperation({ summary: '批量设置参数' })
   batchSet(@Body() items: { config_key: string; config_value: string; description?: string; category?: string }[]) {
     return this.configsService.batchSet(items);
+  }
+
+  @Delete(':key')
+  @ApiOperation({ summary: '删除单个参数' })
+  remove(@Param('key') key: string) {
+    return this.configsService.remove(key);
   }
 }

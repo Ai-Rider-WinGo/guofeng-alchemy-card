@@ -1,0 +1,2014 @@
+[
+  {
+    "card_id": "QH-P-0001-L05",
+    "era": "QH",
+    "name": "秦始皇",
+    "type": "人物",
+    "rarity": "UR",
+    "level": 5,
+    "level_cn": "伍",
+    "knowledge": "秦始皇嬴政，中国历史上第一位皇帝，统一六国，建立中央集权制度。",
+    "tags": [
+      "帝王",
+      "秦朝",
+      "统一",
+      "长城"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 秦始皇, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 帝王, 秦朝, 统一, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0002-L04",
+    "era": "QH",
+    "name": "刘邦",
+    "type": "人物",
+    "rarity": "SSR",
+    "level": 4,
+    "level_cn": "肆",
+    "knowledge": "汉高祖刘邦，出身布衣，秦末起义建立汉朝。",
+    "tags": [
+      "帝王",
+      "汉朝",
+      "开国",
+      "布衣"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 刘邦, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 帝王, 汉朝, 开国, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0003-L04",
+    "era": "QH",
+    "name": "项羽",
+    "type": "人物",
+    "rarity": "SSR",
+    "level": 4,
+    "level_cn": "肆",
+    "knowledge": "西楚霸王项羽，力能扛鼎的绝世猛将，楚汉之争的核心人物。",
+    "tags": [
+      "霸王",
+      "西楚",
+      "武力",
+      "悲剧"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 项羽, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 霸王, 西楚, 武力, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0004-L03",
+    "era": "QH",
+    "name": "张良",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "张良，汉初三杰之一，运筹帷幄之中决胜千里之外的顶级谋士。",
+    "tags": [
+      "谋士",
+      "运筹帷幄",
+      "汉初三杰"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 张良, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 谋士, 运筹帷幄, 汉初三杰, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0005-L03",
+    "era": "QH",
+    "name": "韩信",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "韩信，汉初三杰之一，被后世尊为兵仙，暗度陈仓灭三秦。",
+    "tags": [
+      "兵仙",
+      "统帅",
+      "汉初三杰"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 韩信, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 兵仙, 统帅, 汉初三杰, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0006-L02",
+    "era": "QH",
+    "name": "萧何",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "萧何，汉初三杰之一，丞相之首，刘邦的后勤总管家。",
+    "tags": [
+      "丞相",
+      "后勤",
+      "汉初三杰"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 萧何, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 丞相, 后勤, 汉初三杰, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0007-L03",
+    "era": "QH",
+    "name": "吕雉",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "吕雉，刘邦之妻，中国历史上第一位临朝称制的女性统治者。",
+    "tags": [
+      "皇后",
+      "女政治家",
+      "吕后"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 吕雉, 秦汉 dynasty, dignified East Asian woman, classical Chinese beauty, elegant refined facial features, authentic 秦汉 dynasty appearance, wearing elaborate traditional 秦汉 hanfu robes with period-correct patterns, ornate historical Chinese hair ornaments and jewelry, graceful poised posture, historical figure portrait, Context: 皇后, 女政治家, 吕后, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, masculine, manly, rugged, muscular, beard, facial hair, bodybuilder, hulk, testosterone, male",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0008-L02",
+    "era": "QH",
+    "name": "蒙恬",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "蒙恬，秦朝名将，率三十万大军北击匈奴，修筑万里长城。",
+    "tags": [
+      "名将",
+      "长城",
+      "秦朝"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 蒙恬, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 名将, 长城, 秦朝, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0009-L02",
+    "era": "QH",
+    "name": "扶苏",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "扶苏，秦始皇长子，仁德宽厚，因赵高篡改遗诏而被迫自尽。",
+    "tags": [
+      "公子",
+      "仁德",
+      "悲剧"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 扶苏, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 公子, 仁德, 悲剧, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0010-L01",
+    "era": "QH",
+    "name": "赵高",
+    "type": "人物",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "赵高，秦朝宦官，秦始皇死后篡改遗诏扶立胡亥，加速秦朝灭亡。",
+    "tags": [
+      "宦官",
+      "权臣",
+      "反派"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 赵高, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 宦官, 权臣, 反派, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0011-L02",
+    "era": "QH",
+    "name": "范增",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "范增，项羽首席谋士，被尊为亚父，鸿门宴力主杀刘邦未果。",
+    "tags": [
+      "谋士",
+      "亚父",
+      "楚汉"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 范增, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 谋士, 亚父, 楚汉, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0012-L02",
+    "era": "QH",
+    "name": "虞姬",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "虞姬，项羽宠姬，垓下之围时自刎殉情，与霸王演绎千古爱情悲剧。",
+    "tags": [
+      "美人",
+      "楚汉",
+      "爱情"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 虞姬, 秦汉 dynasty, dignified East Asian woman, classical Chinese beauty, elegant refined facial features, authentic 秦汉 dynasty appearance, wearing elaborate traditional 秦汉 hanfu robes with period-correct patterns, ornate historical Chinese hair ornaments and jewelry, graceful poised posture, historical figure portrait, Context: 美人, 楚汉, 爱情, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, masculine, manly, rugged, muscular, beard, facial hair, bodybuilder, hulk, testosterone, male",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0013-L02",
+    "era": "QH",
+    "name": "樊哙",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "樊哙，刘邦爱将，鸿门宴上直面项羽护主脱险的勇猛武将。",
+    "tags": [
+      "猛将",
+      "鸿门宴",
+      "忠勇"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 樊哙, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 猛将, 鸿门宴, 忠勇, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-P-0014-L02",
+    "era": "QH",
+    "name": "章邯",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "章邯，秦末最后一位名将，先败于项羽后降楚，最终兵败自杀。",
+    "tags": [
+      "秦将",
+      "降将",
+      "名将"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 章邯, 秦汉 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 秦汉 dynasty robes or historical Chinese armor, dignified historical figure, authentic 秦汉 appearance, Context: 秦将, 降将, 名将, historical background: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0015-L02",
+    "era": "QH",
+    "name": "焚书坑儒",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "秦始皇为统一思想，焚烧儒家经典坑杀儒生的重大历史事件。",
+    "tags": [
+      "秦朝",
+      "文化",
+      "争议"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 焚书坑儒, 秦汉 dynasty, dramatic historical scene depicting 秦始皇为统一思想，焚烧儒家经典坑杀儒生的重大历史事件。, key elements: 秦朝, 文化, 争议, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0016-L02",
+    "era": "QH",
+    "name": "大泽乡起义",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "陈胜吴广在大泽乡揭竿而起，打响秦末农民起义第一枪。",
+    "tags": [
+      "起义",
+      "陈胜",
+      "秦末"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 大泽乡起义, 秦汉 dynasty, dramatic historical scene depicting 陈胜吴广在大泽乡揭竿而起，打响秦末农民起义第一枪。, key elements: 起义, 陈胜, 秦末, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0017-L03",
+    "era": "QH",
+    "name": "鸿门宴",
+    "type": "事件",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "项羽设宴鸿门欲杀刘邦，刘邦在张良樊哙帮助下化险为夷。",
+    "tags": [
+      "楚汉",
+      "宴会",
+      "刺杀"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 鸿门宴, 秦汉 dynasty, dramatic historical scene depicting 项羽设宴鸿门欲杀刘邦，刘邦在张良樊哙帮助下化险为夷。, key elements: 楚汉, 宴会, 刺杀, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0018-L02",
+    "era": "QH",
+    "name": "暗度陈仓",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "韩信明修栈道暗度陈仓，出其不意还定三秦的经典战例。",
+    "tags": [
+      "楚汉",
+      "韩信",
+      "战略"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 暗度陈仓, 秦汉 dynasty, dramatic historical scene depicting 韩信明修栈道暗度陈仓，出其不意还定三秦的经典战例。, key elements: 楚汉, 韩信, 战略, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0019-L03",
+    "era": "QH",
+    "name": "垓下之围",
+    "type": "事件",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "垓下之战项羽被刘邦大军包围，四面楚歌，霸王别姬。",
+    "tags": [
+      "楚汉",
+      "决战",
+      "四面楚歌"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 垓下之围, 秦汉 dynasty, dramatic historical scene depicting 垓下之战项羽被刘邦大军包围，四面楚歌，霸王别姬。, key elements: 楚汉, 决战, 四面楚歌, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0020-L01",
+    "era": "QH",
+    "name": "约法三章",
+    "type": "事件",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "刘邦入关中后与百姓约法三章，废除秦朝苛法赢得民心。",
+    "tags": [
+      "刘邦",
+      "关中",
+      "法度"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 约法三章, 秦汉 dynasty, dramatic historical scene depicting 刘邦入关中后与百姓约法三章，废除秦朝苛法赢得民心。, key elements: 刘邦, 关中, 法度, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0021-L02",
+    "era": "QH",
+    "name": "韩信点兵",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "刘邦问韩信能带多少兵，韩信答多多益善的著名典故。",
+    "tags": [
+      "韩信",
+      "兵法",
+      "多多益善"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 韩信点兵, 秦汉 dynasty, dramatic historical scene depicting 刘邦问韩信能带多少兵，韩信答多多益善的著名典故。, key elements: 韩信, 兵法, 多多益善, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0022-L01",
+    "era": "QH",
+    "name": "指鹿为马",
+    "type": "事件",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "赵高在朝堂上指鹿为马试探大臣立场，铲除异己的著名典故。",
+    "tags": [
+      "赵高",
+      "秦朝",
+      "阴谋"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 指鹿为马, 秦汉 dynasty, dramatic historical scene depicting 赵高在朝堂上指鹿为马试探大臣立场，铲除异己的著名典故。, key elements: 赵高, 秦朝, 阴谋, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-E-0023-L02",
+    "era": "QH",
+    "name": "萧何月下追韩信",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "韩信因不受重用离开汉营，萧何连夜追赶劝回，成就汉家天下。",
+    "tags": [
+      "人才",
+      "楚汉",
+      "知遇之恩"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 萧何月下追韩信, 秦汉 dynasty, dramatic historical scene depicting 韩信因不受重用离开汉营，萧何连夜追赶劝回，成就汉家天下。, key elements: 人才, 楚汉, 知遇之恩, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-W-0024-L01",
+    "era": "QH",
+    "name": "秦弩",
+    "type": "兵器",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "秦弩是秦军制式远程武器，标准化生产使秦军战力碾压六国。",
+    "tags": [
+      "秦朝",
+      "远程",
+      "军工"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 秦弩, 秦汉 dynasty, 秦弩是秦军制式远程武器，标准化生产使秦军战力碾压六国。, detailed craftsmanship: 秦朝, 远程, 军工, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-W-0025-L03",
+    "era": "QH",
+    "name": "天子剑",
+    "type": "兵器",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "天子剑象征皇权至高无上，秦始皇佩剑为太阿剑的传说。",
+    "tags": [
+      "帝王",
+      "宝剑",
+      "象征"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 天子剑, 秦汉 dynasty, 天子剑象征皇权至高无上，秦始皇佩剑为太阿剑的传说。, detailed craftsmanship: 帝王, 宝剑, 象征, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-W-0026-L02",
+    "era": "QH",
+    "name": "项羽戟",
+    "type": "兵器",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "项羽善使长戟，据说其戟重达百斤，万夫不当之勇。",
+    "tags": [
+      "霸王",
+      "兵器",
+      "勇武"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 项羽戟, 秦汉 dynasty, 项羽善使长戟，据说其戟重达百斤，万夫不当之勇。, detailed craftsmanship: 霸王, 兵器, 勇武, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-W-0027-L01",
+    "era": "QH",
+    "name": "秦剑",
+    "type": "兵器",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "秦剑是秦军标准化冷兵器的代表，比六国长剑更长更锋利。",
+    "tags": [
+      "秦朝",
+      "冷兵器",
+      "标准化"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 秦剑, 秦汉 dynasty, 秦剑是秦军标准化冷兵器的代表，比六国长剑更长更锋利。, detailed craftsmanship: 秦朝, 冷兵器, 标准化, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-B-0028-L02",
+    "era": "QH",
+    "name": "秦律",
+    "type": "典籍",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "秦律是秦朝以法家思想制定的严密法律体系，影响中国两千年法制。",
+    "tags": [
+      "法律",
+      "秦朝",
+      "法家"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 秦律, 秦汉 dynasty, 秦律是秦朝以法家思想制定的严密法律体系，影响中国两千年法制。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 法律, 秦朝, 法家, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-B-0029-L03",
+    "era": "QH",
+    "name": "九章算术",
+    "type": "典籍",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "九章算术是汉代最终成书的中国古代最重要的数学经典。",
+    "tags": [
+      "数学",
+      "汉代",
+      "科学"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 九章算术, 秦汉 dynasty, 九章算术是汉代最终成书的中国古代最重要的数学经典。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 数学, 汉代, 科学, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-B-0030-L03",
+    "era": "QH",
+    "name": "黄帝内经",
+    "type": "典籍",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "黄帝内经是汉代编定的中医理论奠基之作，阴阳五行医学体系。",
+    "tags": [
+      "医学",
+      "养生",
+      "中医经典"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 黄帝内经, 秦汉 dynasty, 黄帝内经是汉代编定的中医理论奠基之作，阴阳五行医学体系。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 医学, 养生, 中医经典, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-L-0031-L02",
+    "era": "QH",
+    "name": "阿房宫",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "阿房宫是秦始皇修建的超级宫殿，覆压三百余里隔离天日。",
+    "tags": [
+      "宫殿",
+      "秦朝",
+      "奢华"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 阿房宫, 秦汉 dynasty, ancient Chinese architecture and landscape, 宫殿, 秦朝, 奢华, 阿房宫是秦始皇修建的超级宫殿，覆压三百余里隔离天日。, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-L-0032-L02",
+    "era": "QH",
+    "name": "未央宫",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "未央宫是西汉王朝的大朝正殿，中国历史上最著名的宫殿之一。",
+    "tags": [
+      "宫殿",
+      "汉朝",
+      "长安"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 未央宫, 秦汉 dynasty, ancient Chinese architecture and landscape, 宫殿, 汉朝, 长安, 未央宫是西汉王朝的大朝正殿，中国历史上最著名的宫殿之一。, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-L-0033-L03",
+    "era": "QH",
+    "name": "龙门石窟",
+    "type": "地点",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "龙门石窟始建于北魏，秦汉之后的佛教艺术宝库。",
+    "tags": [
+      "佛教",
+      "石刻",
+      "艺术"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 龙门石窟, 秦汉 dynasty, ancient Chinese landscape scenery, 佛教, 石刻, 艺术, 龙门石窟始建于北魏，秦汉之后的佛教艺术宝库。, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-L-0034-L02",
+    "era": "QH",
+    "name": "祁连山",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "祁连山是汉匈战争的战略要地，霍去病在此大破匈奴。",
+    "tags": [
+      "山脉",
+      "匈奴",
+      "汉匈战争"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 祁连山, 秦汉 dynasty, ancient Chinese landscape scenery, 山脉, 匈奴, 汉匈战争, 祁连山是汉匈战争的战略要地，霍去病在此大破匈奴。, historical atmosphere: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "QH-D-0035-L05",
+    "era": "QH",
+    "name": "大秦帝国",
+    "type": "朝代",
+    "rarity": "UR",
+    "level": 5,
+    "level_cn": "伍",
+    "knowledge": "大秦帝国是中国历史上第一个大一统王朝，奠定了中国两千年帝制基础。",
+    "tags": [
+      "秦朝",
+      "帝国",
+      "统一"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese imperial dynasty symbol: 大秦帝国, 大秦帝国是中国历史上第一个大一统王朝，奠定了中国两千年帝制基础。, iconic elements: 秦朝, 帝国, 统一, visual aesthetic: black Qin dynasty robes and bronze lamellar armor, Great Wall silhouette, terracotta warriors, Qin imperial solemnity, bronze and black color palette, grand imperial scale, majestic atmosphere, semi-realistic Chinese historical painting, vertical composition, golden age imperial splendor, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0001-L05",
+    "era": "SG",
+    "name": "诸葛亮",
+    "type": "人物",
+    "rarity": "UR",
+    "level": 5,
+    "level_cn": "伍",
+    "knowledge": "诸葛亮，三国蜀汉丞相，鞠躬尽瘁死而后已的千古名相。",
+    "tags": [
+      "蜀汉",
+      "丞相",
+      "智慧",
+      "传奇"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 诸葛亮, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 蜀汉, 丞相, 智慧, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0002-L04",
+    "era": "SG",
+    "name": "关羽",
+    "type": "人物",
+    "rarity": "SSR",
+    "level": 4,
+    "level_cn": "肆",
+    "knowledge": "关羽，蜀汉五虎将之首，被后世尊为武圣关帝，忠义化身。",
+    "tags": [
+      "蜀汉",
+      "五虎将",
+      "忠义",
+      "武圣"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 关羽, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 蜀汉, 五虎将, 忠义, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0003-L04",
+    "era": "SG",
+    "name": "曹操",
+    "type": "人物",
+    "rarity": "SSR",
+    "level": 4,
+    "level_cn": "肆",
+    "knowledge": "曹操，三国曹魏奠基人，挟天子以令诸侯的乱世枭雄。",
+    "tags": [
+      "魏",
+      "枭雄",
+      "权臣",
+      "诗人"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 曹操, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 魏, 枭雄, 权臣, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0004-L03",
+    "era": "SG",
+    "name": "刘备",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "刘备，蜀汉开国皇帝，以仁德立身，桃园三结义的带头大哥。",
+    "tags": [
+      "蜀汉",
+      "仁君",
+      "织席贩履"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 刘备, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 蜀汉, 仁君, 织席贩履, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0005-L03",
+    "era": "SG",
+    "name": "赵云",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "赵云，蜀汉五虎将，长坂坡七进七出救阿斗的常胜将军。",
+    "tags": [
+      "蜀汉",
+      "五虎将",
+      "长坂坡",
+      "银枪"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 赵云, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 蜀汉, 五虎将, 长坂坡, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0006-L03",
+    "era": "SG",
+    "name": "周瑜",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "周瑜，东吴大都督，赤壁之战中以少胜多火烧曹营的美周郎。",
+    "tags": [
+      "东吴",
+      "都督",
+      "赤壁",
+      "儒将"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 周瑜, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 东吴, 都督, 赤壁, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0007-L03",
+    "era": "SG",
+    "name": "吕布",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "吕布，三国第一猛将，人中吕布马中赤兔的飞将。",
+    "tags": [
+      "猛将",
+      "方天画戟",
+      "赤兔马"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 吕布, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 猛将, 方天画戟, 赤兔马, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0008-L03",
+    "era": "SG",
+    "name": "孙权",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "孙权，东吴开国皇帝，继承父兄基业坐断东南的守成之主。",
+    "tags": [
+      "东吴",
+      "帝王",
+      "紫髯碧眼"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 孙权, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 东吴, 帝王, 紫髯碧眼, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0009-L03",
+    "era": "SG",
+    "name": "司马懿",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "司马懿，三国曹魏权臣，隐忍数十载终为晋朝奠基。",
+    "tags": [
+      "魏",
+      "权臣",
+      "隐忍",
+      "篡魏"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 司马懿, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 魏, 权臣, 隐忍, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0010-L02",
+    "era": "SG",
+    "name": "典韦",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "典韦，曹操帐下第一猛将，宛城之战中为保曹操脱逃力战而死。",
+    "tags": [
+      "魏",
+      "猛将",
+      "宛城之战"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 典韦, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 魏, 猛将, 宛城之战, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0011-L02",
+    "era": "SG",
+    "name": "黄忠",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "黄忠，蜀汉五虎将中最年长者，老当益壮箭术无双。",
+    "tags": [
+      "蜀汉",
+      "五虎将",
+      "老当益壮"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 黄忠, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 蜀汉, 五虎将, 老当益壮, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0012-L02",
+    "era": "SG",
+    "name": "陆逊",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "陆逊，东吴大都督，夷陵之战中火烧连营大败刘备的年轻儒将。",
+    "tags": [
+      "东吴",
+      "儒将",
+      "夷陵之战"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 陆逊, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 东吴, 儒将, 夷陵之战, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0013-L01",
+    "era": "SG",
+    "name": "董卓",
+    "type": "人物",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "董卓，东汉末年权臣，废少帝立献帝的残暴军阀。",
+    "tags": [
+      "军阀",
+      "残暴",
+      "乱世"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 董卓, 三国 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 三国 dynasty robes or historical Chinese armor, dignified historical figure, authentic 三国 appearance, Context: 军阀, 残暴, 乱世, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-P-0014-L02",
+    "era": "SG",
+    "name": "貂蝉",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "貂蝉，三国第一美人，王允以连环计离间董卓吕布的绝色女子。",
+    "tags": [
+      "美人",
+      "连环计",
+      "三国"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 貂蝉, 三国 dynasty, dignified East Asian woman, classical Chinese beauty, elegant refined facial features, authentic 三国 dynasty appearance, wearing elaborate traditional 三国 hanfu robes with period-correct patterns, ornate historical Chinese hair ornaments and jewelry, graceful poised posture, historical figure portrait, Context: 美人, 连环计, 三国, historical background: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, masculine, manly, rugged, muscular, beard, facial hair, bodybuilder, hulk, testosterone, male",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0015-L02",
+    "era": "SG",
+    "name": "桃园三结义",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "刘备关羽张飞在桃园结为异姓兄弟，不求同生但求同死。",
+    "tags": [
+      "蜀汉",
+      "结义",
+      "兄弟情"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 桃园三结义, 三国 dynasty, dramatic historical scene depicting 刘备关羽张飞在桃园结为异姓兄弟，不求同生但求同死。, key elements: 蜀汉, 结义, 兄弟情, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0016-L02",
+    "era": "SG",
+    "name": "草船借箭",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "诸葛亮利用大雾以草船诱使曹操放箭，一夜之间借到十万支箭。",
+    "tags": [
+      "赤壁",
+      "诸葛",
+      "谋略"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 草船借箭, 三国 dynasty, dramatic historical scene depicting 诸葛亮利用大雾以草船诱使曹操放箭，一夜之间借到十万支箭。, key elements: 赤壁, 诸葛, 谋略, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0017-L03",
+    "era": "SG",
+    "name": "空城计",
+    "type": "事件",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "诸葛亮以空城计退司马懿大军，一人抚琴城楼吓退数万雄兵。",
+    "tags": [
+      "诸葛",
+      "司马懿",
+      "西城"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 空城计, 三国 dynasty, dramatic historical scene depicting 诸葛亮以空城计退司马懿大军，一人抚琴城楼吓退数万雄兵。, key elements: 诸葛, 司马懿, 西城, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0018-L04",
+    "era": "SG",
+    "name": "赤壁之战",
+    "type": "事件",
+    "rarity": "SSR",
+    "level": 4,
+    "level_cn": "肆",
+    "knowledge": "赤壁之战孙刘联军火烧曹船，奠定三国鼎立格局的决定性战役。",
+    "tags": [
+      "三国",
+      "火攻",
+      "周瑜",
+      "东风"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 赤壁之战, 三国 dynasty, dramatic historical scene depicting 赤壁之战孙刘联军火烧曹船，奠定三国鼎立格局的决定性战役。, key elements: 三国, 火攻, 周瑜, 东风, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0019-L02",
+    "era": "SG",
+    "name": "七擒孟获",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "诸葛亮七次擒获南中首领孟获七次释放，以攻心为上平定南中。",
+    "tags": [
+      "蜀汉",
+      "诸葛",
+      "南征"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 七擒孟获, 三国 dynasty, dramatic historical scene depicting 诸葛亮七次擒获南中首领孟获七次释放，以攻心为上平定南中。, key elements: 蜀汉, 诸葛, 南征, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0020-L02",
+    "era": "SG",
+    "name": "水淹七军",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "关羽利用汉水暴涨水淹于禁七军，威震华夏的经典战术。",
+    "tags": [
+      "关羽",
+      "荆州",
+      "于禁"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 水淹七军, 三国 dynasty, dramatic historical scene depicting 关羽利用汉水暴涨水淹于禁七军，威震华夏的经典战术。, key elements: 关羽, 荆州, 于禁, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0021-L03",
+    "era": "SG",
+    "name": "六出祁山",
+    "type": "事件",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "诸葛亮六次北伐中原，出祁山伐曹魏直到五丈原星落。",
+    "tags": [
+      "北伐",
+      "诸葛",
+      "蜀汉"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 六出祁山, 三国 dynasty, dramatic historical scene depicting 诸葛亮六次北伐中原，出祁山伐曹魏直到五丈原星落。, key elements: 北伐, 诸葛, 蜀汉, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-E-0022-L01",
+    "era": "SG",
+    "name": "青梅煮酒论英雄",
+    "type": "事件",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "曹操与刘备在许昌梅园煮酒论英雄的经典对话场景。",
+    "tags": [
+      "曹操",
+      "刘备",
+      "双雄"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 青梅煮酒论英雄, 三国 dynasty, dramatic historical scene depicting 曹操与刘备在许昌梅园煮酒论英雄的经典对话场景。, key elements: 曹操, 刘备, 双雄, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-W-0023-L03",
+    "era": "SG",
+    "name": "青龙偃月刀",
+    "type": "兵器",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "青龙偃月刀是关羽的标志性兵器，重八十二斤的冷艳锯。",
+    "tags": [
+      "关羽",
+      "兵器",
+      "传奇"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 青龙偃月刀, 三国 dynasty, 青龙偃月刀是关羽的标志性兵器，重八十二斤的冷艳锯。, detailed craftsmanship: 关羽, 兵器, 传奇, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-W-0024-L02",
+    "era": "SG",
+    "name": "丈八蛇矛",
+    "type": "兵器",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "丈八蛇矛是张飞的标志性兵器，矛身如蛇形弯曲丈八其长。",
+    "tags": [
+      "张飞",
+      "兵器",
+      "丈八"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 丈八蛇矛, 三国 dynasty, 丈八蛇矛是张飞的标志性兵器，矛身如蛇形弯曲丈八其长。, detailed craftsmanship: 张飞, 兵器, 丈八, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-W-0025-L02",
+    "era": "SG",
+    "name": "方天画戟",
+    "type": "兵器",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "方天画戟是吕布的专属兵器，两侧月牙刃的华丽长戟。",
+    "tags": [
+      "吕布",
+      "兵器",
+      "方天"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 方天画戟, 三国 dynasty, 方天画戟是吕布的专属兵器，两侧月牙刃的华丽长戟。, detailed craftsmanship: 吕布, 兵器, 方天, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-W-0026-L02",
+    "era": "SG",
+    "name": "诸葛连弩",
+    "type": "兵器",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "诸葛亮改良的连弩可连续发射十支箭矢，蜀汉军事科技代表。",
+    "tags": [
+      "诸葛亮",
+      "发明",
+      "远程"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 诸葛连弩, 三国 dynasty, 诸葛亮改良的连弩可连续发射十支箭矢，蜀汉军事科技代表。, detailed craftsmanship: 诸葛亮, 发明, 远程, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-B-0027-L03",
+    "era": "SG",
+    "name": "出师表",
+    "type": "典籍",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "出师表是诸葛亮北伐前写给后主刘禅的奏表，千古忠臣之绝唱。",
+    "tags": [
+      "诸葛亮",
+      "文学",
+      "忠义"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 出师表, 三国 dynasty, 出师表是诸葛亮北伐前写给后主刘禅的奏表，千古忠臣之绝唱。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 诸葛亮, 文学, 忠义, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-B-0028-L03",
+    "era": "SG",
+    "name": "伤寒杂病论",
+    "type": "典籍",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "伤寒杂病论是东汉张仲景所著，中医临床医学奠基之作。",
+    "tags": [
+      "医学",
+      "张仲景",
+      "医圣"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 伤寒杂病论, 三国 dynasty, 伤寒杂病论是东汉张仲景所著，中医临床医学奠基之作。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 医学, 张仲景, 医圣, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-B-0029-L02",
+    "era": "SG",
+    "name": "隆中对",
+    "type": "典籍",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "诸葛亮在隆中对中为刘备规划三分天下的战略蓝图。",
+    "tags": [
+      "策略",
+      "刘备",
+      "诸葛"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 隆中对, 三国 dynasty, 诸葛亮在隆中对中为刘备规划三分天下的战略蓝图。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 策略, 刘备, 诸葛, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-L-0030-L02",
+    "era": "SG",
+    "name": "五丈原",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "五丈原是诸葛亮第六次北伐病逝之地，出师未捷身先死。",
+    "tags": [
+      "诸葛亮",
+      "北伐",
+      "落星"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 五丈原, 三国 dynasty, ancient Chinese landscape scenery, 诸葛亮, 北伐, 落星, 五丈原是诸葛亮第六次北伐病逝之地，出师未捷身先死。, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-L-0031-L02",
+    "era": "SG",
+    "name": "长坂坡",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "长坂坡是赵云单骑救阿斗血战曹军的传奇战场。",
+    "tags": [
+      "赵云",
+      "战场",
+      "当阳"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 长坂坡, 三国 dynasty, ancient Chinese landscape scenery, 赵云, 战场, 当阳, 长坂坡是赵云单骑救阿斗血战曹军的传奇战场。, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-L-0032-L02",
+    "era": "SG",
+    "name": "白帝城",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "白帝城是刘备夷陵之败后病逝托孤诸葛亮的历史遗址。",
+    "tags": [
+      "刘备",
+      "托孤",
+      "蜀汉"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 白帝城, 三国 dynasty, ancient Chinese architecture and landscape, 刘备, 托孤, 蜀汉, 白帝城是刘备夷陵之败后病逝托孤诸葛亮的历史遗址。, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-L-0033-L01",
+    "era": "SG",
+    "name": "定军山",
+    "type": "地点",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "定军山是黄忠斩杀夏侯渊之地，蜀汉北伐的重要战略据点。",
+    "tags": [
+      "蜀汉",
+      "战场",
+      "黄忠"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 定军山, 三国 dynasty, ancient Chinese landscape scenery, 蜀汉, 战场, 黄忠, 定军山是黄忠斩杀夏侯渊之地，蜀汉北伐的重要战略据点。, historical atmosphere: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "SG-D-0034-L05",
+    "era": "SG",
+    "name": "三国鼎立",
+    "type": "朝代",
+    "rarity": "UR",
+    "level": 5,
+    "level_cn": "伍",
+    "knowledge": "三国鼎立是魏蜀吴三分天下的历史格局，中国历史上最著名的分裂时期。",
+    "tags": [
+      "三国",
+      "对峙",
+      "历史格局"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese imperial dynasty symbol: 三国鼎立, 三国鼎立是魏蜀吴三分天下的历史格局，中国历史上最著名的分裂时期。, iconic elements: 三国, 对峙, 历史格局, visual aesthetic: Three Kingdoms warring chaos, red cliff bluffs, ancient Chinese battlefields, heroic warriors in colorful armor, Han dynasty military banners, grand imperial scale, majestic atmosphere, semi-realistic Chinese historical painting, vertical composition, golden age imperial splendor, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0001-L04",
+    "era": "LJ",
+    "name": "王羲之",
+    "type": "人物",
+    "rarity": "SSR",
+    "level": 4,
+    "level_cn": "肆",
+    "knowledge": "王羲之，东晋书圣，兰亭序被誉为天下第一行书。",
+    "tags": [
+      "书法",
+      "东晋",
+      "书圣",
+      "兰亭"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 王羲之, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 书法, 东晋, 书圣, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0002-L03",
+    "era": "LJ",
+    "name": "谢安",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "谢安，东晋名相，淝水之战中以少胜多的战略大师。",
+    "tags": [
+      "东晋",
+      "宰相",
+      "淝水之战"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 谢安, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 东晋, 宰相, 淝水之战, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0003-L03",
+    "era": "LJ",
+    "name": "陶渊明",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "陶渊明，东晋田园诗人，不为五斗米折腰的隐逸之宗。",
+    "tags": [
+      "诗人",
+      "隐士",
+      "田园",
+      "魏晋"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 陶渊明, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 诗人, 隐士, 田园, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0004-L02",
+    "era": "LJ",
+    "name": "祖逖",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "祖逖，东晋北伐名将，闻鸡起舞志复中原的爱国英雄。",
+    "tags": [
+      "东晋",
+      "北伐",
+      "闻鸡起舞"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 祖逖, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 东晋, 北伐, 闻鸡起舞, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0005-L02",
+    "era": "LJ",
+    "name": "顾恺之",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "顾恺之，东晋画圣，以洛神赋图等传世名作代表六朝艺术高峰。",
+    "tags": [
+      "绘画",
+      "东晋",
+      "艺术"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 顾恺之, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 绘画, 东晋, 艺术, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0006-L03",
+    "era": "LJ",
+    "name": "嵇康",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "嵇康，竹林七贤之首，广陵散绝响于刑场的不屈文人。",
+    "tags": [
+      "竹林七贤",
+      "琴艺",
+      "傲骨"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 嵇康, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 竹林七贤, 琴艺, 傲骨, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0007-L03",
+    "era": "LJ",
+    "name": "花木兰",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "花木兰，北魏时期代父从军的传奇女英雄，巾帼不让须眉。",
+    "tags": [
+      "女英雄",
+      "北魏",
+      "代父从军"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 花木兰, 两晋南北朝 dynasty, dignified East Asian woman, classical Chinese beauty, elegant refined facial features, authentic 两晋南北朝 dynasty appearance, wearing elaborate traditional 两晋南北朝 hanfu robes with period-correct patterns, ornate historical Chinese hair ornaments and jewelry, graceful poised posture, historical figure portrait, Context: 女英雄, 北魏, 代父从军, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, masculine, manly, rugged, muscular, beard, facial hair, bodybuilder, hulk, testosterone, male",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0008-L02",
+    "era": "LJ",
+    "name": "阮籍",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "阮籍，竹林七贤之一，以青白眼表达好恶的不羁诗人。",
+    "tags": [
+      "竹林七贤",
+      "诗人",
+      "旷达"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 阮籍, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 竹林七贤, 诗人, 旷达, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0009-L02",
+    "era": "LJ",
+    "name": "苻坚",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "苻坚，前秦皇帝，统一北方后在淝水之战中惨败的前秦雄主。",
+    "tags": [
+      "前秦",
+      "帝王",
+      "淝水之战"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 苻坚, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 前秦, 帝王, 淝水之战, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0010-L02",
+    "era": "LJ",
+    "name": "谢道韫",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "谢道韫，东晋才女，咏絮之才形容女子的文学天赋。",
+    "tags": [
+      "才女",
+      "东晋",
+      "咏絮之才"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 谢道韫, 两晋南北朝 dynasty, dignified East Asian woman, classical Chinese beauty, elegant refined facial features, authentic 两晋南北朝 dynasty appearance, wearing elaborate traditional 两晋南北朝 hanfu robes with period-correct patterns, ornate historical Chinese hair ornaments and jewelry, graceful poised posture, historical figure portrait, Context: 才女, 东晋, 咏絮之才, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, masculine, manly, rugged, muscular, beard, facial hair, bodybuilder, hulk, testosterone, male",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0011-L03",
+    "era": "LJ",
+    "name": "刘裕",
+    "type": "人物",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "刘裕，南朝宋开国皇帝，出身寒门的气吞万里如虎的雄主。",
+    "tags": [
+      "南朝宋",
+      "开国",
+      "寒门"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 刘裕, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 南朝宋, 开国, 寒门, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0012-L01",
+    "era": "LJ",
+    "name": "潘岳",
+    "type": "人物",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "潘岳，西晋美男子与文学家，掷果盈车的古代第一美男。",
+    "tags": [
+      "美男子",
+      "西晋",
+      "文采"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 潘岳, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 美男子, 西晋, 文采, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0013-L02",
+    "era": "LJ",
+    "name": "贾思勰",
+    "type": "人物",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "贾思勰，北朝农学家，著齐民要术是中国现存最早的完整农书。",
+    "tags": [
+      "农学家",
+      "北朝",
+      "齐民要术"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 贾思勰, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 农学家, 北朝, 齐民要术, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-P-0014-L01",
+    "era": "LJ",
+    "name": "石勒",
+    "type": "人物",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "石勒，后赵开国皇帝，从奴隶到皇帝的传奇羯族首领。",
+    "tags": [
+      "后赵",
+      "羯族",
+      "奴隶皇帝"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical figure 石勒, 两晋南北朝 dynasty, masculine rugged East Asian man, strong angular jaw, piercing intense dark eyes, short black beard or mustache, weathered mature masculine face, broad shoulders, powerful commanding stance, wearing period-correct 两晋南北朝 dynasty robes or historical Chinese armor, dignified historical figure, authentic 两晋南北朝 appearance, Context: 后赵, 羯族, 奴隶皇帝, historical background: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, semi-realistic Chinese historical portrait illustration, ancient Chinese scroll painting aesthetic with ink and mineral pigment texture, vertical composition, historical accuracy, museum-quality artwork, solemn dignified atmosphere, no modern elements",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, female, woman, girl, 1girl, feminine, effeminate, soft face, pretty boy, bishounen, androgynous, makeup, lipstick, blush, eyeliner, groomed eyebrows, delicate features, cute, kawaii, moe, waifu, slender, slim, narrow shoulders, cross-dressing, trap",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0015-L03",
+    "era": "LJ",
+    "name": "淝水之战",
+    "type": "事件",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "淝水之战东晋以八万北府兵大破前秦八十万大军。",
+    "tags": [
+      "东晋",
+      "前秦",
+      "以少胜多"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 淝水之战, 两晋南北朝 dynasty, dramatic historical scene depicting 淝水之战东晋以八万北府兵大破前秦八十万大军。, key elements: 东晋, 前秦, 以少胜多, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0016-L02",
+    "era": "LJ",
+    "name": "永嘉之乱",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "永嘉之乱匈奴攻破洛阳掳走晋怀帝，西晋走向灭亡。",
+    "tags": [
+      "西晋",
+      "匈奴",
+      "亡国"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 永嘉之乱, 两晋南北朝 dynasty, dramatic historical scene depicting 永嘉之乱匈奴攻破洛阳掳走晋怀帝，西晋走向灭亡。, key elements: 西晋, 匈奴, 亡国, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0017-L01",
+    "era": "LJ",
+    "name": "闻鸡起舞",
+    "type": "事件",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "祖逖与刘琨闻鸡鸣即起练剑，立志收复中原的励志典故。",
+    "tags": [
+      "祖逖",
+      "勤奋",
+      "成语"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 闻鸡起舞, 两晋南北朝 dynasty, dramatic historical scene depicting 祖逖与刘琨闻鸡鸣即起练剑，立志收复中原的励志典故。, key elements: 祖逖, 勤奋, 成语, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0018-L02",
+    "era": "LJ",
+    "name": "衣冠南渡",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "西晋灭亡后中原士族南迁江南，中国文化中心首次大规模南移。",
+    "tags": [
+      "东晋",
+      "移民",
+      "文化传承"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 衣冠南渡, 两晋南北朝 dynasty, dramatic historical scene depicting 西晋灭亡后中原士族南迁江南，中国文化中心首次大规模南移。, key elements: 东晋, 移民, 文化传承, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0019-L01",
+    "era": "LJ",
+    "name": "八王之乱",
+    "type": "事件",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "西晋八位宗王为争夺皇位进行的十六年内乱，严重削弱了西晋国力。",
+    "tags": [
+      "西晋",
+      "内乱",
+      "宗室"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 八王之乱, 两晋南北朝 dynasty, dramatic historical scene depicting 西晋八位宗王为争夺皇位进行的十六年内乱，严重削弱了西晋国力。, key elements: 西晋, 内乱, 宗室, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0020-L02",
+    "era": "LJ",
+    "name": "孝文帝改革",
+    "type": "事件",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "北魏孝文帝迁都洛阳推行全面汉化改革，促进民族融合。",
+    "tags": [
+      "北魏",
+      "汉化",
+      "改革"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 孝文帝改革, 两晋南北朝 dynasty, dramatic historical scene depicting 北魏孝文帝迁都洛阳推行全面汉化改革，促进民族融合。, key elements: 北魏, 汉化, 改革, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-E-0021-L01",
+    "era": "LJ",
+    "name": "侯景之乱",
+    "type": "事件",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "侯景之乱摧毁了南朝梁的繁荣，建康城从百万人口降至废墟。",
+    "tags": [
+      "南朝",
+      "梁",
+      "叛将"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical event: 侯景之乱, 两晋南北朝 dynasty, dramatic historical scene depicting 侯景之乱摧毁了南朝梁的繁荣，建康城从百万人口降至废墟。, key elements: 南朝, 梁, 叛将, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, epic Chinese historical painting, semi-realistic illustration, ancient Chinese scroll painting composition, vertical format, dramatic lighting and atmosphere, historical accuracy, museum-quality epic artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-W-0022-L01",
+    "era": "LJ",
+    "name": "北府矛",
+    "type": "兵器",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "北府矛是东晋精锐北府兵的制式长矛，在淝水之战中威震天下。",
+    "tags": [
+      "东晋",
+      "北府兵",
+      "长兵器"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 北府矛, 两晋南北朝 dynasty, 北府矛是东晋精锐北府兵的制式长矛，在淝水之战中威震天下。, detailed craftsmanship: 东晋, 北府兵, 长兵器, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-W-0023-L01",
+    "era": "LJ",
+    "name": "环首刀",
+    "type": "兵器",
+    "rarity": "N",
+    "level": 1,
+    "level_cn": "壹",
+    "knowledge": "环首刀是汉末至南北朝时期最普遍的实战直刀。",
+    "tags": [
+      "汉末",
+      "直刀",
+      "冷兵器"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 环首刀, 两晋南北朝 dynasty, 环首刀是汉末至南北朝时期最普遍的实战直刀。, detailed craftsmanship: 汉末, 直刀, 冷兵器, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-W-0024-L02",
+    "era": "LJ",
+    "name": "马镫",
+    "type": "兵器",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "马镫的发明使骑兵真正成为战场主力，改变了世界军事格局。",
+    "tags": [
+      "骑兵",
+      "南北朝",
+      "军事革命"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 马镫, 两晋南北朝 dynasty, 马镫的发明使骑兵真正成为战场主力，改变了世界军事格局。, detailed craftsmanship: 骑兵, 南北朝, 军事革命, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-W-0025-L02",
+    "era": "LJ",
+    "name": "明光铠",
+    "type": "兵器",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "明光铠是南北朝时期最精良的铁质铠甲，胸甲如镜反光。",
+    "tags": [
+      "南北朝",
+      "铠甲",
+      "铁甲"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese weapon: 明光铠, 两晋南北朝 dynasty, 明光铠是南北朝时期最精良的铁质铠甲，胸甲如镜反光。, detailed craftsmanship: 南北朝, 铠甲, 铁甲, materials: forged steel, bronze fittings, wood shaft, displayed on dark silk background with dramatic museum lighting, artifact photography style, semi-realistic illustration, vertical composition, historical accuracy, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-B-0026-L02",
+    "era": "LJ",
+    "name": "齐民要术",
+    "type": "典籍",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "齐民要术是贾思勰所著中国现存最早的完整农业百科全书。",
+    "tags": [
+      "农学",
+      "北朝",
+      "实用"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 齐民要术, 两晋南北朝 dynasty, 齐民要术是贾思勰所著中国现存最早的完整农业百科全书。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 农学, 北朝, 实用, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-B-0027-L02",
+    "era": "LJ",
+    "name": "世说新语",
+    "type": "典籍",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "世说新语记录魏晋名士言行轶事，是了解魏晋风度的重要文献。",
+    "tags": [
+      "南朝",
+      "笔记",
+      "魏晋风度"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 世说新语, 两晋南北朝 dynasty, 世说新语记录魏晋名士言行轶事，是了解魏晋风度的重要文献。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 南朝, 笔记, 魏晋风度, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-B-0028-L03",
+    "era": "LJ",
+    "name": "水经注",
+    "type": "典籍",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "水经注是郦道元著的中国古代最全面的水文地理巨著。",
+    "tags": [
+      "地理",
+      "北魏",
+      "郦道元"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, ancient Chinese classic text: 水经注, 两晋南北朝 dynasty, 水经注是郦道元著的中国古代最全面的水文地理巨著。, displayed as ancient Chinese bound book or scroll on dark wooden desk, with ink brush, inkstone, and candlelight, scholarly study atmosphere, 地理, 北魏, 郦道元, traditional Chinese literati aesthetic, semi-realistic illustration, vertical composition, warm atmospheric lighting, museum-quality artifact presentation",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-L-0029-L02",
+    "era": "LJ",
+    "name": "兰亭",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "兰亭是王羲之举办兰亭雅集书写兰亭序的千古文化圣地。",
+    "tags": [
+      "东晋",
+      "书法",
+      "绍兴"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 兰亭, 两晋南北朝 dynasty, ancient Chinese landscape scenery, 东晋, 书法, 绍兴, 兰亭是王羲之举办兰亭雅集书写兰亭序的千古文化圣地。, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-L-0030-L03",
+    "era": "LJ",
+    "name": "云冈石窟",
+    "type": "地点",
+    "rarity": "SR",
+    "level": 3,
+    "level_cn": "叁",
+    "knowledge": "云冈石窟是北魏皇家开凿的佛教石窟艺术宝库。",
+    "tags": [
+      "北魏",
+      "佛教",
+      "大同"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 云冈石窟, 两晋南北朝 dynasty, ancient Chinese landscape scenery, 北魏, 佛教, 大同, 云冈石窟是北魏皇家开凿的佛教石窟艺术宝库。, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  },
+  {
+    "card_id": "LJ-L-0031-L02",
+    "era": "LJ",
+    "name": "洛阳城",
+    "type": "地点",
+    "rarity": "R",
+    "level": 2,
+    "level_cn": "贰",
+    "knowledge": "洛阳是汉魏至北魏多朝都城，白马寺和永宁寺塔的所在地。",
+    "tags": [
+      "都城",
+      "北魏",
+      "汉魏"
+    ],
+    "prompt_positive": "masterpiece, best quality, high score, great score, absurdres, Chinese historical site 洛阳城, 两晋南北朝 dynasty, ancient Chinese architecture and landscape, 都城, 北魏, 汉魏, 洛阳是汉魏至北魏多朝都城，白马寺和永宁寺塔的所在地。, historical atmosphere: flowing Wei-Jin robes, bamboo groves, calligraphy and poetry, Buddhist grotto art, Six Dynasties refined elegance, ink painting aesthetics, traditional Chinese ink wash landscape painting aesthetic, semi-realistic Chinese historical illustration, vertical composition, atmospheric lighting, no people in foreground, museum-quality historical artwork",
+    "prompt_negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, 3d, realistic, photorealistic, photo, western, european, caucasian, knight, crusader, blonde, modern, gun, xianxia, fantasy magic, deformed, anime, chibi, cartoon, nsfw, nude, 1girl, 1boy, solo, character focus, portrait, close-up, anime girl, waifu, person, people, crowd, face, looking at viewer",
+    "framed": false,
+    "framed_path": null,
+    "thumb": null
+  }
+]

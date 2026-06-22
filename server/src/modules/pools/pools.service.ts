@@ -36,4 +36,21 @@ export class PoolsService {
     await this.poolRepo.remove(pool);
     return { deleted: true };
   }
+
+  /** 快速切换上下架状态 */
+  async toggleActive(id: number) {
+    const pool = await this.findOne(id);
+    pool.is_active = !pool.is_active;
+    return this.poolRepo.save(pool);
+  }
+
+  /** 批量上下架 */
+  async batchToggle(ids: number[], active: boolean) {
+    const pools = await this.poolRepo.findByIds(ids);
+    for (const pool of pools) {
+      pool.is_active = active;
+    }
+    const saved = await this.poolRepo.save(pools);
+    return { updated: saved.length };
+  }
 }

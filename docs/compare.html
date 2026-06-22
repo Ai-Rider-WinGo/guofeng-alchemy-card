@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><title>模型对比</title>
+<style>body{background:#12100e;color:#d4c8b8;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+h1{color:#c9a85c}h2{color:#c9a85c;font-size:1.1em;margin:24px 0 10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#1e1b17;border:1px solid #2e2820;border-radius:6px;overflow:hidden}
+.card img{width:100%}.card .lbl{padding:8px 10px;font-size:0.85em;color:#7a7060}
+.card .lbl strong{color:#c9a85c}.card .lbl em{color:#7a7060;font-size:0.8em}
+.l-ani{border-color:#8eaac9}.l-gf{border-color:#e9b84c}
+</style></head><body>
+<h1>对比：Animagine XL vs GuoFeng4.1</h1>
+<div id="cmp"></div>
+<script>
+const subs=[
+  {name:'关羽',an:'TEST-FX-001',gf:'TEST-GF2-001',feat:'红脸·青龙偃月刀·丹凤眼'},
+  {name:'诸葛亮',an:'TEST-FX-002',gf:'TEST-GF2-002',feat:'白袍·羽扇·星图竹简'},
+  {name:'李世民',an:'TEST-FX-003',gf:'TEST-GF2-003',feat:'黄龙袍·玉带·红柱宫殿'},
+  {name:'巨鹿之战',an:'TEST-FX-004',gf:'TEST-GF2-004',feat:'项羽冲锋·楚秦旌旗'},
+];
+let h='';
+subs.forEach(s=>{
+  h+=`<h2>${s.name} · <small>${s.feat}</small></h2>`;
+  h+=`<div class="row">`;
+  h+=`<div class="card l-ani"><img src="/assets-output/cards/originals-v2/${s.an}.png"><div class="lbl"><strong>Animagine XL</strong> <em>卡牌味·日漫感</em></div></div>`;
+  h+=`<div class="card l-gf"><img src="/assets-output/cards/originals-v2/${s.gf}.png"><div class="lbl"><strong>GuoFeng4.1</strong> <em>国风味·2.5D</em></div></div>`;
+  h+=`</div>`;
+});
+document.getElementById('cmp').innerHTML=h;
+</script>
+</body></html>

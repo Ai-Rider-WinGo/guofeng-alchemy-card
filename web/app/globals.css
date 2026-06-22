@@ -779,3 +779,328 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-bronze/50;
 }
+
+/* =========================================================
+   重建组件样式（Toast / StickyHeader / PageTransition
+   / BannerCarousel / AlchemyFurnace）
+   ========================================================= */
+
+/* ---- PageTransition：页面淡入上浮 ---- */
+.page-transition {
+  animation: page-transition-in 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes page-transition-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Toast ---- */
+.toast-viewport {
+  position: fixed;
+  top: max(env(safe-area-inset-top), 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  width: 92%;
+  max-width: 420px;
+}
+.toast-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  animation: toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.toast-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.toast-message {
+  color: #f4e2b2;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---- StickyHeader ---- */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 10px 16px 8px;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.7));
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(216, 177, 90, 0.12);
+}
+.sticky-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.sticky-header-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f4e2b2;
+  margin: 0;
+}
+.sticky-header-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: #8e7a55;
+  margin: 2px 0 0;
+}
+.sticky-header-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.1;
+}
+.sticky-header-count {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #d8b15a;
+  font-variant-numeric: tabular-nums;
+}
+.sticky-header-total {
+  color: #5c4e38;
+  font-weight: 400;
+}
+.sticky-header-percent {
+  font-size: 0.66rem;
+  color: #8e7a55;
+}
+.sticky-header-bar {
+  margin-top: 8px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(216, 177, 90, 0.12);
+  overflow: hidden;
+}
+.sticky-header-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8b1e18, #d8b15a);
+  transition: width 0.4s ease;
+}
+
+/* ---- BannerCarousel ---- */
+.banner-carousel {
+  position: relative;
+  width: 100%;
+}
+.banner-carousel-track {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  height: 76px;
+  background: rgba(20, 16, 10, 0.6);
+  border: 1px solid rgba(216, 177, 90, 0.16);
+}
+.banner-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.banner-card-icon {
+  font-size: 1.6rem;
+}
+.banner-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.banner-card-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f4e2b2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.banner-card-subtitle {
+  font-size: 0.74rem;
+  color: #8e7a55;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.banner-card-cta {
+  color: #d8b15a;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.banner-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.banner-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(216, 177, 90, 0.25);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.banner-dot-active {
+  width: 16px;
+  background: #d8b15a;
+}
+
+/* ---- AlchemyFurnace 炼金炉 ---- */
+.alchemy-furnace {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0 12px;
+}
+.alchemy-furnace-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(246, 106, 42, 0.35) 0%, rgba(216, 177, 90, 0.12) 40%, transparent 70%);
+  filter: blur(8px);
+  animation: furnace-glow 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes furnace-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+.alchemy-furnace-body {
+  position: relative;
+  width: 120px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.alchemy-furnace-mouth {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 14px;
+  border-radius: 50% 50% 30% 30%;
+  background: linear-gradient(to bottom, #2a1408, #0d0805);
+  border: 1px solid rgba(216, 177, 90, 0.4);
+  box-shadow: inset 0 2px 6px rgba(246, 106, 42, 0.6);
+}
+.alchemy-furnace-rune {
+  width: 92px;
+  height: 92px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #f4e2b2;
+  background: linear-gradient(160deg, #2a1c10 0%, #1a1208 60%, #100a04 100%);
+  border: 1px solid rgba(216, 177, 90, 0.5);
+  box-shadow: 0 0 24px rgba(216, 177, 90, 0.25), inset 0 0 18px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 12px rgba(246, 106, 42, 0.7);
+}
+.alchemy-furnace-flame {
+  position: absolute;
+  top: -6px;
+  width: 20px;
+  height: 28px;
+  background: radial-gradient(ellipse at bottom, rgba(246, 106, 42, 0.9), rgba(216, 177, 90, 0.4) 60%, transparent);
+  border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+  filter: blur(2px);
+  animation: furnace-flame 0.9s ease-in-out infinite alternate;
+}
+@keyframes furnace-flame {
+  from {
+    transform: scaleY(1) translateY(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: scaleY(1.25) translateY(-4px);
+    opacity: 1;
+  }
+}
+.alchemy-furnace-particles {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+}
+.alchemy-furnace-particles span {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(216, 177, 90, 0.8);
+  animation: furnace-particle 2.6s linear infinite;
+  animation-delay: calc(var(--i) * 0.5s);
+}
+@keyframes furnace-particle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc((var(--i) - 2) * 14px), -90px) scale(0.2);
+    opacity: 0;
+  }
+}
+.alchemy-furnace-caption {
+  margin-top: 14px;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  color: #8e7a55;
+}

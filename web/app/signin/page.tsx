@@ -6,12 +6,15 @@ import { PageLayout } from '@/components/PageLayout'
 import { useGame } from '@/lib/gameContext'
 import { doSignIn } from '@/lib/storage'
 import signInRewards from '@/config/signin_rewards.json'
+import { doSignin as apiSignin, isLoggedIn } from '@/lib/api/game'
+import { useToast } from '@/components/Toast'
 
 const WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日']
 const rewards = (signInRewards as { cycle: number; rewards: Array<{ day: number; type: string; amount: number; label: string }> }).rewards
 
 export default function SignInPage() {
   const { gameState, updateGameState } = useGame()
+  const { showToast } = useToast()
   const [justClaimed, setJustClaimed] = useState<string | null>(null)
 
   const streak = gameState.signIn?.streak || 0
@@ -19,7 +22,25 @@ export default function SignInPage() {
   const today = new Date().toISOString().slice(0, 10)
   const alreadySignedToday = gameState.signIn?.lastSignInDate === today
 
-  const handleSignIn = () => {
+  const handleSignIn = async () => {
+    // 联机模式：调后端签到（服务端记录+发金币）
+    if (isLoggedIn()) {
+      try {
+        const res = await apiSignin()
+        // 同步本地连续天数显示
+        const newState = { ...gameState, signIn: { streak: res.streak, currentCycleDay: ((res.streak - 1) % 7) + 1, lastSignInDate: res.signin_date } }
+        updateGameState(newState)
+        const rewardDesc = res.rewards.map((r) => `${r.type === 'coins' ? '金币' : r.type}+${r.amount}`).join('、')
+        setJustClaimed(rewardDesc)
+        showToast(`签到成功!连续${res.streak}天 · ${rewardDesc}`, 'reward', '🎁')
+        setTimeout(() => setJustClaimed(null), 2500)
+        return
+      } catch (e: any) {
+        showToast(e.message || '签到失败', 'error')
+        return
+      }
+    }
+    // 游客模式：本地
     const { newState, reward } = doSignIn(gameState)
     updateGameState(newState)
     if (reward) { setJustClaimed(reward.label); setTimeout(() => setJustClaimed(null), 2500) }

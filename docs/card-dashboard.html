@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>国风炼金 · 控制台</title>
+<style>
+:root{--bg:#12100e;--cbg:#1e1b17;--bd:#2e2820;--g:#c9a85c;--t:#d4c8b8;--dim:#7a7060;--r:#c95c5c;--grn:#6b9e6b;--blu:#6b8ec9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t);font-family:"Microsoft YaHei","PingFang SC",sans-serif;display:flex;min-height:100vh}
+/* Sidebar */
+.sidebar{width:200px;background:var(--cbg);border-right:1px solid var(--bd);padding:16px 0;display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:50}
+.sidebar .logo{padding:0 16px 16px;color:var(--g);font-size:1.1em;font-weight:bold;border-bottom:1px solid var(--bd)}
+.sidebar a{display:block;padding:10px 16px;color:var(--dim);text-decoration:none;font-size:0.85em;transition:.15s}
+.sidebar a:hover,.sidebar a.on{color:var(--t);background:rgba(255,255,255,0.03);border-left:3px solid var(--g);padding-left:13px}
+/* Main */
+.main{margin-left:200px;flex:1;display:flex;flex-direction:column}
+.page{display:none;flex:1}.page.on{display:flex;flex-direction:column;overflow:hidden}
+/* ── Shared ── */
+.hdr{padding:12px 24px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--bd);background:var(--cbg);flex-shrink:0}
+.hdr h2{color:var(--g);font-size:1.1em}.hdr .sub{color:var(--dim);font-size:0.75em}
+.stat-bar{display:flex;gap:14px;font-size:0.78em;margin-left:auto}.stat-bar b{color:var(--g)}
+/* ── Stats Grid ── */
+.hero-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;padding:16px 24px}
+.scard{background:var(--cbg);border:1px solid var(--bd);border-radius:8px;padding:14px;text-align:center}
+.scard .n{font-size:1.5em;font-weight:bold;color:var(--g)}.scard .l{font-size:0.7em;color:var(--dim);margin-top:3px}
+.scard.sm .n{font-size:1.1em}
+/* ── Gameplay Cards ── */
+.gp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding:16px 24px}
+.gp-card{background:var(--cbg);border:1px solid var(--bd);border-radius:8px;padding:16px}
+.gp-card h3{color:var(--g);font-size:0.95em;margin-bottom:8px}
+.gp-card p{font-size:0.78em;color:var(--dim);line-height:1.5}
+.gp-card .badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:0.7em;margin:2px;background:rgba(255,255,255,0.06);color:var(--dim)}
+.gp-card .val{color:var(--blu);font-weight:bold}
+/* ── Table ── */
+.ctl select,.ctl input,.ctl button{background:var(--bg);border:1px solid var(--bd);color:var(--t);padding:5px 10px;border-radius:4px;font-size:0.85em}
+.ctl button{cursor:pointer}.ctl button:hover{border-color:var(--g)}.gap{flex:1}
+.tbl-outer{overflow:auto;margin:0;flex:1}
+.tbl-outer table thead th{position:sticky;top:0;z-index:2;background:var(--cbg)}
+table{border-collapse:collapse;font-size:0.72em;min-width:2000px;width:100%}
+th{background:var(--cbg);color:var(--g);padding:7px 5px;text-align:left;border-bottom:2px solid var(--bd);white-space:nowrap}
+td{padding:5px;border-bottom:1px solid rgba(255,255,255,0.03);white-space:nowrap}
+td.wrap{white-space:normal;max-width:150px;word-break:break-all}
+tr:hover td{background:rgba(255,255,255,0.02)}
+.rare{display:inline-block;padding:1px 6px;border-radius:3px;font-size:0.85em;font-weight:bold}
+.rc{background:#2e2820;color:#c9a85c}.ru{background:#1e2e1e;color:#8ec98e}.rr{background:#1e1e2e;color:#8eaac9}.re{background:#2e1e2e;color:#c98ec9}.rl{background:#2e2a1a;color:#e9b84c}
+.ok{color:var(--grn);font-weight:bold}
+.pv{width:40px;height:56px;object-fit:cover;border-radius:2px;cursor:pointer;border:1px solid var(--bd)}.pv:hover{border-color:var(--g)}
+.pv-none{width:40px;height:56px;border-radius:2px;border:1px dashed var(--bd);display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:0.5em}
+.tag{display:inline-block;padding:1px 6px;border-radius:3px;background:rgba(255,255,255,0.04);color:var(--dim);font-size:0.72em;margin:1px 2px}
+.era-tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:0.78em;font-weight:bold}
+.era-QH{background:#2e2a1a;color:#e9b84c}.era-SG{background:#2e1e1e;color:#c98e8e}.era-LJ{background:#1e2e1e;color:#8ec98e}
+.era-ST{background:#2e2a2e;color:#c9a8c9}.era-SY{background:#1e1e2e;color:#8eaac9}.era-MQ{background:#2e2820;color:#c9a85c}
+.pgn{display:flex;justify-content:center;align-items:center;gap:6px;padding:12px;font-size:0.85em}
+.pgn button{background:var(--cbg);border:1px solid var(--bd);color:var(--t);padding:5px 12px;border-radius:4px;cursor:pointer}
+.pgn button.on{background:var(--g);color:var(--bg);border-color:var(--g)}.pgn button:disabled{opacity:0.3}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:200;align-items:center;justify-content:center;flex-direction:column}
+.modal.on{display:flex}.modal img{max-width:90vw;max-height:76vh;border-radius:6px}
+.modal .cls{position:fixed;top:12px;right:24px;color:var(--t);font-size:2.5em;cursor:pointer;background:none;border:none;z-index:201}
+#promptModal.on{display:flex}
+.modal-nav{display:flex;gap:12px;align-items:center;margin-top:12px}
+.modal-nav button{background:var(--cbg);border:1px solid var(--bd);color:var(--t);padding:7px 18px;border-radius:6px;cursor:pointer;font-size:0.9em}
+.modal-nav button:hover{border-color:var(--g);color:var(--g)}
+.modal-nav button.reg{background:var(--g);color:var(--bg)}
+.modal-info{color:var(--dim);font-size:0.8em;margin-top:6px}
+.tabs{display:flex;gap:0;padding:0 24px;background:var(--cbg);border-bottom:1px solid var(--bd);flex-shrink:0}
+.ctl{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:0.78em;padding:8px 24px;border-bottom:1px solid var(--bd);background:var(--cbg);flex-shrink:0}
+.tabs button{background:none;border:none;color:var(--dim);padding:7px 14px;cursor:pointer;font-size:0.78em;border-bottom:2px solid transparent}
+.tabs button:hover{color:var(--t)}.tabs button.on{color:var(--g);border-bottom-color:var(--g)}
+</style>
+</head>
+<body>
+<nav class="sidebar">
+  <div class="logo">🏯 国风炼金</div>
+  <a class="on" href="#" data-page="cards">📋 卡牌总表</a>
+  <a href="#" data-page="stats">📊 数据统计</a>
+  <a href="#" data-page="gameplay">🎮 玩法规则</a>
+</nav>
+<div class="main">
+  <!-- ════════ CARDS ════════ -->
+  <div class="page on" id="page-cards">
+    <div class="hdr"><h2>卡牌总表</h2><span class="sub">Animagine XL · 133</span><div class="stat-bar"><span>已生产 <b id="cDone">0</b></span></div></div>
+    <div class="tabs" id="cTabs"></div>
+    <div class="ctl">
+      <select id="sCol" onchange="doSort()"><option value="no">编号</option><option value="n">名称</option><option value="lv">等级</option><option value="era">板块</option><option value="t">类型</option></select>
+      <select id="sDir" onchange="doSort()"><option value="1">升序</option><option value="-1">降序</option></select>
+      <select id="fEra"><option value="">全部板块</option></select>
+      <select id="fLevel"><option value="">全部等级</option></select>
+      <select id="fType"><option value="">全部类型</option></select>
+      <select id="fRarity"><option value="">全部稀有度</option></select>
+      <input id="fSearch" placeholder="🔍 搜索..." oninput="doFilter()" style="width:130px">
+      <button onclick="resetFilters()">重置</button>
+      <span class="gap"></span>
+      <span style="color:var(--dim);font-size:0.8em">每页:</span>
+      <select id="pageSize" onchange="changePS()"><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="400">400</option></select>
+      <span style="color:var(--dim);font-size:0.75em" id="rowInfo"></span>
+    </div>
+	    <div class="tbl-outer">
+	      <table><thead><tr><th>编号</th><th>板块</th><th>名称</th><th>类型</th><th>稀有度</th><th>等级</th><th>知识点</th><th>标签</th><th>状态</th><th>主提示词</th><th>副提示词</th><th>预览</th></tr></thead><tbody id="tb"></tbody></table>
+    </div>
+    <div class="pgn" id="pgn"></div>
+  </div>
+  <!-- ════════ STATS ════════ -->
+  <div class="page" id="page-stats">
+    <div class="hdr"><h2>数据统计</h2><span class="sub">生产进度 · 等级分布 · 板块分析</span></div>
+    <div class="hero-grid" id="sGrid"></div>
+    <div style="padding:0 24px"><h3 style="color:var(--g);font-size:0.9em;margin-bottom:8px">板块分布</h3></div>
+    <div class="gp-grid" id="eraGrid"></div>
+  </div>
+  <!-- ════════ GAMEPLAY ════════ -->
+  <div class="page" id="page-gameplay">
+    <div class="hdr"><h2>玩法规则</h2><span class="sub">国风炼金 · 历史知识卡牌对战</span></div>
+    <div style="padding:24px;overflow-y:auto;flex:1">
+      <div class="gp-grid">
+        <div class="gp-card">
+          <h3>🎯 核心玩法</h3>
+          <p>收集不同历史板块的卡牌，通过 <span class="val">炼金合成</span> 将低级卡升级为高级卡。同一历史的卡牌可以合成更高等级的终极卡。</p>
+        </div>
+        <div class="gp-card">
+          <h3>📊 等级体系</h3>
+          <p><span class="badge">壹 Lv1</span> <span class="badge">贰 Lv2</span> <span class="badge">叁 Lv3</span> <span class="badge">肆 Lv4</span> <span class="badge">伍 Lv5</span> <span class="badge">Lv6-12</span></p>
+          <p style="margin-top:6px">等级越高越稀有，合成需要消耗多张同级卡 + 时间/道具</p>
+        </div>
+        <div class="gp-card">
+          <h3>🏛️ 六大板块</h3>
+          <p><span class="era-tag era-QH">秦汉</span> <span class="era-tag era-SG">三国</span> <span class="era-tag era-LJ">两晋</span> <span class="era-tag era-ST">隋唐</span> <span class="era-tag era-SY">宋元</span> <span class="era-tag era-MQ">明清</span></p>
+          <p style="margin-top:6px">每板块覆盖该时期的人物、地点、事件、势力、人物关系、阶段事件</p>
+        </div>
+        <div class="gp-card">
+          <h3>🃏 卡牌类型</h3>
+          <p><span class="badge">人物</span> <span class="badge">地点</span> <span class="badge">事件</span> <span class="badge">势力</span> <span class="badge">人物关系</span> <span class="badge">阶段事件</span></p>
+          <p style="margin-top:6px">不同类型的卡有不同技能效果，组合搭配形成策略</p>
+        </div>
+        <div class="gp-card">
+          <h3>🔄 炼金合成</h3>
+          <p>2张<span class="val">同等级</span> + 1张<span class="val">同板块</span> = 1张<span class="val">高一级</span></p>
+          <p style="margin-top:4px">消耗配方：<span class="val">3×Lv1</span> → Lv2，<span class="val">2×Lv2 + 1×Lv1</span> → Lv3，具体规则见 <code>merge_rules.json</code></p>
+        </div>
+        <div class="gp-card">
+          <h3>📅 每日/每周</h3>
+          <p>每日抽卡池：<span class="val">上限N张</span>（见 <code>daily_limits.json</code>）</p>
+          <p>每周收集奖励：<span class="val">集齐特定组合得额外卡</span>（见 <code>weekly_collection_rewards.json</code>）</p>
+          <p>重复卡转换：<span class="val">3张重复 → 随机同等级</span>（见 <code>duplicate_conversion_rules.json</code>）</p>
+        </div>
+        <div class="gp-card">
+          <h3>🎨 视觉规格</h3>
+          <p>卡面尺寸：<span class="val">960×1408</span></p>
+          <p>模型：<span class="val">Animagine XL 4.0</span> · 风格：semi-realistic Chinese historical illustration</p>
+          <p>边框：等级纹样框（铜→钢→银→鎏金→赤金→传说）</p>
+        </div>
+        <div class="gp-card">
+          <h3>📐 编号规则</h3>
+          <p><code>XX-?-NNNN-LNN</code></p>
+          <p><span class="val">XX</span>=板块代码 <span class="val">?</span>=类型 <span class="val">NNNN</span>=序号 <span class="val">LNN</span>=等级</p>
+          <p style="margin-top:4px">例：<span class="val">SG-P-0002-L02</span> = 三国·人物·0002·等级贰</p>
+        </div>
+        <div style="padding:0 24px;margin-top:20px"><h3 style="color:var(--g);font-size:0.9em;margin-bottom:4px">🎨 AI生图提示词规则</h3><span style="color:var(--dim);font-size:0.72em">模型 Animagine XL 4.0 · CFG 7.0 · 960×1408 · 六大类型结构化模板</span></div>
+        <div class="gp-grid" style="padding-top:0">
+          <div class="gp-card">
+            <h3>👤 人物 (Person)</h3>
+            <p style="font-size:0.72em;color:var(--dim);margin-bottom:4px">角色名 + 朝代 + 身份 + 服饰 + 场景 + 情绪姿态 + 国风半写实 + 竖版</p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">男性：<span class="val">masculine rugged East Asian man, strong jaw, short black beard, broad shoulders, period-correct robes/armor</span></p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">女性：<span class="val">dignified East Asian woman, classical beauty, elaborate hanfu robes, historical hair ornaments</span></p>
+            <p style="font-size:0.7em;margin-top:4px">🔒 防女化负面词：<span style="color:var(--r)">female, woman, 1girl, feminine, soft face, pretty boy, bishounen, makeup, cute, kawaii, moe, waifu, slender, cross-dressing</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>📍 地点 (Place)</h3>
+            <p style="font-size:0.72em;color:var(--dim);margin-bottom:4px">地名 + 朝代 + 建筑/地貌 + 知识点 + 时代氛围 + 国风山水 + 竖版</p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">模板：<span class="val">Chinese historical site {name}, {dynasty}, ancient Chinese architecture/landscape, {kp}, traditional ink wash painting aesthetic, no people in foreground</span></p>
+            <p style="font-size:0.7em;margin-top:4px">🔒 禁止人物：<span style="color:var(--r)">1girl, 1boy, character focus, portrait, person, people, face, looking at viewer</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>⚔️ 事件 (Event)</h3>
+            <p style="font-size:0.72em;color:var(--dim);margin-bottom:4px">事件名 + 历史阶段 + 核心场景 + 双方势力 + 氛围 + 国风史诗 + 竖版</p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">模板：<span class="val">Chinese historical event: {name}, {dynasty}, dramatic scene depicting {kp}, epic Chinese historical painting, ancient scroll composition, dramatic lighting</span></p>
+            <p style="font-size:0.7em;margin-top:4px">🔒 禁止人物前景：<span style="color:var(--r)">1girl, 1boy, solo, character focus, portrait, close-up, anime girl</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>🗡️ 兵器 (Weapon)</h3>
+            <p style="font-size:0.72em;color:var(--dim);margin-bottom:4px">兵器名 + 朝代 + 工艺 + 材质 + 博物馆陈列光 + 文物摄影风 + 竖版</p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">模板：<span class="val">ancient Chinese weapon: {name}, {dynasty}, detailed craftsmanship, forged steel & bronze, displayed on dark silk, dramatic museum lighting, artifact photography</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>📜 典籍 (Book)</h3>
+            <p style="font-size:0.72em;color:var(--dim);margin-bottom:4px">书名 + 朝代 + 书卷形态 + 笔墨纸砚 + 烛光氛围 + 文人书房 + 竖版</p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">模板：<span class="val">ancient Chinese classic text: {name}, {dynasty}, displayed as bound book or scroll on dark wooden desk, ink brush & inkstone, candlelight, scholarly atmosphere</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>🏛️ 朝代 (Dynasty)</h3>
+            <p style="font-size:0.72em;color:var(--dim);margin-bottom:4px">朝代名 + 帝国象征 + 标志元素 + 宏伟气场 + 金色盛世 + 竖版</p>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">模板：<span class="val">Chinese imperial dynasty symbol: {name}, iconic elements: {tags}, grand imperial scale, majestic golden age atmosphere, semi-realistic historical painting</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>🔧 通用质量增强标签</h3>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">所有正向prompt前缀：<span class="val">masterpiece, best quality, high score, great score, absurdres</span></p>
+          </div>
+          <div class="gp-card">
+            <h3>🚫 通用负面约束</h3>
+            <p style="font-size:0.7em;color:var(--r);line-height:1.4">lowres, bad anatomy, text, watermark, signature, western, european, caucasian, modern, gun, 3d, photorealistic, anime, chibi, cartoon, nsfw, deformed, xianxia, fantasy magic</p>
+            <p style="font-size:0.68em;color:var(--dim);margin-top:4px">注：男性人物额外叠加「防女化20词」；非人物卡叠加「禁止人物前景」；女性人物叠加「防男性化」</p>
+          </div>
+          <div class="gp-card">
+            <h3>🏷️ 朝代视觉关键词库</h3>
+            <p style="font-size:0.68em;color:var(--dim);margin-bottom:2px">每个朝代注入对应的视觉指引，增强历史准确度：</p>
+            <p style="font-size:0.67em;line-height:1.5"><span class="era-tag era-QH">秦汉</span> black Qin robes, bronze armor, Great Wall, terracotta, solemnity<br><span class="era-tag era-SG">三国</span> Three Kingdoms chaos, red cliffs, heroic warriors, Han banners<br><span class="era-tag era-LJ">两晋</span> flowing robes, bamboo groves, calligraphy, Buddhist grottoes<br><span class="era-tag era-ST">隋唐</span> golden age, silk road, peony flowers, tri-color pottery<br><span class="era-tag era-SY">宋元</span> ink wash landscape, celadon porcelain, canal cities, gardens<br><span class="era-tag era-MQ">明清</span> imperial grandeur, Forbidden City, dragon motifs, blue-white porcelain</p>
+          </div>
+          <div class="gp-card">
+            <h3>👥 性别自动检测</h3>
+            <p style="font-size:0.7em;color:var(--t);line-height:1.4">内置 <span class="val">80+男性</span> + <span class="val">10+女性</span> 历史人物名册。无法判断时默认男性（宁可粗犷也不娘化）。标签/知识点中出现「女/皇后/妃/姬/公主/才女」→判女性；「帝/王/将/帅/臣/皇/霸」→判男性</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal" onclick="event.target===this&&this.classList.remove('on')"><button class="cls" onclick="document.getElementById('modal').classList.remove('on')">&times;</button><img id="modalImg" src=""><div class="modal-nav"><button onclick="navCard(-1)">◀</button><button onclick="navCard(1)">▶</button><button class="reg" onclick="regenCard()">🔄 重生成</button></div><div class="modal-info" id="modalInfo"></div></div>
+<div class="modal" id="promptModal" onclick="event.target===this&&this.classList.remove('on')"><div style="background:var(--cbg);border:1px solid var(--bd);border-radius:8px;padding:20px;max-width:800px;width:90vw;max-height:80vh;overflow-y:auto"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><h3 style="color:var(--g);margin:0" id="promptModalTitle">提示词详情</h3><button class="cls" style="position:static;font-size:1.5em" onclick="document.getElementById('promptModal').classList.remove('on')">&times;</button></div><pre id="promptModalBody" style="color:var(--t);font-size:0.75em;white-space:pre-wrap;word-break:break-all;line-height:1.6;background:var(--bg);padding:12px;border-radius:4px;border:1px solid var(--bd)"></pre></div></div>
+
+<script>
+// ── Navigation ──
+document.querySelectorAll('.sidebar a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();navTo(e.target.dataset.page)})});
+function navTo(p){
+  document.querySelectorAll('.sidebar a').forEach(a=>a.classList.toggle('on',a.dataset.page===p));
+  document.querySelectorAll('.page').forEach(g=>g.classList.toggle('on',g.id==='page-'+p));
+}
+
+// ── Data ──
+const CN={1:'壹',2:'贰',3:'叁',4:'肆',5:'伍',6:'陆',7:'柒',8:'捌',9:'玖',10:'拾',11:'拾壹',12:'拾贰'};
+const RC={Common:'rc',Uncommon:'ru',Rare:'rr',Epic:'re',Legendary:'rl'};
+const ERAS=[{code:'QH',name:'秦汉',css:'era-QH'},{code:'SG',name:'三国',css:'era-SG'},{code:'LJ',name:'两晋',css:'era-LJ'},{code:'ST',name:'隋唐',css:'era-ST'},{code:'SY',name:'宋元',css:'era-SY'},{code:'MQ',name:'明清',css:'era-MQ'}];
+let all=[],filt=[],pg=0,pp=50,sc='no',sd=1,curIdx=-1,tab='all';
+
+async function init(){
+  const data=await(await fetch('/api/cards')).json();
+  ERAS.forEach(e=>{let o=document.createElement('option');o.value=e.code;o.textContent=e.name;document.getElementById('fEra').appendChild(o)});
+  for(let i=1;i<=5;i++){let o=document.createElement('option');o.value=i;o.textContent=CN[i];document.getElementById('fLevel').appendChild(o)}
+  ['人物','事件','兵器','典籍','地点','朝代'].forEach(t=>{let o=document.createElement('option');o.value=t;o.textContent=t;document.getElementById('fType').appendChild(o)});
+  ['Common','Uncommon','Rare','Epic','Legendary'].forEach(r=>{let o=document.createElement('option');o.value=r;o.textContent=r;document.getElementById('fRarity').appendChild(o)});
+  
+	  data.forEach(c=>{
+	    const isV2=/^[A-Z]{2}-/.test(c.card_id);
+	    all.push({
+	      no:c.card_id,era:isV2?c.card_id.substring(0,2):'QH',cid:c.card_id,
+	      n:c.name,t:c.type,r:c.rarity,lv:c.level,lvcn:c.level_cn,
+	      kp:c.knowledge||'',tags:(c.tags||[]).slice(0,5),status:c.framed?'done':'pending',
+	      path:c.framed_path||'',thumb:c.framed_path?'/'+c.framed_path:'',
+	      pp:c.prompt_positive||'',pn:c.prompt_negative||''
+	    });
+	  });
+  
+  document.getElementById('cTabs').innerHTML=`<button class="on" onclick="setTab('all')">📋 全部 ${all.length}</button><button onclick="setTab('done')">✅ 已生产 ${all.length}</button>`;
+  document.getElementById('cDone').textContent=all.length;
+  
+  // Stats page
+  buildStats();
+  
+  doFilter();
+}
+
+function setTab(t){tab=t;document.querySelectorAll('#cTabs button').forEach((b,i)=>{b.classList.toggle('on',(i===0&&t==='all')||(i===1&&t==='done'))});doFilter();}
+
+function buildStats(){
+  const lc={};all.forEach(c=>{lc[c.lv]=(lc[c.lv]||0)+1});
+  const ec={};all.forEach(c=>{ec[c.era]=(ec[c.era]||0)+1});
+  
+  let h=`<div class="scard"><div class="n">${all.length}</div><div class="l">已生产卡牌</div></div>`;
+  h+=`<div class="scard"><div class="n">${Object.keys(ec).length}</div><div class="l">历史板块</div></div>`;
+  h+=`<div class="scard"><div class="n" style="color:var(--grn)">100%</div><div class="l">合成成功率</div></div>`;
+  [1,2,3,4,5].forEach(lv=>{h+=`<div class="scard sm"><div class="n">${lc[lv]||0}</div><div class="l">等级${CN[lv]}</div></div>`});
+  document.getElementById('sGrid').innerHTML=h;
+  
+  let eh='';
+  ERAS.forEach(e=>{
+    const cnt=ec[e.code]||0;
+    const lvs={};all.filter(c=>c.era===e.code).forEach(c=>{lvs[c.lv]=(lvs[c.lv]||0)+1});
+    eh+=`<div class="gp-card"><h3><span class="era-tag ${e.css}">${e.name}</span> · ${cnt}张</h3><p>${[1,2,3,4,5].map(lv=>`<span class="badge">${CN[lv]} ${lvs[lv]||0}张</span>`).join(' ')}</p></div>`;
+  });
+  document.getElementById('eraGrid').innerHTML=eh;
+}
+
+function doSort(){sc=document.getElementById('sCol').value;sd=parseInt(document.getElementById('sDir').value);doFilter();}
+function changePS(){pp=parseInt(document.getElementById('pageSize').value);pg=0;render();}
+
+function doFilter(){
+  const fe=document.getElementById('fEra').value,fl=document.getElementById('fLevel').value,ft=document.getElementById('fType').value,fr=document.getElementById('fRarity').value,fq=document.getElementById('fSearch').value.toLowerCase();
+  filt=all.filter(r=>{
+    if(tab==='done'&&r.status!=='done')return false;
+    if(fe&&r.era!==fe)return false;if(fl&&r.lv!=parseInt(fl))return false;if(ft&&r.t!==ft)return false;if(fr&&r.r!==fr)return false;
+    if(fq&&!r.n.includes(fq)&&!r.no.toLowerCase().includes(fq))return false;
+    return true;
+  });
+  const cmp={no:(a,b)=>a.no.localeCompare(b.no),n:(a,b)=>a.n.localeCompare(b.n,'zh'),lv:(a,b)=>(a.lv-b.lv)||a.n.localeCompare(b.n,'zh'),era:(a,b)=>a.era.localeCompare(b.era)||(a.lv-b.lv),t:(a,b)=>a.t.localeCompare(b.t,'zh')||(a.lv-b.lv),r:(a,b)=>a.r.localeCompare(b.r)||(a.lv-b.lv)};
+  if(cmp[sc])filt.sort((a,b)=>cmp[sc](a,b)*sd);
+  pg=0;render();
+}
+function resetFilters(){['fEra','fLevel','fType','fRarity'].forEach(id=>document.getElementById(id).value='');document.getElementById('fSearch').value='';doFilter();}
+
+function render(){
+  const t=filt.length,pages=Math.ceil(t/pp),s=pg*pp,b=filt.slice(s,s+pp);
+  document.getElementById('rowInfo').textContent=`${s+1}-${Math.min(s+pp,t)} / ${t}`;
+	  document.getElementById('tb').innerHTML=b.map(r=>{
+	    const eo=ERAS.find(e=>e.code===r.era);
+	    const ppShort=r.pp?r.pp.substring(0,80):'';
+	    const pnShort=r.pn?r.pn.substring(0,80):'';
+	    return`<tr><td style="font-family:monospace;font-size:0.78em">${r.no}</td><td>${eo?`<span class="era-tag ${eo.css}">${eo.name}</span>`:r.era}</td><td><strong>${r.n}</strong></td><td>${r.t}</td><td>${r.r?`<span class="rare ${RC[r.r]||''}">${r.r}</span>`:'—'}</td><td>${r.lvcn||CN[r.lv]||r.lv}</td><td class="wrap" style="font-size:0.75em;color:var(--dim)">${r.kp||'—'}</td><td>${r.tags.length?r.tags.map(tg=>`<span class="tag">#${tg}</span>`).join(''):'—'}</td><td>${r.status==='done'?'<span class="ok">✅已生产</span>':'<span style="color:var(--dim)">⏳待生成</span>'}</td><td class="wrap" style="font-size:0.65em;color:var(--blu);cursor:pointer" title="${(r.pp||'').replace(/"/g,'&quot;')}" onclick="showPrompt('${r.no}','pos')">${ppShort}${r.pp&&r.pp.length>80?'…':''}</td><td class="wrap" style="font-size:0.65em;color:var(--r);cursor:pointer" title="${(r.pn||'').replace(/"/g,'&quot;')}" onclick="showPrompt('${r.no}','neg')">${pnShort}${r.pn&&r.pn.length>80?'…':''}</td><td>${r.thumb?`<img class="pv" src="${r.thumb}" loading="lazy" onclick="event.stopPropagation();M(${filt.indexOf(r)})">`:'<span class="pv-none">—</span>'}</td></tr>`;
+	  }).join('');
+  let h=`<button ${pg===0?'disabled':''} onclick="G(${pg-1})">◀</button>`;
+  for(let i=0;i<pages;i++){if(i<3||i>=pages-3||Math.abs(i-pg)<2)h+=`<button class="${i===pg?'on':''}" onclick="G(${i})">${i+1}</button>`;else if(Math.abs(i-pg)===2)h+='<span style="color:var(--dim)">…</span>'}
+  h+=`<button ${pg>=pages-1?'disabled':''} onclick="G(${pg+1})">▶</button>`;
+  document.getElementById('pgn').innerHTML=h;
+}
+
+function G(p){pg=Math.max(0,p);render();}
+function M(i){curIdx=i;const r=filt[i];document.getElementById('modalImg').src=r.thumb;document.getElementById('modal').classList.add('on');document.getElementById('modalInfo').textContent=`${r.no} · ${r.n} · ${r.lvcn||CN[r.lv]} · ${r.t} · ${r.r}`;}
+async function navCard(d){if(!filt.length)return;curIdx=((curIdx+d)%filt.length+filt.length)%filt.length;const r=filt[curIdx];if(r.thumb){document.getElementById('modalImg').src=r.thumb;document.getElementById('modalInfo').textContent=`${r.no} · ${r.n} · ${r.lvcn||CN[r.lv]} · ${r.t} · ${r.r}`;}else navCard(d);}
+	async function regenCard(){if(curIdx<0)return;const r=filt[curIdx];document.getElementById('modalInfo').textContent=`[提交中...]`;try{const resp=await fetch('/api/regenerate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({card_id:r.cid||r.no})});const j=await resp.json();document.getElementById('modalInfo').textContent=j.error?`[失败]${j.error}`:`[已提交] ${r.no} · seed:${j.seed}`;}catch(e){document.getElementById('modalInfo').textContent=`[失败]${e.message}`;}}
+	function showPrompt(no,type){
+	  const r=all.find(c=>c.no===no);if(!r)return;
+	  const t=type==='pos'?'主提示词 (Positive)':'副提示词 (Negative)';
+	  document.getElementById('promptModalTitle').textContent=`${r.no} ${r.n} · ${t}`;
+	  document.getElementById('promptModalBody').textContent=type==='pos'?(r.pp||'(无)'):(r.pn||'(无)');
+	  document.getElementById('promptModal').classList.add('on');
+	}
+	init();
+</script>
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><title>风格测试10张</title>
+<style>
+body{background:#12100e;color:#d4c8b8;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+h1{color:#c9a85c}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}
+.card{background:#1e1b17;border:1px solid #2e2820;border-radius:6px;overflow:hidden}
+.card img{width:100%;display:block}
+.card .lbl{padding:8px;font-size:0.85em;color:#7a7060}
+.card .lbl strong{color:#c9a85c}
+</style></head>
+<body>
+<h1>🎨 风格测试 10 张（去日漫prompt）</h1>
+<p style="color:#7a7060">模型：Animagine XL 4.0 · 关键词：中国古画/工笔/水墨 · 负向：anime/manga/cg</p>
+<div class="grid" id="g"></div>
+<script>
+const names={'TEST-GF-001':'刘邦·人物','TEST-GF-002':'项羽·人物','TEST-GF-003':'咸阳·地点','TEST-GF-004':'赤壁·地点','TEST-GF-005':'李世民·人物','TEST-GF-006':'朱雀城门·地点','TEST-GF-007':'鸿门宴·事件','TEST-GF-008':'赤壁之战·事件','TEST-GF-009':'诸葛亮·人物','TEST-GF-010':'清明上河·地点'};
+let h='';
+for(let i=1;i<=10;i++){
+  const no=`TEST-GF-${String(i).padStart(3,'0')}`, n=names[no]||no;
+  h+=`<div class="card"><img src="/assets-output/cards/originals-v2/${no}.png"><div class="lbl"><strong>${no}</strong> · ${n}</div></div>`;
+}
+document.getElementById('g').innerHTML=h;
+</script>
+</body>
+</html>

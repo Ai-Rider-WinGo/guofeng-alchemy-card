@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><title>中国风插画测试</title>
+<style>body{background:#12100e;color:#d4c8b8;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+h1{color:#c9a85c}p{color:#7a7060}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:12px}
+.card{background:#1e1b17;border:1px solid #2e2820;border-radius:6px;overflow:hidden}
+.card img{width:100%}.card .lbl{padding:8px;font-size:0.85em;color:#7a7060}
+.card .lbl strong{color:#c9a85c}
+</style></head><body>
+<h1>🎨 Juggernaut XL · 中国历史插画风</h1>
+<p>关键词：Chinese historical illustration + classical painting + rich brushstrokes · 负向：photo/photograph/anime</p>
+<div class="grid" id="g"></div>
+<script>
+const names={1:'关羽·青龙偃月刀',2:'李世民·唐太宗',3:'诸葛亮·羽扇纶巾',4:'巨鹿之战·项羽'};
+let h='';
+for(let i=1;i<=4;i++){
+  const no=`TEST-CG-${String(i).padStart(3,'0')}`;
+  h+=`<div class="card"><img src="/assets-output/cards/originals-v2/${no}.png"><div class="lbl"><strong>${no}</strong> · ${names[i]}</div></div>`;
+}
+document.getElementById('g').innerHTML=h;
+</script>
+</body></html>

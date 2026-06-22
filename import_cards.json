@@ -1,0 +1,2555 @@
+[
+  {
+    "card_id": "xingyang_001",
+    "name": "荥阳",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "荥阳是楚汉战争的核心战场，刘邦与项羽反复争夺的战略要地。",
+    "knowledge_point": "荥阳是楚汉战争的核心战场，刘邦与项羽反复争夺的战略要地。",
+    "tags": [
+      "城池",
+      "要塞",
+      "楚汉",
+      "荥阳"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "julu_001",
+    "name": "巨鹿",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "巨鹿是项羽破釜沉舟大破秦军主力的古战场，秦末战争的转折点。",
+    "knowledge_point": "巨鹿是项羽破釜沉舟大破秦军主力的古战场，秦末战争的转折点。",
+    "tags": [
+      "战场",
+      "巨鹿",
+      "项羽",
+      "破釜沉舟"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0004-L01",
+    "name": "咸阳",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "咸阳是秦朝都城，中国历史上第一座大一统帝国首都。",
+    "knowledge_point": "咸阳是秦朝都城，中国历史上第一座大一统帝国首都。",
+    "tags": [
+      "秦都",
+      "关中",
+      "宫殿",
+      "帝国"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0003-L01",
+    "name": "函谷关",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "秦国东大门，一夫当关万夫莫开的军事天险。",
+    "knowledge_point": "秦国东大门，一夫当关万夫莫开的军事天险。",
+    "tags": [
+      "关中",
+      "天险",
+      "函谷",
+      "秦国"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0005-L01",
+    "name": "彭城",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "项羽定都的西楚霸王城，楚汉相争的核心战场。",
+    "knowledge_point": "项羽定都的西楚霸王城，楚汉相争的核心战场。",
+    "tags": [
+      "西楚",
+      "古都",
+      "徐州",
+      "霸王"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0006-L01",
+    "name": "汉中",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "刘邦封汉王的龙兴之地，蜀道咽喉南北要塞。",
+    "knowledge_point": "刘邦封汉王的龙兴之地，蜀道咽喉南北要塞。",
+    "tags": [
+      "刘邦",
+      "巴蜀",
+      "栈道",
+      "汉水"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0001-L01",
+    "name": "赤壁",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "赤壁之战火烧连船，三国鼎立格局从此奠定。",
+    "knowledge_point": "赤壁之战火烧连船，三国鼎立格局从此奠定。",
+    "tags": [
+      "长江",
+      "火攻",
+      "赤壁之战",
+      "战场"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0002-L01",
+    "name": "官渡",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "官渡之战曹操以少胜多，奠定北方霸业。",
+    "knowledge_point": "官渡之战曹操以少胜多，奠定北方霸业。",
+    "tags": [
+      "曹操",
+      "黄河",
+      "以少胜多",
+      "战场"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0003-L01",
+    "name": "荆州",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "三国兵家必争之地，关羽大意失荆州的千古遗恨。",
+    "knowledge_point": "三国兵家必争之地，关羽大意失荆州的千古遗恨。",
+    "tags": [
+      "关羽",
+      "江陵",
+      "九省通衢",
+      "战略要地"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0001-L01",
+    "name": "建康",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "东晋南朝三百年的都城，六朝金粉之地。",
+    "knowledge_point": "东晋南朝三百年的都城，六朝金粉之地。",
+    "tags": [
+      "六朝",
+      "金陵",
+      "秦淮",
+      "都城"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0002-L01",
+    "name": "洛阳",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "魏晋名都，白马寺与龙门石窟的佛国圣地。",
+    "knowledge_point": "魏晋名都，白马寺与龙门石窟的佛国圣地。",
+    "tags": [
+      "古都",
+      "白马寺",
+      "龙门",
+      "中原"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0003-L01",
+    "name": "金陵",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "六朝古都帝王州，钟山龙蟠石头虎踞的形胜之地。",
+    "knowledge_point": "六朝古都帝王州，钟山龙蟠石头虎踞的形胜之地。",
+    "tags": [
+      "建康",
+      "钟山",
+      "石头城",
+      "紫金山"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "ST-L-0001-L01",
+    "name": "长安",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "大唐帝国首都，丝绸之路起点，万国来朝的天下之中。",
+    "knowledge_point": "大唐帝国首都，丝绸之路起点，万国来朝的天下之中。",
+    "tags": [
+      "唐",
+      "丝路",
+      "大明宫",
+      "帝都"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "ST-L-0002-L01",
+    "name": "洛阳",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "隋唐东都，武则天定都的神都，牡丹花城。",
+    "knowledge_point": "隋唐东都，武则天定都的神都，牡丹花城。",
+    "tags": [
+      "唐",
+      "东都",
+      "神都",
+      "武则天"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "ST-L-0003-L01",
+    "name": "敦煌",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "丝绸之路上的明珠，莫高窟壁画千佛洞的佛教艺术宝库。",
+    "knowledge_point": "丝绸之路上的明珠，莫高窟壁画千佛洞的佛教艺术宝库。",
+    "tags": [
+      "丝路",
+      "莫高窟",
+      "佛教",
+      "沙漠"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SY-L-0001-L01",
+    "name": "汴京",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "北宋都城，清明上河图的繁华盛世，世界最大城市。",
+    "knowledge_point": "北宋都城，清明上河图的繁华盛世，世界最大城市。",
+    "tags": [
+      "宋",
+      "开封",
+      "清明上河",
+      "都城"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SY-L-0002-L01",
+    "name": "临安",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "南宋偏安之都，西湖歌舞几时休的烟雨江南。",
+    "knowledge_point": "南宋偏安之都，西湖歌舞几时休的烟雨江南。",
+    "tags": [
+      "南宋",
+      "西湖",
+      "江南",
+      "杭州"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SY-L-0003-L01",
+    "name": "大散关",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "宋金对峙的雄关险隘，铁马秋风大散关的边塞要塞。",
+    "knowledge_point": "宋金对峙的雄关险隘，铁马秋风大散关的边塞要塞。",
+    "tags": [
+      "宋金",
+      "铁马秋风",
+      "秦岭",
+      "关隘"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "MQ-L-0001-L01",
+    "name": "北京城",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "明清两代帝都，四九城格局的世界文化遗产之城。",
+    "knowledge_point": "明清两代帝都，四九城格局的世界文化遗产之城。",
+    "tags": [
+      "明清",
+      "帝都",
+      "紫禁",
+      "燕京"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "MQ-L-0002-L01",
+    "name": "南京",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "明朝开国都城，虎踞龙盘的六朝文脉延续。",
+    "knowledge_point": "明朝开国都城，虎踞龙盘的六朝文脉延续。",
+    "tags": [
+      "明",
+      "金陵",
+      "秦淮",
+      "古都"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "MQ-L-0003-L01",
+    "name": "山海关",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "天下第一关，万里长城东起点的山海雄关。",
+    "knowledge_point": "天下第一关，万里长城东起点的山海雄关。",
+    "tags": [
+      "长城",
+      "天下第一关",
+      "山海",
+      "边关"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0007-L01",
+    "name": "骊山",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "秦始皇陵所在地，焚书坑儒的历史现场，华清宫坐落于山麓。",
+    "knowledge_point": "秦始皇陵所在地，焚书坑儒的历史现场，华清宫坐落于山麓。",
+    "tags": [
+      "秦陵",
+      "华清宫",
+      "骊山",
+      "关中"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0008-L01",
+    "name": "陈仓",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "暗度陈仓，刘邦还定三秦的军事要道，秦岭古栈道咽喉。",
+    "knowledge_point": "暗度陈仓，刘邦还定三秦的军事要道，秦岭古栈道咽喉。",
+    "tags": [
+      "秦岭",
+      "栈道",
+      "暗度陈仓",
+      "汉中"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0009-L01",
+    "name": "灞上",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "刘邦率先入关驻军灞上，与关中父老约法三章之地。",
+    "knowledge_point": "刘邦率先入关驻军灞上，与关中父老约法三章之地。",
+    "tags": [
+      "长安",
+      "霸水",
+      "刘邦",
+      "关中"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0004-L01",
+    "name": "许昌",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "曹操迎献帝迁都许昌，挟天子以令诸侯的霸业起点。",
+    "knowledge_point": "曹操迎献帝迁都许昌，挟天子以令诸侯的霸业起点。",
+    "tags": [
+      "曹操",
+      "许都",
+      "汉室",
+      "中原"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0005-L01",
+    "name": "成都",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "刘备称帝建蜀汉，天府之国的中心，诸葛亮治蜀的大本营。",
+    "knowledge_point": "刘备称帝建蜀汉，天府之国的中心，诸葛亮治蜀的大本营。",
+    "tags": [
+      "蜀汉",
+      "天府",
+      "锦官城",
+      "益州"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0006-L01",
+    "name": "建业",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "孙权称帝建都建业，六朝古都之始，虎踞龙盘帝王州。",
+    "knowledge_point": "孙权称帝建都建业，六朝古都之始，虎踞龙盘帝王州。",
+    "tags": [
+      "孙权",
+      "石头城",
+      "金陵",
+      "长江"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0004-L01",
+    "name": "邺城",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "曹魏至北齐六朝古都，铜雀台与漳水环绕的北方雄城。",
+    "knowledge_point": "曹魏至北齐六朝古都，铜雀台与漳水环绕的北方雄城。",
+    "tags": [
+      "铜雀台",
+      "漳水",
+      "曹魏",
+      "古都"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0005-L01",
+    "name": "平城",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "北魏都城，云冈石窟与佛教艺术的北国圣地。",
+    "knowledge_point": "北魏都城，云冈石窟与佛教艺术的北国圣地。",
+    "tags": [
+      "北魏",
+      "云冈",
+      "大同",
+      "佛教"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0006-L01",
+    "name": "姑臧",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "河西走廊重镇，前凉后凉北凉都城，东西文明交汇处。",
+    "knowledge_point": "河西走廊重镇，前凉后凉北凉都城，东西文明交汇处。",
+    "tags": [
+      "凉州",
+      "河西",
+      "丝绸之路",
+      "胡汉"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "ST-L-0004-L01",
+    "name": "大明宫",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "大唐帝国的大朝正殿，世界最大宫殿群，九天阊阖开宫殿。",
+    "knowledge_point": "大唐帝国的大朝正殿，世界最大宫殿群，九天阊阖开宫殿。",
+    "tags": [
+      "唐",
+      "长安",
+      "含元殿",
+      "宫殿"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "ST-L-0005-L01",
+    "name": "扬州",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "隋唐大运河枢纽，天下三分明月夜二分在扬州的繁华商都。",
+    "knowledge_point": "隋唐大运河枢纽，天下三分明月夜二分在扬州的繁华商都。",
+    "tags": [
+      "隋唐",
+      "运河",
+      "江南",
+      "商都"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "ST-L-0006-L01",
+    "name": "凉州",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "河西走廊重镇，丝绸之路要冲，葡萄美酒夜光杯的边塞雄关。",
+    "knowledge_point": "河西走廊重镇，丝绸之路要冲，葡萄美酒夜光杯的边塞雄关。",
+    "tags": [
+      "河西",
+      "边塞",
+      "葡萄酒",
+      "丝绸之路"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SY-L-0004-L01",
+    "name": "襄阳",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "宋元决战之地，坚守六年终陷落，改写中国历史的铁血雄城。",
+    "knowledge_point": "宋元决战之地，坚守六年终陷落，改写中国历史的铁血雄城。",
+    "tags": [
+      "宋元",
+      "襄阳",
+      "樊城",
+      "汉水"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SY-L-0005-L01",
+    "name": "泉州",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "宋元时期世界第一大港，海上丝绸之路的东方起点。",
+    "knowledge_point": "宋元时期世界第一大港，海上丝绸之路的东方起点。",
+    "tags": [
+      "宋元",
+      "刺桐",
+      "海港",
+      "海上丝路"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SY-L-0006-L01",
+    "name": "幽州",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "燕云十六州之首，宋辽边界重镇，自古兵家必争之地。",
+    "knowledge_point": "燕云十六州之首，宋辽边界重镇，自古兵家必争之地。",
+    "tags": [
+      "幽云",
+      "燕京",
+      "宋辽",
+      "边防"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "MQ-L-0004-L01",
+    "name": "紫禁城",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "明清两代的皇家宫殿，世界最大木结构建筑群，九千九百九十九间半。",
+    "knowledge_point": "明清两代的皇家宫殿，世界最大木结构建筑群，九千九百九十九间半。",
+    "tags": [
+      "故宫",
+      "太和殿",
+      "明清",
+      "皇城"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "MQ-L-0005-L01",
+    "name": "十三陵",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "明十三位皇帝的陵寝群，世界文化遗产，神道石像生庄严排列。",
+    "knowledge_point": "明十三位皇帝的陵寝群，世界文化遗产，神道石像生庄严排列。",
+    "tags": [
+      "明陵",
+      "天寿山",
+      "神道",
+      "长陵"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "MQ-L-0006-L01",
+    "name": "承德避暑山庄",
+    "quality": "common",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "清代夏宫与木兰围场，世界最大皇家园林，汉蒙藏建筑荟萃。",
+    "knowledge_point": "清代夏宫与木兰围场，世界最大皇家园林，汉蒙藏建筑荟萃。",
+    "tags": [
+      "清",
+      "热河",
+      "园林",
+      "行宫"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0001-L05",
+    "name": "秦始皇",
+    "quality": "ur",
+    "dynasty": "秦汉",
+    "level": 5,
+    "type": "人物",
+    "story": "秦始皇嬴政，中国历史上第一位皇帝，统一六国，建立中央集权制度。",
+    "knowledge_point": "秦始皇嬴政，中国历史上第一位皇帝，统一六国，建立中央集权制度。",
+    "tags": [
+      "帝王",
+      "秦朝",
+      "统一",
+      "长城"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0002-L04",
+    "name": "刘邦",
+    "quality": "ssr",
+    "dynasty": "秦汉",
+    "level": 4,
+    "type": "人物",
+    "story": "汉高祖刘邦，出身布衣，秦末起义建立汉朝。",
+    "knowledge_point": "汉高祖刘邦，出身布衣，秦末起义建立汉朝。",
+    "tags": [
+      "帝王",
+      "汉朝",
+      "开国",
+      "布衣"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0003-L04",
+    "name": "项羽",
+    "quality": "ssr",
+    "dynasty": "秦汉",
+    "level": 4,
+    "type": "人物",
+    "story": "西楚霸王项羽，力能扛鼎的绝世猛将，楚汉之争的核心人物。",
+    "knowledge_point": "西楚霸王项羽，力能扛鼎的绝世猛将，楚汉之争的核心人物。",
+    "tags": [
+      "霸王",
+      "西楚",
+      "武力",
+      "悲剧"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0004-L03",
+    "name": "张良",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "张良，汉初三杰之一，运筹帷幄之中决胜千里之外的顶级谋士。",
+    "knowledge_point": "张良，汉初三杰之一，运筹帷幄之中决胜千里之外的顶级谋士。",
+    "tags": [
+      "谋士",
+      "运筹帷幄",
+      "汉初三杰"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0005-L03",
+    "name": "韩信",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "韩信，汉初三杰之一，被后世尊为兵仙，暗度陈仓灭三秦。",
+    "knowledge_point": "韩信，汉初三杰之一，被后世尊为兵仙，暗度陈仓灭三秦。",
+    "tags": [
+      "兵仙",
+      "统帅",
+      "汉初三杰"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0006-L02",
+    "name": "萧何",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "萧何，汉初三杰之一，丞相之首，刘邦的后勤总管家。",
+    "knowledge_point": "萧何，汉初三杰之一，丞相之首，刘邦的后勤总管家。",
+    "tags": [
+      "丞相",
+      "后勤",
+      "汉初三杰"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0007-L03",
+    "name": "吕雉",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "吕雉，刘邦之妻，中国历史上第一位临朝称制的女性统治者。",
+    "knowledge_point": "吕雉，刘邦之妻，中国历史上第一位临朝称制的女性统治者。",
+    "tags": [
+      "皇后",
+      "女政治家",
+      "吕后"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0008-L02",
+    "name": "蒙恬",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "蒙恬，秦朝名将，率三十万大军北击匈奴，修筑万里长城。",
+    "knowledge_point": "蒙恬，秦朝名将，率三十万大军北击匈奴，修筑万里长城。",
+    "tags": [
+      "名将",
+      "长城",
+      "秦朝"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0009-L02",
+    "name": "扶苏",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "扶苏，秦始皇长子，仁德宽厚，因赵高篡改遗诏而被迫自尽。",
+    "knowledge_point": "扶苏，秦始皇长子，仁德宽厚，因赵高篡改遗诏而被迫自尽。",
+    "tags": [
+      "公子",
+      "仁德",
+      "悲剧"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0010-L01",
+    "name": "赵高",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "人物",
+    "story": "赵高，秦朝宦官，秦始皇死后篡改遗诏扶立胡亥，加速秦朝灭亡。",
+    "knowledge_point": "赵高，秦朝宦官，秦始皇死后篡改遗诏扶立胡亥，加速秦朝灭亡。",
+    "tags": [
+      "宦官",
+      "权臣",
+      "反派"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0011-L02",
+    "name": "范增",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "范增，项羽首席谋士，被尊为亚父，鸿门宴力主杀刘邦未果。",
+    "knowledge_point": "范增，项羽首席谋士，被尊为亚父，鸿门宴力主杀刘邦未果。",
+    "tags": [
+      "谋士",
+      "亚父",
+      "楚汉"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0012-L02",
+    "name": "虞姬",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "虞姬，项羽宠姬，垓下之围时自刎殉情，与霸王演绎千古爱情悲剧。",
+    "knowledge_point": "虞姬，项羽宠姬，垓下之围时自刎殉情，与霸王演绎千古爱情悲剧。",
+    "tags": [
+      "美人",
+      "楚汉",
+      "爱情"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0013-L02",
+    "name": "樊哙",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "樊哙，刘邦爱将，鸿门宴上直面项羽护主脱险的勇猛武将。",
+    "knowledge_point": "樊哙，刘邦爱将，鸿门宴上直面项羽护主脱险的勇猛武将。",
+    "tags": [
+      "猛将",
+      "鸿门宴",
+      "忠勇"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-P-0014-L02",
+    "name": "章邯",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "章邯，秦末最后一位名将，先败于项羽后降楚，最终兵败自杀。",
+    "knowledge_point": "章邯，秦末最后一位名将，先败于项羽后降楚，最终兵败自杀。",
+    "tags": [
+      "秦将",
+      "降将",
+      "名将"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0015-L02",
+    "name": "焚书坑儒",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "秦始皇为统一思想，焚烧儒家经典坑杀儒生的重大历史事件。",
+    "knowledge_point": "秦始皇为统一思想，焚烧儒家经典坑杀儒生的重大历史事件。",
+    "tags": [
+      "秦朝",
+      "文化",
+      "争议"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0016-L02",
+    "name": "大泽乡起义",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "陈胜吴广在大泽乡揭竿而起，打响秦末农民起义第一枪。",
+    "knowledge_point": "陈胜吴广在大泽乡揭竿而起，打响秦末农民起义第一枪。",
+    "tags": [
+      "起义",
+      "陈胜",
+      "秦末"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0017-L03",
+    "name": "鸿门宴",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "事件",
+    "story": "项羽设宴鸿门欲杀刘邦，刘邦在张良樊哙帮助下化险为夷。",
+    "knowledge_point": "项羽设宴鸿门欲杀刘邦，刘邦在张良樊哙帮助下化险为夷。",
+    "tags": [
+      "楚汉",
+      "宴会",
+      "刺杀"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0018-L02",
+    "name": "暗度陈仓",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "韩信明修栈道暗度陈仓，出其不意还定三秦的经典战例。",
+    "knowledge_point": "韩信明修栈道暗度陈仓，出其不意还定三秦的经典战例。",
+    "tags": [
+      "楚汉",
+      "韩信",
+      "战略"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0019-L03",
+    "name": "垓下之围",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "事件",
+    "story": "垓下之战项羽被刘邦大军包围，四面楚歌，霸王别姬。",
+    "knowledge_point": "垓下之战项羽被刘邦大军包围，四面楚歌，霸王别姬。",
+    "tags": [
+      "楚汉",
+      "决战",
+      "四面楚歌"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0020-L01",
+    "name": "约法三章",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "事件",
+    "story": "刘邦入关中后与百姓约法三章，废除秦朝苛法赢得民心。",
+    "knowledge_point": "刘邦入关中后与百姓约法三章，废除秦朝苛法赢得民心。",
+    "tags": [
+      "刘邦",
+      "关中",
+      "法度"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0021-L02",
+    "name": "韩信点兵",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "刘邦问韩信能带多少兵，韩信答多多益善的著名典故。",
+    "knowledge_point": "刘邦问韩信能带多少兵，韩信答多多益善的著名典故。",
+    "tags": [
+      "韩信",
+      "兵法",
+      "多多益善"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0022-L01",
+    "name": "指鹿为马",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "事件",
+    "story": "赵高在朝堂上指鹿为马试探大臣立场，铲除异己的著名典故。",
+    "knowledge_point": "赵高在朝堂上指鹿为马试探大臣立场，铲除异己的著名典故。",
+    "tags": [
+      "赵高",
+      "秦朝",
+      "阴谋"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-E-0023-L02",
+    "name": "萧何月下追韩信",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "韩信因不受重用离开汉营，萧何连夜追赶劝回，成就汉家天下。",
+    "knowledge_point": "韩信因不受重用离开汉营，萧何连夜追赶劝回，成就汉家天下。",
+    "tags": [
+      "人才",
+      "楚汉",
+      "知遇之恩"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-W-0024-L01",
+    "name": "秦弩",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "兵器",
+    "story": "秦弩是秦军制式远程武器，标准化生产使秦军战力碾压六国。",
+    "knowledge_point": "秦弩是秦军制式远程武器，标准化生产使秦军战力碾压六国。",
+    "tags": [
+      "秦朝",
+      "远程",
+      "军工"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-W-0025-L03",
+    "name": "天子剑",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "兵器",
+    "story": "天子剑象征皇权至高无上，秦始皇佩剑为太阿剑的传说。",
+    "knowledge_point": "天子剑象征皇权至高无上，秦始皇佩剑为太阿剑的传说。",
+    "tags": [
+      "帝王",
+      "宝剑",
+      "象征"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-W-0026-L02",
+    "name": "项羽戟",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "兵器",
+    "story": "项羽善使长戟，据说其戟重达百斤，万夫不当之勇。",
+    "knowledge_point": "项羽善使长戟，据说其戟重达百斤，万夫不当之勇。",
+    "tags": [
+      "霸王",
+      "兵器",
+      "勇武"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-W-0027-L01",
+    "name": "秦剑",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "兵器",
+    "story": "秦剑是秦军标准化冷兵器的代表，比六国长剑更长更锋利。",
+    "knowledge_point": "秦剑是秦军标准化冷兵器的代表，比六国长剑更长更锋利。",
+    "tags": [
+      "秦朝",
+      "冷兵器",
+      "标准化"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-B-0028-L02",
+    "name": "秦律",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "典籍",
+    "story": "秦律是秦朝以法家思想制定的严密法律体系，影响中国两千年法制。",
+    "knowledge_point": "秦律是秦朝以法家思想制定的严密法律体系，影响中国两千年法制。",
+    "tags": [
+      "法律",
+      "秦朝",
+      "法家"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-B-0029-L03",
+    "name": "九章算术",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "典籍",
+    "story": "九章算术是汉代最终成书的中国古代最重要的数学经典。",
+    "knowledge_point": "九章算术是汉代最终成书的中国古代最重要的数学经典。",
+    "tags": [
+      "数学",
+      "汉代",
+      "科学"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-B-0030-L03",
+    "name": "黄帝内经",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "典籍",
+    "story": "黄帝内经是汉代编定的中医理论奠基之作，阴阳五行医学体系。",
+    "knowledge_point": "黄帝内经是汉代编定的中医理论奠基之作，阴阳五行医学体系。",
+    "tags": [
+      "医学",
+      "养生",
+      "中医经典"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0031-L02",
+    "name": "阿房宫",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "阿房宫是秦始皇修建的超级宫殿，覆压三百余里隔离天日。",
+    "knowledge_point": "阿房宫是秦始皇修建的超级宫殿，覆压三百余里隔离天日。",
+    "tags": [
+      "宫殿",
+      "秦朝",
+      "奢华"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0032-L02",
+    "name": "未央宫",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "未央宫是西汉王朝的大朝正殿，中国历史上最著名的宫殿之一。",
+    "knowledge_point": "未央宫是西汉王朝的大朝正殿，中国历史上最著名的宫殿之一。",
+    "tags": [
+      "宫殿",
+      "汉朝",
+      "长安"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0033-L03",
+    "name": "龙门石窟",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "地点",
+    "story": "龙门石窟始建于北魏，秦汉之后的佛教艺术宝库。",
+    "knowledge_point": "龙门石窟始建于北魏，秦汉之后的佛教艺术宝库。",
+    "tags": [
+      "佛教",
+      "石刻",
+      "艺术"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-L-0034-L02",
+    "name": "祁连山",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "祁连山是汉匈战争的战略要地，霍去病在此大破匈奴。",
+    "knowledge_point": "祁连山是汉匈战争的战略要地，霍去病在此大破匈奴。",
+    "tags": [
+      "山脉",
+      "匈奴",
+      "汉匈战争"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "QH-D-0035-L05",
+    "name": "大秦帝国",
+    "quality": "ur",
+    "dynasty": "秦汉",
+    "level": 5,
+    "type": "朝代",
+    "story": "大秦帝国是中国历史上第一个大一统王朝，奠定了中国两千年帝制基础。",
+    "knowledge_point": "大秦帝国是中国历史上第一个大一统王朝，奠定了中国两千年帝制基础。",
+    "tags": [
+      "秦朝",
+      "帝国",
+      "统一"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0001-L05",
+    "name": "诸葛亮",
+    "quality": "ur",
+    "dynasty": "秦汉",
+    "level": 5,
+    "type": "人物",
+    "story": "诸葛亮，三国蜀汉丞相，鞠躬尽瘁死而后已的千古名相。",
+    "knowledge_point": "诸葛亮，三国蜀汉丞相，鞠躬尽瘁死而后已的千古名相。",
+    "tags": [
+      "蜀汉",
+      "丞相",
+      "智慧",
+      "传奇"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0002-L04",
+    "name": "关羽",
+    "quality": "ssr",
+    "dynasty": "秦汉",
+    "level": 4,
+    "type": "人物",
+    "story": "关羽，蜀汉五虎将之首，被后世尊为武圣关帝，忠义化身。",
+    "knowledge_point": "关羽，蜀汉五虎将之首，被后世尊为武圣关帝，忠义化身。",
+    "tags": [
+      "蜀汉",
+      "五虎将",
+      "忠义",
+      "武圣"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0003-L04",
+    "name": "曹操",
+    "quality": "ssr",
+    "dynasty": "秦汉",
+    "level": 4,
+    "type": "人物",
+    "story": "曹操，三国曹魏奠基人，挟天子以令诸侯的乱世枭雄。",
+    "knowledge_point": "曹操，三国曹魏奠基人，挟天子以令诸侯的乱世枭雄。",
+    "tags": [
+      "魏",
+      "枭雄",
+      "权臣",
+      "诗人"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0004-L03",
+    "name": "刘备",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "刘备，蜀汉开国皇帝，以仁德立身，桃园三结义的带头大哥。",
+    "knowledge_point": "刘备，蜀汉开国皇帝，以仁德立身，桃园三结义的带头大哥。",
+    "tags": [
+      "蜀汉",
+      "仁君",
+      "织席贩履"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0005-L03",
+    "name": "赵云",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "赵云，蜀汉五虎将，长坂坡七进七出救阿斗的常胜将军。",
+    "knowledge_point": "赵云，蜀汉五虎将，长坂坡七进七出救阿斗的常胜将军。",
+    "tags": [
+      "蜀汉",
+      "五虎将",
+      "长坂坡",
+      "银枪"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0006-L03",
+    "name": "周瑜",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "周瑜，东吴大都督，赤壁之战中以少胜多火烧曹营的美周郎。",
+    "knowledge_point": "周瑜，东吴大都督，赤壁之战中以少胜多火烧曹营的美周郎。",
+    "tags": [
+      "东吴",
+      "都督",
+      "赤壁",
+      "儒将"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0007-L03",
+    "name": "吕布",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "吕布，三国第一猛将，人中吕布马中赤兔的飞将。",
+    "knowledge_point": "吕布，三国第一猛将，人中吕布马中赤兔的飞将。",
+    "tags": [
+      "猛将",
+      "方天画戟",
+      "赤兔马"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0008-L03",
+    "name": "孙权",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "孙权，东吴开国皇帝，继承父兄基业坐断东南的守成之主。",
+    "knowledge_point": "孙权，东吴开国皇帝，继承父兄基业坐断东南的守成之主。",
+    "tags": [
+      "东吴",
+      "帝王",
+      "紫髯碧眼"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0009-L03",
+    "name": "司马懿",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "司马懿，三国曹魏权臣，隐忍数十载终为晋朝奠基。",
+    "knowledge_point": "司马懿，三国曹魏权臣，隐忍数十载终为晋朝奠基。",
+    "tags": [
+      "魏",
+      "权臣",
+      "隐忍",
+      "篡魏"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0010-L02",
+    "name": "典韦",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "典韦，曹操帐下第一猛将，宛城之战中为保曹操脱逃力战而死。",
+    "knowledge_point": "典韦，曹操帐下第一猛将，宛城之战中为保曹操脱逃力战而死。",
+    "tags": [
+      "魏",
+      "猛将",
+      "宛城之战"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0011-L02",
+    "name": "黄忠",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "黄忠，蜀汉五虎将中最年长者，老当益壮箭术无双。",
+    "knowledge_point": "黄忠，蜀汉五虎将中最年长者，老当益壮箭术无双。",
+    "tags": [
+      "蜀汉",
+      "五虎将",
+      "老当益壮"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0012-L02",
+    "name": "陆逊",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "陆逊，东吴大都督，夷陵之战中火烧连营大败刘备的年轻儒将。",
+    "knowledge_point": "陆逊，东吴大都督，夷陵之战中火烧连营大败刘备的年轻儒将。",
+    "tags": [
+      "东吴",
+      "儒将",
+      "夷陵之战"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0013-L01",
+    "name": "董卓",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "人物",
+    "story": "董卓，东汉末年权臣，废少帝立献帝的残暴军阀。",
+    "knowledge_point": "董卓，东汉末年权臣，废少帝立献帝的残暴军阀。",
+    "tags": [
+      "军阀",
+      "残暴",
+      "乱世"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-P-0014-L02",
+    "name": "貂蝉",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "貂蝉，三国第一美人，王允以连环计离间董卓吕布的绝色女子。",
+    "knowledge_point": "貂蝉，三国第一美人，王允以连环计离间董卓吕布的绝色女子。",
+    "tags": [
+      "美人",
+      "连环计",
+      "三国"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0015-L02",
+    "name": "桃园三结义",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "刘备关羽张飞在桃园结为异姓兄弟，不求同生但求同死。",
+    "knowledge_point": "刘备关羽张飞在桃园结为异姓兄弟，不求同生但求同死。",
+    "tags": [
+      "蜀汉",
+      "结义",
+      "兄弟情"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0016-L02",
+    "name": "草船借箭",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "诸葛亮利用大雾以草船诱使曹操放箭，一夜之间借到十万支箭。",
+    "knowledge_point": "诸葛亮利用大雾以草船诱使曹操放箭，一夜之间借到十万支箭。",
+    "tags": [
+      "赤壁",
+      "诸葛",
+      "谋略"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0017-L03",
+    "name": "空城计",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "事件",
+    "story": "诸葛亮以空城计退司马懿大军，一人抚琴城楼吓退数万雄兵。",
+    "knowledge_point": "诸葛亮以空城计退司马懿大军，一人抚琴城楼吓退数万雄兵。",
+    "tags": [
+      "诸葛",
+      "司马懿",
+      "西城"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0018-L04",
+    "name": "赤壁之战",
+    "quality": "ssr",
+    "dynasty": "秦汉",
+    "level": 4,
+    "type": "事件",
+    "story": "赤壁之战孙刘联军火烧曹船，奠定三国鼎立格局的决定性战役。",
+    "knowledge_point": "赤壁之战孙刘联军火烧曹船，奠定三国鼎立格局的决定性战役。",
+    "tags": [
+      "三国",
+      "火攻",
+      "周瑜",
+      "东风"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0019-L02",
+    "name": "七擒孟获",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "诸葛亮七次擒获南中首领孟获七次释放，以攻心为上平定南中。",
+    "knowledge_point": "诸葛亮七次擒获南中首领孟获七次释放，以攻心为上平定南中。",
+    "tags": [
+      "蜀汉",
+      "诸葛",
+      "南征"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0020-L02",
+    "name": "水淹七军",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "关羽利用汉水暴涨水淹于禁七军，威震华夏的经典战术。",
+    "knowledge_point": "关羽利用汉水暴涨水淹于禁七军，威震华夏的经典战术。",
+    "tags": [
+      "关羽",
+      "荆州",
+      "于禁"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0021-L03",
+    "name": "六出祁山",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "事件",
+    "story": "诸葛亮六次北伐中原，出祁山伐曹魏直到五丈原星落。",
+    "knowledge_point": "诸葛亮六次北伐中原，出祁山伐曹魏直到五丈原星落。",
+    "tags": [
+      "北伐",
+      "诸葛",
+      "蜀汉"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-E-0022-L01",
+    "name": "青梅煮酒论英雄",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "事件",
+    "story": "曹操与刘备在许昌梅园煮酒论英雄的经典对话场景。",
+    "knowledge_point": "曹操与刘备在许昌梅园煮酒论英雄的经典对话场景。",
+    "tags": [
+      "曹操",
+      "刘备",
+      "双雄"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-W-0023-L03",
+    "name": "青龙偃月刀",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "兵器",
+    "story": "青龙偃月刀是关羽的标志性兵器，重八十二斤的冷艳锯。",
+    "knowledge_point": "青龙偃月刀是关羽的标志性兵器，重八十二斤的冷艳锯。",
+    "tags": [
+      "关羽",
+      "兵器",
+      "传奇"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-W-0024-L02",
+    "name": "丈八蛇矛",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "兵器",
+    "story": "丈八蛇矛是张飞的标志性兵器，矛身如蛇形弯曲丈八其长。",
+    "knowledge_point": "丈八蛇矛是张飞的标志性兵器，矛身如蛇形弯曲丈八其长。",
+    "tags": [
+      "张飞",
+      "兵器",
+      "丈八"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-W-0025-L02",
+    "name": "方天画戟",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "兵器",
+    "story": "方天画戟是吕布的专属兵器，两侧月牙刃的华丽长戟。",
+    "knowledge_point": "方天画戟是吕布的专属兵器，两侧月牙刃的华丽长戟。",
+    "tags": [
+      "吕布",
+      "兵器",
+      "方天"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-W-0026-L02",
+    "name": "诸葛连弩",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "兵器",
+    "story": "诸葛亮改良的连弩可连续发射十支箭矢，蜀汉军事科技代表。",
+    "knowledge_point": "诸葛亮改良的连弩可连续发射十支箭矢，蜀汉军事科技代表。",
+    "tags": [
+      "诸葛亮",
+      "发明",
+      "远程"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-B-0027-L03",
+    "name": "出师表",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "典籍",
+    "story": "出师表是诸葛亮北伐前写给后主刘禅的奏表，千古忠臣之绝唱。",
+    "knowledge_point": "出师表是诸葛亮北伐前写给后主刘禅的奏表，千古忠臣之绝唱。",
+    "tags": [
+      "诸葛亮",
+      "文学",
+      "忠义"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-B-0028-L03",
+    "name": "伤寒杂病论",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "典籍",
+    "story": "伤寒杂病论是东汉张仲景所著，中医临床医学奠基之作。",
+    "knowledge_point": "伤寒杂病论是东汉张仲景所著，中医临床医学奠基之作。",
+    "tags": [
+      "医学",
+      "张仲景",
+      "医圣"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-B-0029-L02",
+    "name": "隆中对",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "典籍",
+    "story": "诸葛亮在隆中对中为刘备规划三分天下的战略蓝图。",
+    "knowledge_point": "诸葛亮在隆中对中为刘备规划三分天下的战略蓝图。",
+    "tags": [
+      "策略",
+      "刘备",
+      "诸葛"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0030-L02",
+    "name": "五丈原",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "五丈原是诸葛亮第六次北伐病逝之地，出师未捷身先死。",
+    "knowledge_point": "五丈原是诸葛亮第六次北伐病逝之地，出师未捷身先死。",
+    "tags": [
+      "诸葛亮",
+      "北伐",
+      "落星"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0031-L02",
+    "name": "长坂坡",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "长坂坡是赵云单骑救阿斗血战曹军的传奇战场。",
+    "knowledge_point": "长坂坡是赵云单骑救阿斗血战曹军的传奇战场。",
+    "tags": [
+      "赵云",
+      "战场",
+      "当阳"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0032-L02",
+    "name": "白帝城",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "白帝城是刘备夷陵之败后病逝托孤诸葛亮的历史遗址。",
+    "knowledge_point": "白帝城是刘备夷陵之败后病逝托孤诸葛亮的历史遗址。",
+    "tags": [
+      "刘备",
+      "托孤",
+      "蜀汉"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-L-0033-L01",
+    "name": "定军山",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "地点",
+    "story": "定军山是黄忠斩杀夏侯渊之地，蜀汉北伐的重要战略据点。",
+    "knowledge_point": "定军山是黄忠斩杀夏侯渊之地，蜀汉北伐的重要战略据点。",
+    "tags": [
+      "蜀汉",
+      "战场",
+      "黄忠"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "SG-D-0034-L05",
+    "name": "三国鼎立",
+    "quality": "ur",
+    "dynasty": "秦汉",
+    "level": 5,
+    "type": "朝代",
+    "story": "三国鼎立是魏蜀吴三分天下的历史格局，中国历史上最著名的分裂时期。",
+    "knowledge_point": "三国鼎立是魏蜀吴三分天下的历史格局，中国历史上最著名的分裂时期。",
+    "tags": [
+      "三国",
+      "对峙",
+      "历史格局"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0001-L04",
+    "name": "王羲之",
+    "quality": "ssr",
+    "dynasty": "秦汉",
+    "level": 4,
+    "type": "人物",
+    "story": "王羲之，东晋书圣，兰亭序被誉为天下第一行书。",
+    "knowledge_point": "王羲之，东晋书圣，兰亭序被誉为天下第一行书。",
+    "tags": [
+      "书法",
+      "东晋",
+      "书圣",
+      "兰亭"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0002-L03",
+    "name": "谢安",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "谢安，东晋名相，淝水之战中以少胜多的战略大师。",
+    "knowledge_point": "谢安，东晋名相，淝水之战中以少胜多的战略大师。",
+    "tags": [
+      "东晋",
+      "宰相",
+      "淝水之战"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0003-L03",
+    "name": "陶渊明",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "陶渊明，东晋田园诗人，不为五斗米折腰的隐逸之宗。",
+    "knowledge_point": "陶渊明，东晋田园诗人，不为五斗米折腰的隐逸之宗。",
+    "tags": [
+      "诗人",
+      "隐士",
+      "田园",
+      "魏晋"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0004-L02",
+    "name": "祖逖",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "祖逖，东晋北伐名将，闻鸡起舞志复中原的爱国英雄。",
+    "knowledge_point": "祖逖，东晋北伐名将，闻鸡起舞志复中原的爱国英雄。",
+    "tags": [
+      "东晋",
+      "北伐",
+      "闻鸡起舞"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0005-L02",
+    "name": "顾恺之",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "顾恺之，东晋画圣，以洛神赋图等传世名作代表六朝艺术高峰。",
+    "knowledge_point": "顾恺之，东晋画圣，以洛神赋图等传世名作代表六朝艺术高峰。",
+    "tags": [
+      "绘画",
+      "东晋",
+      "艺术"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0006-L03",
+    "name": "嵇康",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "嵇康，竹林七贤之首，广陵散绝响于刑场的不屈文人。",
+    "knowledge_point": "嵇康，竹林七贤之首，广陵散绝响于刑场的不屈文人。",
+    "tags": [
+      "竹林七贤",
+      "琴艺",
+      "傲骨"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0007-L03",
+    "name": "花木兰",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "花木兰，北魏时期代父从军的传奇女英雄，巾帼不让须眉。",
+    "knowledge_point": "花木兰，北魏时期代父从军的传奇女英雄，巾帼不让须眉。",
+    "tags": [
+      "女英雄",
+      "北魏",
+      "代父从军"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0008-L02",
+    "name": "阮籍",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "阮籍，竹林七贤之一，以青白眼表达好恶的不羁诗人。",
+    "knowledge_point": "阮籍，竹林七贤之一，以青白眼表达好恶的不羁诗人。",
+    "tags": [
+      "竹林七贤",
+      "诗人",
+      "旷达"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0009-L02",
+    "name": "苻坚",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "苻坚，前秦皇帝，统一北方后在淝水之战中惨败的前秦雄主。",
+    "knowledge_point": "苻坚，前秦皇帝，统一北方后在淝水之战中惨败的前秦雄主。",
+    "tags": [
+      "前秦",
+      "帝王",
+      "淝水之战"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0010-L02",
+    "name": "谢道韫",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "谢道韫，东晋才女，咏絮之才形容女子的文学天赋。",
+    "knowledge_point": "谢道韫，东晋才女，咏絮之才形容女子的文学天赋。",
+    "tags": [
+      "才女",
+      "东晋",
+      "咏絮之才"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0011-L03",
+    "name": "刘裕",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "人物",
+    "story": "刘裕，南朝宋开国皇帝，出身寒门的气吞万里如虎的雄主。",
+    "knowledge_point": "刘裕，南朝宋开国皇帝，出身寒门的气吞万里如虎的雄主。",
+    "tags": [
+      "南朝宋",
+      "开国",
+      "寒门"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0012-L01",
+    "name": "潘岳",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "人物",
+    "story": "潘岳，西晋美男子与文学家，掷果盈车的古代第一美男。",
+    "knowledge_point": "潘岳，西晋美男子与文学家，掷果盈车的古代第一美男。",
+    "tags": [
+      "美男子",
+      "西晋",
+      "文采"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0013-L02",
+    "name": "贾思勰",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "人物",
+    "story": "贾思勰，北朝农学家，著齐民要术是中国现存最早的完整农书。",
+    "knowledge_point": "贾思勰，北朝农学家，著齐民要术是中国现存最早的完整农书。",
+    "tags": [
+      "农学家",
+      "北朝",
+      "齐民要术"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-P-0014-L01",
+    "name": "石勒",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "人物",
+    "story": "石勒，后赵开国皇帝，从奴隶到皇帝的传奇羯族首领。",
+    "knowledge_point": "石勒，后赵开国皇帝，从奴隶到皇帝的传奇羯族首领。",
+    "tags": [
+      "后赵",
+      "羯族",
+      "奴隶皇帝"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0015-L03",
+    "name": "淝水之战",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "事件",
+    "story": "淝水之战东晋以八万北府兵大破前秦八十万大军。",
+    "knowledge_point": "淝水之战东晋以八万北府兵大破前秦八十万大军。",
+    "tags": [
+      "东晋",
+      "前秦",
+      "以少胜多"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0016-L02",
+    "name": "永嘉之乱",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "永嘉之乱匈奴攻破洛阳掳走晋怀帝，西晋走向灭亡。",
+    "knowledge_point": "永嘉之乱匈奴攻破洛阳掳走晋怀帝，西晋走向灭亡。",
+    "tags": [
+      "西晋",
+      "匈奴",
+      "亡国"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0017-L01",
+    "name": "闻鸡起舞",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "事件",
+    "story": "祖逖与刘琨闻鸡鸣即起练剑，立志收复中原的励志典故。",
+    "knowledge_point": "祖逖与刘琨闻鸡鸣即起练剑，立志收复中原的励志典故。",
+    "tags": [
+      "祖逖",
+      "勤奋",
+      "成语"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0018-L02",
+    "name": "衣冠南渡",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "西晋灭亡后中原士族南迁江南，中国文化中心首次大规模南移。",
+    "knowledge_point": "西晋灭亡后中原士族南迁江南，中国文化中心首次大规模南移。",
+    "tags": [
+      "东晋",
+      "移民",
+      "文化传承"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0019-L01",
+    "name": "八王之乱",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "事件",
+    "story": "西晋八位宗王为争夺皇位进行的十六年内乱，严重削弱了西晋国力。",
+    "knowledge_point": "西晋八位宗王为争夺皇位进行的十六年内乱，严重削弱了西晋国力。",
+    "tags": [
+      "西晋",
+      "内乱",
+      "宗室"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0020-L02",
+    "name": "孝文帝改革",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "事件",
+    "story": "北魏孝文帝迁都洛阳推行全面汉化改革，促进民族融合。",
+    "knowledge_point": "北魏孝文帝迁都洛阳推行全面汉化改革，促进民族融合。",
+    "tags": [
+      "北魏",
+      "汉化",
+      "改革"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-E-0021-L01",
+    "name": "侯景之乱",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "事件",
+    "story": "侯景之乱摧毁了南朝梁的繁荣，建康城从百万人口降至废墟。",
+    "knowledge_point": "侯景之乱摧毁了南朝梁的繁荣，建康城从百万人口降至废墟。",
+    "tags": [
+      "南朝",
+      "梁",
+      "叛将"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-W-0022-L01",
+    "name": "北府矛",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "兵器",
+    "story": "北府矛是东晋精锐北府兵的制式长矛，在淝水之战中威震天下。",
+    "knowledge_point": "北府矛是东晋精锐北府兵的制式长矛，在淝水之战中威震天下。",
+    "tags": [
+      "东晋",
+      "北府兵",
+      "长兵器"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-W-0023-L01",
+    "name": "环首刀",
+    "quality": "n",
+    "dynasty": "秦汉",
+    "level": 1,
+    "type": "兵器",
+    "story": "环首刀是汉末至南北朝时期最普遍的实战直刀。",
+    "knowledge_point": "环首刀是汉末至南北朝时期最普遍的实战直刀。",
+    "tags": [
+      "汉末",
+      "直刀",
+      "冷兵器"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-W-0024-L02",
+    "name": "马镫",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "兵器",
+    "story": "马镫的发明使骑兵真正成为战场主力，改变了世界军事格局。",
+    "knowledge_point": "马镫的发明使骑兵真正成为战场主力，改变了世界军事格局。",
+    "tags": [
+      "骑兵",
+      "南北朝",
+      "军事革命"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-W-0025-L02",
+    "name": "明光铠",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "兵器",
+    "story": "明光铠是南北朝时期最精良的铁质铠甲，胸甲如镜反光。",
+    "knowledge_point": "明光铠是南北朝时期最精良的铁质铠甲，胸甲如镜反光。",
+    "tags": [
+      "南北朝",
+      "铠甲",
+      "铁甲"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-B-0026-L02",
+    "name": "齐民要术",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "典籍",
+    "story": "齐民要术是贾思勰所著中国现存最早的完整农业百科全书。",
+    "knowledge_point": "齐民要术是贾思勰所著中国现存最早的完整农业百科全书。",
+    "tags": [
+      "农学",
+      "北朝",
+      "实用"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-B-0027-L02",
+    "name": "世说新语",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "典籍",
+    "story": "世说新语记录魏晋名士言行轶事，是了解魏晋风度的重要文献。",
+    "knowledge_point": "世说新语记录魏晋名士言行轶事，是了解魏晋风度的重要文献。",
+    "tags": [
+      "南朝",
+      "笔记",
+      "魏晋风度"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-B-0028-L03",
+    "name": "水经注",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "典籍",
+    "story": "水经注是郦道元著的中国古代最全面的水文地理巨著。",
+    "knowledge_point": "水经注是郦道元著的中国古代最全面的水文地理巨著。",
+    "tags": [
+      "地理",
+      "北魏",
+      "郦道元"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0029-L02",
+    "name": "兰亭",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "兰亭是王羲之举办兰亭雅集书写兰亭序的千古文化圣地。",
+    "knowledge_point": "兰亭是王羲之举办兰亭雅集书写兰亭序的千古文化圣地。",
+    "tags": [
+      "东晋",
+      "书法",
+      "绍兴"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0030-L03",
+    "name": "云冈石窟",
+    "quality": "sr",
+    "dynasty": "秦汉",
+    "level": 3,
+    "type": "地点",
+    "story": "云冈石窟是北魏皇家开凿的佛教石窟艺术宝库。",
+    "knowledge_point": "云冈石窟是北魏皇家开凿的佛教石窟艺术宝库。",
+    "tags": [
+      "北魏",
+      "佛教",
+      "大同"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  },
+  {
+    "card_id": "LJ-L-0031-L02",
+    "name": "洛阳城",
+    "quality": "r",
+    "dynasty": "秦汉",
+    "level": 2,
+    "type": "地点",
+    "story": "洛阳是汉魏至北魏多朝都城，白马寺和永宁寺塔的所在地。",
+    "knowledge_point": "洛阳是汉魏至北魏多朝都城，白马寺和永宁寺塔的所在地。",
+    "tags": [
+      "都城",
+      "北魏",
+      "汉魏"
+    ],
+    "related_cards": [],
+    "merge_hint": null,
+    "is_active": true
+  }
+]

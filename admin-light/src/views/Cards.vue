@@ -69,6 +69,7 @@
         <template v-if="column.key === 'actions'">
           <a-space size="small">
             <a-button size="small" type="link" @click="openEdit(record)">编辑</a-button>
+            <a-button size="small" type="link" @click="openRegenerate(record)">重生图</a-button>
             <a-popconfirm title="确定删除？" @confirm="handleDelete(record.id)">
               <a-button size="small" type="link" danger>删除</a-button>
             </a-popconfirm>
@@ -136,6 +137,32 @@
           <a-switch v-model:checked="form.is_active" />
         </a-form-item>
       </a-form>
+    </a-modal>
+
+    <!-- 重生图片弹窗（ComfyUI 占位） -->
+    <a-modal
+      v-model:open="regenOpen"
+      :title="'重生图片 · ' + (regenCard?.name || '')"
+      :confirm-loading="regenSaving"
+      @ok="handleRegenerate"
+      width="560px"
+    >
+      <a-alert
+        message="ComfyUI 素材管线尚未稳定，此操作将记录一条 pending 生成任务。管线就绪后会自动执行出图并回写图片。"
+        type="info"
+        show-icon
+        style="margin-bottom:12px"
+      />
+      <a-descriptions :column="1" size="small" style="margin-bottom:12px">
+        <a-descriptions-item label="卡牌">{{ regenCard?.name }} ({{ regenCard?.card_id }})</a-descriptions-item>
+        <a-descriptions-item label="当前图片">
+          <span v-if="regenCard?.image_url">{{ regenCard.image_url }}</span>
+          <span v-else style="color:#999">未设置</span>
+        </a-descriptions-item>
+      </a-descriptions>
+      <a-form-item label="出图 Prompt" :label-col="{ span: 4 }">
+        <a-textarea v-model:value="regenPrompt" :rows="4" :placeholder="regenCard?.short_desc || '留空则用卡牌元数据自动生成'" />
+      </a-form-item>
     </a-modal>
   </div>
 </template>
@@ -307,6 +334,33 @@ async function handleDelete(id) {
     fetchData();
   } catch (e) {
     message.error('删除失败: ' + (e.message || ''));
+  }
+}
+
+// ── 重生图片 ──
+const regenOpen = ref(false);
+const regenCard = ref(null);
+const regenPrompt = ref('');
+const regenSaving = ref(false);
+
+function openRegenerate(record) {
+  regenCard.value = record;
+  regenPrompt.value = '';
+  regenOpen.value = true;
+}
+
+async function handleRegenerate() {
+  regenSaving.value = true;
+  try {
+    const body = { card_id: regenCard.value.card_id };
+    if (regenPrompt.value.trim()) body.prompt = regenPrompt.value.trim();
+    await request.post('/image-jobs/regenerate', body);
+    message.success('已提交重生任务（pending），ComfyUI 管线就绪后执行');
+    regenOpen.value = false;
+  } catch (e) {
+    message.error('提交失败: ' + (e.message || ''));
+  } finally {
+    regenSaving.value = false;
   }
 }
 

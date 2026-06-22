@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><title>GuoFeng4.1 模型测试</title>
+<style>body{background:#12100e;color:#d4c8b8;font-family:"Microsoft YaHei",sans-serif;padding:20px}
+h1{color:#c9a85c}h3{color:#7a7060;margin-top:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:12px}
+.card{background:#1e1b17;border:1px solid #2e2820;border-radius:6px;overflow:hidden}
+.card img{width:100%}.card .lbl{padding:8px;font-size:0.85em;color:#7a7060}
+.card .lbl strong{color:#c9a85c}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.compare .card:first-child{border-color:#6b9e6b}.compare .card:last-child{border-color:#8eaac9}
+</style></head><body>
+<h1>GuoFeng4.1_2.5D 模型测试</h1>
+<div class="grid" id="g"></div>
+<script>
+const g4={1:'刘邦',2:'咸阳',3:'项羽'};
+let h='';
+for(let i=1;i<=3;i++){
+  const no=`TEST-G4-${String(i).padStart(3,'0')}`;
+  h+=`<div class="card"><img src="/assets-output/cards/originals-v2/${no}.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22320%22 height=%22480%22><rect fill=%22%23222%22 width=%22320%22 height=%22480%22/><text fill=%22%23777%22 x=%22160%22 y=%22240%22 text-anchor=%22middle%22>生成中...</text></svg>'"><div class="lbl"><strong>${no}</strong> · ${g4[i]}</div></div>`;
+}
+document.getElementById('g').innerHTML=h;
+</script>
+</body></html>

@@ -10,6 +10,8 @@ import { drawFromPool, getCardById, loadCards, loadDrawPools } from '@/lib/cardU
 import { getRemainingDraws, addCardToInventory, calculateStars, convertDuplicateToFragment, updateTaskProgress } from '@/lib/storage'
 import type { Card } from '@/lib/types'
 import { DUPLICATION_FOR_STAR } from '@/lib/types'
+import { draw as apiDraw, isLoggedIn, getDrawRemaining } from '@/lib/api/game'
+import { useToast } from '@/components/Toast'
 
 interface DrawResult {
   cardId: string; card: Card; isNew: boolean; starCount: number; wasConverted: boolean; shardAmount?: number; shardType?: string
@@ -17,6 +19,7 @@ interface DrawResult {
 
 export default function DrawPage() {
   const { gameState, updateGameState } = useGame()
+  const { showToast } = useToast()
   const [drawResults, setDrawResults] = useState<DrawResult[]>([])
   const [isDrawing, setIsDrawing] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
@@ -43,6 +46,34 @@ export default function DrawPage() {
   const handleSingleDraw = async () => {
     if (remainingDraws === 0) return; setIsDrawing(true); setSelectedIndex(null); setDrawResults([])
     await new Promise((r) => setTimeout(r, 400))
+
+    // 联机模式：调后端抽卡（服务端随机+落库）
+    if (isLoggedIn()) {
+      try {
+        const res = await apiDraw('permanent_basic', 1)
+        const results: DrawResult[] = res.drawn.map((d) => {
+          const card = getCardById(d.card_id)
+          const isNew = !gameState.unlockedCards.includes(d.card_id)
+          const currentCount = (gameState.playerCards[d.card_id] || 0) + 1
+          const starCount = calculateStars(currentCount, DUPLICATION_FOR_STAR)
+          return { cardId: d.card_id, card: card || { id: d.card_id, name: d.name, level: d.level, quality: 'common', type: 'person', dynasty: 'qinhan', description: '', story: '', knowledgePoint: '', relatedCards: [] } as Card, isNew, starCount, wasConverted: !isNew }
+        })
+        // 同步本地状态（与后端一致）
+        let newState = gameState
+        for (const r of results) {
+          newState = addCardToInventory(newState, r.cardId)
+          if (!newState.unlockedCards.includes(r.cardId)) newState.unlockedCards = [...newState.unlockedCards, r.cardId]
+        }
+        newState = { ...newState, dailyDrawCount: res.today_count }
+        updateGameState(newState)
+        setDrawResults(results); setSelectedIndex(0); setIsDrawing(false)
+        return
+      } catch (e: any) {
+        showToast(e.message || '抽卡失败', 'error'); setIsDrawing(false); return
+      }
+    }
+
+    // 游客模式：本地随机（降级）
     const cardId = drawFromPool('permanent_basic'); if (!cardId) { setIsDrawing(false); return }
     const { result, newState } = processDraw(cardId, gameState); if (!result) { setIsDrawing(false); return }
     const finalState = updateTaskProgress(updateTaskProgress({ ...newState, dailyDrawCount: newState.dailyDrawCount + 1 }, 'daily_draw', 1), 'daily_login', 1)
@@ -52,6 +83,32 @@ export default function DrawPage() {
   const handleTenDraw = async () => {
     if (remainingDraws < 10) return; setIsDrawing(true); setSelectedIndex(null); setDrawResults([])
     await new Promise((r) => setTimeout(r, 600))
+
+    // 联机模式
+    if (isLoggedIn()) {
+      try {
+        const res = await apiDraw('permanent_basic', 10)
+        const results: DrawResult[] = res.drawn.map((d) => {
+          const card = getCardById(d.card_id)
+          const isNew = !gameState.unlockedCards.includes(d.card_id)
+          const currentCount = (gameState.playerCards[d.card_id] || 0) + 1
+          return { cardId: d.card_id, card: card || { id: d.card_id, name: d.name, level: d.level, quality: 'common', type: 'person', dynasty: 'qinhan', description: '', story: '', knowledgePoint: '', relatedCards: [] } as Card, isNew, starCount: calculateStars(currentCount, DUPLICATION_FOR_STAR), wasConverted: !isNew }
+        })
+        let newState = gameState
+        for (const r of results) {
+          newState = addCardToInventory(newState, r.cardId)
+          if (!newState.unlockedCards.includes(r.cardId)) newState.unlockedCards = [...newState.unlockedCards, r.cardId]
+        }
+        newState = { ...newState, dailyDrawCount: res.today_count }
+        updateGameState(newState)
+        setDrawResults(results); setIsDrawing(false)
+        return
+      } catch (e: any) {
+        showToast(e.message || '抽卡失败', 'error'); setIsDrawing(false); return
+      }
+    }
+
+    // 游客模式
     const results: DrawResult[] = []; let newState = gameState
     for (let i = 0; i < 10; i++) { const cardId = drawFromPool('permanent_basic'); if (!cardId) continue; const { result } = processDraw(cardId, newState); if (!result) continue; results.push(result); newState = addCardToInventory(newState, cardId) }
     setDrawResults(results)
@@ -70,7 +127,7 @@ export default function DrawPage() {
           <h1 className="text-2xl font-black text-bronze text-center mb-5">抽卡结果</h1>
           {drawResults.length === 1 ? (
             <div className="space-y-4">
-              <div className="flex justify-center"><div className="w-48 animate-flip-in"><CardDisplay cardId={drawResults[0].cardId} cardName={drawResults[0].card.name} level={drawResults[0].card.level} quality={drawResults[0].card.quality} isRevealed /></div></div>
+              <div className="flex justify-center"><div className="w-48 animate-flip-in"><CardDisplay cardId={drawResults[0].cardId} cardName={drawResults[0].card.name} level={drawResults[0].card.level} quality={drawResults[0].card.quality} image={drawResults[0].card.image} isRevealed /></div></div>
               <div className="bronze-panel p-4 space-y-2">
                 <div className="flex items-center justify-between"><span className="text-parchment/70">等级</span><span className="text-lg font-bold text-bronze">{drawResults[0].card.level}</span></div>
                 <div className="flex items-center justify-between"><span className="text-parchment/70">稀有度</span><span className="text-lg font-bold text-bronze">{drawResults[0].card.quality}</span></div>
@@ -82,7 +139,7 @@ export default function DrawPage() {
             <div className="space-y-4">
               {convertedCount > 0 && (<div className="bronze-panel p-3 text-center"><p className="text-sm text-bronze font-bold">{convertedCount} 张重复卡 · 共获得碎片 +{totalShards}</p></div>)}
               <div className="grid grid-cols-3 gap-2">
-                {drawResults.map((result, index) => (<button key={index} onClick={() => setSelectedIndex(index)} className={`transition-transform hover:scale-105 ${result.isNew ? 'ring-2 ring-jade/50 rounded-card' : ''}`}><CardDisplay cardId={result.cardId} cardName={result.card.name} level={result.card.level} quality={result.card.quality} isRevealed /><p className="text-[10px] text-center mt-1 text-parchment/50">{result.isNew ? '🆕 新卡' : `⭐×${result.starCount}`}</p></button>))}
+                {drawResults.map((result, index) => (<button key={index} onClick={() => setSelectedIndex(index)} className={`transition-transform hover:scale-105 ${result.isNew ? 'ring-2 ring-jade/50 rounded-card' : ''}`}><CardDisplay cardId={result.cardId} cardName={result.card.name} level={result.card.level} quality={result.card.quality} image={result.card.image} isRevealed /><p className="text-[10px] text-center mt-1 text-parchment/50">{result.isNew ? '🆕 新卡' : `⭐×${result.starCount}`}</p></button>))}
               </div>
               {selectedIndex !== null && (<div className="bronze-panel p-4 space-y-2 animate-slide-up"><h2 className="text-lg font-black text-bronze">{drawResults[selectedIndex].card.name}</h2><div className="flex items-center justify-between text-sm"><span className="text-parchment/70">等级 {drawResults[selectedIndex].card.level}</span><span className="text-parchment/70">{drawResults[selectedIndex].card.quality}</span></div>{drawResults[selectedIndex].isNew ? (<span className="inline-block text-jade font-bold">✨ 新卡解锁</span>) : (<span className="inline-block text-bronze font-bold">重复 ({drawResults[selectedIndex].starCount}⭐) · 碎片+{drawResults[selectedIndex].shardAmount}</span>)}<p className="text-xs text-parchment/60 mt-2">{drawResults[selectedIndex].card.description}</p></div>)}
             </div>
